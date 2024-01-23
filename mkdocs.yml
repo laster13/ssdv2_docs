@@ -16,7 +16,7 @@ theme:
   name: material
   custom_dir: material/overrides
   features:
-    # - announce.dismiss
+    - announce.dismiss
     - content.action.edit
     - content.action.view
     - content.code.annotate
@@ -35,7 +35,7 @@ theme:
     - navigation.sections
     - navigation.tabs
     # - navigation.tabs.sticky
-    - navigation.top
+    # - navigation.top
     - navigation.tracking
     - search.highlight
     - search.share

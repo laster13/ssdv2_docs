@@ -1,161 +1,161 @@
-# Recommended naming scheme
+# Schéma de dénomination recommandé
 
-On the [Sonarr Discord](https://discord.gg/M6BvZn5){:target="_blank" rel="noopener noreferrer"} people often ask, "What's the recommended/best way to
-name your files?" First off, it's personal preference, but it's often recommended to add non-recoverable info.
+Sur le [Sonarr Discord](https://discord.gg/M6BvZn5){:target="_blank" rel="noopener noreferrer"}, les gens demandent souvent : "Quelle est la meilleure façon de
+nommez vos fichiers ?" Tout d'abord, c'est une préférence personnelle, mais il est souvent recommandé d'ajouter des informations non récupérables.
 
-Why?
+Pourquoi?
 
-If, for what ever reason, you ever need to do a re-install or re-import in
-the Starr Apps or Plex/Emby/Jellyfin it's nice to have all that info in the filename so
-it gets imported correctly and isn't incorrectly matched as HDTV or WEB-DL etc.
+Si, pour une raison quelconque, vous devez effectuer une réinstallation ou une réimportation dans
+les applications Starr ou Plex/Emby/Jellyfin, c'est bien d'avoir toutes ces informations dans le nom de fichier donc
+il est importé correctement et ne correspond pas incorrectement à HDTV ou WEB-DL, etc.
 
-!!! info "The Tokens not available in the release won't be used/shown."
+!!! info "Les jetons non disponibles dans la version ne seront pas utilisés/affichés."
 
 ------
 
-## Preparation
+## Préparation
 
-Go to `Settings` => `Media Management` and make sure that `Show Advanced` at the top is enabled.
+Allez dans « Paramètres » => « Gestion des médias » et assurez-vous que « Afficher avancé » en haut est activé.
 
-![Enable Advanced](images/sonarr-show-adavanced.png)
+![Activer Avancé](images/sonarr-show-adavanced.png)
 
-Once you clicked on the button it should look like this and you should see all the advanced options.
+Une fois que vous avez cliqué sur le bouton, cela devrait ressembler à ceci et vous devriez voir toutes les options avancées.
 
-![Unhide Advanced](images/unhide-advanced.png)
+![Afficher avancé](images/unhide-advanced.png)
 
-## Standard Episode Format
+## Format d'épisode standard
 
 ```bash
 {{ sonarr['naming']['sonarr-naming']['episodes']['standard']['default:4'] }}
 ```
 
-??? abstract "RESULTS: - [Click to show/hide]"
+??? résumé "RESULTATS : - [Cliquez pour afficher/masquer]"
 
-    Single Episode:
+    Épisode unique :
 
-    `The Series Title! (2010) - S01E01 - Episode Title 1 [AMZN WEBDL-1080p Proper][DV HDR10][DTS 5.1][x264]-RlsGrp`
+    `Le titre de la série ! (2010) - S01E01 - Titre de l'épisode 1 [AMZN WEBDL-1080p Proper][DV HDR10][DTS 5.1][x264]-RlsGrp`
 
-    Multi Episode:
+    Épisode multiple :
 
-    `The Series Title! (2010) - S01E01-E03 - Episode Title [AMZN WEBDL-1080p Proper][DV HDR10][DTS 5.1][x264]-RlsGrp`
+    `Le titre de la série ! (2010) - S01E01-E03 - Titre de l'épisode [AMZN WEBDL-1080p Proper][DV HDR10][DTS 5.1][x264]-RlsGrp`
 
 ------
 
-## Daily Episode Format
+## Format des épisodes quotidiens
 
 ```bash
 {{ sonarr['naming']['sonarr-naming']['episodes']['daily']['default:4'] }}
 ```
 
-??? abstract "RESULTS: - [Click to show/hide]"
+??? résumé "RESULTATS : - [Cliquez pour afficher/masquer]"
 
-    `The Series Title! (2010) - 2013-10-30 - Episode Title 1 [AMZN WEBDL-1080p Proper][DV HDR10][DTS 5.1][x264]-RlsGrp`
+    `Le titre de la série ! (2010) - 30/10/2013 - Titre de l'épisode 1 [AMZN WEBDL-1080p Proper][DV HDR10][DTS 5.1][x264]-RlsGrp`
 
 ------
 
-## Anime Episode Format
+## Format des épisodes d'anime
 
 ```bash
 {{ sonarr['naming']['sonarr-naming']['episodes']['anime']['default:4'] }}
 ```
 
-??? abstract "RESULTS: - [Click to show/hide]"
+??? résumé "RESULTATS : - [Cliquez pour afficher/masquer]"
 
-    Single Episode:
+    Épisode unique :
 
-    `The Series Title! (2010) - S01E01 - 001 - Episode Title 1 [iNTERNAL HDTV-720p v2][HDR10][10bit][x264][DTS 5.1][JA]-RlsGrp`
+    `Le titre de la série ! (2010) - S01E01 - 001 - Titre de l'épisode 1 [iNTERNAL HDTV-720p v2][HDR10][10bit][x264][DTS 5.1][JA]-RlsGrp`
 
-    Multi Episode:
+    Épisode multiple :
 
-    `The Series Title! (2010) - S01E01-E03 - 001-003 - Episode Title [iNTERNAL HDTV-720p v2][HDR10][10bit][x264][DTS 5.1][JA]-RlsGrp`
+    `Le titre de la série ! (2010) - S01E01-E03 - 001-003 - Titre de l'épisode [iNTERNAL HDTV-720p v2][HDR10][10bit][x264][DTS 5.1][JA]-RlsGrp`
 
 ------
 
-### Series Folder Format
+Format de dossier de la série ###
 
 ```bash
 {{ sonarr['naming']['sonarr-naming']['series']['default'] }}
 ```
 
-<small>RESULT:</small> `The Series Title! (2010)`
+<small>RESULTAT :</small> `Le titre de la série ! (2010)
 
-#### Optional Series Folder Format
+#### Format de dossier de série facultatif
 
-This naming scheme is made to be compatible with the new [Plex TV Series Scanner](https://forums.plex.tv/t/beta-new-plex-tv-series-scanner/696242){:target="_blank" rel="noopener noreferrer"} that now support IMDB and TVDB IDs in file names.
+Ce schéma de dénomination est conçu pour être compatible avec le nouveau [Scanner Plex TV Series](https://forums.plex.tv/t/beta-new-plex-tv-series-scanner/696242){:target="_blank " rel="noopener noreferrer"} qui prend désormais en charge les ID IMDB et TVDB dans les noms de fichiers.
 
-##### Optional Plex
+##### Plex en option
 
 ```bash
 {{ sonarr['naming']['sonarr-naming']['series']['plex'] }}
 ```
 
-<small>RESULT:</small> `The Series Title! (2010) {imdb-tt1520211}`
+<small>RESULTAT :</small> `Le titre de la série ! (2010) {imdb-tt1520211}`
 
-##### Optional Emby
+##### Emby facultatif
 
 ```bash
 {{ sonarr['naming']['sonarr-naming']['series']['emby'] }}
 ```
 
-<small>RESULT:</small> `The Series Title! (2010)`
+<small>RESULTAT :</small> `Le titre de la série ! (2010)
 
-##### Optional Jellyfin
+##### Jellyfin en option
 
 ```bash
 {{ sonarr['naming']['sonarr-naming']['series']['jellyfin'] }}
 ```
 
-<small>RESULT:</small> `The Series Title! (2010) [tvdbid-tt1520211]`
+<small>RESULTAT :</small> `Le titre de la série ! (2010) [tvdbid-tt1520211]`
 
-!!! tip
-    IMDb IDs are going to be very accurate and rarely change, TVDB/TMDB IDs, on the other hand, do change or are removed more frequently.
+!!! conseil
+    Les identifiants IMDb seront très précis et changeront rarement, les identifiants TVDB/TMDB, en revanche, changent ou sont supprimés plus fréquemment.
 
 ------
 
-### Season Folder Format
+### Format du dossier de saison
 
-For this there's only one real option to use in my opinion.
+Pour cela, il n’y a qu’une seule véritable option à utiliser à mon avis.
 
 ```bash
-Season {season:00}
+Saison {saison:00}
 ```
 
-RESULT: `Season 01`
+RÉSULTAT : `Saison 01`
 
 ------
 
-### Multi-Episode Style
+### Style multi-épisodes
 
 ```bash
-Prefixed Range
+Plage préfixée
 ```
 
-RESULTS:
+RÉSULTATS:
 
-![results](images/results.png)
-
-------
-
-## Original Title vs  Original Filename
-
-### Original Title
-
-Another option is to use `{Original Title}` rather than the recommended naming scheme outlined above. `{Original Title}` will use the title of the release which will contain all of the information included in the release itself. The benefit of this naming scheme is to prevent download loops which can occur on import when there is a discrepancy in the release title compared to the contents of the file itself (for example, if the release title says DTS-ES but the contents are actually DTS). The downside is less flexibility with how the files are named.
-
-If using this alternate naming scheme I suggest using `{Original Title}` over `{Original Filename}`
-
-Why?
-
-The filename can be Obscured where the Release naming isn't, especially when you use Usenet.
-
-`{Original Title}` => `The.Series.Title.S01E01.Episode.Title.1080p.AMZN.WEB-DL.DDP5.1.H.264-RlsGrp`
-
-`{Original Filename}` => `show episode 1-1080p` or `lchd-tkk1080p` or `t1i0p3s7i8yuti`
+![résultats](images/results.png)
 
 ------
 
-Thanks:
+## Titre original vs nom de fichier original
 
-A big Thanks to [fryfrog](https://github.com/fryfrog), [rg9400](https://github.com/rg9400) and [bakerboy448](https://github.com/bakerboy448) for the suggestions.
+### Titre original
+
+Une autre option consiste à utiliser « {Titre original} » plutôt que le schéma de dénomination recommandé décrit ci-dessus. `{Titre original}` utilisera le titre de la version qui contiendra toutes les informations incluses dans la version elle-même. L'avantage de ce schéma de dénomination est d'éviter les boucles de téléchargement qui peuvent se produire lors de l'importation lorsqu'il y a une différence entre le titre de la version et le contenu du fichier lui-même (par exemple, si le titre de la version indique DTS-ES mais que le contenu est en réalité DTS). L'inconvénient est moins de flexibilité dans la façon dont les fichiers sont nommés.
+
+Si vous utilisez ce schéma de dénomination alternatif, je suggère d'utiliser `{Titre original}` plutôt que `{Nom de fichier original}`
+
+Pourquoi?
+
+Le nom du fichier peut être masqué là où le nom de la version ne l'est pas, en particulier lorsque vous utilisez Usenet.
+
+`{Titre original}` => `The.Series.Title.S01E01.Episode.Title.1080p.AMZN.WEB-DL.DDP5.1.H.264-RlsGrp`
+
+`{Nom de fichier original}` => `afficher l'épisode 1-1080p` ou `lchd-tkk1080p` ou `t1i0p3s7i8yuti`
+
+------
+
+Merci:
+
+Un grand merci à [fryfrog](https://github.com/fryfrog), [rg9400](https://github.com/rg9400) et [bakerboy448](https://github.com/bakerboy448) pour le suggestions.
 
 --8<-- "includes/support.md"

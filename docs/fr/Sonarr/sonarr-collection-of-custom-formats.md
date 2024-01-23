@@ -1,26 +1,26 @@
-# Collection of Custom Formats
+# Collection de formats personnalisés
 
-Below is a collection of what we've come to regard as the most needed and commonly used Custom Formats.
-These CFs have been collected from discussions on Discord or created with help from others.
+Vous trouverez ci-dessous une collection de ce que nous considérons comme les formats personnalisés les plus nécessaires et les plus couramment utilisés.
+Ces CF ont été collectés à partir de discussions sur Discord ou créés avec l'aide d'autres personnes.
 
-Special thanks to everyone that has helped in the creation and testing of these Custom Formats, my team at TRaSH guides, and the community.
+Un merci spécial à tous ceux qui ont aidé à la création et aux tests de ces formats personnalisés, à mon équipe des guides TRaSH et à la communauté.
 
-Sonarr V4+ introduces Custom Formats. These are much more advanced/powerful than the release profiles, although this also means a Custom Format can require more knowledge to set up or create.
-We've made 3 guides related to this.
+Sonarr V4+ introduit les formats personnalisés. Ceux-ci sont beaucoup plus avancés/puissants que les profils de version, bien que cela signifie également qu'un format personnalisé peut nécessiter plus de connaissances pour être configuré ou créé.
+Nous avons réalisé 3 guides liés à cela.
 
-- [How to import Custom Formats](/Sonarr/sonarr-import-custom-formats){:target="_blank" rel="noopener noreferrer"} - Explains how to import the Custom Formats.
-- [How to upgrade Custom Formats](/Sonarr/sonarr-how-to-update-custom-formats){:target="_blank" rel="noopener noreferrer"} - Explains how to upgrade your existing Custom Formats.
-- [How to setup Quality Profiles](/Sonarr/sonarr-setup-quality-profiles){:target="_blank" rel="noopener noreferrer"} - Explains how to make the most use of Custom Formats and shows some specifics of my configuration. You can use these examples to get an idea of how to set up your preferences.
+- [Comment importer des formats personnalisés](/Sonarr/sonarr-import-custom-formats){:target="_blank" rel="noopener noreferrer"} - Explique comment importer les formats personnalisés.
+- [Comment mettre à niveau les formats personnalisés](/Sonarr/sonarr-how-to-update-custom-formats){:target="_blank" rel="noopener noreferrer"} - Explique comment mettre à niveau vos formats personnalisés existants.
+- [Comment configurer les profils de qualité](/Sonarr/sonarr-setup-quality-profiles){:target="_blank" rel="noopener noreferrer"} - Explique comment tirer le meilleur parti des formats personnalisés et montre quelques détails de ma configuration. Vous pouvez utiliser ces exemples pour avoir une idée de la façon de configurer vos préférences.
 
-!!! tip
+!!! conseil
 
-    It also is recommended to change the Propers and Repacks settings in Sonarr's `Settings`.
+    Il est également recommandé de modifier les paramètres Propers et Repacks dans les « Paramètres » de Sonarr.
 
-    `Media Management` => `File Management` to `Do Not Prefer` and use the [Repack/Proper](#repackproper) Custom Format.
+    `Media Management` => `File Management` sur `Ne pas préférer` et utilisez le format personnalisé [Repack/Proper](#repackproper).
 
     ![!cf-mm-propers-repacks-disable](images/cf-mm-propers-repacks-disable.png)
 
-    This way you make sure the Custom Format scoring and preferences will be fully utilized.
+    De cette façon, vous vous assurez que la notation et les préférences du format personnalisé seront pleinement utilisées.
 
 --8<-- "includes/support.md"
 
@@ -122,19 +122,19 @@ We've made 3 guides related to this.
 |                                                                             |                                                                       | [ADN](#adn)                   |                                       |
 |                                                                             |                                                                       | [WKN](#wkn)                   |                                       |
 
-## Audio Advanced
+## Audio Avancé
 
 ------
 
-### TrueHD ATMOS
+### ATMOS TrueHD
 
-??? question "TrueHD ATMOS - [Click to show/hide]"
+??? question "TrueHD ATMOS - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Dolby_Atmos){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Dolby_Atmos){:target="_blank" rel="noopener noreferrer"}
 
-    Dolby Atmos is a surround sound technology developed by Dolby Laboratories. It expands on existing surround sound systems by adding height channels, allowing sounds to be interpreted as three-dimensional objects.
+    Dolby Atmos est une technologie de son surround développée par Dolby Laboratories. Il étend les systèmes de son surround existants en ajoutant des canaux de hauteur, permettant aux sons d'être interprétés comme des objets tridimensionnels.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/truehd-atmos.json' %]][[% endfilter %]]
@@ -144,15 +144,15 @@ We've made 3 guides related to this.
 
 ------
 
-### DTS X
+### DTSX
 
-??? question "DTS:X - [Click to show/hide]"
+??? question "DTS:X - [Cliquez pour afficher/masquer]"
 
-    [DTS:X is an object-based audio codec](https://www.whathifi.com/advice/dtsx-what-it-how-can-you-get-it), which aims to create a multi-dimensional sound that “moves around you like it would in real life”.
-    You may think that sounds a lot like Dolby Atmos, and you’d be right. But where DTS:X differs lies in the required speaker configuration. While Dolby Atmos requires you to add extra overhead channels to your 5.1 or 7.1 setup, DTS:X works with standard surround speaker setups – just like the one you might already have at home. It can support up to 32 speaker locations and up to an 11.2-channel system.
-    DTS:X like other higher quality DTS formats (e.g. DTS-HD MA) is lossless.
+    [DTS:X est un codec audio basé sur des objets](https://www.whathifi.com/advice/dtsx-what-it-how-can-you-get-it), qui vise à créer un un son qui « bouge autour de vous comme il le ferait dans la vraie vie ».
+    Vous pensez peut-être que cela ressemble beaucoup à Dolby Atmos, et vous avez raison. Mais là où DTS:X diffère, c'est dans la configuration des enceintes requise. Alors que Dolby Atmos vous oblige à ajouter des canaux aériens supplémentaires à votre configuration 5.1 ou 7.1, DTS:X fonctionne avec les configurations d'enceintes surround standard, tout comme celle que vous possédez peut-être déjà à la maison. Il peut prendre en charge jusqu'à 32 emplacements d'enceintes et jusqu'à un système à 11,2 canaux.
+    DTS:X, comme les autres formats DTS de qualité supérieure (par exemple DTS-HD MA), est sans perte.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dts-x.json' %]][[% endfilter %]]
@@ -162,16 +162,16 @@ We've made 3 guides related to this.
 
 ------
 
-### ATMOS (undefined)
+### ATMOS (non défini)
 
-??? question "ATMOS (undefined) - [Click to show/hide]"
+??? question "ATMOS (non défini) - [Cliquez pour afficher/masquer]"
 
-    Handles cases where only Atmos is specified in title but not DD+ or TrueHD (Where it is not specified if it is Lossy or Lossless)
+    Gère les cas où seul Atmos est spécifié dans le titre mais pas DD+ ou TrueHD (où il n'est pas spécifié s'il est avec ou sans perte)
 
     !!! note
-        Give this the same score as Lossy Atmos, and then on import, it will get changed to either lossy or lossless based on mediainfo.
+        Donnez-lui le même score que Lossy Atmos, puis lors de l'importation, il sera modifié en avec ou sans perte en fonction des informations sur les médias.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/atmos-undefined.json' %]][[% endfilter %]]
@@ -185,11 +185,11 @@ We've made 3 guides related to this.
 
 <sub>DDPlus = DD+</sub>
 
-??? question "DD+ ATMOS - [Click to show/hide]"
+??? question "DD+ ATMOS - [Cliquez pour afficher/masquer]"
 
-    Atmos via UHD Blu-ray will be lossless, or lossy via streaming services so in this case it will be lossy + Atmos
+    Atmos via UHD Blu-ray sera sans perte, ou avec perte via les services de streaming donc dans ce cas, ce sera avec perte + Atmos
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/ddplus-atmos.json' %]][[% endfilter %]]
@@ -199,15 +199,15 @@ We've made 3 guides related to this.
 
 ------
 
-### TrueHD
+### VraiHD
 
-??? question "TrueHD - [Click to show/hide]"
+??? question "TrueHD - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Dolby_TrueHD){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Dolby_TrueHD){:target="_blank" rel="noopener noreferrer"}
 
-    Dolby TrueHD is a lossless, multi-channel audio codec developed by Dolby Laboratories for home video, used principally in Blu-ray Disc and compatible hardware.
+    Dolby TrueHD est un codec audio multicanal sans perte développé par Dolby Laboratories pour la vidéo domestique, utilisé principalement dans les disques Blu-ray et le matériel compatible.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/truehd.json' %]][[% endfilter %]]
@@ -219,13 +219,13 @@ We've made 3 guides related to this.
 
 ### DTS-HD MA
 
-??? question "DTS-HD MA - [Click to show/hide]"
+??? question "DTS-HD MA - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/DTS-HD_Master_Audio){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/DTS-HD_Master_Audio){:target="_blank" rel="noopener noreferrer"}
 
-    DTS-HD Master Audio is a multi-channel, lossless audio codec developed by DTS as an extension of the lossy DTS Coherent Acoustics codec (DTS CA; usually itself referred to as just DTS). Rather than being an entirely new coding mechanism, DTS-HD MA encodes an audio master in lossy DTS first, then stores a concurrent stream of supplementary data representing whatever the DTS encoder discarded. This gives DTS-HD MA a lossy "core" able to be played back by devices that cannot decode the more complex lossless audio. DTS-HD MA's primary application is audio storage and playback for Blu-ray Disc media.
+    DTS-HD Master Audio est un codec audio multicanal sans perte développé par DTS en tant qu'extension du codec avec perte DTS Coherent Acoustics (DTS CA ; généralement lui-même appelé simplement DTS). Plutôt que d'être un mécanisme de codage entièrement nouveau, DTS-HD MA encode d'abord un maître audio en DTS avec perte, puis stocke un flux simultané de données supplémentaires représentant tout ce que l'encodeur DTS a rejeté. Cela donne au DTS-HD MA un « noyau » avec perte capable d'être lu par des appareils qui ne peuvent pas décoder l'audio sans perte plus complexe. L'application principale du DTS-HD MA est le stockage et la lecture audio pour les supports Blu-ray Disc.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dts-hd-ma.json' %]][[% endfilter %]]
@@ -235,13 +235,13 @@ We've made 3 guides related to this.
 
 ------
 
-### FLAC
+###FLAC
 
-??? question "FLAC - [Click to show/hide]"
+??? question "FLAC - [Cliquez pour afficher/masquer]"
 
-    FLAC stands for Free Lossless Audio Codec, an audio format similar to MP3, but lossless, meaning that audio is compressed in FLAC without any loss in quality. This is similar to how Zip works, except with FLAC you will get much better compression because it is designed specifically for audio
+    FLAC signifie Free Lossless Audio Codec, un format audio similaire au MP3, mais sans perte, ce qui signifie que l'audio est compressé en FLAC sans aucune perte de qualité. Ceci est similaire au fonctionnement de Zip, sauf qu'avec FLAC, vous obtiendrez une bien meilleure compression car il est spécialement conçu pour l'audio.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/flac.json' %]][[% endfilter %]]
@@ -253,11 +253,11 @@ We've made 3 guides related to this.
 
 ### PCM
 
-??? question "PCM - [Click to show/hide]"
+??? question "PCM - [Cliquez pour afficher/masquer]"
 
-    PCM is the method of encoding typically used for uncompressed digital audio
+    PCM est la méthode d'encodage généralement utilisée pour l'audio numérique non compressé.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/pcm.json' %]][[% endfilter %]]
@@ -269,26 +269,26 @@ We've made 3 guides related to this.
 
 ### DTS-HD HRA
 
-??? question "DTS-HD HRA - [Click to show/hide]"
+??? question "DTS-HD HRA - [Cliquez pour afficher/masquer]"
 
-    [Technical Whitepaper](https://www.opusproductions.com/pdfs/DTS_HD_WhitePaper.pdf){:target="_blank" rel="noopener noreferrer"}
+    [Livre blanc technique](https://www.opusproductions.com/pdfs/DTS_HD_WhitePaper.pdf){:target="_blank" rel="noopener noreferrer"}
 
-    | Codec      | Page   | Paragraph |
+    | Codecs | Pages | Paragraphe |
     | ---------- | ------ | --------- |
-    | DTS-HD MA  | Page 6 | 5.1.1     |
-    | DTS-HD HRA | Page 7 | 5.1.2     |
+    | DTS-HD MA | Page 6 | 5.1.1 |
+    | DTS-HD HRA | Page 7 | 5.1.2 |
 
-    DTS-HD HRA is the lossy version of DTS-HD MA.
+    DTS-HD HRA est la version avec perte de DTS-HD MA.
 
-    | Codec          | DTS-HRA          | DTS-MA            |
-    | -------------- | ---------------- | ----------------- |
-    | Lossy/lossless | Lossy            | Lossless          |
-    | Data rate      | 1.5 - 6.0 Mbit/s | VBR - 24.5 Mbit/s |
-    | Channels       | Up to 7.1 ch     | Up to 7.1 ch      |
-    | Sampling Freq. | 96 kHz           | 192 kHz           |
-    | Resolution     | -                | Up to 24-bit      |
+    | Codecs | DTS-HRA | DTS-MA |
+    | ---------- | ---------------- | ----------------- |
+    | Avec/sans perte | Avec perte | Sans perte |
+    | Débit de données | 1,5 - 6,0 Mbit/s | VBR-24,5 Mbit/s |
+    | Chaînes | Jusqu'à 7,1 ch | Jusqu'à 7,1 ch |
+    | Fréquence d'échantillonnage. | 96 kHz | 192 kHz |
+    | Résolution | - | Jusqu'à 24 bits |
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dts-hd-hra.json' %]][[% endfilter %]]
@@ -302,13 +302,13 @@ We've made 3 guides related to this.
 
 <sub>Dolby Digital Plus = DD+ = DDPlus</sub>
 
-??? question "DD+ - [Click to show/hide]"
+??? question "DD+ - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Dolby_Digital_Plus){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Dolby_Digital_Plus){:target="_blank" rel="noopener noreferrer"}
 
-    Dolby Digital Plus, also known as Enhanced AC-3 (and commonly abbreviated as DD+ or E-AC-3, or EC-3) is a digital audio compression scheme developed by Dolby Labs for transport and storage of multi-channel digital audio. It is a successor to Dolby Digital (AC-3).
+    Dolby Digital Plus, également connu sous le nom de Enhanced AC-3 (et communément abrégé en DD+ ou E-AC-3, ou EC-3) est un système de compression audio numérique développé par Dolby Labs pour le transport et le stockage de l'audio numérique multicanal. C'est le successeur du Dolby Digital (AC-3).
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/ddplus.json' %]][[% endfilter %]]
@@ -320,11 +320,11 @@ We've made 3 guides related to this.
 
 ### DTS-ES
 
-??? question "DTS-ES - [Click to show/hide]"
+??? question "DTS-ES - [Cliquez pour afficher/masquer]"
 
-    DTS-ES (DTS Extended Surround) includes two variants, DTS-ES Discrete 6.1, and DTS-ES Matrix 5.1, depending on how the sound was originally mastered and stored.
+    DTS-ES (DTS Extended Surround) comprend deux variantes, DTS-ES Discrete 6.1 et DTS-ES Matrix 5.1, selon la manière dont le son a été initialement masterisé et stocké.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dts-es.json' %]][[% endfilter %]]
@@ -336,12 +336,12 @@ We've made 3 guides related to this.
 
 ### DTS
 
-<sub>DTS = Basic DTS</sub>
+<sub>DTS = DTS de base</sub>
 
-??? question "DTS - [Click to show/hide]"
-    Description placeholder
+??? question "DTS - [Cliquez pour afficher/masquer]"
+    Espace réservé pour la description
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dts.json' %]][[% endfilter %]]
@@ -351,16 +351,16 @@ We've made 3 guides related to this.
 
 ------
 
-### AAC
+### CAA
 
-??? question "AAC - [Click to show/hide]"
+??? question "AAC - [Cliquez pour afficher/masquer]"
 
-    Advanced Audio Coding
+    Codage audio avancé
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Advanced_Audio_Coding){:target="_blank" rel="noopener noreferrer"}
-    Advanced Audio Coding (AAC) is an audio coding standard for lossy digital audio compression. Designed to be the successor of the MP3 format, AAC generally achieves higher sound quality than MP3 at the same bit rate.
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Advanced_Audio_Coding){:target="_blank" rel="noopener noreferrer"}
+    Advanced Audio Coding (AAC) est une norme de codage audio pour la compression audio numérique avec perte. Conçu pour succéder au format MP3, l'AAC permet généralement d'obtenir une qualité sonore supérieure à celle du MP3 pour le même débit binaire.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/aac.json' %]][[% endfilter %]]
@@ -372,15 +372,15 @@ We've made 3 guides related to this.
 
 ### DD
 
-<sub>(Basic) Dolby Digital = DD</sub>
+<sub>(Basique) Dolby Digital = DD</sub>
 
-??? question "DD - [Click to show/hide]"
+??? question "DD - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Dolby_Digital){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Dolby_Digital){:target="_blank" rel="noopener noreferrer"}
 
-    Dolby Digital, also known as Dolby AC-3, the audio compression is lossy.
+    Dolby Digital, également connu sous le nom de Dolby AC-3, la compression audio est avec perte.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dd.json' %]][[% endfilter %]]
@@ -390,12 +390,12 @@ We've made 3 guides related to this.
 
 ------
 
-### MP3
+###MP3
 
-??? question "MP3 - [Click to show/hide]"
-    Description placeholder
+??? question "MP3 - [Cliquez pour afficher/masquer]"
+    Espace réservé pour la description
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/mp3.json' %]][[% endfilter %]]
@@ -407,13 +407,13 @@ We've made 3 guides related to this.
 
 ### Opus
 
-??? question "Opus - [Click to show/hide]"
+??? question "Opus - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Opus_(audio_format)){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Opus_(audio_format)){:target="_blank" rel="noopener noreferrer"}
 
-    Opus is a lossy audio coding format developed by the Xiph.Org Foundation and standardized by the Internet Engineering Task Force, designed to efficiently code speech and general audio in a single format, while remaining low-latency enough for real-time interactive communication and low-complexity enough for low-end embedded processors.Opus replaces both Vorbis and Speex for new applications, and several blind listening tests have ranked it higher-quality than any other standard audio format at any given bitrate until transparency is reached, including MP3, AAC, and HE-AAC
+    Opus est un format de codage audio avec perte développé par la Fondation Xiph.Org et standardisé par l'Internet Engineering Task Force, conçu pour coder efficacement la parole et l'audio général dans un format unique, tout en restant suffisamment faible pour une communication interactive en temps réel et une faible latence. - une complexité suffisante pour les processeurs embarqués bas de gamme. Opus remplace Vorbis et Speex pour de nouvelles applications, et plusieurs tests d'écoute aveugle l'ont classé comme étant de meilleure qualité que tout autre format audio standard à n'importe quel débit binaire donné jusqu'à ce que la transparence soit atteinte, y compris MP3, AAC , et HE-AAC
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/opus.json' %]][[% endfilter %]]
@@ -423,13 +423,13 @@ We've made 3 guides related to this.
 
 ------
 
-## Audio Channels
+## Canaux audio
 
 ------
 
-### 1.0 Mono
+### 1.0Mono
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/10-mono.json' %]][[% endfilter %]]
@@ -439,9 +439,9 @@ We've made 3 guides related to this.
 
 ------
 
-### 2.0 Stereo
+### 2.0 Stéréo
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/20-stereo.json' %]][[% endfilter %]]
@@ -451,9 +451,9 @@ We've made 3 guides related to this.
 
 ------
 
-### 3.0 Sound
+### Son 3.0
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/30-sound.json' %]][[% endfilter %]]
@@ -463,9 +463,9 @@ We've made 3 guides related to this.
 
 ------
 
-### 4.0 Sound
+### Son 4.0
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/40-sound.json' %]][[% endfilter %]]
@@ -475,9 +475,9 @@ We've made 3 guides related to this.
 
 ------
 
-### 5.1 Surround
+### Surround 5.1
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/51-surround.json' %]][[% endfilter %]]
@@ -487,9 +487,9 @@ We've made 3 guides related to this.
 
 ------
 
-### 6.1 Surround
+### Surround 6.1
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/61-surround.json' %]][[% endfilter %]]
@@ -499,9 +499,9 @@ We've made 3 guides related to this.
 
 ------
 
-### 7.1 Surround
+### Surround 7.1
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/71-surround.json' %]][[% endfilter %]]
@@ -511,9 +511,9 @@ We've made 3 guides related to this.
 
 ------
 
-### 9.1 Surround
+### Ambiance 9.1
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/91-surround.json' %]][[% endfilter %]]
@@ -523,7 +523,7 @@ We've made 3 guides related to this.
 
 ------
 
-## HDR Formats
+## Formats HDR
 
 ------
 
@@ -532,11 +532,11 @@ We've made 3 guides related to this.
 <sub>DV = DoVi = Dolby Vision</sub><br>
 <sub>HDR10+ = HDR10P = HDR10Plus</sub>
 
-??? question "DV HDR10+ - [Click to show/hide]"
+??? question "DV HDR10+ - [Cliquez pour afficher/masquer]"
 
     {! include-markdown "../../includes/cf-descriptions/dv-hdr10plus.md" !}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dv-hdr10plus.json' %]][[% endfilter %]]
@@ -550,11 +550,11 @@ We've made 3 guides related to this.
 
 <sub>DV = DoVi = Dolby Vision</sub>
 
-??? question "DV HDR10 - [Click to show/hide]"
+??? question "DV HDR10 - [Cliquez pour afficher/masquer]"
 
     {! include-markdown "../../includes/cf-descriptions/dv-hdr10.md" !}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dv-hdr10.json' %]][[% endfilter %]]
@@ -564,17 +564,17 @@ We've made 3 guides related to this.
 
 ------
 
-### DV
+### DVD
 
 <sub>DV = DoVi = Dolby Vision</sub>
 
-??? question "DV - [Click to show/hide]"
+??? question "DV - [Cliquez pour afficher/masquer]"
 
     --8<-- "includes/cf-descriptions/dv.md"
 
-<! -- the reason why we didn't use here `include-markdown` is because all the headers when using `include-markdown` will be looking in `/includes` and not the current markdown file, in this case the pointer to `#dv-webdl` in `includes/dv.md`-->
+<! -- la raison pour laquelle nous n'avons pas utilisé ici `include-markdown` est que tous les en-têtes lors de l'utilisation de `include-markdown` rechercheront dans `/includes` et non dans le fichier markdown actuel, dans ce cas le pointeur vers ` #dv-webdl` dans `includes/dv.md`-->
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dv.json' %]][[% endfilter %]]
@@ -588,11 +588,11 @@ We've made 3 guides related to this.
 
 <sub>DV = DoVi = Dolby Vision</sub>
 
-??? question "DV HLG - [Click to show/hide]"
+??? question "DV HLG - [Cliquez pour afficher/masquer]"
 
     {! include-markdown "../../includes/cf-descriptions/dv-hlg.md" !}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dv-hlg.json' %]][[% endfilter %]]
@@ -602,15 +602,15 @@ We've made 3 guides related to this.
 
 ------
 
-### DV SDR
+### DV-SDR
 
 <sub>DV = DoVi = Dolby Vision</sub>
 
-??? question "DV SDR - [Click to show/hide]"
+??? question "DV SDR - [Cliquez pour afficher/masquer]"
 
     {! include-markdown "../../includes/cf-descriptions/dv-sdr.md" !}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dv-sdr.json' %]][[% endfilter %]]
@@ -624,11 +624,11 @@ We've made 3 guides related to this.
 
 <sub>HDR10+ = HDR10P = HDR10Plus</sub>
 
-??? question "HDR10+ - [Click to show/hide]"
+??? question "HDR10+ - [Cliquez pour afficher/masquer]"
 
     {! include-markdown "../../includes/cf-descriptions/hdr10plus.md" !}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/hdr10plus.json' %]][[% endfilter %]]
@@ -638,15 +638,15 @@ We've made 3 guides related to this.
 
 ------
 
-### HDR10
+###HDR10
 
 <sub>HDR10</sub>
 
-??? question "HDR10 - [Click to show/hide]"
+??? question "HDR10 - [Cliquez pour afficher/masquer]"
 
     {! include-markdown "../../includes/cf-descriptions/hdr10.md" !}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/hdr10.json' %]][[% endfilter %]]
@@ -656,15 +656,15 @@ We've made 3 guides related to this.
 
 ------
 
-### HDR
+###HDR
 
 <sub>HDR</sub>
 
-??? question "HDR - [Click to show/hide]"
+??? question "HDR - [Cliquez pour afficher/masquer]"
 
     {! include-markdown "../../includes/cf-descriptions/hdr.md" !}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/hdr.json' %]][[% endfilter %]]
@@ -674,13 +674,13 @@ We've made 3 guides related to this.
 
 ------
 
-### HDR (undefined)
+### HDR (non défini)
 
-??? question "HDR (undefined) - [Click to show/hide]"
+??? question "HDR (non défini) - [Cliquez pour afficher/masquer]"
 
     {! include-markdown "../../includes/cf-descriptions/hdr-undefined.md" !}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/hdr-undefined.json' %]][[% endfilter %]]
@@ -694,11 +694,11 @@ We've made 3 guides related to this.
 
 <sub>PQ = PQ10</sub>
 
-??? question "PQ - [Click to show/hide]"
+??? question "PQ - [Cliquez pour afficher/masquer]"
 
     {! include-markdown "../../includes/cf-descriptions/pq.md" !}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/pq.json' %]][[% endfilter %]]
@@ -712,11 +712,11 @@ We've made 3 guides related to this.
 
 <sub>HLG = HLG10</sub>
 
-??? question "HLG - [Click to show/hide]"
+??? question "HLG - [Cliquez pour afficher/masquer]"
 
     {! include-markdown "../../includes/cf-descriptions/hlg.md" !}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/hlg.json' %]][[% endfilter %]]
@@ -726,17 +726,17 @@ We've made 3 guides related to this.
 
 ------
 
-## Series Versions
+## Versions de la série
 
 ------
 
-### Hybrid
+### Hybride
 
-??? question "Hybrid - [Click to show/hide]"
+??? question "Hybride - [Cliquez pour afficher/masquer]"
 
-    A hybrid release means any combination of sources (video + audio) and not a direct encode of a single source. Generally you can be sure that any hybrid that has been put together is the best quality release of a particular title.
+    Une version hybride signifie toute combinaison de sources (vidéo + audio) et non un encodage direct d'une seule source. En général, vous pouvez être sûr que tout hybride créé constitue la version de la meilleure qualité d’un titre particulier.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/hybrid.json' %]][[% endfilter %]]
@@ -746,16 +746,16 @@ We've made 3 guides related to this.
 
 ------
 
-### Remaster
+### Remasterisé
 
-??? question "Remaster - [Click to show/hide]"
+??? question "Remaster - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Remaster){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Remaster){:target="_blank" rel="noopener noreferrer"}
 
-    For the software term, see Software remastering.
-    Remaster (also digital remastering and digitally remastered) refers to changing the quality of the sound or of the image, or both, of previously created recordings, either audiophonic, cinematic, or videographic.
+    Pour le terme logiciel, voir Remasterisation de logiciels.
+    Le remaster (également remasterisation numérique et remasterisé numériquement) fait référence à la modification de la qualité du son ou de l'image, ou des deux, d'enregistrements précédemment créés, qu'ils soient audiophoniques, cinématographiques ou vidéographiques.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
      [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/remaster.json' %]][[% endfilter %]]
@@ -765,30 +765,30 @@ We've made 3 guides related to this.
 
 ------
 
-## Unwanted
+## Indésirable
 
 ------
 
-### BR-DISK
+### BR-DISQUE
 
-??? question "BR-DISK - [Click to show/hide]"
+??? question "BR-DISK - [Cliquez pour afficher/masquer]"
 
-    This is a custom format to help Sonarr recognize and ignore BR-DISK (ISO's and Blu-ray folder structure) in addition to the standard BR-DISK quality.
+    Il s'agit d'un format personnalisé permettant à Sonarr de reconnaître et d'ignorer BR-DISK (structure des dossiers ISO et Blu-ray) en plus de la qualité BR-DISK standard.
 
-    You will need to add the following as a new Custom Format, and when created adjust the scoring in your Quality Profile (`Setting` => `Profiles`) to `-10000`.
+    Vous devrez ajouter les éléments suivants en tant que nouveau format personnalisé et, une fois créé, ajuster la note dans votre profil de qualité (`Setting` => `Profiles`) à `-10000`.
 
     !!! note
 
-        Depending on your renaming scheme Sonarr could potentially match renamed files AFTER they are downloaded and imported as `BR-DISK`,
-        This is only a cosmetic annoyance until we come up with another way to solve this,
-        Because this Custom Format is used to exclude downloading of BR-DISK, it is still behaving as intended.
+        En fonction de votre schéma de renommage, Sonarr pourrait potentiellement faire correspondre les fichiers renommés APRÈS qu'ils aient été téléchargés et importés en tant que « BR-DISK »,
+        Ce n'est qu'un désagrément cosmétique jusqu'à ce que nous trouvions une autre façon de résoudre ce problème.
+        Étant donné que ce format personnalisé est utilisé pour exclure le téléchargement de BR-DISK, il se comporte toujours comme prévu.
 
-        Potential reasons why this is could occurr:
+        Raisons potentielles pour lesquelles cela pourrait se produire :
 
-        - Blame the often wrongly used naming of x265 encodes.
-        - Sonarr v3/v4 uses dynamic custom formats.
+        - La faute à la dénomination souvent mal utilisée des encodes x265.
+        - Sonarr v3/v4 utilise des formats personnalisés dynamiques.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/br-disk.json' %]][[% endfilter %]]
@@ -800,13 +800,13 @@ We've made 3 guides related to this.
 
 ### LQ
 
-<sub>Low Quality Releases = LQ</sub>
+<sub>Communiqués de mauvaise qualité = LQ</sub>
 
-??? question "LQ - [Click to show/hide]"
+??? question "LQ - [Cliquez pour afficher/masquer]"
 
-    A collection of known Low Quality groups that are often banned from the the top trackers due to their lack of quality releases.
+    Une collection de groupes connus de faible qualité qui sont souvent bannis des meilleurs trackers en raison de leur manque de versions de qualité.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/lq.json' %]][[% endfilter %]]
@@ -816,15 +816,15 @@ We've made 3 guides related to this.
 
 ------
 
-### LQ (Release Title)
+### LQ (titre de la version)
 
-<sub>Low Quality Releases = LQ</sub>
+<sub>Communiqués de mauvaise qualité = LQ</sub>
 
-??? question "LQ (Release Title)- [Click to show/hide]"
+??? question "LQ (titre de la version) - [Cliquez pour afficher/masquer]"
 
-    A collection of terms seen in the titles of Low Quality releases that are not captured by using a release group name.
+    Ensemble de termes présents dans les titres des versions de faible qualité qui ne sont pas capturés à l'aide d'un nom de groupe de versions.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/lq-release-title.json' %]][[% endfilter %]]
@@ -834,13 +834,13 @@ We've made 3 guides related to this.
 
 ------
 
-### Upscaled
+### Mise à l'échelle
 
-??? question "Upscaled - [Click to show/hide]"
+??? question "Mise à niveau - [Cliquez pour afficher/masquer]"
 
-    This custom format is used to prevent Sonarr from grabbing upscaled releases.
+    Ce format personnalisé est utilisé pour empêcher Sonarr de récupérer les versions mises à l'échelle.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/upscaled.json' %]][[% endfilter %]]
@@ -852,20 +852,20 @@ We've made 3 guides related to this.
 
 ### x265 (HD)
 
-<sub>720/1080p no x265 = x265 (720/1080p) = x265 (HD)</sub>
+<sub>720/1080p non x265 = x265 (720/1080p) = x265 (HD)</sub>
 
-??? question "x265 (HD) - [Click to show/hide]"
+??? question "x265 (HD) - [Cliquez pour afficher/masquer]"
 
-    This blocks/ignores 720/1080p(HD) releases that are encoded in x265
+    Ceci bloque/ignore les versions 720/1080p(HD) codées en x265.
 
-    In your quality profile use the following score for this Custom Format: `{{ sonarr['cf']['x265-hd']['trash_scores']['default'] }}`
+    Dans votre profil de qualité, utilisez le score suivant pour ce format personnalisé : `{{ sonarr['cf']['x265-hd']['trash_scores']['default'] }}`
 
-    !!! failure ""
+    !!! échec ""
         --8<-- "includes/docker/x265.md"
 
-            !!! Danger "Don't use this together with [{{ sonarr['cf']['x265-no-hdrdv']['name'] }}](/Sonarr/sonarr-collection-of-custom-formats/#x265-no-hdrdv), Only ever include one of them :warning:"
+            !!! Danger "Ne l'utilisez pas avec [{{ sonarr['cf']['x265-no-hdrdv']['name'] }}](/Sonarr/sonarr-collection-of-custom-formats/# x265-no-hdrdv), n'incluez qu'un seul d'entre eux :avertissement:"
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/x265-hd.json' %]][[% endfilter %]]
@@ -875,13 +875,13 @@ We've made 3 guides related to this.
 
 ------
 
-### Extras
+### Suppléments
 
-??? question "Extras - [Click to show/hide]"
+??? question "Extras - [Cliquez pour afficher/masquer]"
 
-    This blocks/ignores Extras (bonus footage, outtakes, etc)
+    Ceci bloque/ignore les extras (images bonus, extraits, etc.)
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/extras.json' %]][[% endfilter %]]
@@ -891,13 +891,13 @@ We've made 3 guides related to this.
 
 ------
 
-## Misc
+## Divers
 
 ------
 
-### Repack/Proper
+### Reconditionner/correctement
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/repack-proper.json' %]][[% endfilter %]]
@@ -909,7 +909,7 @@ We've made 3 guides related to this.
 
 ### Repack v2
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/repack-v2.json' %]][[% endfilter %]]
@@ -921,7 +921,7 @@ We've made 3 guides related to this.
 
 ### Repack v3
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/repack-v3.json' %]][[% endfilter %]]
@@ -933,13 +933,13 @@ We've made 3 guides related to this.
 
 ### x264
 
-??? question "x264 - [Click to show/hide]"
+??? question "x264 - [Cliquez pour afficher/masquer]"
 
-    x264 is a *free software library* and *application* for encoding video streams into the [H.264/MPEG-4 AVC](https://en.wikipedia.org/wiki/H.264){:target="_blank" rel="noopener noreferrer"} compression format, and is released under the terms of the [GNU GPL](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html){:target="_blank" rel="noopener noreferrer"}.
+    x264 est une *bibliothèque de logiciels gratuits* et une *application* permettant d'encoder des flux vidéo au format [H.264/MPEG-4 AVC](https://en.wikipedia.org/wiki/H.264){:target=" _blank" rel="noopener noreferrer"} format de compression et est publié selon les termes de la [GNU GPL](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html){:target ="_blank" rel="noopener noreferrer"}.
 
-    If you want maximum compatibility and have much better direct play support then use x264 for 720p/1080p.
+    Si vous souhaitez une compatibilité maximale et bénéficier d’une bien meilleure prise en charge de la lecture directe, utilisez x264 pour 720p/1080p.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/x264.json' %]][[% endfilter %]]
@@ -949,16 +949,16 @@ We've made 3 guides related to this.
 
 ------
 
-### x265
+###x265
 
-??? question "x265 - [Click to show/hide]"
+??? question "x265 - [Cliquez pour afficher/masquer]"
 
-    x265 is a *free software library* and *application* for encoding video streams into the [H.265/MPEG-H HEVC](http://en.wikipedia.org/wiki/H.265){:target="_blank" rel="noopener noreferrer"} compression format, and is released under the terms of the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html){:target="_blank" rel="noopener noreferrer"}.
+    x265 est une *bibliothèque de logiciels gratuits* et une *application* permettant d'encoder des flux vidéo au format [H.265/MPEG-H HEVC](http://en.wikipedia.org/wiki/H.265){:target=" _blank" rel="noopener noreferrer"} format de compression et est publié selon les termes de la [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html){:target ="_blank" rel="noopener noreferrer"}.
 
-    !!! failure ""
-        Please don't forget to read the following [Microsized & Wrong Source](#microsized-wrong-source)
+    !!! échec ""
+        N'oubliez pas de lire ce qui suit [Microsized & Wrong Source](#microsized-wrong-source)
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/x265.json' %]][[% endfilter %]]
@@ -968,9 +968,9 @@ We've made 3 guides related to this.
 
 ------
 
-### MPEG2
+###MPEG2
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/mpeg2.json' %]][[% endfilter %]]
@@ -982,7 +982,7 @@ We've made 3 guides related to this.
 
 ### Multi
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/multi.json' %]][[% endfilter %]]
@@ -992,17 +992,17 @@ We've made 3 guides related to this.
 
 ------
 
-## Optional
+## Facultatif
 
 ------
 
-### Bad Dual Groups
+### Mauvais groupes doubles
 
-??? question "Bad dual groups - [Click to show/hide]"
-    These groups take the original release and add their own language (ex. Portuguese) as the main audio track (AAC 2.0), What results after renaming and FFprobe is that the media file will be recognized as Portuguese AAC audio. It's a common rule that you add the best audio as the first track.
-    Also they often even translate/rename the release name to Portuguese.
+??? question "Mauvais groupes doubles - [Cliquez pour afficher/masquer]"
+    Ces groupes prennent la version originale et ajoutent leur propre langue (par exemple le portugais) comme piste audio principale (AAC 2.0). Après avoir renommé et FFprobe, le fichier multimédia sera reconnu comme audio AAC portugais. Il est courant d'ajouter le meilleur son comme première piste.
+    De plus, ils traduisent/renomment souvent même le nom de la version en portugais.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/bad-dual-groups.json' %]][[% endfilter %]]
@@ -1016,18 +1016,18 @@ We've made 3 guides related to this.
 
 <sub>DV = DoVi = Dolby Vision</sub>
 
-??? question "DV (WEBDL) - [Click to show/hide]"
-    This is a special Custom Format that blocks WEBDLs **with** Dolby Vision but **without** HDR10 fallback.
+??? question "DV (WEBDL) - [Cliquez pour afficher/masquer]"
+    Il s'agit d'un format personnalisé spécial qui bloque les WEBDL **avec** Dolby Vision mais **sans** solution de secours HDR10.
 
-    You will need to add the following as a new Custom Format, and when created adjust the scoring in your Quality Profile (`Setting` => `Profiles`) to `-10000`.
+    Vous devrez ajouter les éléments suivants en tant que nouveau format personnalisé et, une fois créé, ajuster la note dans votre profil de qualité (`Setting` => `Profiles`) à `-10000`.
 
-    This Custom Format works together with the normal [DV](#dv) Custom Format that you would use to prefer Dolby Vision.
+    Ce format personnalisé fonctionne avec le format personnalisé [DV](#dv) normal que vous utiliseriez pour préférer Dolby Vision.
 
-    Most WEBDL from Streaming Services don't have the fallback to HDR10. What can result during playback is issues with weird colors (typically a green hue) when you attempt to play it on a non Dolby Vision compatible setup.
+    La plupart des WEBDL des services de streaming ne disposent pas de solution de repli vers HDR10. Ce qui peut résulter pendant la lecture, ce sont des problèmes de couleurs étranges (généralement une teinte verte) lorsque vous essayez de le lire sur une configuration non compatible Dolby Vision.
 
-    Remuxes and Bluray have a fallback to HDR10.
+    Les remux et Bluray ont un recours au HDR10.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dv-webdl.json' %]][[% endfilter %]]
@@ -1037,13 +1037,13 @@ We've made 3 guides related to this.
 
 ------
 
-### HDR10Plus Boost
+### Boost HDR10Plus
 
-??? question "HDR10+ Boost - [Click to show/hide]"
+??? question "HDR10+ Boost - [Cliquez pour afficher/masquer]"
 
-    Optional. Use this one only if you have a (Samsung) TV that supports HDR10+ and you don't have a Setup that supports DV or you prefer HDR10+.
+    Facultatif. Utilisez celui-ci uniquement si vous possédez un téléviseur (Samsung) prenant en charge HDR10+ et que vous n'avez pas de configuration prenant en charge le DV ou si vous préférez HDR10+.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/hdr10plus-boost.json' %]][[% endfilter %]]
@@ -1053,13 +1053,13 @@ We've made 3 guides related to this.
 
 ------
 
-### DV HDR10Plus Boost
+### Boost DV HDR10Plus
 
-??? question "DV HDR10+ Boost - [Click to show/hide]"
+??? question "DV HDR10+ Boost - [Cliquez pour afficher/masquer]"
 
-    Optional: use this one if you want to upgrade from DV HDR10 to DV HDR10+ to support the best of both worlds.
+    Facultatif : utilisez celui-ci si vous souhaitez passer du DV HDR10 au DV HDR10+ pour prendre en charge le meilleur des deux mondes.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dv-hdr10plus-boost.json' %]][[% endfilter %]]
@@ -1069,18 +1069,18 @@ We've made 3 guides related to this.
 
 ------
 
-### No-RlsGroup
+### Sans-RlsGroup
 
-??? question "No-RlsGroup - [Click to show/hide]"
+??? question "No-RlsGroup - [Cliquez pour afficher/masquer]"
 
-    Some indexers strip out the release group which could result in LQ groups getting a higher score.
-    For example, a lot of EVO releases end up stripped of the group name so they appear as "upgrades" and they end up getting a decent score if other things match
+    Certains indexeurs suppriment le groupe de versions, ce qui pourrait permettre aux groupes LQ d'obtenir un score plus élevé.
+    Par exemple, de nombreuses versions d'EVO finissent par être dépourvues du nom du groupe et apparaissent donc comme des "mises à niveau" et finissent par obtenir un score décent si d'autres éléments correspondent.
 
-    !!! warning
+    !!! avertissement
 
-        If you don't use decent filenames (like not adding release groups) don't add this Custom Format, except if you want to upgrade them.
+        Si vous n'utilisez pas de noms de fichiers corrects (par exemple en n'ajoutant pas de groupes de versions), n'ajoutez pas ce format personnalisé, sauf si vous souhaitez les mettre à niveau.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/no-rlsgroup.json' %]][[% endfilter %]]
@@ -1090,13 +1090,13 @@ We've made 3 guides related to this.
 
 ------
 
-### Obfuscated
+### Obscurci
 
-??? question "Obfuscated - [Click to show/hide]"
+??? question "Obscurci - [Cliquez pour afficher/masquer]"
 
-    Optional (use these only if you dislike renamed releases)
+    Facultatif (utilisez-les uniquement si vous n'aimez pas les versions renommées)
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/obfuscated.json' %]][[% endfilter %]]
@@ -1108,11 +1108,11 @@ We've made 3 guides related to this.
 
 ### Retags
 
-??? question "Retags - [Click to show/hide]"
+??? question "Retags - [Cliquez pour afficher/masquer]"
 
-    Optional (use these only if you dislike retagged releases)
+    Facultatif (utilisez-les uniquement si vous n'aimez pas les versions retaggées)
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/retags.json' %]][[% endfilter %]]
@@ -1122,13 +1122,13 @@ We've made 3 guides related to this.
 
 ------
 
-### Scene
+### Scène
 
-??? question "Scene - [Click to show/hide]"
+??? question "Scène - [Cliquez pour afficher/masquer]"
 
-    This Custom Format will try to recognize so-called "scene releases". Depending on your preferences, you can give it a negative score `-10000`, a positive score, or just skip adding it altogether.
+    Ce format personnalisé tentera de reconnaître ce que l'on appelle les « versions de scène ». Selon vos préférences, vous pouvez lui attribuer un score négatif « -10 000 », un score positif, ou simplement ignorer complètement son ajout.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/scene.json' %]][[% endfilter %]]
@@ -1138,22 +1138,22 @@ We've made 3 guides related to this.
 
 ------
 
-### Season Pack
+### Pack de saison
 
-??? question "Season Pack - [Click to show/hide]"
+??? question "Season Pack - [Cliquez pour afficher/masquer]"
 
-    This Custom Format can be used to prefer or exclude season packs
+    Ce format personnalisé peut être utilisé pour préférer ou exclure les packs de saison
 
-    - Give it a score of `10` if you prefer a season pack.
-    - Give it a score of `-10000` if you prefer to not download season packs.
-    - `/\bS\d+\b(?!E\d+\b)/i` season packs are preferred: however, given the folder name is ignored the error/warning/issue occurs as the file names would not be a season pack.
-    - Keep in mind this is the only way to prefer season packs. If you have preferred words, due to a long standing bug => Preferred Words overrule season pack preference [Sonarr/Sonarr#3562](https://github.com/Sonarr/Sonarr/issues/3562){:target="_blank" rel="noopener noreferrer"}
+    - Donnez-lui une note de « 10 » si vous préférez un pack saisonnier.
+    - Donnez-lui un score de « -10000 » si vous préférez ne pas télécharger les packs de saison.
+    - Les packs de saison `/\bS\d+\b(?!E\d+\b)/i` sont préférés : cependant, étant donné que le nom du dossier est ignoré, l'erreur/avertissement/problème se produit car les noms de fichiers ne seraient pas une saison paquet.
+    - Gardez à l'esprit que c'est la seule façon de préférer les packs saisonniers. Si vous avez des mots préférés, en raison d'un bug de longue date => Les mots préférés annulent les préférences du pack saisonnier [Sonarr/Sonarr#3562](https://github.com/Sonarr/Sonarr/issues/3562){:target="_blank " rel="noopener noreferrer"}
 
-    !!! danger "WARNING"
-        - This Custom Format could result in a download loop :bangbang:
-        - This will upgrade also your already downloaded single episodes :bangbang:
+    !!! danger "AVERTISSEMENT"
+        - Ce format personnalisé pourrait entraîner une boucle de téléchargement :bangbang:
+        - Cela mettra également à niveau vos épisodes uniques déjà téléchargés :bangbang:
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/season-pack.json' %]][[% endfilter %]]
@@ -1163,21 +1163,21 @@ We've made 3 guides related to this.
 
 ------
 
-### x265 (no HDR/DV)
+### x265 (pas de HDR/DV)
 
-??? question "x265 (no HDR/DV) - [Click to show/hide]"
+??? question "x265 (pas de HDR/DV) - [Cliquez pour afficher/masquer]"
 
-  This blocks most 720/1080p (HD) releases that are encoded in x265.
+  Cela bloque la plupart des versions 720/1080p (HD) codées en x265.
 
-    **But it will allow 720/1080p x265 releases if they have HDR and/or DV**
+    **Mais cela autorisera les versions 720/1080p x265 si elles ont HDR et/ou DV**
 
-    *Being that some NF releases won't be released as 4k, but you want to have DV/HDR releases.*
+    *Étant donné que certaines versions NF ne seront pas publiées en 4K, mais vous souhaitez avoir des versions DV/HDR.*
 
-    In your quality profile use the following score for this Custom Format: `{{ sonarr['cf']['x265-no-hdrdv']['trash_scores']['default'] }}`
+    Dans votre profil de qualité, utilisez le score suivant pour ce format personnalisé : `{{ sonarr['cf']['x265-no-hdrdv']['trash_scores']['default'] }}`
 
-    !!! Danger "Don't use this together with [{{ sonarr['cf']['x265-hd']['name'] }}](/Sonarr/sonarr-collection-of-custom-formats/#x265-hd), Only ever include one of them :warning:"
+    !!! Danger "Ne l'utilisez pas avec [{{ sonarr['cf']['x265-hd']['name'] }}](/Sonarr/sonarr-collection-of-custom-formats/#x265- hd), n'incluez qu'un seul d'entre eux :avertissement:"
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/x265-no-hdrdv.json' %]][[% endfilter %]]
@@ -1187,16 +1187,16 @@ We've made 3 guides related to this.
 
 ------
 
-### AV1
+###AV1
 
-??? question "AV1 - [Click to show/hide]"
+??? question "AV1 - [Cliquez pour afficher/masquer]"
 
-    - This is a new codec and you need modern devices that support it.
-    - We also had reports of playback/transcoding issues.
-    - No main group is actually using it (yet).
-    - It's better to ignore this new codec to prevent compatibility issues.
+    - Il s'agit d'un nouveau codec et vous avez besoin d'appareils modernes qui le prennent en charge.
+    - Nous avons également eu des rapports faisant état de problèmes de lecture/transcodage.
+    - Aucun groupe principal ne l'utilise (encore).
+    - Il est préférable d'ignorer ce nouveau codec pour éviter des problèmes de compatibilité.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/av1.json' %]][[% endfilter %]]
@@ -1206,16 +1206,16 @@ We've made 3 guides related to this.
 
 ------
 
-### VP9
+###VP9
 
-??? question "VP9 - [Click to show/hide]"
+??? question "VP9 - [Cliquez pour afficher/masquer]"
 
-    - This is a new codec and you need modern devices that support it.
-    - We also had reports of playback/transcoding issues.
-    - No main group is actually using it (yet).
-    - It's better to ignore this new codec to prevent compatibility issues.
+    - Il s'agit d'un nouveau codec et vous avez besoin d'appareils modernes qui le prennent en charge.
+    - Nous avons également eu des rapports faisant état de problèmes de lecture/transcodage.
+    - Aucun groupe principal ne l'utilise (encore).
+    - Il est préférable d'ignorer ce nouveau codec pour éviter des problèmes de compatibilité.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/vp9.json' %]][[% endfilter %]]
@@ -1225,14 +1225,14 @@ We've made 3 guides related to this.
 
 ------
 
-### Internal
+### Interne
 
-??? question "Internal - [Click to show/hide]"
+??? question "Interne - [Cliquez pour afficher/masquer]"
 
-    - For those that prefer scene releases may want to boost internals as they generally have higher settings that may not conform to ruleset.
-    - In some rare cases P2P use also INTERNAL.
+    - Pour ceux qui préfèrent les versions de scène, vous souhaiterez peut-être améliorer les composants internes, car ils ont généralement des paramètres plus élevés qui peuvent ne pas être conformes aux règles.
+    - Dans de rares cas, le P2P utilise également INTERNE.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/internal.json' %]][[% endfilter %]]
@@ -1242,13 +1242,13 @@ We've made 3 guides related to this.
 
 ------
 
-### SDR
+### DTS
 
-??? question "SDR - [Click to show/hide]"
+??? question "SDR - [Cliquez pour afficher/masquer]"
 
-    - This will help to prevent to grab UHD/4k releases without HDR Formats.
+    - Cela aidera à éviter de récupérer des versions UHD/4k sans formats HDR.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/sdr.json' %]][[% endfilter %]]
@@ -1258,13 +1258,13 @@ We've made 3 guides related to this.
 
 ------
 
-### SDR (no WEBDL)
+### SDR (pas de WEBDL)
 
-??? question "SDR (no WEBDL) - [Click to show/hide]"
+??? question "SDR (pas de WEBDL) - [Cliquez pour afficher/masquer]"
 
-    - This will prevent grabbing UHD/4k Remux and Bluray encode releases without HDR Formats - i.e., SDR WEB releases will still be allowed. 4K SDR WEB releases can look better than the 1080p version, owing to improved bitrates.
+    - Cela empêchera la récupération des versions encodées UHD/4k Remux et Bluray sans formats HDR - c'est-à-dire que les versions WEB SDR seront toujours autorisées. Les versions WEB 4K SDR peuvent être plus belles que la version 1080p, grâce à des débits binaires améliorés.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/sdr-no-webdl.json' %]][[% endfilter %]]
@@ -1274,13 +1274,13 @@ We've made 3 guides related to this.
 
 ------
 
-### DV (Disk)
+### DV (Disque)
 
-??? question "DV (Disk) - [Click to show/hide]"
+??? question "DV (Disque) - [Cliquez pour afficher/masquer]"
 
-    - This will boost the score for Dolby Vision Releases using the original full quality Dolby Vision layer from the disc release to replace the old WEBDL HYBRID release.
+    - Cela augmentera le score des versions Dolby Vision en utilisant la couche Dolby Vision originale de pleine qualité de la version disque pour remplacer l'ancienne version WEBDL HYBRID.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dv-disk.json' %]][[% endfilter %]]
@@ -1292,11 +1292,11 @@ We've made 3 guides related to this.
 
 ### HFR
 
-??? question "HFR - [Click to show/hide]"
+??? question "HFR - [Cliquez pour afficher/masquer]"
 
-    - This will boost the score for HFR releases. HFR stands for High Frame Rate and refers to a video format that uses a higher number of frames per second than traditional video, resulting in smoother and more detailed motion.
+    - Cela augmentera le score des versions HFR. HFR signifie High Frame Rate et fait référence à un format vidéo qui utilise un nombre d'images par seconde plus élevé que la vidéo traditionnelle, ce qui donne un mouvement plus fluide et plus détaillé.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/hfr.json' %]][[% endfilter %]]
@@ -1306,21 +1306,21 @@ We've made 3 guides related to this.
 
 ------
 
-## HQ Source Groups
+## Groupes sources du QG
 
 ------
 
-### Remux Tier 01
+### Remux niveau 01
 
-??? question "Remux Tier 01 - [Click to show/hide]"
+??? question "Remux Tier 01 - [Cliquez pour afficher/masquer]"
 
-    Groups that:
+    Des groupes qui :
 
-    - Have established themselves as consistently delivering high-quality releases.
-    - Produce remuxes from multiple sources (discs) and combine them to produce the best end result.
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - Se sont imposés comme fournissant constamment des versions de haute qualité.
+    - Produisez des remux à partir de plusieurs sources (disques) et combinez-les pour produire le meilleur résultat final.
+    - Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/remux-tier-01.json' %]][[% endfilter %]]
@@ -1330,20 +1330,20 @@ We've made 3 guides related to this.
 
 ------
 
-### Remux Tier 02
+### Remux niveau 02
 
-??? question "Remux Tier 02 - [Click to show/hide]"
+??? question "Remux Tier 02 - [Cliquez pour afficher/masquer]"
 
-    Groups that:
+    Des groupes qui :
 
-    - Only use one source (poetically dubbed "one disc wonders").
-    - Use a fully automated method without double-checking.
-    - Don't check/review their releases prior to uploading.
-    - Haven't released much. (yet)
-    - Have retired and don't have the best quality by today's standards
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - N'utilisez qu'une seule source (surnommée poétiquement « les merveilles d'un disque »).
+    - Utilisez une méthode entièrement automatisée sans double vérification.
+    - Ne vérifiez/n'examinez pas leurs versions avant de les télécharger.
+    - Je n'ai pas publié grand-chose. (encore)
+    - Vous avez pris votre retraite et n'avez pas la meilleure qualité selon les normes actuelles
+    - Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/remux-tier-02.json' %]][[% endfilter %]]
@@ -1351,17 +1351,17 @@ We've made 3 guides related to this.
 
 <sub><sup>[TOP](#index)</sup>
 
-### HD Bluray Tier 01
+### HD Blu-ray niveau 01
 
-??? question "HD Bluray Tier 01 - [Click to show/hide]"
+??? question "HD Bluray Tier 01 - [Cliquez pour afficher/masquer]"
 
-    Groups that:
+    Des groupes qui :
 
-    - Have established themselves as consistently delivering high-quality releases.
-    - Use remuxes as their source without micro-sizing them.
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - Se sont imposés comme fournissant constamment des versions de haute qualité.
+    - Utilisez les remux comme source sans les micro-dimensionner.
+    - Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/hd-bluray-tier-01.json' %]][[% endfilter %]]
@@ -1371,16 +1371,16 @@ We've made 3 guides related to this.
 
 ------
 
-### HD Bluray Tier 02
+### Blu-ray HD niveau 02
 
-??? question "HD Bluray Tier 02 - [Click to show/hide]"
+??? question "HD Bluray Tier 02 - [Cliquez pour afficher/masquer]"
 
-    Groups that:
+    Des groupes qui :
 
-    - Use remuxes as their source without micro-sizing them.
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - Utilisez les remux comme source sans les micro-dimensionner.
+    - Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/hd-bluray-tier-02.json' %]][[% endfilter %]]
@@ -1388,18 +1388,18 @@ We've made 3 guides related to this.
 
 <sub><sup>[TOP](#index)</sup>
 
-### WEB Tier 01
+### WEB Niveau 01
 
-??? question "WEB Tier 01 - [Click to show/hide]"
+??? question "WEB Tier 01 - [Cliquez pour afficher/masquer]"
 
-    Groups that:
+    Des groupes qui :
 
-    - Have established themselves as consistently delivering high-quality releases.
-    - Create hybrids.
-    - Sign up for the gentleman list on a certain private tracker.
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - Se sont imposés comme fournissant constamment des versions de haute qualité.
+    - Créer des hybrides.
+    - Inscrivez-vous à la liste des gentlemen sur un certain tracker privé.
+    - Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/web-tier-01.json' %]][[% endfilter %]]
@@ -1409,18 +1409,18 @@ We've made 3 guides related to this.
 
 ------
 
-### WEB Tier 02
+### WEB Niveau 02
 
-??? question "WEB Tier 02 - [Click to show/hide]"
+??? question "WEB Tier 02 - [Cliquez pour afficher/masquer]"
 
-    Groups that:
+    Des groupes qui :
 
-    - Sign up for the gentleman list on a certain private tracker.
-    - Have only done a few releases
-    - Are not on the list but have a few releases on their name
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - Inscrivez-vous à la liste des gentlemen sur un certain tracker privé.
+    - Je n'ai fait que quelques versions
+    - Ne sont pas sur la liste mais ont quelques sorties à leur nom
+    - Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/web-tier-02.json' %]][[% endfilter %]]
@@ -1430,18 +1430,18 @@ We've made 3 guides related to this.
 
 ------
 
-### WEB Tier 03
+### WEB Niveau 03
 
-??? question "WEB Tier 03 - [Click to show/hide]"
+??? question "WEB Tier 03 - [Cliquez pour afficher/masquer]"
 
-    Groups that:
+    Des groupes qui :
 
-    - Sign up for the gentleman list on a certain private tracker.
-    - Have only done a few releases
-    - Are not on the list but have a few releases on their name
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - Inscrivez-vous à la liste des gentlemen sur un certain tracker privé.
+    - Je n'ai fait que quelques versions
+    - Ne sont pas sur la liste mais ont quelques sorties à leur nom
+    - Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/web-tier-03.json' %]][[% endfilter %]]
@@ -1451,13 +1451,13 @@ We've made 3 guides related to this.
 
 ------
 
-### WEB Scene
+### Scène WEB
 
-??? question "WEB Scene - [Click to show/hide]"
+??? question "Scène WEB - [Cliquez pour afficher/masquer]"
 
-    One of the few scene groups that released quality releases.
+    L'un des rares groupes de scène à avoir sorti des sorties de qualité.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/web-scene.json' %]][[% endfilter %]]
@@ -1467,19 +1467,19 @@ We've made 3 guides related to this.
 
 ------
 
-## Streaming Services
+## Services de diffusion en continu
 
 ------
 
-### AMZN
+###AMZN
 
 <sub>Amazon</sub>
 
-??? question "Amazon - [Click to show/hide]"
+??? question "Amazon - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Amazon_Prime_Video){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Amazon_Prime_Video){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/amzn.json' %]][[% endfilter %]]
@@ -1493,11 +1493,11 @@ We've made 3 guides related to this.
 
 <sub>Apple TV+</sub>
 
-??? question "Apple TV+ - [Click to show/hide]"
+??? question "Apple TV+ - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Apple_TV%2B){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Apple_TV%2B){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/atvp.json' %]][[% endfilter %]]
@@ -1509,13 +1509,13 @@ We've made 3 guides related to this.
 
 ### DCU
 
-<sub>DC Universe</sub>
+<sub>Univers DC</sub>
 
-??? question "DC Universe - [Click to show/hide]"
+??? question "DC Universe - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/DC_Universe_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/DC_Universe_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dcu.json' %]][[% endfilter %]]
@@ -1525,15 +1525,15 @@ We've made 3 guides related to this.
 
 ------
 
-### DSNP
+###DSNP
 
 <sub>Disney+</sub>
 
-??? question "Disney+ - [Click to show/hide]"
+??? question "Disney+ - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Disney%2B){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Disney%2B){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dsnp.json' %]][[% endfilter %]]
@@ -1547,11 +1547,11 @@ We've made 3 guides related to this.
 
 <sub>HBO Max</sub>
 
-??? question "HBO Max - [Click to show/hide]"
+??? question "HBO Max - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/HBO_Max){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/HBO_Max){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/hmax.json' %]][[% endfilter %]]
@@ -1565,11 +1565,11 @@ We've made 3 guides related to this.
 
 <sub>HBO</sub>
 
-??? question "HBO - [Click to show/hide]"
+??? question "HBO - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/HBO){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/HBO){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/hbo.json' %]][[% endfilter %]]
@@ -1579,15 +1579,15 @@ We've made 3 guides related to this.
 
 ------
 
-### Max
+###Maximum
 
-<sub>Max</sub>
+<sub>Maximum</sub>
 
-??? question "Max - [Click to show/hide]"
+??? question "Max - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Max_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Max_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/max.json' %]][[% endfilter %]]
@@ -1601,11 +1601,11 @@ We've made 3 guides related to this.
 
 <sub>Hulu</sub>
 
-??? question "Hulu - [Click to show/hide]"
+??? question "Hulu - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Hulu){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Hulu){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/hulu.json' %]][[% endfilter %]]
@@ -1619,11 +1619,11 @@ We've made 3 guides related to this.
 
 <sub>BBC iPlayer</sub>
 
-??? question "BBC iPlayer - [Click to show/hide]"
+??? question "BBC iPlayer - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/BBC_iPlayer){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/BBC_iPlayer){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/ip.json' %]][[% endfilter %]]
@@ -1637,11 +1637,11 @@ We've made 3 guides related to this.
 
 <sub>NLZiet</sub>
 
-??? question "NLZiet - [Click to show/hide]"
+??? question "NLZiet - [Cliquez pour afficher/masquer]"
 
-    NLZIET is the online service of Dutch broadcasters that provides non-stop tv, commercial-free. The streaming service brings the best of all channels straight to your preferred device and lets you see your favorite tv content in high quality on all available platforms; anytime and anywhere.
+    NLZIET est le service en ligne des radiodiffuseurs néerlandais qui propose une télévision en continu, sans publicité. Le service de streaming apporte le meilleur de toutes les chaînes directement sur votre appareil préféré et vous permet de voir votre contenu télévisé préféré en haute qualité sur toutes les plateformes disponibles ; N'importe quand et n'importe où.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/nlz.json' %]][[% endfilter %]]
@@ -1655,11 +1655,11 @@ We've made 3 guides related to this.
 
 <sub>Netflix</sub>
 
-??? question "Netflix - [Click to show/hide]"
+??? question "Netflix - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Netflix){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Netflix){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/nf.json' %]][[% endfilter %]]
@@ -1669,15 +1669,15 @@ We've made 3 guides related to this.
 
 ------
 
-### PMTP
+###PMTP
 
 <sub>Paramount+</sub>
 
-??? question "Paramount+ - [Click to show/hide]"
+??? question "Paramount+ - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Paramount%2B){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Paramount%2B){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/pmtp.json' %]][[% endfilter %]]
@@ -1687,15 +1687,15 @@ We've made 3 guides related to this.
 
 ------
 
-### PCOK
+###PCOK
 
-<sub>Peacock TV</sub>
+<sub>Paon TV</sub>
 
-??? question "Peacock TV - [Click to show/hide]"
+??? question "Peacock TV - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Peacock_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Peacock_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/pcok.json' %]][[% endfilter %]]
@@ -1709,11 +1709,11 @@ We've made 3 guides related to this.
 
 <sub>Quibi</sub>
 
-??? question "Quibi - [Click to show/hide]"
+??? question "Quibi - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Quibi){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Quibi){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/qibi.json' %]][[% endfilter %]]
@@ -1727,11 +1727,11 @@ We've made 3 guides related to this.
 
 <sub>SHOWTIME</sub>
 
-??? question "SHOWTIME - [Click to show/hide]"
+??? question "SHOWTIME - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Showtime_(TV_network)){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Showtime_(TV_network)){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/sho.json' %]][[% endfilter %]]
@@ -1743,13 +1743,13 @@ We've made 3 guides related to this.
 
 ### VDL
 
-<sub>Videoland</sub>
+<sub>Vidéoland</sub>
 
-??? question "Videoland - [Click to show/hide]"
+??? question "Videoland - [Cliquez pour afficher/masquer]"
 
-    Videoland is a Dutch OTT online service provider owned by RTL Nederland. Originally it was a retail chain of video rental stores. Its main competitor is Netflix.
+    Videoland est un fournisseur de services en ligne OTT néerlandais appartenant à RTL Nederland. À l’origine, il s’agissait d’une chaîne de magasins de location de vidéos. Son principal concurrent est Netflix.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/vdl.json' %]][[% endfilter %]]
@@ -1763,11 +1763,11 @@ We've made 3 guides related to this.
 
 <sub>Stan</sub>
 
-??? question "STAN - [Click to show/hide]"
+??? question "STAN - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Stan_(service)){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Stan_(service)){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/stan.json' %]][[% endfilter %]]
@@ -1777,15 +1777,15 @@ We've made 3 guides related to this.
 
 ------
 
-### RED
+### ROUGE
 
-<sub>RED = Youtube Red = Youtube Premium</sub>
+<sub>ROUGE = Youtube Rouge = Youtube Premium</sub>
 
-??? question "Youtube Red - [Click to show/hide]"
+??? question "Youtube Red - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/YouTube_Premium){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/YouTube_Premium){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/red.json' %]][[% endfilter %]]
@@ -1795,15 +1795,15 @@ We've made 3 guides related to this.
 
 ------
 
-### IT
+### IL
 
 <sub>iT = iTunes</sub>
 
-??? question "iTunes - [Click to show/hide]"
+??? question "iTunes - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/ITunes){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/ITunes){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/it.json' %]][[% endfilter %]]
@@ -1813,15 +1813,15 @@ We've made 3 guides related to this.
 
 ------
 
-### CANALPlus
+###CANALPlus
 
-<sub>CANALPlus = CANAL+/MyCANAL</sub>
+<sub>CANALPlus = CANAL+/MonCANAL</sub>
 
-??? question "Canal+ - [Click to show/hide]"
+??? question "Canal+ - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Canal%2B){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Canal%2B){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-canalplus.json' %]][[% endfilter %]]
@@ -1835,11 +1835,11 @@ We've made 3 guides related to this.
 
 <sub>SALTO = SⱯLTO</sub>
 
-??? question "SⱯLTO - [Click to show/hide]"
+??? question "SⱯLTO - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Salto_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Salto_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-salto.json' %]][[% endfilter %]]
@@ -1849,15 +1849,15 @@ We've made 3 guides related to this.
 
 ------
 
-### RTBF
+###RTBF
 
 <sub>RTBF = Radio-télévision belge de la Communauté française (Radio Télévision Belge Francophone)</sub>
 
-??? question "RTBF - [Click to show/hide]"
+??? question "RTBF - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/RTBF){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/RTBF){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-rtbf.json' %]][[% endfilter %]]
@@ -1871,11 +1871,11 @@ We've made 3 guides related to this.
 
 <sub>CC = Comedy Central</sub>
 
-??? question "CC - [Click to show/hide]"
+??? question "CC - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Comedy_Central){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Comedy_Central){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/cc.json' %]][[% endfilter %]]
@@ -1887,13 +1887,13 @@ We've made 3 guides related to this.
 
 ### Crav
 
-<sub>Crave</sub>
+<sub>Envie</sub>
 
-??? question "CRAVE - [Click to show/hide]"
+??? question "CRAVE - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Crave_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Crave_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/crav.json' %]][[% endfilter %]]
@@ -1907,11 +1907,11 @@ We've made 3 guides related to this.
 
 <sub>OViD</sub>
 
-??? question "OViD - [Click to show/hide]"
+??? question "OViD - [Cliquez pour afficher/masquer]"
 
-    [OViD Website](https://search.ovid.tv/other/about){:target="_blank" rel="noopener noreferrer"}
+    [Site Web OViD](https://search.ovid.tv/other/about){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/ovid.json' %]][[% endfilter %]]
@@ -1925,13 +1925,13 @@ We've made 3 guides related to this.
 
 <sub>FOD</sub>
 
-??? question "FOD - [Click to show/hide]"
+??? question "FOD - [Cliquez pour afficher/masquer]"
 
-    - Fuji Television On Demand
-    - [From Wikipedia, the free encyclopedia](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%B8%E3%83%86%E3%83%AC%E3%83%93%E3%82%AA%E3%83%B3%E3%83%87%E3%83%9E%E3%83%B3%E3%83%89){:target="_blank" rel="noopener noreferrer"}
-    - [FOD Website](https://fod-sp.fujitv.co.jp){:target="_blank" rel="noopener noreferrer"}
+    - Télévision Fuji à la demande
+    - [De Wikipédia, l'encyclopédie libre](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%B8%E3%83%86%E3%83%AC%E3%83 %93%E3%82%AA%E3%83%B3%E3%83%87%E3%83%9E%E3%83%B3%E3%83%89){:target="_blank" rel="noopener aucun référent"}
+    - [Site Web FOD](https://fod-sp.fujitv.co.jp){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/fod.json' %]][[% endfilter %]]
@@ -1941,16 +1941,16 @@ We've made 3 guides related to this.
 
 ------
 
-### TVer
+### Téléviseur
 
-<sub>TVer</sub>
+<sub>TVeur</sub>
 
-??? question "TVer - [Click to show/hide]"
+??? question "TVer - [Cliquez pour afficher/masquer]"
 
-    - [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/TVer_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
-    - [TVer Website](https://tver.jp){:target="_blank" rel="noopener noreferrer"}
+    - [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/TVer_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
+    - [Site Web TVer](https://tver.jp){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/tver.json' %]][[% endfilter %]]
@@ -1960,16 +1960,16 @@ We've made 3 guides related to this.
 
 ------
 
-### U-NEXT
+### U-SUIVANT
 
 <sub>U-NEXT</sub>
 
-??? question "U-NEXT - [Click to show/hide]"
+??? question "U-NEXT - [Cliquez pour afficher/masquer]"
 
-    - [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/U-Next){:target="_blank" rel="noopener noreferrer"}
-    - [U-NEXT Website](https://video.unext.jp){:target="_blank" rel="noopener noreferrer"}
+    - [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/U-Next){:target="_blank" rel="noopener noreferrer"}
+    - [Site Web U-NEXT](https://video.unext.jp){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/u-next.json' %]][[% endfilter %]]
@@ -1979,16 +1979,16 @@ We've made 3 guides related to this.
 
 ------
 
-### ALL4
+### TOUS4
 
-<sub>ALL4</sub>
+<sub>TOUS4</sub>
 
-??? question "ALL4 - [Click to show/hide]"
+??? question "ALL4 - [Cliquez pour afficher/masquer]"
 
-    - [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Channel_4_(VoD_service)){:target="_blank" rel="noopener noreferrer"}
-    - ALL4 is a previous name for the UK's Channel4 VOD service. Releases are usually identified with either 'ALL4' or '4OD', not 'Channel4'.
+    - [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Channel_4_(VoD_service)){:target="_blank" rel="noopener noreferrer"}
+    - ALL4 est l'ancien nom du service britannique Channel4 VOD. Les versions sont généralement identifiées par « ALL4 » ou « 4OD », et non par « Channel4 ».
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/all4.json' %]][[% endfilter %]]
@@ -2000,14 +2000,14 @@ We've made 3 guides related to this.
 
 ### 4OD
 
-<sub>4OD</sub>
+<sub> 4OD</sub>
 
-??? question "4OD - [Click to show/hide]"
+??? question "4OD - [Cliquez pour afficher/masquer]"
 
-    - [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Channel_4_(VoD_service)){:target="_blank" rel="noopener noreferrer"}
-    - 4OD is a previous name for the UK's Channel4 VOD service. Releases are usually identified with either 'ALL4' or '4OD', not 'Channel4'.
+    - [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Channel_4_(VoD_service)){:target="_blank" rel="noopener noreferrer"}
+    - 4OD est l'ancien nom du service britannique Channel4 VOD. Les versions sont généralement identifiées par « ALL4 » ou « 4OD », et non par « Channel4 ».
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/4od.json' %]][[% endfilter %]]
@@ -2017,13 +2017,13 @@ We've made 3 guides related to this.
 
 ------
 
-### UHD Streaming Boost
+### Amélioration du streaming UHD
 
-??? question "UHD Streaming Boost - [Click to show/hide]"
+??? question "UHD Streaming Boost - [Cliquez pour afficher/masquer]"
 
-    Some streaming services have UHD releases that are generally better than their HD counterparts. The UHD Streaming Boost custom format increases those streaming services' scores appropriately for UHD releases. Use this in conjunction with the regular streaming service custom formats.
+    Certains services de streaming proposent des versions UHD qui sont généralement meilleures que leurs homologues HD. Le format personnalisé UHD Streaming Boost augmente les scores de ces services de streaming de manière appropriée pour les versions UHD. Utilisez-le en conjonction avec les formats personnalisés du service de streaming habituel.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/uhd-streaming-boost.json' %]][[% endfilter %]]
@@ -2033,13 +2033,13 @@ We've made 3 guides related to this.
 
 ------
 
-### UHD Streaming Cut
+### Coupe du streaming UHD
 
-??? question "UHD Streaming Cut - [Click to show/hide]"
+??? question "UHD Streaming Cut - [Cliquez pour afficher/masquer]"
 
-    Some streaming services have UHD releases that are generally worse than their HD counterparts. The UHD Streaming Cut custom format decreases those streaming services' scores appropriately for UHD releases. Use this in conjunction with the regular streaming service custom formats.
+    Certains services de streaming proposent des versions UHD généralement pires que leurs homologues HD. Le format personnalisé UHD Streaming Cut diminue les scores de ces services de streaming de manière appropriée pour les versions UHD. Utilisez-le en conjonction avec les formats personnalisés du service de streaming habituel.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/uhd-streaming-cut.json' %]][[% endfilter %]]
@@ -2049,16 +2049,16 @@ We've made 3 guides related to this.
 
 ------
 
-## Anime
+## Animés
 
 ------
 
-### Anime BD Tier 01 (Top SeaDex Muxers)
+### Anime BD Tier 01 (meilleurs multiplexeurs SeaDex)
 
-??? question "Anime BD Tier 01 (Top SeaDex Muxers) - [Click to show/hide]"
-    Groups that do the best releases as per SeaDex. They are more consistent and trump others
+??? question "Anime BD Tier 01 (Meilleurs multiplexeurs SeaDex) - [Cliquez pour afficher/masquer]"
+    Groupes qui font les meilleures versions selon SeaDex. Ils sont plus cohérents et surpassent les autres
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-bd-tier-01-top-seadex-muxers.json' %]][[% endfilter %]]
@@ -2068,12 +2068,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Anime BD Tier 02 (SeaDex Muxers)
+### Anime BD Tier 02 (Muxeurs SeaDex)
 
-??? question "Anime BD Tier 02 (SeaDex Muxers) - [Click to show/hide]"
-    Groups that do the best releases as per SeaDex. They are more consistent and trump others
+??? question "Anime BD Tier 02 (SeaDex Muxers) - [Cliquez pour afficher/masquer]"
+    Groupes qui font les meilleures versions selon SeaDex. Ils sont plus cohérents et surpassent les autres
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-bd-tier-02-seadex-muxers.json' %]][[% endfilter %]]
@@ -2083,12 +2083,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Anime BD Tier 03 (SeaDex Muxers)
+### Anime BD Tier 03 (Muxeurs SeaDex)
 
-??? question "Anime BD Tier 03 (SeaDex Muxers) - [Click to show/hide]"
-    Groups that do the best releases as per SeaDex. They are more consistent and trump others
+??? question "Anime BD Tier 03 (SeaDex Muxers) - [Cliquez pour afficher/masquer]"
+    Groupes qui font les meilleures versions selon SeaDex. Ils sont plus cohérents et surpassent les autres
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-bd-tier-03-seadex-muxers.json' %]][[% endfilter %]]
@@ -2098,12 +2098,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Anime BD Tier 04 (SeaDex Muxers)
+### Anime BD Tier 04 (Muxeurs SeaDex)
 
-??? question "Anime BD Tier 04 (SeaDex Muxers) - [Click to show/hide]"
-    Groups that do the best releases as per SeaDex. They are more consistent and trump others
+??? question "Anime BD Tier 04 (SeaDex Muxers) - [Cliquez pour afficher/masquer]"
+    Groupes qui font les meilleures versions selon SeaDex. Ils sont plus cohérents et surpassent les autres
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-bd-tier-04-seadex-muxers.json' %]][[% endfilter %]]
@@ -2113,12 +2113,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Anime BD Tier 05 (Remuxes)
+### Anime BD Niveau 05 (Remux)
 
-??? question "Anime BD Tier 05 (Remuxes) - [Click to show/hide]"
-    Groups that are consistent and do Remuxes
+??? question "Anime BD Tier 05 (Remuxes) - [Cliquez pour afficher/masquer]"
+    Des groupes cohérents et qui font des Remux
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-bd-tier-05-remuxes.json' %]][[% endfilter %]]
@@ -2128,12 +2128,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Anime BD Tier 06 (FanSubs)
+### Anime BD niveau 06 (FanSubs)
 
-??? question "Anime BD Tier 06 (FanSubs) - [Click to show/hide]"
-    FanSub groups that are consistent
+??? question "Anime BD Tier 06 (FanSubs) - [Cliquez pour afficher/masquer]"
+    Groupes FanSub cohérents
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-bd-tier-06-fansubs.json' %]][[% endfilter %]]
@@ -2143,12 +2143,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Anime BD Tier 07 (P2P/Scene)
+### Anime BD Niveau 07 (P2P/Scène)
 
-??? question "Anime BD Tier 07 (P2P/Scene) - [Click to show/hide]"
-    Known P2P and Scene Anime groups
+??? question "Anime BD Tier 07 (P2P/Scène) - [Cliquez pour afficher/masquer]"
+    Groupes P2P et Scene Anime connus
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-bd-tier-07-p2pscene.json' %]][[% endfilter %]]
@@ -2158,12 +2158,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Anime BD Tier 08 (Mini Encodes)
+### Anime BD niveau 08 (mini-encodages)
 
-??? question "Anime BD Tier 08 (Mini Encodes) - [Click to show/hide]"
-    Know groups that do mini encodes
+??? question "Anime BD Tier 08 (Mini Encodes) - [Cliquez pour afficher/masquer]"
+    Connaître les groupes qui effectuent des mini-encodages
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-bd-tier-08-mini-encodes.json' %]][[% endfilter %]]
@@ -2173,12 +2173,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Anime Web Tier 01 (Muxers)
+### Anime Web Tier 01 (Muxeurs)
 
-??? question "Anime Web Tier 01 (Muxers) - [Click to show/hide]"
-    Groups that do the best releases as per SeaDex. They are more consistent and trump others
+??? question "Anime Web Tier 01 (Muxers) - [Cliquez pour afficher/masquer]"
+    Groupes qui font les meilleures versions selon SeaDex. Ils sont plus cohérents et surpassent les autres
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-web-tier-01-muxers.json' %]][[% endfilter %]]
@@ -2188,12 +2188,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Anime Web Tier 02 (Top FanSubs)
+### Anime Web Niveau 02 (Meilleurs FanSubs)
 
-??? question "Anime Web Tier 02 (Top FanSubs) - [Click to show/hide]"
-    Groups that do the best releases as per SeaDex. They are more consistent and trump others
+??? question "Anime Web Tier 02 (Top FanSubs) - [Cliquez pour afficher/masquer]"
+    Groupes qui font les meilleures versions selon SeaDex. Ils sont plus cohérents et surpassent les autres
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-web-tier-02-top-fansubs.json' %]][[% endfilter %]]
@@ -2203,12 +2203,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Anime Web Tier 03 (Official Subs)
+### Anime Web Tier 03 (Sous-marins officiels)
 
-??? question "Anime Web Tier 03 (Official Subs) - [Click to show/hide]"
-    Official sub groups that tend to be more consistent and release fast
+??? question "Anime Web Tier 03 (Sous-marins officiels) - [Cliquez pour afficher/masquer]"
+    Sous-groupes officiels qui ont tendance à être plus cohérents et à sortir rapidement
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-web-tier-03-official-subs.json' %]][[% endfilter %]]
@@ -2218,12 +2218,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Anime Web Tier 04 (Official Subs)
+### Anime Web Tier 04 (Sous-marins officiels)
 
-??? question "Anime Web Tier 04 (Official Subs) - [Click to show/hide]"
-    Official sub groups
+??? question "Anime Web Tier 04 (Sous-marins officiels) - [Cliquez pour afficher/masquer]"
+    Sous-groupes officiels
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-web-tier-04-official-subs.json' %]][[% endfilter %]]
@@ -2233,12 +2233,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Anime Web Tier 05 (FanSubs)
+### Anime Web niveau 05 (FanSubs)
 
-??? question "Anime Web Tier 05 (FanSubs) - [Click to show/hide]"
-    FanSub groups that are consistent
+??? question "Anime Web Tier 05 (FanSubs) - [Cliquez pour afficher/masquer]"
+    Groupes FanSub cohérents
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-web-tier-05-fansubs.json' %]][[% endfilter %]]
@@ -2248,12 +2248,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Anime Web Tier 06 (FanSubs)
+### Anime Web niveau 06 (FanSubs)
 
-??? question "Anime Web Tier 06 (FanSubs) - [Click to show/hide]"
-    FanSub groups that are consistent
+??? question "Anime Web Tier 06 (FanSubs) - [Cliquez pour afficher/masquer]"
+    Groupes FanSub cohérents
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-web-tier-06-fansubs.json' %]][[% endfilter %]]
@@ -2263,12 +2263,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Anime Raws
+### Anime bruts
 
-??? question "Anime Raws - [Click to show/hide]"
-    A collection of know groups that release raws
+??? question "Anime Raws - [Cliquez pour afficher/masquer]"
+    Une collection de groupes connus qui publient des bruts
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-raws.json' %]][[% endfilter %]]
@@ -2278,12 +2278,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Anime LQ Groups
+### Groupes Anime LQ
 
-??? question "Anime LQ Groups - [Click to show/hide]"
-    A collection of known Low Quality groups.
+??? question "Groupes Anime LQ - [Cliquez pour afficher/masquer]"
+    Une collection de groupes connus de faible qualité.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-lq-groups.json' %]][[% endfilter %]]
@@ -2293,12 +2293,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Uncensored
+### Non censuré
 
-??? question "Uncensored - [Click to show/hide]"
-    This CF covers releases that are uncensored
+??? question "Non censuré - [Cliquez pour afficher/masquer]"
+    Ce CF couvre les sorties non censurées
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/uncensored.json' %]][[% endfilter %]]
@@ -2308,12 +2308,12 @@ We've made 3 guides related to this.
 
 ------
 
-### v0
+###v0
 
-??? question "v0 - [Click to show/hide]"
-    CF to cover releases named with v0 which we don't want
+??? question "v0 - [Cliquez pour afficher/masquer]"
+    CF couvrira les versions nommées avec v0 dont nous ne voulons pas
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/v0.json' %]][[% endfilter %]]
@@ -2323,12 +2323,12 @@ We've made 3 guides related to this.
 
 ------
 
-### v1
+###v1
 
-??? question "v1 - [Click to show/hide]"
-    CF to cover v1 releases
+??? question "v1 - [Cliquez pour afficher/masquer]"
+    CF pour couvrir les versions v1
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/v1.json' %]][[% endfilter %]]
@@ -2338,12 +2338,12 @@ We've made 3 guides related to this.
 
 ------
 
-### v2
+###v2
 
-??? question "v2 - [Click to show/hide]"
-    CF to cover v2 releases
+??? question "v2 - [Cliquez pour afficher/masquer]"
+    CF pour couvrir les versions v2
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/v2.json' %]][[% endfilter %]]
@@ -2353,12 +2353,12 @@ We've made 3 guides related to this.
 
 ------
 
-### v3
+###v3
 
-??? question "v3 - [Click to show/hide]"
-    CF to cover v3 releases
+??? question "v3 - [Cliquez pour afficher/masquer]"
+    CF pour couvrir les versions v3
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/v3.json' %]][[% endfilter %]]
@@ -2370,10 +2370,10 @@ We've made 3 guides related to this.
 
 ### v4
 
-??? question "v4 - [Click to show/hide]"
-    CF to cover v4 releases
+??? question "v4 - [Cliquez pour afficher/masquer]"
+    CF pour couvrir les versions v4
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/v4.json' %]][[% endfilter %]]
@@ -2385,10 +2385,10 @@ We've made 3 guides related to this.
 
 ### B-Global
 
-??? question "B-Global - [Click to show/hide]"
-    [From Wikipedia, the free encyclopedia](https://www.wikiwand.com/en/Bilibili){:target="_blank" rel="noopener noreferrer"}
+??? question "B-Global - [Cliquez pour afficher/masquer]"
+    [De Wikipédia, l'encyclopédie gratuite](https://www.wikiwand.com/en/Bilibili){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/bglobal.json' %]][[% endfilter %]]
@@ -2400,10 +2400,10 @@ We've made 3 guides related to this.
 
 ### Bilibili
 
-??? question "Bilibili - [Click to show/hide]"
-    [From Wikipedia, the free encyclopedia](https://www.wikiwand.com/en/Bilibili){:target="_blank" rel="noopener noreferrer"}
+??? question "Bilibili - [Cliquez pour afficher/masquer]"
+    [De Wikipédia, l'encyclopédie gratuite](https://www.wikiwand.com/en/Bilibili){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/bilibili.json' %]][[% endfilter %]]
@@ -2417,10 +2417,10 @@ We've made 3 guides related to this.
 
 <sub>Crunchyroll</sub>
 
-??? question "Crunchyroll - [Click to show/hide]"
-    [From Wikipedia, the free encyclopedia](https://www.wikiwand.com/en/Crunchyroll){:target="_blank" rel="noopener noreferrer"}
+??? question "Crunchyroll - [Cliquez pour afficher/masquer]"
+    [De Wikipédia, l'encyclopédie gratuite](https://www.wikiwand.com/en/Crunchyroll){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/cr.json' %]][[% endfilter %]]
@@ -2430,14 +2430,14 @@ We've made 3 guides related to this.
 
 ------
 
-### funi
+### amusant
 
 <sub>Funimation</sub>
 
-??? question "Funimation - [Click to show/hide]"
-    [From Wikipedia, the free encyclopedia](https://www.wikiwand.com/en/Funimation){:target="_blank" rel="noopener noreferrer"}
+??? question "Funimation - [Cliquez pour afficher/masquer]"
+    [De Wikipédia, l'encyclopédie gratuite](https://www.wikiwand.com/en/Funimation){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/funi.json' %]][[% endfilter %]]
@@ -2447,12 +2447,12 @@ We've made 3 guides related to this.
 
 ------
 
-### HIDIVE
+### CACHER
 
-??? question "HIDIVE - [Click to show/hide]"
-    [From Wikipedia, the free encyclopedia](https://www.wikiwand.com/en/HIDIVE){:target="_blank" rel="noopener noreferrer"}
+??? question "HIDIVE - [Cliquez pour afficher/masquer]"
+    [De Wikipédia, l'encyclopédie gratuite](https://www.wikiwand.com/en/HIDIVE){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/hidive.json' %]][[% endfilter %]]
@@ -2462,12 +2462,12 @@ We've made 3 guides related to this.
 
 ------
 
-### VRV
+###VRV
 
-??? question "VRV - [Click to show/hide]"
-    [From Wikipedia, the free encyclopedia](https://www.wikiwand.com/en/VRV_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
+??? question "VRV - [Cliquez pour afficher/masquer]"
+    [De Wikipédia, l'encyclopédie gratuite](https://www.wikiwand.com/en/VRV_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/vrv.json' %]][[% endfilter %]]
@@ -2477,12 +2477,12 @@ We've made 3 guides related to this.
 
 ------
 
-### ABEMA
+###ABÉMA
 
-??? question "ABMEA - [Click to show/hide]"
-    [From Wikipedia, the free encyclopedia](https://www.wikiwand.com/en/Abema){:target="_blank" rel="noopener noreferrer"}
+??? question "ABMEA - [Cliquez pour afficher/masquer]"
+    [De Wikipédia, l'encyclopédie gratuite](https://www.wikiwand.com/en/Abema){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/abema.json' %]][[% endfilter %]]
@@ -2494,13 +2494,13 @@ We've made 3 guides related to this.
 
 ### ADN
 
-<sub>ADN = Animation Digital Network</sub>
+<sub>ADN = Réseau Numérique d'Animation</sub>
 
-??? question "ADN - [Click to show/hide]"
+??? question "ADN - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://fr.wikipedia.org/wiki/Animation_Digital_Network){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://fr.wikipedia.org/wiki/Animation_Digital_Network){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-adn.json' %]][[% endfilter %]]
@@ -2514,11 +2514,11 @@ We've made 3 guides related to this.
 
 <sub>WKN = Wakanim</sub>
 
-??? question "WKN - [Click to show/hide]"
+??? question "WKN - [Cliquez pour afficher/masquer]"
 
-    [From Wikipedia, the free encyclopedia](https://fr.wikipedia.org/wiki/Wakanim){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie libre](https://fr.wikipedia.org/wiki/Wakanim){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-wkn.json' %]][[% endfilter %]]
@@ -2528,12 +2528,12 @@ We've made 3 guides related to this.
 
 ------
 
-### 10bit
+### 10 bits
 
-??? question "10bit - [Click to show/hide]"
-    This CF covers releases that are 10bit
+??? question "10 bits - [Cliquez pour afficher/masquer]"
+    Ce CF couvre les versions 10 bits
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/10bit.json' %]][[% endfilter %]]
@@ -2543,12 +2543,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Anime Dual Audio
+### Anime double audio
 
-??? question "Anime Dual Audio - [Click to show/hide]"
-    This CF covers releases that have Dual Audio
+??? question "Anime Dual Audio - [Cliquez pour afficher/masquer]"
+    Ce CF couvre les versions dotées de Dual Audio
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/anime-dual-audio.json' %]][[% endfilter %]]
@@ -2558,12 +2558,12 @@ We've made 3 guides related to this.
 
 ------
 
-### Dubs Only
+### Doublage uniquement
 
-??? question "Dubs Only - [Click to show/hide]"
-    This CF covers releases that only have Dubs
+??? question "Dubs uniquement - [Cliquez pour afficher/masquer]"
+    Ce CF couvre les versions qui ne contiennent que des doublages
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/dubs-only.json' %]][[% endfilter %]]
@@ -2573,17 +2573,17 @@ We've made 3 guides related to this.
 
 ------
 
-## French Audio Version
+## Version audio française
 
 ------
 
-### Multi-French
+### Multi-Français
 
-??? question "Multi-French - [Click to show/hide]"
+??? question "Multi-Français - [Cliquez pour afficher/masquer]"
 
-    Recognize movies that include the original and the french audio. Work only after import as it need the result from FFprobe to get which audio are present. Will rename the release to keep the recognition of 'Multi' by the [Multi-Audio](#multi-audio) custom format.
+    Reconnaissez les films qui incluent l’original et l’audio français. Fonctionne uniquement après l'importation car il a besoin du résultat de FFprobe pour obtenir quels fichiers audio sont présents. Renomme la version pour conserver la reconnaissance de « Multi » par le format personnalisé [Multi-Audio](#multi-audio).
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/multi-french.json' %]][[% endfilter %]]
@@ -2595,11 +2595,11 @@ We've made 3 guides related to this.
 
 ### Multi-Audio
 
-??? question "Multi-Audio - [Click to show/hide]"
+??? question "Multi-Audio - [Cliquez pour afficher/masquer]"
 
-    A slightly modified [Multi](#multi) Custom Formats that recognize VF and VO inside the name.
+    Un format personnalisé [Multi](#multi) légèrement modifié qui reconnaît VF et VO dans le nom.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/multi-audio.json' %]][[% endfilter %]]
@@ -2609,13 +2609,13 @@ We've made 3 guides related to this.
 
 ------
 
-### French Audio
+### Audio français
 
-??? question "French Audio - [Click to show/hide]"
+??? question "Audio français - [Cliquez pour afficher/masquer]"
 
-    This will recognize every kind of French Audio.
+    Cela reconnaîtra tous les types d’audio français.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-audio.json' %]][[% endfilter %]]
@@ -2627,11 +2627,11 @@ We've made 3 guides related to this.
 
 ### VFF
 
-??? question "VFF - [Click to show/hide]"
+??? question "VFF - [Cliquez pour afficher/masquer]"
 
-    Full French version (dubbing done in France) and French version (normally equivalent to VFQ).
+    Version française complète (doublage réalisé en France) et version française (normalement équivalente à VFQ).
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-vff.json' %]][[% endfilter %]]
@@ -2643,11 +2643,11 @@ We've made 3 guides related to this.
 
 ### VOF
 
-??? question "VOF - [Click to show/hide]"
+??? question "VOF - [Cliquez pour afficher/masquer]"
 
-    Original French Version.
+    Version originale française.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-vof.json' %]][[% endfilter %]]
@@ -2657,13 +2657,13 @@ We've made 3 guides related to this.
 
 ------
 
-### VFI
+###VFI
 
-??? question "VFI - [Click to show/hide]"
+??? question "VFI - [Cliquez pour afficher/masquer]"
 
-    International French Version.
+    Version française internationale.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-vfi.json' %]][[% endfilter %]]
@@ -2675,11 +2675,11 @@ We've made 3 guides related to this.
 
 ### VF2
 
-??? question "VF2 - [Click to show/hide]"
+??? question "VF2 - [Cliquez pour afficher/masquer]"
 
-    VF[1-9] or FR[1-9] indicates the number of dubs present (normally VF2 being VFF and VFQ).
+    VF[1-9] ou FR[1-9] indique le nombre de doublages présents (normalement VF2 étant VFF et VFQ).
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-vf2.json' %]][[% endfilter %]]
@@ -2691,11 +2691,11 @@ We've made 3 guides related to this.
 
 ### VFQ
 
-??? question "VFQ - [Click to show/hide]"
+??? question "VFQ - [Cliquez pour afficher/masquer]"
 
-    Canadian French Version.
+    Version française canadienne.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-vfq.json' %]][[% endfilter %]]
@@ -2707,11 +2707,11 @@ We've made 3 guides related to this.
 
 ### VOQ
 
-??? question "VOQ - [Click to show/hide]"
+??? question "VOQ - [Cliquez pour afficher/masquer]"
 
-    Quebec Original Version.
+    Version originale québécoise.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-voq.json' %]][[% endfilter %]]
@@ -2723,11 +2723,11 @@ We've made 3 guides related to this.
 
 ### VQ
 
-??? question "VQ - [Click to show/hide]"
+??? question "VQ - [Cliquez pour afficher/masquer]"
 
-    Quebec Version (strong Quebec accent, ex: The Simpsons movie).
+    Version québécoise (fort accent québécois, ex : film Les Simpsons).
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-vq.json' %]][[% endfilter %]]
@@ -2739,11 +2739,11 @@ We've made 3 guides related to this.
 
 ### VFB
 
-??? question "VFB - [Click to show/hide]"
+??? question "VFB - [Cliquez pour afficher/masquer]"
 
-    Belgian French Version.
+    Version française belge.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-vfb.json' %]][[% endfilter %]]
@@ -2755,11 +2755,11 @@ We've made 3 guides related to this.
 
 ### VOSTFR
 
-??? question "VOSTFR - [Click to show/hide]"
+??? question "VOSTFR - [Cliquez pour afficher/masquer]"
 
-    Indicates soundtrack in the original language, with French subtitles. It should be noted that SUBFRENCH is included inside this Custom Format. However, SUB often mean that the subtitle was embedded inside the picture (hardcoded). French releases tend to mix both, leading some VOSTFR being labelled as SUBFRENCH and SUBFRENCH as VOSTFR.
+    Indique la bande sonore en langue originale, sous-titrée en français. Il convient de noter que SUBFRENCH est inclus dans ce format personnalisé. Cependant, SUB signifie souvent que le sous-titre a été intégré à l'image (codé en dur). Les versions françaises ont tendance à mélanger les deux, ce qui conduit certains VOSTFR à être étiquetés SUBFRENCH et SUBFRENCH à VOSTFR.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-vostfr.json' %]][[% endfilter %]]
@@ -2771,11 +2771,11 @@ We've made 3 guides related to this.
 
 ### FanSUB
 
-??? question "FanSUB - [Click to show/hide]"
+??? question "FanSUB - [Cliquez pour afficher/masquer]"
 
-    Action of subtitling a video for personal and non-professional purposes. The quality of FanSUBs can vary enormously (accuracy of translation, mistakes, etc.) and could lead to so called FastSUBs.
+    Action de sous-titrer une vidéo à des fins personnelles et non professionnelles. La qualité des FanSUB peut varier énormément (précision de la traduction, erreurs, etc.) et peut conduire à ce que l'on appelle des FastSUB.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/fansub.json' %]][[% endfilter %]]
@@ -2787,11 +2787,11 @@ We've made 3 guides related to this.
 
 ### FastSUB
 
-??? question "FastSUB - [Click to show/hide]"
+??? question "FastSUB - [Cliquez pour afficher/masquer]"
 
-    FanSUB, but made as quickly as possible, at the expense of quality.
+    FanSUB, mais réalisé le plus rapidement possible, au détriment de la qualité.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/fastsub.json' %]][[% endfilter %]]
@@ -2801,19 +2801,19 @@ We've made 3 guides related to this.
 
 ------
 
-## French HQ Source Groups
+## Groupes sources du siège français
 
 ------
 
-### FR Remux Tier 01
+### FR Remux Niveau 01
 
-??? question "Remux Tier 01 - [Click to show/hide]"
+??? question "Remux Tier 01 - [Cliquez pour afficher/masquer]"
 
-    - WIP
-    - Groups that produce remuxes from multiple sources (discs) and combine them to produce the best end result.
-    - Groups actively doing remuxes from a single source (discs).
+    - En-cours
+    - Des groupes qui produisent des remux à partir de plusieurs sources (disques) et les combinent pour produire le meilleur résultat final.
+    - Groupes effectuant activement des remux à partir d'une seule source (disques).
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-remux-tier-01.json' %]][[% endfilter %]]
@@ -2823,16 +2823,16 @@ We've made 3 guides related to this.
 
 ------
 
-### FR HD Bluray Tier 01
+### FR HD Bluray Niveau 01
 
-??? question "FR HD Bluray Tier 01 - [Click to show/hide]"
+??? question "FR HD Bluray Tier 01 - [Cliquez pour afficher/masquer]"
 
-    - WIP
-    - Groups that create encodes from remuxes without micro-sizing them.
-    - Groups that add the best French audio track to an English release from Tier 01 or 02.
-    - Groups that have a minimum of great releases (best encode in its class 1080p and lower).
+    - En-cours
+    - Des groupes qui créent des encodages à partir de remux sans les micro-dimensionner.
+    - Les groupes qui ajoutent la meilleure piste audio française à une version anglaise du Tier 01 ou 02.
+    - Groupes qui ont un minimum de bonnes versions (meilleur encodage de sa catégorie 1080p et inférieur).
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-hd-bluray-tier-01.json' %]][[% endfilter %]]
@@ -2842,15 +2842,15 @@ We've made 3 guides related to this.
 
 ------
 
-### FR WEB Tier 01
+### FR WEB Niveau 01
 
-??? question "FR WEB Tier 01 - [Click to show/hide]"
+??? question "FR WEB Tier 01 - [Cliquez pour afficher/masquer]"
 
-    - WIP
-    - Groups that get their releases directly from the source.
-    - Groups that source and add the French audio track from the source to an English release from Tier 01 or 02.
+    - En-cours
+    - Groupes qui obtiennent leurs sorties directement de la source.
+    - Regroupe cette source et ajoute la piste audio française de la source à une version anglaise du niveau 01 ou 02.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-web-tier-01.json' %]][[% endfilter %]]
@@ -2860,15 +2860,15 @@ We've made 3 guides related to this.
 
 ------
 
-### FR WEB Tier 02
+### FR WEB Niveau 02
 
-??? question "FR WEB Tier 02 - [Click to show/hide]"
+??? question "FR WEB Tier 02 - [Cliquez pour afficher/masquer]"
 
-    - WIP
-    - Groups that get their releases directly from the source but are not so active.
-    - Groups that source and add the French audio track from the source to an English release.
+    - En-cours
+    - Des groupes qui obtiennent leurs sorties directement de la source mais qui ne sont pas aussi actifs.
+    - Regroupe cette source et ajoute la piste audio française de la source à une version anglaise.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-web-tier-02.json' %]][[% endfilter %]]
@@ -2878,15 +2878,15 @@ We've made 3 guides related to this.
 
 ------
 
-### FR WEB Tier 03
+### FR WEB Niveau 03
 
-??? question "FR WEB Tier 03 - [Click to show/hide]"
+??? question "FR WEB Tier 03 - [Cliquez pour afficher/masquer]"
 
-    - WIP
-    - Groups that haven't released much or are not well recognized. (yet)
-    - Groups that retired and don't have the best quality by today's standards.
+    - En-cours
+    - Des groupes qui n'ont pas beaucoup sorti ou qui ne sont pas bien reconnus. (encore)
+    - Des groupes qui ont pris leur retraite et qui n'ont pas la meilleure qualité selon les normes actuelles.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-web-tier-03.json' %]][[% endfilter %]]
@@ -2896,15 +2896,15 @@ We've made 3 guides related to this.
 
 ------
 
-### FR Anime Tier 01
+### FR Anime Niveau 01
 
-??? question "FR Anime Tier 01 - [Click to show/hide]"
+??? question "FR Anime Tier 01 - [Cliquez pour afficher/masquer]"
 
-    - WIP
-    - Groups that are known to be active and only doing Anime
-    - Groups who's releases are at least comparable to SeaDex recommended.
+    - En-cours
+    - Groupes connus pour être actifs et ne faisant que de l'Anime
+    - Les groupes dont les versions sont au moins comparables à celles recommandées par SeaDex.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-anime-tier-01.json' %]][[% endfilter %]]
@@ -2914,15 +2914,15 @@ We've made 3 guides related to this.
 
 ------
 
-### FR Anime Tier 02
+### FR Anime Niveau 02
 
-??? question "FR Anime Tier 02 - [Click to show/hide]"
+??? question "FR Anime Tier 02 - [Cliquez pour afficher/masquer]"
 
-    - WIP
-    - Groups that are known to be active and only doing Anime, but with few releases per year.
-    - Groups that are known to be active and doing Anime AND other types of releases.
+    - En-cours
+    - Des groupes connus pour être actifs et ne faisant que de l'Anime, mais avec peu de sorties par an.
+    - Des groupes connus pour être actifs et qui font des Anime ET d'autres types de sorties.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-anime-tier-02.json' %]][[% endfilter %]]
@@ -2932,16 +2932,16 @@ We've made 3 guides related to this.
 
 ------
 
-### FR Anime Tier 03
+### FR Anime Niveau 03
 
-??? question "FR Anime Tier 03 - [Click to show/hide]"
+??? question "FR Anime Tier 03 - [Cliquez pour afficher/masquer]"
 
-    - WIP
-    - Groups with no or little activity that have at some point made an interesting release which is either the only one available (in VOSTFR/MULTi), or still top of its category.
-    - Groups that haven't released much or are not well recognized. (yet)
-    - Groups doing only anime that have retired (or no longer exist) and may not have the best quality by today's standards.
+    - En-cours
+    - Des groupes pas ou peu d'activité qui ont à un moment donné réalisé une sortie intéressante qui est soit la seule disponible (en VOSTFR/MULTi), soit encore première de sa catégorie.
+    - Des groupes qui n'ont pas beaucoup sorti ou qui ne sont pas bien reconnus. (encore)
+    - Les groupes qui font uniquement des dessins animés qui ont pris leur retraite (ou n'existent plus) et qui n'offrent peut-être pas la meilleure qualité selon les normes actuelles.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-anime-tier-03.json' %]][[% endfilter %]]
@@ -2953,11 +2953,11 @@ We've made 3 guides related to this.
 
 ### FR Anime FanSub
 
-??? question "FR Anime FanSub - [Click to show/hide]"
+??? question "FR Anime FanSub - [Cliquez pour afficher/masquer]"
 
-    Known good groups that only do FanSub in good quality.
+    Bons groupes connus qui ne font que du FanSub de bonne qualité.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-anime-fansub.json' %]][[% endfilter %]]
@@ -2967,13 +2967,13 @@ We've made 3 guides related to this.
 
 ------
 
-### FR Scene Groups
+### Groupes de scènes FR
 
-??? question "FR Scene Groups - [Click to show/hide]"
+??? question "Groupes de scènes FR - [Cliquez pour afficher/masquer]"
 
-    Known French Scene groups.
+    Groupes connus de la scène française.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-scene.json' %]][[% endfilter %]]
@@ -2983,25 +2983,25 @@ We've made 3 guides related to this.
 
 ------
 
-### FR LQ
+### EN LQ
 
-<sub>French Low Quality Releases = FR LQ</sub>
+<sub>Sorties françaises de basse qualité = FR LQ</sub>
 
-??? question "FR LQ - [Click to show/hide]"
+??? question "FR LQ - [Cliquez pour afficher/masquer]"
 
-    A collection of known French Low-Quality groups that are often banned from the top trackers due to their lack of quality.
+    Une collection de groupes français connus de Low-Quality qui sont souvent bannis des top trackers en raison de leur manque de qualité.
 
     !!! note
 
-        - Ads/Watermarks = Groups that are known to put ads or watermarks in their releases.
-        - Bad/False releases = Groups that are known for lying about their quality, type, or the name of their releases.
-        - DeTAG/ReTAG = Detagging or stealing groups.
-        - Other reasons = Banned Release Groups.
+        - Annonces/Filigranes = Groupes connus pour mettre des publicités ou des filigranes dans leurs versions.
+        - Mauvaises/Fausses versions = Groupes connus pour mentir sur la qualité, le type ou le nom de leurs versions.
+        - DeTAG/ReTAG = Détagging ou vol de groupes.
+        - Autres raisons = Groupes de libération interdits.
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/sonarr/cf/french-lq.json' %]][[% endfilter %]]
     ```
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index

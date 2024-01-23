@@ -1,86 +1,86 @@
-# Remote Path Mappings
+# Mappages de chemins distants
 
-It seems that a lot of people don't understand how the remote path mapping works for Sonarr. I will try to explain it with some screenshots and a short description.
+Il semble que beaucoup de gens ne comprennent pas comment fonctionne le mappage de chemin à distance pour Sonarr. Je vais essayer de l'expliquer avec quelques captures d'écran et une brève description.
 
-Remote Path Mapping acts as a dumb find `Remote Path` and replace with `Local Path`
+Le mappage de chemin à distance agit comme une recherche stupide de « Chemin à distance » et le remplace par « Chemin local »
 
-## When do I need remote path mappings
+## Quand ai-je besoin de mappages de chemins distants
 
-- If Sonarr and your download client are not on the same server/system.
-- If you use either merged local/remote setups using mergerfs or similar.
-- You run dockers and **DON'T** have consistent and well planned paths.
+- Si Sonarr et votre client de téléchargement ne sont pas sur le même serveur/système.
+- Si vous utilisez des configurations locales/à distance fusionnées à l'aide demergefs ou similaire.
+- Vous exécutez des dockers et **N'AVEZ PAS** de chemins cohérents et bien planifiés.
 
 !!! note
-    If you run dockers it would be smarter to fix the problem at the source what's causing the actual issue.
+    Si vous exécutez Dockers, il serait plus intelligent de résoudre le problème à la source, à l'origine du problème réel.
 
-    - [Sonarr Wiki Servarr - Docker Guide](https://wiki.servarr.com/docker-guide#consistent-and-well-planned-paths){:target="_blank" rel="noopener noreferrer"}
+    - [Sonarr Wiki Servarr - Guide Docker](https://wiki.servarr.com/docker-guide#consistent-and-well-planned-paths){:target="_blank" rel="noopener noreferrer"}
 
-    - [TRaSH Guides](/Hardlinks/Hardlinks-and-Instant-Moves/){:target="_blank" rel="noopener noreferrer"}
-
-------
-
-## How do I recognize that I need remote path mappings
-
-If your download client is on another system than Sonarr then you probably need to make use of Remote Path Mappings.
-
-You will get an error that looks a little bit like the following screenshot.
-
-![!download errors](images/dl_error.png)
-
-So looking at this screenshot it seems we need to make use of Remote Path Mappings
+    - [Guides TRaSH](/Hardlinks/Hardlinks-and-Instant-Moves/){:target="_blank" rel="noopener noreferrer"}
 
 ------
 
-## How
+## Comment puis-je reconnaître que j'ai besoin de mappages de chemins distants
 
-First we navigate in Sonarr to the `Settings` => `Download Clients` tab.
+Si votre client de téléchargement se trouve sur un autre système que Sonarr, vous devrez probablement utiliser les mappages de chemins distants.
 
-![download client tab](images/cl_cli_tab.png)
+Vous obtiendrez une erreur qui ressemble un peu à la capture d’écran suivante.
 
-At the bottom you choose `Add new mapping`
+![!erreurs de téléchargement](images/dl_error.png)
 
-![!add new mapping](images/new_mapping.png)
-
-A screen will pop up with the following options:
-
-![add mapping](images/mapping.png)
-
-1. `Host` => This is the hostname or IP you set in your download client settings.
-1. `Remote Path` => The download path that you've set in your download client.
-1. `Local Path` => The path Sonarr needs to access the same path.
+En regardant cette capture d'écran, il semble que nous devions utiliser les mappages de chemins distants.
 
 ------
 
-??? example "Examples"
+## Comment
+
+Tout d'abord, nous naviguons dans Sonarr vers l'onglet `Paramètres` => `Télécharger les clients`.
+
+![onglet client de téléchargement](images/cl_cli_tab.png)
+
+En bas, vous choisissez « Ajouter un nouveau mappage »
+
+![!ajouter un nouveau mappage](images/new_mapping.png)
+
+Un écran apparaîtra avec les options suivantes :
+
+![ajouter un mappage](images/mapping.png)
+
+1. `Hôte` => Il s'agit du nom d'hôte ou de l'adresse IP que vous avez défini dans les paramètres de votre client de téléchargement.
+1. `Remote Path` => Le chemin de téléchargement que vous avez défini dans votre client de téléchargement.
+1. `Local Path` => Le chemin dont Sonarr a besoin pour accéder au même chemin.
+
+------
+
+??? exemple "Exemples"
 
     === "QBittorrent"
 
-        ## Host
+        ## Hôte
 
-        To find what you need to put in your host you navigate in Sonarr to the Settings => Download Clients Tab.
-        There you open up the download client for this example I will be using QBittorrent
+        Pour trouver ce que vous devez mettre dans votre hôte, accédez dans Sonarr à l'onglet Paramètres => Télécharger les clients.
+        Là, vous ouvrez le client de téléchargement pour cet exemple, j'utiliserai QBittorrent
 
-        ![Qbittorrent client](images/qbit_client.png)
+        ![Client Qbittorrent](images/qbit_client.png)
 
-        This is what you put in your Host in Remote Path Mapping.
+        C'est ce que vous mettez dans votre hôte dans le mappage de chemin à distance.
 
-        ## Remote Path
+        ## Chemin distant
 
-        To find what you need to put in your remote path you need to open up your download client and look what you've used there as download location.
+        Pour trouver ce que vous devez mettre dans votre chemin distant, vous devez ouvrir votre client de téléchargement et regarder ce que vous avez utilisé comme emplacement de téléchargement.
 
-        In QBittorrent navigate to Tools => Options (or ALT+O) and navigate to the Download settings.
+        Dans QBittorrent, accédez à Outils => Options (ou ALT+O) et accédez aux paramètres de téléchargement.
 
-        ![Qbittorrent download settings](images/qbit_options.png)
+        ![Paramètres de téléchargement Qbittorrent](images/qbit_options.png)
 
-        This is what you add in your Remote Path in Remote Path Mapping.
+        C'est ce que vous ajoutez à votre chemin distant dans le mappage de chemin distant.
 
-        ## Local Path
+        ## Chemin local
 
-        To find out what you need to put in in your local path you need to know how Sonarr is able to access the files that your download client downloaded. This can be done in different ways. Mounting/Network shares, whatever, but Sonarr needs to have local access to it, so you need to figure out the best way for Sonarr to access the download client's downloaded files yourself.
+        Pour savoir ce que vous devez insérer dans votre chemin local, vous devez savoir comment Sonarr peut accéder aux fichiers téléchargés par votre client de téléchargement. Cela peut se faire de différentes façons. Montage/partages réseau, peu importe, mais Sonarr doit y avoir un accès local, vous devez donc trouver le meilleur moyen pour Sonarr d'accéder vous-même aux fichiers téléchargés du client de téléchargement.
 
-        The final result will look something like this.
+        Le résultat final ressemblera à ceci.
 
-        ![Qbittorrent final result](images/qbit_final.png)
+        ![Résultat final Qbittorrent](images/qbit_final.png)
 
 {! include-markdown "../../includes/support.md" !}
 <!-- --8<-- "includes/support.md" -->

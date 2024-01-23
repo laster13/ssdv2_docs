@@ -1,60 +1,60 @@
-# How to set up Quality Profiles
+# Comment configurer des profils de qualité
 
-*aka How to set up Custom Formats*<br><br>
-So what's the best way to set up the Custom Formats and which ones to use with which scores to set up your quality profiles?
+*alias Comment configurer des formats personnalisés*<br><br>
+Alors, quelle est la meilleure façon de configurer les formats personnalisés et lesquels utiliser avec quels scores pour configurer vos profils de qualité ?
 
-There isn't a "best" setup, it depends on your media setup (hardware devices) and your personal preferences.
+Il n’existe pas de « meilleure » configuration, cela dépend de votre configuration multimédia (périphériques matériels) et de vos préférences personnelles.
 
-Some prefer high-quality audio (HD Audio), others high-quality video. Many prefer both.
+Certains préfèrent un son de haute qualité (HD Audio), d’autres une vidéo de haute qualité. Beaucoup préfèrent les deux.
 
-Here I will try to explain how to make the most use of Custom Formats to help you to set up your quality profiles for your personal needs.
+Ici, je vais essayer de vous expliquer comment tirer le meilleur parti des formats personnalisés pour vous aider à configurer vos profils de qualité en fonction de vos besoins personnels.
 
-I created a [flowchart](#which-quality-profile-should-you-choose) to make your decision/choices easier.
+J'ai créé un [organigramme] (#quel-profil-de-qualité-devriez-vous-choisir) pour faciliter votre/vos décision/choix.
 
 ------
 
-## Basics
+## Bases
 
-After you've added the Custom Formats, as explained in [How to import Custom Formats](/Sonarr/sonarr-import-custom-formats/){:target="_blank" rel="noopener noreferrer"}.
-You will need to set it up in the quality Profile you want to use/prefer to make use of the Custom Formats.
+Après avoir ajouté les formats personnalisés, comme expliqué dans [Comment importer des formats personnalisés](/Sonarr/sonarr-import-custom-formats/){:target="_blank" rel="noopener noreferrer"}.
+Vous devrez le configurer dans le profil de qualité que vous souhaitez utiliser/préférez utiliser les formats personnalisés.
 
-`Settings` => `Profiles`
+`Paramètres` => `Profils`
 
 ![!cf-settings-profiles](images/cf-settings-profiles.png)
 
-!!! info "Sonarr Custom Formats can be set per profile and isn't global"
-Select the profile that you want to use/prefer.
+!!! info "Les formats personnalisés Sonarr peuvent être définis par profil et ne sont pas globaux"
+Sélectionnez le profil que vous souhaitez utiliser/préférer.
 
 ![!cf-quality-profiles](images/cf-quality-profiles.png)
 
 ![!cf-profile-selected](images/cf-profile-selected.png)
 
-1. Profile name.
-1. Allow upgrades. Sonarr will stop upgrading quality once (3) is met.
-1. Upgrade until the selected quality.
-1. The `Minimum Custom Format Score` that is allowed to download. [More Info](#minimum-custom-format-score)
-1. Keep upgrading Custom Format until this score is reached. (setting this to `0` means no upgrades will happen based on Custom Formats)
+1. Nom du profil.
+1. Autorisez les mises à niveau. Sonarr arrêtera d’améliorer la qualité une fois que (3) sera satisfait.
+1. Mettez à niveau jusqu'à la qualité sélectionnée.
+1. Le « score minimum au format personnalisé » dont le téléchargement est autorisé. [Plus d'informations](#minimum-custom-format-score)
+1. Continuez à mettre à niveau le format personnalisé jusqu'à ce que ce score soit atteint. (le définir sur « 0 » signifie qu'aucune mise à niveau n'aura lieu en fonction des formats personnalisés)
 
-At the bottom, in your chosen profile, you will see the added Custom Formats where you can start setting up the scores.
+En bas, dans le profil que vous avez choisi, vous verrez les formats personnalisés ajoutés où vous pourrez commencer à configurer les scores.
 
-??? success "Screenshot example - [Click to show/hide]"
+??? succès "Exemple de capture d'écran - [Cliquez pour afficher/masquer]"
     ![!cf-quality-profile-cf](images/cf-quality-profile-cf.png)
 
-    !!! warning
-        These screenshots are just examples to show you how it should look and where you need to place the data that you need to add, they aren't always a 100% reflection of the actual data and not always 100% up to date with the actual data you need to add.
+    !!! avertissement
+        Ces captures d'écran ne sont que des exemples pour vous montrer à quoi cela devrait ressembler et où vous devez placer les données que vous devez ajouter. Elles ne reflètent pas toujours à 100 % les données réelles et ne sont pas toujours à jour à 100 % avec les données réelles. données que vous devez ajouter.
 
-        - Always follow the data described in the guide.
-        - If you have any questions or aren't sure just click the chat badge to join the Discord Channel where you can ask your questions directly.
+        - Suivez toujours les données décrites dans le guide.
+        - Si vous avez des questions ou n'êtes pas sûr, cliquez simplement sur le badge de discussion pour rejoindre la chaîne Discord où vous pourrez poser vos questions directement.
 
-!!! info "Keep in mind Custom Formats are made to fine-tune your Quality Profile.<br>Generally, quality trumps all"
+!!! info "Gardez à l'esprit que les formats personnalisés sont conçus pour affiner votre profil de qualité.<br>En général, la qualité l'emporte sur tout"
 
-    Custom formats are controlled by Quality Profiles.
+    Les formats personnalisés sont contrôlés par les profils de qualité.
 
-    - The Upgrade Until score prevents upgrading once a release with this desired score has been downloaded.
-    - A score of 0 results in the custom format being informational only.
-    - The Minimum score requires releases to reach this threshold otherwise they will be rejected.
-    - Custom formats that match with undesirable attributes should be given a negative score to lower their appeal.
-    - Outright rejections should be given a negative score low enough that even if all of the other formats with positive scores were added, the score would still fall below the minimum.
+    - Le score Upgrade Until empêche la mise à niveau une fois qu'une version avec ce score souhaité a été téléchargée.
+    - Un score de 0 signifie que le format personnalisé est uniquement informatif.
+    - Le score minimum exige que les versions atteignent ce seuil sinon elles seront rejetées.
+    - Les formats personnalisés qui correspondent à des attributs indésirables doivent recevoir un score négatif pour réduire leur attrait.
+    - Les rejets purs et simples devraient recevoir une note négative suffisamment faible pour que même si tous les autres formats avec des notes positives étaient ajoutés, la note resterait toujours en dessous du minimum.
 
 ------
 
@@ -62,25 +62,25 @@ At the bottom, in your chosen profile, you will see the added Custom Formats whe
 
 ------
 
-## Which Quality Profile should you choose
+## Quel profil de qualité choisir
 
-??? abstract "Which Quality Profile should you choose - [Click to show/hide]"
+??? résumé "Quel profil de qualité devriez-vous choisir - [Cliquez pour afficher/masquer]"
 
-    ![Flowchart](/Sonarr/images/flowchart-quality-profiles-sonarr.png)
+    ![Organigramme](/Sonarr/images/flowchart-quality-profiles-sonarr.png)
 
-    If you're unsure or have questions do not hesitate to ask for help on Discord
+    Si vous n'êtes pas sûr ou si vous avez des questions, n'hésitez pas à demander de l'aide sur Discord
 
-    [![Discord chat](https://img.shields.io/discord/492590071455940612?style=for-the-badge&color=4051B5&logo=discord){ .off-glb }](https://trash-guides.info/discord){:target="_blank" rel="noopener noreferrer"}
+    [![Chat Discord](https://img.shields.io/discord/492590071455940612?style=for-the-badge&color=4051B5&logo=discord){ .off-glb }](https://trash-guides.info /discord){:target="_blank" rel="noopener noreferrer"}
 
 ------
 
-## TRaSH Quality Profiles
+## Profils de qualité TRaSH
 
-The following Quality Profiles can be combined into a single Quality Profile if you, for example, want to be able to upgrade from 1080p to 4K/2160p.
+Les profils de qualité suivants peuvent être combinés en un seul profil de qualité si vous souhaitez, par exemple, pouvoir passer de 1080p à 4K/2160p.
 
 ### WEB-1080p
 
-If you prefer 720p/1080p WEBDL (WEB-1080p)
+Si vous préférez WEBDL 720p/1080p (WEB-1080p)
 
 {! include-markdown "../../includes/cf/sonarr-suggest-attention.md" !}
 
@@ -94,34 +94,34 @@ If you prefer 720p/1080p WEBDL (WEB-1080p)
 
 {! include-markdown "../../includes/cf/sonarr-hq-source-group.md" !}
 
-I decided not to add `Audio Advanced` Custom Formats to the WEB profile, You will hardly find HD audio with WEB-DL (most newer WEBDL will have Atmos). If you want HD audio formats, I would suggest going with Remuxes.
+J'ai décidé de ne pas ajouter de formats personnalisés « Audio Advanced » au profil WEB. Vous trouverez difficilement de l'audio HD avec WEB-DL (la plupart des WEBDL les plus récents auront Atmos). Si vous voulez des formats audio HD, je vous suggère d'opter pour des Remux.
 
-Use the following main settings in your profile.
+Utilisez les paramètres principaux suivants dans votre profil.
 
 ![!cf-profile-web1080](images/cf-profile-web1080.png)
 
-!!! info ""
+!!! Info ""
 
-    For some older shows, you might want to enable the `WEB 720p`, or even the `HDTV 1080p`.
+    Pour certaines émissions plus anciennes, vous souhaiterez peut-être activer le « WEB 720p », ou même le « HDTV 1080p ».
 
 {! include-markdown "../../includes/starr/move-quality-to-top.md" !}
 
-??? abstract "Workflow Logic - [Click to show/hide]"
+??? résumé "Workflow Logic - [Cliquez pour afficher/masquer]"
 
-    - It will download WEB-DL 1080p. (If you also enabled `WEB 720p` and/or `HDTV 1080p` it will upgrade until `Upgrade Until`)
-    - The downloaded media will be upgraded to any of the added Custom Formats until a score of 10000.
+    - Il téléchargera WEB-DL 1080p. (Si vous avez également activé « WEB 720p » et/ou « HDTV 1080p », la mise à niveau sera effectuée jusqu'à « Mise à niveau jusqu'à »)
+    - Les médias téléchargés seront mis à niveau vers l'un des formats personnalisés ajoutés jusqu'à un score de 10 000.
 
-    So why such a ridiculously high `Upgrade Until Custom` and not a score of `100`?
+    Alors pourquoi une « Mise à niveau jusqu'à la personnalisation » aussi ridiculement élevée et pas un score de « 100 » ?
 
-    Because I'm too lazy to calculate the maximum for every Quality Profile I use, and I want it to upgrade to the highest possible score anyway.
+    Parce que je suis trop paresseux pour calculer le maximum pour chaque profil de qualité que j'utilise, et je veux de toute façon qu'il passe au score le plus élevé possible.
 
 ------
 
 ### WEB-2160p
 
-If you prefer 2160p WEBDL (WEB-2160p)
+Si vous préférez WEBDL 2160p (WEB-2160p)
 
-The only deal breaker with 2160p is when the release includes DV/HDR. 2160p without DV/HDR is of minimal benefit.
+Le seul problème avec le 2160p est lorsque la version inclut le DV/HDR. Le 2160p sans DV/HDR présente un avantage minime.
 
 {! include-markdown "../../includes/cf/sonarr-suggest-attention.md" !}
 
@@ -139,130 +139,130 @@ The only deal breaker with 2160p is when the release includes DV/HDR. 2160p with
 
 {! include-markdown "../../includes/cf/sonarr-hq-source-group.md" !}
 
-I decided not to add `Audio Advanced` Custom Formats to the WEB profile. You will hardly find HD audio with WEB-DL (Most newer WEBDL will have Atmos). If you also want HD audio formats, I would suggest going for Remuxes.
+J'ai décidé de ne pas ajouter de formats personnalisés « Audio Advanced » au profil WEB. Vous trouverez difficilement de l'audio HD avec WEB-DL (la plupart des WEBDL les plus récents auront Atmos). Si vous souhaitez également des formats audio HD, je vous suggère d'opter pour les Remux.
 
-Use the following main settings in your profile.
+Utilisez les paramètres principaux suivants dans votre profil.
 
 ![!cf-profile-web2160](images/cf-profile-web2160.png)
 
 {! include-markdown "../../includes/starr/move-quality-to-top.md" !}
 
-??? abstract "Workflow Logic - [Click to show/hide]"
+??? résumé "Workflow Logic - [Cliquez pour afficher/masquer]"
 
-    - This will download WEB-2160p with HDR/DV.
-    - The downloaded media will be upgraded to any of the added Custom Formats until a score of 10000.
+    - Cela téléchargera WEB-2160p avec HDR/DV.
+    - Les médias téléchargés seront mis à niveau vers l'un des formats personnalisés ajoutés jusqu'à un score de 10 000.
 
-    So why such a ridiculously high `Upgrade Until Custom` and not a score of `100`?
+    Alors pourquoi une « Mise à niveau jusqu'à la personnalisation » aussi ridiculement élevée et pas un score de « 100 » ?
 
-    Because I'm too lazy to calculate the maximum for every Quality Profile I use, and I want it to upgrade to the highest possible score anyway.
+    Parce que je suis trop paresseux pour calculer le maximum pour chaque profil de qualité que j'utilise, et je veux de toute façon qu'il passe au score le plus élevé possible.
 
 ------
 
-## Custom Format Groups
+## Groupes de formats personnalisés
 
-The following custom format groups should be combined with the Quality Profiles above. Users will need to choose which options and custom formats they prefer.
+Les groupes de formats personnalisés suivants doivent être combinés avec les profils de qualité ci-dessus. Les utilisateurs devront choisir les options et les formats personnalisés qu'ils préfèrent.
 
-### HDR Formats
+###Formats HDR
 
-- You have a 4K TV and a hardware media player device (such as Roku, AppleTV, Shield, SmartTV App, etc.) that supports several HDR formats (such as Dolby Vision, HDR10, HDR10+, etc.).
+- Vous disposez d'un téléviseur 4K et d'un lecteur multimédia matériel (tel que Roku, AppleTV, Shield, SmartTV App, etc.) prenant en charge plusieurs formats HDR (tels que Dolby Vision, HDR10, HDR10+, etc.).
 
 {! include-markdown "../../includes/cf/sonarr-all-hdr-formats.md" !}
 
 ------
 
-## FAQ & INFO
+## FAQ et informations
 
-### Why only WEB-DL
+### Pourquoi seulement WEB-DL
 
-??? question "Why do you only have a release profile for WEB-DL - [Click to show/hide]"
+??? question "Pourquoi avez-vous uniquement un profil de version pour WEB-DL - [Cliquez pour afficher/masquer]"
 
-    I only do WEB-DL, myself, for TV shows. In my opinion, WEB-DL is the sweet spot between quality and size (you often don't see big differences anyway for TV shows) except for shows like GOT, Vikings, etc.
+    Je fais moi-même du WEB-DL uniquement pour les émissions de télévision. À mon avis, le WEB-DL est le juste milieu entre qualité et taille (de toute façon, on ne voit souvent pas de grandes différences pour les émissions de télévision) à l'exception des émissions comme GOT, Vikings, etc.
 
-### Why prefer P2P groups
+### Pourquoi préférer les groupes P2P
 
-??? question "Why do you prefer P2P groups over scene groups - [Click to show/hide]"
+??? question "Pourquoi préférez-vous les groupes P2P aux groupes de scènes - [Cliquez pour afficher/masquer]"
 
-    Scene groups are always in a rush to bring releases out as fast as possible.
+    Les groupes de scène sont toujours pressés de sortir les sorties le plus rapidement possible.
 
-    I noticed, often, that I got Repacks/Propers from them, or of different groups and quality. P2P release groups are a bit smarter, and sort of work together, by not doing the same releases. Also, I noticed that with some scene releases the 5.1 audio was stripped out or converted to AAC audio.
+    J'ai souvent remarqué que je recevais des Repacks/Propers de leur part, ou de différents groupes et qualités. Les groupes de versions P2P sont un peu plus intelligents et travaillent en quelque sorte ensemble, en ne faisant pas les mêmes versions. De plus, j'ai remarqué qu'avec certaines versions de scène, l'audio 5.1 était supprimé ou converti en audio AAC.
 
-    In my opinion, the P2P releases are better quality. However, there is one scene group that does bring out quality releases `-deflate`/`-inflate`.
+    À mon avis, les versions P2P sont de meilleure qualité. Cependant, il existe un groupe de scènes qui produit des versions de qualité `-deflate`/`-inflate`.
 
-### Why so many repacks/propers
+### Pourquoi tant de reconditionnements/propriétés
 
-??? question "Why do I see so many repacks/propers of Amazon WEB-DLs lately - [Click to show/hide]"
+??? question "Pourquoi est-ce que je vois autant de repacks/propriétés d'Amazon WEB-DL ces derniers temps - [Cliquez pour afficher/masquer]"
 
-    A large portion of Amazon WEB-DLs in the last weeks have only had 192Kbps DD+5.1 (because that's all Amazon made available initially). The proper 640Kbps DD+5.1 audio might appear a few hours, or a few months, later. The lower quality release will be REPACKED when the higher quality audio is available.
+    Une grande partie des WEB-DL d'Amazon au cours des dernières semaines n'avaient que 192 Kbps DD+5.1 (car c'est tout ce qu'Amazon avait initialement mis à disposition). L’audio DD+5.1 à 640 Kbit/s approprié peut apparaître quelques heures, voire quelques mois, plus tard. La version de qualité inférieure sera REMPACKÉE lorsque la qualité audio de meilleure qualité sera disponible.
 
-### Proper and Repacks
+### Propre et reconditionné
 
-??? tip "Proper and Repacks - [Click to show/hide]"
+??? Astuce "Proper and Repacks - [Cliquez pour afficher/masquer]"
 
-    I also suggest that you change the Propers and Repacks settings in Radarr
+    Je vous suggère également de modifier les paramètres Propers et Repacks dans Radarr
 
-    `Media Management` => `File Management` to `Do Not Prefer` and use the [Repack/Proper](/Sonarr/sonarr-collection-of-custom-formats/#repackproper) Custom Format.
+    `Media Management` => `File Management` sur `Ne pas préférer` et utilisez le format personnalisé [Repack/Proper](/Sonarr/sonarr-collection-of-custom-formats/#repackproper).
 
     ![!cf-mm-propers-repacks-disable](images/cf-mm-propers-repacks-disable.png)
 
-    This way you make sure the Custom Format preferences will be used instead.
+    De cette façon, vous vous assurez que les préférences de format personnalisé seront utilisées à la place.
 
-### Custom Formats to avoid certain releases
+### Formats personnalisés pour éviter certaines versions
 
-??? question "How to use a Custom Format to avoid certain releases? - [Click to show/hide]"
+??? question "Comment utiliser un format personnalisé pour éviter certaines versions ? - [Cliquez pour afficher/masquer]"
 
-    For Custom Formats you really want to avoid, set it to something really low like `-10000` and not something like `-10`.
-    When you add your preferred Custom Format and set it to something like `+10`, it's possible that, for example, the `BR-DISK` will be downloaded - (-10)+(+10)=0 - if your `Minimum Custom Format Score` is set at `0`.
+    Pour les formats personnalisés que vous voulez vraiment éviter, définissez-le sur quelque chose de très bas comme « -10000 » et non sur quelque chose comme « -10 ».
+    Lorsque vous ajoutez votre format personnalisé préféré et que vous le définissez sur quelque chose comme `+10`, il est possible que, par exemple, le `BR-DISK` soit téléchargé - (-10)+(+10)=0 - si votre ` Le score minimum de format personnalisé est défini sur « 0 ».
 
-### Releases you should avoid
+### Versions à éviter
 
-This is a must-have for every Quality Profile you use in my opinion. All these Custom Formats make sure you don't get Low Quality Releases.
+À mon avis, c'est un incontournable pour chaque profil de qualité que vous utilisez. Tous ces formats personnalisés garantissent que vous n'obtiendrez pas de versions de mauvaise qualité.
 
 {! include-markdown "../../includes/cf/sonarr-unwanted.md" !}
 
-### Custom Formats with a score of 0
+### Formats personnalisés avec un score de 0
 
-??? question "What do Custom Formats with a score of 0 do? - [Click to show/hide]"
+??? question "Que font les formats personnalisés avec un score de 0 ? - [Cliquez pour afficher/masquer]"
 
-    All Custom Formats with a score of 0 are purely informational and don't do anything.
+    Tous les formats personnalisés avec un score de 0 sont purement informatifs et ne font rien.
 
-### Minimum Custom Format Score
+### Score minimum du format personnalisé
 
-??? info "Minimum Custom Format Score - [Click to show/hide]"
+??? info "Score minimum de format personnalisé - [Cliquez pour afficher/masquer]"
 
-    Some people suggest not to use negative scores for your Custom Formats and set this option to a higher score than 0.
+    Certaines personnes suggèrent de ne pas utiliser de scores négatifs pour vos formats personnalisés et de définir cette option sur un score supérieur à 0.
 
-    The reason why I don't prefer/use this is because you could limit yourself when some new groups or whatever will be released.
+    La raison pour laquelle je ne préfère/n'utilise pas cela est parce que vous pourriez vous limiter lorsque de nouveaux groupes ou quoi que ce soit seront publiés.
 
-    Also, it makes it much more clear what you prefer and what you want to avoid.
+    En outre, cela montre beaucoup plus clairement ce que vous préférez et ce que vous voulez éviter.
 
-### Audio Channels
+### Canaux audio
 
-??? info "Audio Channels - [Click to show/hide]"
+??? info "Canaux audio - [Cliquez pour afficher/masquer]"
 
-    Elsewhere in the guide, you will find a separate group of custom formats called `Audio Channels`. These will match the number of audio channels in a release, for example, 2.0 (stereo) or 5.1/7.1 (surround sound). Personally, I wouldn't add the audio channels Custom Formats as you could limit yourself in the amount of releases you're able to get. Only use them if you have a specific need for them.
+    Ailleurs dans le guide, vous trouverez un groupe distinct de formats personnalisés appelés « Canaux audio ». Ceux-ci correspondront au nombre de canaux audio dans une version, par exemple 2.0 (stéréo) ou 5.1/7.1 (son surround). Personnellement, je n'ajouterais pas les formats personnalisés des canaux audio, car vous pourriez vous limiter dans le nombre de versions que vous pouvez obtenir. Utilisez-les uniquement si vous en avez un besoin spécifique.
 
-    Using this with any kind of Remux Quality Profile is useless, in my opinion, being that 99% of all Remuxes are multi-audio anyway. You can get better scores just by using the `Audio Advanced` Custom Formats.
+    L'utiliser avec n'importe quel type de profil de qualité Remux est inutile, à mon avis, étant donné que 99% de tous les Remux sont de toute façon multi-audio. Vous pouvez obtenir de meilleurs scores simplement en utilisant les formats personnalisés « Audio Advanced ».
 
-### Avoid using the x264/x265 Custom Format
+### Évitez d'utiliser le format personnalisé x264/x265
 
-??? tip "Avoid using the x264/x265 Custom Format - [Click to show/hide]"
+??? Astuce "Évitez d'utiliser le format personnalisé x264/x265 - [Cliquez pour afficher/masquer]"
 
-    Avoid using the x264/x265 Custom Format with a score if possible, it's smarter to use the [{{ sonarr['cf']['x265-hd']['name'] }}](/Sonarr/sonarr-collection-of-custom-formats/#x265-hd){:target="_blank" rel="noopener noreferrer"} Custom Format.
+    Évitez d'utiliser le format personnalisé x264/x265 avec une partition si possible, il est plus intelligent d'utiliser le [{{ sonarr['cf']['x265-hd']['name'] }}](/Sonarr/sonarr-collection -of-custom-formats/#x265-hd){:target="_blank" rel="noopener noreferrer"} Format personnalisé.
 
-    Something like 95% of video files are x264 and have much better direct play support. If you have more than a of couple users, you will notice much more transcoding.
+    Quelque chose comme 95 % des fichiers vidéo sont au format x264 et offrent une bien meilleure prise en charge de la lecture directe. Si vous avez plus de quelques utilisateurs, vous remarquerez beaucoup plus de transcodage.
 
-    Use x265 only for 4k releases and the [{{ sonarr['cf']['x265-hd']['name'] }}](/Sonarr/sonarr-collection-of-custom-formats/#x265-hd){:target="_blank" rel="noopener noreferrer"} makes sure you still get the x265 releases.
+    Utilisez x265 uniquement pour les versions 4K et le [{{ sonarr['cf']['x265-hd']['name'] }}](/Sonarr/sonarr-collection-of-custom-formats/#x265-hd ){:target="_blank" rel="noopener noreferrer"} s'assure que vous disposez toujours des versions x265.
 
-### Why am I getting purple or green colors
+### Pourquoi est-ce que j'obtiens des couleurs violettes ou vertes
 
 {! include-markdown "../../includes/cf/dv-info-green-purple.md" !}
 
-### Dolby Vision Profiles
+### Profils Dolby Vision
 
 {! include-markdown "../../includes/cf/dv-info-profiles.md" !}
 
-## Thanks
+## Merci
 
-Special thanks to everyone who helped with the testing and creation of these Custom Formats.
+Un merci spécial à tous ceux qui ont contribué aux tests et à la création de ces formats personnalisés.
 
 --8<-- "includes/support.md"

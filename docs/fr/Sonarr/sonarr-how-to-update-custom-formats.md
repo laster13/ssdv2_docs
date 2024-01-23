@@ -1,41 +1,41 @@
-# How to update Custom Formats
+# Comment mettre à jour les formats personnalisés
 
-Here I will try to explain how you can manually update Custom Formats for Sonarr v3+, With any changes from the guide or changes provided to you from other sources, without losing the scoring in your Quality Profile.
+Ici, je vais essayer d'expliquer comment vous pouvez mettre à jour manuellement les formats personnalisés pour Sonarr v3+, avec toutes les modifications du guide ou les modifications qui vous sont fournies à partir d'autres sources, sans perdre la notation de votre profil de qualité.
 
-!!! info "Keep in mind Custom Formats are made to fine tune your Quality Profile.<br>Generally, quality trumps all"
+!!! info "Gardez à l'esprit que les formats personnalisés sont conçus pour affiner votre profil de qualité.<br>En général, la qualité l'emporte sur tout"
 
-## How to Copy/Paste the JSON
+## Comment copier/coller le JSON
 
-The manual way is almost the same as the Import Custom Format way found [HERE](/Sonarr/sonarr-import-custom-formats/){:target="_blank" rel="noopener noreferrer"}
+La méthode manuelle est presque la même que la méthode d'importation au format personnalisé trouvée [ICI](/Sonarr/sonarr-import-custom-formats/){:target="_blank" rel="noopener noreferrer"}
 
-### In Sonarr
+### À Sonarr
 
-`Settings` => `Custom Formats`
+`Paramètres` => `Formats personnalisés`
 
 ![cf-settings-cf](images/cf-settings-cf.png)
 
-### Open the Custom Format you want to update
+### Ouvrez le format personnalisé que vous souhaitez mettre à jour
 
-![!Import To Update](images/cf-import-to-update.png)
+![!Importer pour mettre à jour](images/cf-import-to-update.png)
 
-### Paste the Custom Format
+### Collez le format personnalisé
 
-In the empty `Custom Format JSON` box (1) you just paste the `JSON` that you got from the [Custom Format Collection](/Sonarr/sonarr-collection-of-custom-formats/){:target="_blank" rel="noopener noreferrer"} or provided to you from other sources followed by the `Import` button (2).
+Dans la zone vide "Format personnalisé JSON" (1), collez simplement le "JSON" que vous avez obtenu de la [Collection de formats personnalisés](/Sonarr/sonarr-collection-of-custom-formats/){:target="_blank " rel="noopener noreferrer"} ou fourni à partir d'autres sources suivi du bouton `Importer` (2).
 
 ![cf-import-cf](images/cf-import-cf.png)
 
-### Save the Custom Format
+### Enregistrez le format personnalisé
 
-After selecting the `Import` button you will get a screen that has all the Custom Format variables filled in correctly, all you need to do now is click on the `Save` button and you're done.
+Après avoir sélectionné le bouton « Importer », vous obtiendrez un écran contenant toutes les variables de format personnalisé correctement remplies. Il ne vous reste plus qu'à cliquer sur le bouton « Enregistrer » et vous avez terminé.
 
 ![cf-import-done](images/cf-import-done.png)
 
-!!! warning "The Import to update existing Custom Formats replaces the existing Custom Format, so all manual changes you did to it will be lost :warning:"
+!!! avertissement "L'importation pour mettre à jour les formats personnalisés existants remplace le format personnalisé existant, donc toutes les modifications manuelles que vous y avez apportées seront perdues :avertissement:"
 
-### TRaSH Sync
+### Synchronisation TRaSH
 
-This can be done also automatically with one of the TRaSH Sync Applications,
+Cela peut également être fait automatiquement avec l'une des applications TRaSH Sync,
 
-more info can be found [Here](/Guide-Sync/){:target="_blank" rel="noopener noreferrer"}
+plus d'informations peuvent être trouvées [Ici](/Guide-Sync/){:target="_blank" rel="noopener noreferrer"}
 
 --8<-- "includes/support.md"

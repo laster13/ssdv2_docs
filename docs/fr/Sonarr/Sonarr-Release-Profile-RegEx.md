@@ -1,69 +1,69 @@
 {! include-markdown "../../includes/sonarrv3-eol.md" !}
 
-# Release Profile RegEx (WEB-DL)
+# Libérer le profil RegEx (WEB-DL)
 
-Sonarr V3 has a great feature called Release Profile.
-With this option you can fine tune your preference.
+Sonarr V3 possède une fonctionnalité intéressante appelée Release Profile.
+Avec cette option, vous pouvez affiner vos préférences.
 
-The Release profile that we're going to use for this example is mainly to prefer P2P releases over Scene releases. (Scene releases are still being downloaded, but replaced once an upgrade is found.)
+Le profil Release que nous allons utiliser pour cet exemple consiste principalement à préférer les versions P2P aux versions Scene. (Les versions Scene sont toujours en cours de téléchargement, mais remplacées une fois qu'une mise à niveau est trouvée.)
 
 !!! danger ""
-    **If you don't care about quality then stop reading and see if the other tutorials are helpful for you.**
+    **Si vous ne vous souciez pas de la qualité, arrêtez de lire et voyez si les autres tutoriels vous sont utiles.**
 
-??? question "FAQ - [Click to show/hide]"
+??? question "FAQ - [Cliquez pour afficher/masquer]"
 
     ## FAQ
 
-    **Q: Why do you only have a release profile for WEB-DL?**
+    **Q : Pourquoi disposez-vous uniquement d'un profil de version pour WEB-DL ?**
 
-    A: I only do WEB-DL my self for TV shows because in my opinion WEB-DL is the sweet spot between quality and size and you often don't see big differences anyway for TV shows. (Except for shows like GOT, Vikings, etc)
+    R : Je fais moi-même du WEB-DL uniquement pour les émissions de télévision car, à mon avis, le WEB-DL est le juste milieu entre la qualité et la taille et de toute façon, on ne voit souvent pas de grandes différences pour les émissions de télévision. (Sauf pour les émissions comme GOT, Vikings, etc.)
 
-    **Q: Why do you prefer P2P groups over scene groups?**
+    **Q : Pourquoi préférez-vous les groupes P2P aux groupes de scènes ?**
 
-    A: Scene groups always release in a rush to bring it out as fast as possible.
+    R : Les groupes de scènes sortent toujours à la va-vite pour les sortir le plus vite possible.
 
-    So I noticed often that I got Repacks/Proper releases from them or from different groups and quality.
-    P2P releases are a bit smarter and work sort of together by not doing the same release.
-    Also, I noticed that with some scene releases the 5.1 audio was stripped out or converted to AAC audio.
+    J'ai donc souvent remarqué que je recevais des versions Repacks/Proper d'eux ou de différents groupes et qualités.
+    Les versions P2P sont un peu plus intelligentes et fonctionnent en quelque sorte ensemble en ne faisant pas la même version.
+    De plus, j'ai remarqué qu'avec certaines versions de scène, l'audio 5.1 était supprimé ou converti en audio AAC.
 
-    In my opinion the P2P releases are of better quality.
-    There's one scene group that does bring out quality releases `-deflate/-inflate`.
+    À mon avis, les versions P2P sont de meilleure qualité.
+    Il y a un groupe de scène qui sort des versions de qualité `-deflate/-inflate`.
 
-    **Q: Why do I see so many repacks/propers of Amazon WEB-DLs lately?**
+    **Q : Pourquoi vois-je autant de repacks/propriétés d'Amazon WEB-DL ces derniers temps ?**
 
-    A: A large portion of Amazon WEB-DLs in the last week have only had 192Kbps DD+5.1, because that's all Amazon made available initially.
-    The proper 640Kbps DD+5.1 audio might appear a few hours later or a few months, but when they get updated, the episodes will be REPACKED.
+    R : Une grande partie des WEB-DL d'Amazon au cours de la semaine dernière n'avaient que 192 Kbps DD+5.1, car c'est tout ce qu'Amazon avait initialement mis à disposition.
+    L'audio DD+5.1 à 640 Kbps approprié peut apparaître quelques heures plus tard ou quelques mois, mais lorsqu'ils seront mis à jour, les épisodes seront RÉEMBALLÉS.
 
-    **Q: Why did you remove all the scene groups?**
+    **Q : Pourquoi avez-vous supprimé tous les groupes de scènes ?**
 
-    A: I decided to redo the Release Profile to make it easier for me and the end user to update/manage the Release Profile. I decided not to add the scene groups anymore (and also removing the current ones). Why? Lately I noticed a lot of popup scene releases meaning we need to update often.
+    R : J'ai décidé de refaire le profil de version pour permettre à moi et à l'utilisateur final de mettre à jour/gérer plus facilement le profil de version. J'ai décidé de ne plus ajouter les groupes de scènes (et également de supprimer ceux actuels). Pourquoi? Dernièrement, j'ai remarqué de nombreuses versions de scènes contextuelles, ce qui signifie que nous devons les mettre à jour souvent.
 
-    With this it also means all scene and (yet) unknown groups will be getting a score of `0` and not `-50`.
+    Cela signifie également que toutes les scènes et les groupes (encore) inconnus obtiendront un score de « 0 » et non de « -50 ».
 
-    I will still keep a eye on them and add the Low Quality Groups to the `-100` score and when I find a new P2P group I will add them, resulting in less updates and a more accurate upgrade.
+    Je garderai toujours un œil sur eux et ajouterai les groupes de faible qualité au score « -100 ». Lorsque je trouverai un nouveau groupe P2P, je les ajouterai, ce qui entraînera moins de mises à jour et une mise à niveau plus précise.
 
 ------
 
-## Basics
+## Bases
 
-This guide is based on WEBDL (Read the [FAQ](#faq) why) that's why we're going to create a quality profile based on WEBDL.
+Ce guide est basé sur WEBDL (Lire la [FAQ](#faq) pourquoi) c'est pourquoi nous allons créer un profil de qualité basé sur WEBDL.
 
-`Settings` => `Profiles`
+`Paramètres` => `Profils`
 
 ![!cf-settings-profiles](images/cf-settings-profiles.png)
 
-Select the profile that you want to use/prefer.
+Sélectionnez le profil que vous souhaitez utiliser/préférer.
 
 ![!cf-quality-profiles](images/cf-quality-profiles.png)
 
-![Select quality](images/rp-profile-selected.png)
+![Sélectionner la qualité](images/rp-profile-selected.png)
 
-!!! tip
-    Starting from 2010 you will be able to find almost anything as WEBDL,
+!!! conseil
+    À partir de 2010, vous pourrez trouver presque tout comme WEBDL,
 
-    2000-2010 you will only find a few shows as WEBDL in that case you might want to enable `HDTV` and or `720p`.
+    2000-2010, vous ne trouverez que quelques émissions au format WEBDL, dans ce cas, vous souhaiterez peut-être activer « HDTV » et/ou « 720p ».
 
-    If you want 2160p WEBDL then choose 2160p WEBDL and add the HDR and/or DV regex, 2160p without HDR/DV has no real benefits !!!
+    Si vous voulez du WEBDL 2160p alors choisissez 2160p WEBDL et ajoutez le regex HDR et/ou DV, le 2160p sans HDR/DV n'a aucun réel avantage !!!
 
 ------
 
@@ -71,69 +71,69 @@ Select the profile that you want to use/prefer.
 
 ------
 
-## Propers and Repacks
+## Propriétés et reconditionnements
 
-First we're need to make sure a P2P release isn't being replaced by a Scene Repack/Proper release!
+Nous devons d’abord nous assurer qu’une version P2P n’est pas remplacée par une version Scene Repack/Proper !
 
 ![!rp-settings-media-management-proper](images/rp-settings-media-management-proper.png)
 
-Go to `Settings` => `Media Management`
-We´re going to set it to `Do not Prefer`.
+Allez dans `Paramètres` => `Gestion des médias`
+Nous allons le définir sur « Ne pas préférer ».
 
-Then we navigate to `Settings` => `Profiles` and click the plus sign.
+Ensuite, nous naviguons vers « Paramètres » => « Profils » et cliquons sur le signe plus.
 
 ![!rp-settings-profiles](images/rp-settings-profiles.png)
 
-You will get a popup screen that will look like this:
+Vous obtiendrez un écran contextuel qui ressemblera à ceci :
 
 ![!rp-release-profile](images/rp-release-profile.png)
 
-1. `Must Contain` => add words that the release name **MUST HAVE!**
+1. `Must Contain` => ajoutez les mots que le nom de la version **DOIT AVOIR !**
 
-1. `Must Not Contain` => add words that the release name **MUST NOT HAVE OR IT WILL BE REJECTED!**
+1. `Ne doit pas contenir` => ajoutez des mots que le nom de la version ** NE DOIT PAS AVOIR OU IL SERA REJETÉ ! **
 
-1. `Preferred` => add words you prefer with a certain score. The release will be preferred based on each term's score.
+1. `Préféré` => ajoutez les mots que vous préférez avec un certain score. La version sera préférée en fonction du score de chaque trimestre.
 
-1. `Include Preferred when Renaming` => When you add `{Preferred Words}` to your renaming scheme it will add this info.
+1. `Inclure les préférences lors du renommage` => Lorsque vous ajoutez `{Mots préférés}` à votre schéma de renommage, cette information sera ajoutée.
 
-1. `Indexers` => Specify what indexer the profile applies to.
+1. `Indexers` => Spécifiez à quel indexeur le profil s'applique.
 
-1. `Tags` => create a tag so this is only used by shows that you give this tag to or else it's global.
-
-------
-
-!!! info
-
-    The Number between the **[**brackets**]** in the following release profiles are the scores the release name will get during an automatic and manual search and with the use of the scores some releases will be preferred over others and even upgraded.
-
-    The Number between **(**brackets**)** in the following release profiles are referring to the location where you should add this regex in the release profile corresponding the screenshot above.
-
-!!! warning "We're going to make use of four separate release profiles."
+1. `Tags` => créez une balise afin qu'elle ne soit utilisée que par les émissions auxquelles vous donnez cette balise, sinon elle est globale.
 
 ------
 
-## Profile 1
+!!! Info
 
-<!-- [trash_id: a0e7774a471e041d4f1111e0690244d0] -->
+    Les nombres entre les **[**crochets**]** dans les profils de version suivants correspondent aux scores que le nom de la version obtiendra lors d'une recherche automatique et manuelle. Avec l'utilisation des scores, certaines versions seront préférées à d'autres et même mis à niveau.
 
-### Release Sources (Streaming Service)
+    Le nombre entre **(**crochets**)** dans les profils de version suivants fait référence à l'emplacement où vous devez ajouter cette expression régulière dans le profil de version correspondant à la capture d'écran ci-dessus.
+
+!!! avertissement "Nous allons utiliser quatre profils de version distincts."
+
+------
+
+## Profil 1
+
+<!-- [trash_id : a0e7774a471e041d4f1111e0690244d0] -->
+
+### Sources de version (service de streaming)
 
 !!! note
 
-    Check mark `Include Preferred when Renaming` and add `{Preferred Words}` to your renaming scheme or else you could get download loop issues!!!
+    Cochez « Inclure les préférences lors du renommage » et ajoutez « {Mots préférés} » à votre schéma de renommage, sinon vous pourriez avoir des problèmes de boucle de téléchargement !!!
 
-    What it does:
+    Ce qu'il fait:
 
-    When enabled, the block with the [Release Source (Streaming Service)](#release-source-streaming-service) in it are then added to the file name which fixes any loops due to Sonarr seeing a new NF rip when an AMZN rip is found.
-    Probably doesn’t happen if cutoff is met, but for anything that is unmet or any forced searches it results in a loop because NF is not in Sonarr’s copy so it upgrades, and loops.
+    Lorsqu'il est activé, le bloc contenant [Release Source (Streaming Service)] (#release-source-streaming-service) est ensuite ajouté au nom du fichier qui corrige toutes les boucles dues au fait que Sonarr voit une nouvelle extraction NF lorsqu'une extraction AMZN est trouvé.
+    Cela ne se produit probablement pas si le seuil est respecté, mais pour tout ce qui n'est pas respecté ou pour toute recherche forcée, cela entraîne une boucle car NF n'est pas dans la copie de Sonarr, donc il est mis à niveau et boucle.
 
-    Enabling the include in preferred words for AMZN and adding that to the file name fixes that.
+    L'activation de l'inclusion dans les mots préférés pour AMZN et l'ajout de cela au nom du fichier corrigent ce problème.
 
-    Example of a naming scheme for series:
+    Exemple de schéma de dénomination pour les séries :
 
-    Can be found [HERE](/Sonarr/Sonarr-recommended-naming-scheme/){:target="_blank" rel="noopener noreferrer"}
+    Peut être trouvé [ICI](/Sonarr/Sonarr-recommended-naming-scheme/){:target="_blank" rel="noopener noreferrer"}
 
-Add this to your `Preferred (3)` with a score of [100]
+Ajoutez-le à votre « Préféré (3) » avec un score de [100]
 
 ```bash
 /\b(atvp|aptv|Apple TV\+)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
@@ -143,13 +143,13 @@ Add this to your `Preferred (3)` with a score of [100]
 /\b(dsnp|dsny|disney|Disney\+)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
 ```
 
-Add this to your `Preferred (3)` with a score of [90]
+Ajoutez-le à votre « Préféré (3) » avec un score de [90]
 
 ```bash
-/\b((?<!hbo[ ._-])max)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
+/\b((?<!hbo[ ​​._-])max)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
 ```
 
-Add this to your `Preferred (3)` with a score of [80]
+Ajoutez-le à votre « Préféré (3) » avec un score de [80]
 
 ```bash
 /\b(hmax|hbom|hbo[ ._-]max)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
@@ -159,13 +159,13 @@ Add this to your `Preferred (3)` with a score of [80]
 /\b(qibi|quibi)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
 ```
 
-Add this to your `Preferred (3)` with a score of [70]
+Ajoutez-le à votre « Préféré (3) » avec un score de [70]
 
 ```bash
 /\b(amzn|amazon)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
 ```
 
-Add this to your `Preferred (3)` with a score of [60]
+Ajoutez-le à votre « Préféré (3) » avec un score de [60]
 
 ```bash
 /\b(nf|netflix)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
@@ -183,7 +183,7 @@ Add this to your `Preferred (3)` with a score of [60]
 /\b(stan)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
 ```
 
-Add this to your `Preferred (3)` with a score of [50]
+Ajoutez-le à votre « Préféré (3) » avec un score de [50]
 
 ```bash
 /\b(cc)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
@@ -214,7 +214,7 @@ Add this to your `Preferred (3)` with a score of [50]
 ```
 
 ```bash
-/\b(red)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
+/\b(rouge)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
 ```
 
 ```bash
@@ -238,7 +238,7 @@ Add this to your `Preferred (3)` with a score of [50]
 ```
 
 ```bash
-/\b(u-next)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
+/\b(u-suivant)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
 ```
 
 ```bash
@@ -249,186 +249,186 @@ Add this to your `Preferred (3)` with a score of [50]
 /\b(4OD)\b(?=[ ._-]web[ ._-]?(dl|rip)\b)/i
 ```
 
-!!! danger "Caution"
-    Don't forget to click on `SAVE` after you've added everything you want to the release profile :bangbang:
+!!! danger "Attention"
+    N'oubliez pas de cliquer sur `SAVE` après avoir ajouté tout ce que vous voulez au profil de version :bangbang:
 
-??? success "example - [Click to show/hide]"
+??? réussite "exemple - [Cliquez pour afficher/masquer]"
 
-    !!! warning
-        These screenshots are just examples to show you how it should look and where you need to place the data that you need to add, they aren't a 100% reflection of the actual data and not always 100% up to date with the actual data you need to add.
+    !!! avertissement
+        Ces captures d'écran ne sont que des exemples pour vous montrer à quoi cela devrait ressembler et où vous devez placer les données que vous devez ajouter. Elles ne reflètent pas à 100 % les données réelles et ne sont pas toujours à jour à 100 % avec les données réelles. vous devez ajouter.
 
-        - Always follow the data described in the guide (with the copy paste/option at the end).
-        - If you got any questions or aren't sure just click the chat badge to join the Discord Channel where you can ask your questions directly.
+        - Suivez toujours les données décrites dans le guide (avec l'option copier-coller/option à la fin).
+        - Si vous avez des questions ou n'êtes pas sûr, cliquez simplement sur le badge de discussion pour rejoindre la chaîne Discord où vous pourrez poser vos questions directement.
 
-        [![Discord chat](https://img.shields.io/discord/492590071455940612?style=for-the-badge&color=4051B5&logo=discord)](https://trash-guides.info/discord){:target="_blank" rel="noopener noreferrer"}
+        [![Chat Discord](https://img.shields.io/discord/492590071455940612?style=for-the-badge&color=4051B5&logo=discord)](https://trash-guides.info/discord){:target ="_blank" rel="noopener noreferrer"}
 
     ![!rp-release-sources](images/rp-release-sources.png)
 
 ------
 
-## Profile 2
+## Profil 2
 
-<!-- [trash_id: 37cf8cdd57c8fb4a8b68f36e00e40de2] -->
+<!-- [trash_id : 37cf8cdd57c8fb4a8b68f36e00e40de2] -->
 
-### P2P Groups + Repack/Proper
+### Groupes P2P + Repack/Proper
 
-!!! warning "DO NOT Check mark `Include Preferred when Renaming` :bangbang:"
+!!! avertissement "NE PAS cocher `Inclure les préférences lors du changement de nom` :bangbang:"
 
-Add this to your `Preferred (3)` with a score of [1700]
-
-```bash
-/(-ABBIE|-AJP69|-APEX|-CasStudio|CRFW|-CtrlHD|-FLUX|\bHONE|-KiNGS|-monkee|NOSiViD|-NTb|-NTG|-PAXA|-PEXA|-QOQ|-RTN|-SiC|T6D|-TOMMY|-ViSUM|-XEPA)\b/i
-```
-
-Add this to your `Preferred (3)` with a score of [1650]
+Ajoutez ceci à votre « Préféré (3) » avec un score de [1700]
 
 ```bash
-/(3CTWeB|BLUTONiUM|-BTW|-Chotab|-Cinefeel|-CiT|-CMRG|Coo7|-dB|-DEEP|-END|-ETHiCS|-FC|-Flights|-GNOME|-iJP|-iKA|-iT00NZ|-JETIX|-KHN|-KiMCHI|-LAZY|-MZABI|-NPMS|-NYH|-orbitron|playWEB|PSiG|-ROCCaT|RTFM|-SA89|-SDCC|-SIGMA|-SMURF|-SPiRiT|-TEPES|-TVSmash|-WELP)\b/i
+/(-ABBIE|-AJP69|-APEX|-CasStudio|CRFW|-CtrlHD|-FLUX|\bHONE|-KiNGS|-monkee|NOSiViD|-NTb|-NTG|-PAXA|-PEXA|-QOQ|-RTN |-SiC|T6D|-TOMMY|-ViSUM|-XEPA)\b/i
 ```
 
-Add this to your `Preferred (3)` with a score of [1600]
+Ajoutez ceci à votre « Préféré (3) » avec un score de [1650]
+
+```bash
+/(3CTWeB|BLUTONiUM|-BTW|-Chotab|-Cinefeel|-CiT|-CMRG|Coo7|-dB|-DEEP|-END|-ETHiCS|-FC|-Flights|-GNOME|-iJP|-iKA| -iT00NZ|-JETIX|-KHN|-KiMCHI|-LAZY|-MZABI|-NPMS|-NYH|-orbitron|playWEB|PSiG|-ROCCaT|RTFM|-SA89|-SDCC|-SIGMA|-SMURF|-SPiRiT |-TEPES|-TVSmash|-WELP)\b/i
+```
+
+Ajoutez ceci à votre « Préféré (3) » avec un score de [1600]
 
 ```bash
 /(-DRACULA|SLiGNOME|T4H|-ViSiON|SwAgLaNdEr|-NINJACENTRAL)\b/i
 ```
 
-Add this to your `Preferred (3)` with a score of [1600] [^1]
+Ajoutez ceci à votre « Préféré (3) » avec un score de [1600] [^1]
 
 ```bash
-/(-deflate|-inflate)\b/i
+/(-dégonfler|-gonfler)\b/i
 ```
 
-Add this to your `Preferred (3)` with a score of [7]
+Ajoutez-le à votre « Préféré (3) » avec un score de [7]
 
 ```bash
-/(repack3)/i
+/(repack3)/je
 ```
 
-Add this to your `Preferred (3)` with a score of [6]
+Ajoutez-le à votre « Préféré (3) » avec un score de [6]
 
 ```bash
-/(repack2)/i
+/(repack2)/je
 ```
 
-Add this to your `Preferred (3)` with a score of [5]
+Ajoutez-le à votre « Préféré (3) » avec un score de [5]
 
 ```bash
-/\b(repack|proper)\b/i
+/\b(reconditionner|correct)\b/i
 ```
 
-!!! danger "Caution"
-    Don't forget to click on `SAVE` after you've added everything you want to the release profile :bangbang:
+!!! danger "Attention"
+    N'oubliez pas de cliquer sur `SAVE` après avoir ajouté tout ce que vous voulez au profil de version :bangbang:
 
-??? success "example - [Click to show/hide]"
+??? réussite "exemple - [Cliquez pour afficher/masquer]"
 
-    !!! warning
-        These screenshots are just examples to show you how it should look and where you need to place the data that you need to add, they aren't a 100% reflection of the actual data and not always 100% up to date with the actual data you need to add.
+    !!! avertissement
+        Ces captures d'écran ne sont que des exemples pour vous montrer à quoi cela devrait ressembler et où vous devez placer les données que vous devez ajouter. Elles ne reflètent pas à 100 % les données réelles et ne sont pas toujours à jour à 100 % avec les données réelles. vous devez ajouter.
 
-        - Always follow the data described in the guide (with the copy paste/option at the end).
-        - If you got any questions or aren't sure just click the chat badge to join the Discord Channel where you can ask your questions directly.
+        - Suivez toujours les données décrites dans le guide (avec l'option copier-coller/option à la fin).
+        - Si vous avez des questions ou n'êtes pas sûr, cliquez simplement sur le badge de discussion pour rejoindre la chaîne Discord où vous pourrez poser vos questions directement.
 
-        [![Discord chat](https://img.shields.io/discord/492590071455940612?style=for-the-badge&color=4051B5&logo=discord)](https://trash-guides.info/discord){:target="_blank" rel="noopener noreferrer"}
+        [![Chat Discord](https://img.shields.io/discord/492590071455940612?style=for-the-badge&color=4051B5&logo=discord)](https://trash-guides.info/discord){:target ="_blank" rel="noopener noreferrer"}
 
     ![!rp-p2p-groups](images/rp-p2p-groups.png)
 
 ------
 
-## Profile 3
+## Profil 3
 
-<!-- [trash_id: EBC725268D687D588A20CBC5F97E538B] -->
+<!-- [trash_id : EBC725268D687D588A20CBC5F97E538B] -->
 
-### Low Quality Groups
+### Groupes de faible qualité
 
-!!! warning "DO NOT Check mark `Include Preferred when Renaming` :bangbang:"
+!!! avertissement "NE PAS cocher `Inclure les préférences lors du changement de nom` :bangbang:"
 
-Add this to your `Preferred (3)` with a score of [-10000]
+Ajoutez ceci à votre « Préféré (3) » avec un score de [-10000]
 
 ```bash
 /(-BRiNK|-CHX|-CTFOH|-d3g|-EVO|-FGT|-GHOSTS|-HiQVE|-iNTENSO|JFF|MeGusta|-NERO|nhanc3|Pahe\.ph|Pahe\.in|Pahe|PSA|TBS|-TG|-VIDEOHOLE|-worldmkv|-XLF|-Zero00)\b/i
 ```
 
-!!! danger "Caution"
-    Don't forget to click on `SAVE` after you've added everything you want to the release profile :bangbang:
+!!! danger "Attention"
+    N'oubliez pas de cliquer sur `SAVE` après avoir ajouté tout ce que vous voulez au profil de version :bangbang:
 
-??? success "example - [Click to show/hide]"
+??? réussite "exemple - [Cliquez pour afficher/masquer]"
 
-    !!! warning
-        These screenshots are just examples to show you how it should look and where you need to place the data that you need to add, they aren't a 100% reflection of the actual data and not always 100% up to date with the actual data you need to add.
+    !!! avertissement
+        Ces captures d'écran ne sont que des exemples pour vous montrer à quoi cela devrait ressembler et où vous devez placer les données que vous devez ajouter. Elles ne reflètent pas à 100 % les données réelles et ne sont pas toujours à jour à 100 % avec les données réelles. vous devez ajouter.
 
-        - Always follow the data described in the guide (with the copy paste/option at the end).
-        - If you got any questions or aren't sure just click the chat badge to join the Discord Channel where you can ask your questions directly.
+        - Suivez toujours les données décrites dans le guide (avec l'option copier-coller/option à la fin).
+        - Si vous avez des questions ou n'êtes pas sûr, cliquez simplement sur le badge de discussion pour rejoindre la chaîne Discord où vous pourrez poser vos questions directement.
 
-        [![Discord chat](https://img.shields.io/discord/492590071455940612?style=for-the-badge&color=4051B5&logo=discord)](https://trash-guides.info/discord){:target="_blank" rel="noopener noreferrer"}
+        [![Chat Discord](https://img.shields.io/discord/492590071455940612?style=for-the-badge&color=4051B5&logo=discord)](https://trash-guides.info/discord){:target ="_blank" rel="noopener noreferrer"}
 
     ![!rp-lq-groups](images/rp-lq-groups.png)
 
 ------
 
-## Profile 4
+## Profil 4
 
-### Optionals
+###Options
 
-!!! warning "DO NOT Check mark `Include Preferred when Renaming` :bangbang:"
+!!! avertissement "NE PAS cocher `Inclure les préférences lors du changement de nom` :bangbang:"
 
-!!! danger "Caution"
-    These optionals are optional because they should only be added/used if you got a certain use case for it, if you don't understand what the optional is for then you probably don't need it :bangbang:
+!!! danger "Attention"
+    Ces options sont facultatives car elles ne doivent être ajoutées/utilisées que si vous avez un certain cas d'utilisation, si vous ne comprenez pas à quoi sert l'option, alors vous n'en avez probablement pas besoin :bangbang:
 
-    :bangbang: **Except the `Golden Rule` this one is actually a must even that it's added in the optional section** :bangbang:
+    :bangbang: **À l'exception de la `Règle d'or`, celle-ci est en fait un incontournable même si elle est ajoutée dans la section facultative** :bangbang:
 
-    If you see certain optional with a positive score and you actually don't want them just add them with a negative score !!!
+    Si vous voyez certaines options avec un score positif et que vous ne les voulez pas, ajoutez-les simplement avec un score négatif !!!
 
-#### Golden rule
+#### Règle d'or
 
-!!! warning ""
-    :bangbang: This one is actually a must even that it's added in the optional section :bangbang:
+!!! avertissement ""
+    :bangbang: Celui-ci est en fait un incontournable même s'il est ajouté dans la section facultative :bangbang:
 
-??? question "Why the Must Not Contain entry - [Click to show/hide]"
+??? question "Pourquoi l'entrée Ne doit pas contenir - [Cliquez pour afficher/masquer]"
 
-    This one blocks/ignores 720/1080p releases that are (re-)encoded in x265.
+    Celui-ci bloque/ignore les versions 720/1080p qui sont (ré)codées en x265.
 
-    So why did I put `/^(?=.*(1080|720))(?=.*((x|h)[ ._-]?265|hevc)).*/i` as `Must Not Contain` and what does it do ?
+    Alors pourquoi ai-je mis `/^(?=.*(1080|720))(?=.*((x|h)( ._-]?265|hevc)).*/i` comme `Ne doit pas Contenir et à quoi ça sert ?
 
-    Why ?
+    Pourquoi ?
 
-    !!! quote
-        x265 is good for for 4k stuff or 1080p if they used the the remuxes as source.
-        If the media isn't source quality/remux, then there will be a loss of quality every time.
-        Also, once you go x265, typically that file is done.
-        It can't be changed to something else without a huge loss of quality.
+    !!! citation
+        x265 convient aux contenus 4K ou 1080p s'ils utilisent les remux comme source.
+        Si le média n'est pas de qualité source/remux, il y aura une perte de qualité à chaque fois.
+        De plus, une fois que vous passez à x265, ce fichier est généralement terminé.
+        Il ne peut pas être remplacé par autre chose sans une énorme perte de qualité.
 
-        Something like 95% of video files are x264 and have much better direct play support.
-        If you have more than a couple users,
-        you will notice much more transcoding.
-        Just depends on your priorities.
+        Quelque chose comme 95 % des fichiers vidéo sont au format x264 et offrent une bien meilleure prise en charge de la lecture directe.
+        Si vous avez plusieurs utilisateurs,
+        vous remarquerez beaucoup plus de transcodage.
+        Cela dépend simplement de vos priorités.
 
-        So basically if you are storage poor and just need to save space, use x265.
-        The catch is if you want best quality x265, you need source quality files, so you still have huge file sizes.
-        If you want maximum compatibility and the option to change your files to something else later,
-        then x264.
-        It's all really dependent on specific situations for different people
+        Donc, fondamentalement, si vous manquez de stockage et que vous avez juste besoin d’économiser de l’espace, utilisez x265.
+        Le problème est que si vous voulez la meilleure qualité x265, vous avez besoin de fichiers de qualité source, vous avez donc toujours des tailles de fichiers énormes.
+        Si vous souhaitez une compatibilité maximale et la possibilité de remplacer vos fichiers par autre chose plus tard,
+        puis x264.
+        Tout dépend vraiment de situations spécifiques pour différentes personnes
 
-    It's a shame that most x265 groups microsize the releases or use the x264 as source what results in low quality releases. And the few groups that do use the correct source suffer from it.
+    Il est dommage que la plupart des groupes x265 microdimensionnent les versions ou utilisent le x264 comme source, ce qui entraîne des versions de mauvaise qualité. Et les quelques groupes qui utilisent la bonne source en souffrent.
 
-    That's why  I created my own golden rule.
+    C'est pourquoi j'ai créé ma propre règle d'or.
 
     - 720/1080p => x264
     - 2160p/4k => x265
 
-Add this to your `Must not contain (2)`
+Ajoutez ceci à votre « Ne doit pas contenir (2) »
 
 ```bash
 /^(?=.*(1080|720))(?=.*((x|h)[ ._-]?265|hevc)).*/i
 ```
 
-??? success "example - [Click to show/hide]"
+??? réussite "exemple - [Cliquez pour afficher/masquer]"
 
     ![!rp-release-sources](images/rp-golden-rule.png)
 
 ------
 
-#### Optional - Prefer HDR
+#### Facultatif – Préférer le HDR
 
-Add this to your `Preferred (3)` with a score of [500]
+Ajoutez-le à votre « Préféré (3) » avec un score de [500]
 
 ```bash
 /\bHDR(\b|\d)/i
@@ -436,46 +436,46 @@ Add this to your `Preferred (3)` with a score of [500]
 
 ------
 
-#### Optional - Prefer Dolby Vision
+#### Facultatif - Préférez Dolby Vision
 
-Add this to your `Preferred (3)` with a score of [1500]
+Ajoutez-le à votre « Préféré (3) » avec un score de [1 500]
 
 ```bash
-/\b(dv|dovi|dolby[ .]?v(ision)?)\b/i
+/\b(dv|dovi|dolby[ .]?v(ison)?)\b/i
 ```
 
 ------
 
-#### Optional - Dislike retags
+#### Facultatif – Je n'aime pas les retags
 
-??? question "Explanation - [Click to show/hide]"
-    Use this only if you dislike renamed and retagged releases, some indexers/trackers are known to rename or add their own tags to the release name which could mess up your results or naming.
+??? question "Explication - [Cliquez pour afficher/masquer]"
+    Utilisez-le uniquement si vous n'aimez pas les versions renommées et réétiquetées, certains indexeurs/trackers sont connus pour renommer ou ajouter leurs propres balises au nom de la version, ce qui pourrait gâcher vos résultats ou votre dénomination.
 
-Add this to your `Preferred (3)` with a score of [-10000]
+Ajoutez ceci à votre « Préféré (3) » avec un score de [-10000]
 
 ```bash
 /(\[rartv\]|\[rarbg\]|\[eztv([ ._-]re)?\]|\[TGx\])/i
 ```
 
-#### Optional - Dislike Obfuscated
+#### Facultatif – Je n'aime pas les éléments obscurcis
 
-??? question "Explanation - [Click to show/hide]"
-    Use this only if you dislike Obfuscated releases, some indexers are known to rename or add their own tags/obfuscated name to the release name which could mess up your results or naming.
+??? question "Explication - [Cliquez pour afficher/masquer]"
+    Utilisez-le uniquement si vous n'aimez pas les versions obscurcies, certains indexeurs sont connus pour renommer ou ajouter leurs propres balises/noms obscurcis au nom de la version, ce qui pourrait gâcher vos résultats ou votre dénomination.
 
-Add this to your `Preferred (3)` with a score of [-10000]
+Ajoutez ceci à votre « Préféré (3) » avec un score de [-10000]
 
 ```bash
-/(-4P|-4Planet|-AsRequested|-BUYMORE|-CAPTCHA|-Chamele0n|-GEROV|-iNC0GNiTO|-NZBGeek|-Obfuscated|-postbot|-Rakuv|-Scrambled|-WhiteRev|-WRTEAM|-xpost)\b/i
+/(-4P|-4Planet|-AsRequested|-BUYMORE|-CAPTCHA|-Chamele0n|-GEROV|-iNC0GNiTO|-NZBGeek|-Obfuscated|-postbot|-Rakuv|-Scrambled|-WhiteRev|-WRTEAM|-xpost) \bi
 ```
 
 ------
 
-#### Optional - Dislike release ending: en
+#### Facultatif - Je n'aime pas la fin de la version : fr
 
-Add this to your `Preferred (3)` with a score of [-10000]
+Ajoutez ceci à votre « Préféré (3) » avec un score de [-10000]
 
-??? question "Explanation - [Click to show/hide]"
-    Some indexers are known to add extra useless info to the release name which could mess up your results or naming.
+??? question "Explication - [Cliquez pour afficher/masquer]"
+    Certains indexeurs sont connus pour ajouter des informations supplémentaires inutiles au nom de la version, ce qui pourrait gâcher vos résultats ou votre dénomination.
 
 ```bash
 /\s?\ben\b$/i
@@ -483,14 +483,14 @@ Add this to your `Preferred (3)` with a score of [-10000]
 
 ------
 
-#### Optional - Dislike release containing: 1-
+#### Facultatif - Je n'aime pas la version contenant : 1-
 
-??? question "Explanation - [Click to show/hide]"
-    Some indexers are known to add extra useless info to the release name which could mess up your results or naming.
+??? question "Explication - [Cliquez pour afficher/masquer]"
+    Certains indexeurs sont connus pour ajouter des informations supplémentaires inutiles au nom de la version, ce qui pourrait gâcher vos résultats ou votre dénomination.
 
-    Matches any release that contains '1-' as prefix for Release Groups
+    Correspond à toute version contenant « 1- » comme préfixe pour les groupes de versions
 
-Add this to your `Preferred (3)` with a score of [-10000]
+Ajoutez ceci à votre « Préféré (3) » avec un score de [-10000]
 
 ```bash
 /(?<!\d\.)(1-.+)$/i
@@ -498,9 +498,9 @@ Add this to your `Preferred (3)` with a score of [-10000]
 
 ------
 
-#### Optional - Dislike Extras
+#### Facultatif – Je n'aime pas les extras
 
-Add this to your `Preferred (3)` with a score of [-10000]
+Ajoutez ceci à votre « Préféré (3) » avec un score de [-10000]
 
 ```bash
 /(?<=\bS\d+\b).*\b(Extras|Bonus)\b/i
@@ -508,18 +508,18 @@ Add this to your `Preferred (3)` with a score of [-10000]
 
 ------
 
-#### Optional - Prefer Season Packs
+#### Facultatif - Préférer les packs de saison
 
-??? question "Explanation - [Click to show/hide]"
-    Use this if you prefer Season packs
+??? question "Explication - [Cliquez pour afficher/masquer]"
+    Utilisez-le si vous préférez les packs saisonniers
 
-!!! warning ""
+!!! avertissement ""
 
-    - This will upgrade also your already downloaded single episodes
-    - `/\bS\d+\b(?!E\d+\b)/i` season packs are preferred: however, given the folder name is ignored the error/warning/issue occurs as the file names would not be a season pack of course.
-    - keep in mind this is the only way to prefer season packs if you have preferred words due to the long standing bug => Preferred Words overrule season pack preference [Sonarr/Sonarr#3562](https://github.com/Sonarr/Sonarr/issues/3562){:target="_blank" rel="noopener noreferrer"}
+    - Cela mettra également à niveau vos épisodes uniques déjà téléchargés
+    - Les packs de saison `/\bS\d+\b(?!E\d+\b)/i` sont préférés : cependant, étant donné que le nom du dossier est ignoré, l'erreur/avertissement/problème se produit car les noms de fichiers ne seraient pas une saison pack bien sûr.
+    - gardez à l'esprit que c'est la seule façon de préférer les packs de saison si vous avez des mots préférés en raison d'un bug de longue date => Les mots préférés annulent la préférence du pack de saison [Sonarr/Sonarr#3562](https://github.com/Sonarr/ Sonarr/issues/3562){:target="_blank" rel="noopener noreferrer"}
 
-Add this to your `Preferred (3)` with a score of [15]
+Ajoutez-le à votre « Préféré (3) » avec un score de [15]
 
 ```bash
 /\bS\d+\b(?!E\d+\b)/i
@@ -527,31 +527,31 @@ Add this to your `Preferred (3)` with a score of [15]
 
 ------
 
-##### .su season pack issue
+##### Problème de pack de saison .su
 
-??? bug ".su season pack issue - [Click to show/hide]"
+??? bug "Problème du pack de saison .su - [Cliquez pour afficher/masquer]"
 
-    When you see a error in Sonarr that looks somehow like the follow screenshot
+    Lorsque vous voyez une erreur dans Sonarr qui ressemble en quelque sorte à la capture d'écran suivante
 
     ![!rp-su-season](images/rp-su-season.png)
 
-    Then there is only one way real way that always solves this issue.
-    create a new release profile specific for .su that uses the [Season regex](#optional-matches-season-packs-use-this-if-you-prefer-season-packs) as `Must not contain (2)`
+    Ensuite, il n’existe qu’une seule solution réelle qui résout toujours ce problème.
+    créez un nouveau profil de version spécifique pour .su qui utilise la [regex de saison] (#optional-matches-season-packs-use-this-if-you-prefer-season-packs) comme « Ne doit pas contenir (2) »
 
     ![!rp-release-profile-block-season-su](images/rp-release-profile-block-season-su.png)
 
     !!! note
-        There is a [script](/NZBGet/scripts/#wtfnzb-renamer){:target="_blank" rel="noopener noreferrer"} for NZBGet that sometimes could help but it seems it doesn't always work. It also seems there is a work around for SABnzbd but i can't confirm being i'm not using Sab.
+        Il existe un [script](/NZBGet/scripts/#wtfnzb-renamer){:target="_blank" rel="noopener noreferrer"} pour NZBGet qui pourrait parfois aider, mais il semble qu'il ne fonctionne pas toujours. Il semble également qu'il existe une solution pour SABnzbd, mais je ne peux pas confirmer que je n'utilise pas Sab.
 
 ------
 
-#### Optional - Ignore Dolby Vision without HDR10 fallback
+#### Facultatif - Ignorer Dolby Vision sans repli HDR10
 
-??? question "Explanation - [Click to show/hide]"
+??? question "Explication - [Cliquez pour afficher/masquer]"
 
-    This is a RegEx that ignores DV that don't have the fallback to HDR10, What can results in playback issues like weird colors if you want to play it on a not Dolby Vision compatible setup.
+    Il s'agit d'un RegEx qui ignore les DV qui n'ont pas de solution de repli vers HDR10, ce qui peut entraîner des problèmes de lecture comme des couleurs étranges si vous souhaitez le lire sur une configuration non compatible Dolby Vision.
 
-Add this to your `Must not contain (2)`
+Ajoutez ceci à votre « Ne doit pas contenir (2) »
 
 ```bash
 /^(?!.*(HDR|HULU|REMUX))(?=.*\b(DV|Dovi|Dolby[- .]?V(ision)?)\b).*/i
@@ -559,56 +559,56 @@ Add this to your `Must not contain (2)`
 
 ------
 
-#### Optional - Ignore The Group -SCENE
+#### Facultatif - Ignorer le groupe -SCÈNE
 
-??? question "Explanation - [Click to show/hide]"
+??? question "Explication - [Cliquez pour afficher/masquer]"
 
-    Seems plex ignores `-scene` because it thinks they are extra's. [SOURCE](https://github.com/squaresmile/Plex-Plug-Ins/blob/61eda8a775e198971dcf5088c4daf264a844736f/Scanners.bundle/Contents/Resources/Common/VideoFiles.py#L11){:target="_blank" rel="noopener noreferrer"}
+    Il semble que plex ignore « -scene » parce qu'il pense que ce sont des extras. [SOURCE](https://github.com/squaresmile/Plex-Plug-Ins/blob/61eda8a775e198971dcf5088c4daf264a844736f/Scanners.bundle/Contents/Resources/Common/VideoFiles.py#L11){:target="_blank" rel=" pas d'ouverture ni de référence"}
 
-Add this to your `Must not contain (2)`
+Ajoutez ceci à votre « Ne doit pas contenir (2) »
 
 ```bash
-/\b(-scene)\b/i
+/\b(-scène)\b/i
 ```
 
 ------
 
-#### Optional - Ignore scene releases
+#### Facultatif - Ignorer les versions de scène
 
-??? question "WHY ? - [Click to show/hide]"
+??? question "POURQUOI ? - [Cliquez pour afficher/masquer]"
 
-    If you don't want to download so called scene releases.
+    Si vous ne souhaitez pas télécharger ce qu'on appelle les versions de scène.
 
-Add this to your `Must not contain (2)`
+Ajoutez ceci à votre « Ne doit pas contenir (2) »
 
 ```bash
-/^(?!.*(web[ ]dl|-deflate|-inflate))(?=.*(\b\d{3,4}p\b).*([_. ]WEB[_. ])(?!DL)\b)|\b(-CAKES|-GGEZ|-GGWP|-GLHF|-GOSSIP|-NAISU|-KOGI|-PECULATE|-SLOT|-EDITH|-ETHEL|-ELEANOR|-B2B|-SPAMnEGGS|-FTP|-DiRT|-SYNCOPY|-BAE|-SuccessfulCrab|-NHTFS|-SURCODE|-B0MBARDIERS).*/i
+/^(?!.*(web[ ]dl|-deflate|-inflate))(?=.*(\b\d{3,4}p\b).*([_. ]WEB[_. ])(?!DL)\b)|\b(-CAKES|-GGEZ|-GGWP|-GLHF|-GOSSIP|-NAISU|-KOGI|-PECULATE|-SLOT|-EDITH|-ETHEL|-ELEANOR| -B2B|-SPAMnEGGS|-FTP|-DiRT|-SYNCOPY|-BAE|-SuccessfulCrab|-NHTFS|-SURCODE|-B0MBARDIERS).*/i
 
 ```
 
-#### Optional - Ignore Bad Dual Audio Groups
+#### Facultatif - Ignorer les mauvais groupes audio doubles
 
-??? question "WHY ? - [Click to show/hide]"
+??? question "POURQUOI ? - [Cliquez pour afficher/masquer]"
 
-    These groups take the original release, then they add their own preferred language (ex. Portuguese) as the main audio track (AAC 2.0), What results after renaming and FFprobe that the media file will be recognized as Portuguese AAC audio. It's a common rule that you add the best audio as first.
-    Also they often even rename the release name in to Portuguese.
+    Ces groupes prennent la version originale, puis ajoutent leur propre langue préférée (par exemple le portugais) comme piste audio principale (AAC 2.0). Ce qui résulte après le changement de nom et FFprobe que le fichier multimédia sera reconnu comme audio AAC portugais. Il est courant d'ajouter le meilleur son en premier.
+    De plus, ils renomment souvent le nom de la version en portugais.
 
-Add this to your `Must not contain (2)`
+Ajoutez ceci à votre « Ne doit pas contenir (2) »
 
 ```bash
 /\b(-alfaHD|-BAT|-BNd|-C\.A\.A|-Cory|-EXTREME|-FF|-FOXX|-G4RiS|-GUEIRA|-N3G4N|-PD|-PTHome|-RiPER|-RK|-SiGLA|-Tars|-WTV|-Yatogam1|-YusukeFLA|-ZigZag)\b/i
 ```
 
-#### Optional - Ignore AV1
+#### Facultatif – Ignorer AV1
 
-??? question "WHY ? - [Click to show/hide]"
+??? question "POURQUOI ? - [Cliquez pour afficher/masquer]"
 
-    - This is a new codec and you need modern devices that support it.
-    - We also had reports of playback/transcoding issues.
-    - No main group is actually using it (yet).
-    - It's better to ignore this new codec to prevent compatibility issues.
+    - Il s'agit d'un nouveau codec et vous avez besoin d'appareils modernes qui le prennent en charge.
+    - Nous avons également eu des rapports faisant état de problèmes de lecture/transcodage.
+    - Aucun groupe principal ne l'utilise (encore).
+    - Il est préférable d'ignorer ce nouveau codec pour éviter des problèmes de compatibilité.
 
-Add this to your `Must not contain (2)`
+Ajoutez ceci à votre « Ne doit pas contenir (2) »
 
 ```bash
 /\bAV1\b/i
@@ -616,53 +616,53 @@ Add this to your `Must not contain (2)`
 
 ------
 
-### A little explanation of the scores and why
+### Une petite explication des scores et pourquoi
 
-- Scores [75]-[100] Release Source.
-- Scores [1600]-[1800] P2P Groups.
-- Scores [10-12] Give a repack/proper a higher score but don't trump P2P groups for a Scene fix.
-- Scores [-10000] Retagged/Renames/Obfuscated  releases.
+- Scores [75]-[100] Source de sortie.
+- Scores [1600]-[1800] groupes P2P.
+- Scores [10-12] Donnez à un repack/bon un score plus élevé, mais ne l'emportez pas sur les groupes P2P pour un correctif de scène.
+- Scores [-10000] Versions réétiquetées/renommées/obscurcies.
 
     !!! danger ""
-        If you're getting often a error message like `Has the same filesize as existing file`, you might need to consider to remove the [-10000]
+        Si vous recevez souvent un message d'erreur du type « A la même taille de fichier que le fichier existant », vous devrez peut-être envisager de supprimer le [-10000]
 
-- Scores [-10000] Groups that mess with the audio or add another preferred language.
+- Scores [-10000] Groupes qui modifient l'audio ou ajoutent une autre langue préférée.
 
-Optional => We've tested it and it worked for what we've tested it on, if it will work in your situation we don't know.
+Facultatif => Nous l'avons testé et cela a fonctionné pour ce sur quoi nous l'avons testé, si cela fonctionnera dans votre situation, nous ne le savons pas.
 
-If you notice something wrong just contact me and we will try to fix it or remove it.
+Si vous remarquez quelque chose qui ne va pas, contactez-moi et nous essaierons de le réparer ou de le supprimer.
 
-## Final Results
+## Résultats finaux
 
-When you've done it correctly it will look something like this.
+Lorsque vous l'aurez fait correctement, cela ressemblera à ceci.
 
-??? success "example - [Click to show/hide]"
+??? réussite "exemple - [Cliquez pour afficher/masquer]"
 
-    !!! warning
-        These screenshots are just examples to show you how it should look and where you need to place the data that you need to add, they aren't a 100% reflection of the actual data and not always 100% up to date with the actual data you need to add.
+    !!! avertissement
+        Ces captures d'écran ne sont que des exemples pour vous montrer à quoi cela devrait ressembler et où vous devez placer les données que vous devez ajouter. Elles ne reflètent pas à 100 % les données réelles et ne sont pas toujours à jour à 100 % avec les données réelles. vous devez ajouter.
 
-        - Always follow the data described in the guide (with the copy paste/option at the end).
-        - If you got any questions or aren't sure just click the chat badge to join the Discord Channel where you can ask your questions directly.
+        - Suivez toujours les données décrites dans le guide (avec l'option copier-coller/option à la fin).
+        - Si vous avez des questions ou n'êtes pas sûr, cliquez simplement sur le badge de discussion pour rejoindre la chaîne Discord où vous pourrez poser vos questions directement.
 
-        [![Discord chat](https://img.shields.io/discord/492590071455940612?style=for-the-badge&color=4051B5&logo=discord)](https://trash-guides.info/discord){:target="_blank" rel="noopener noreferrer"}
+        [![Chat Discord](https://img.shields.io/discord/492590071455940612?style=for-the-badge&color=4051B5&logo=discord)](https://trash-guides.info/discord){:target ="_blank" rel="noopener noreferrer"}
 
     ![!rp-profiles](images/rp-profiles.png)
 
 ------
 
-This list is made by collecting information from Sonarr Discord Channel, and personal testing and a few others that helped.
+Cette liste est établie en collectant des informations auprès de Sonarr Discord Channel, ainsi que des tests personnels et quelques autres qui ont aidé.
 
-So I want to thank everyone who helped to make this list possible, for privacy reasons I decided not to add the names/nick of the persons.
+Je tiens donc à remercier tous ceux qui ont contribué à rendre cette liste possible, pour des raisons de confidentialité, j'ai décidé de ne pas ajouter les noms/pseudo des personnes.
 
-If you want to be mentioned please message me on discord, including a link for proof to what part you want to be credited.
+Si vous souhaitez être mentionné, veuillez m'envoyer un message sur Discord, en incluant un lien pour prouver la partie que vous souhaitez être crédité.
 
-!!! info
+!!! Info
 
-    Keep in mind this list will be a constant work in progress because I will be updating it when it's needed.
+    Gardez à l’esprit que cette liste sera un travail constant en cours car je la mettrai à jour lorsque cela sera nécessaire.
 
-    So best to set a notification for updates for this page.
+    Il est donc préférable de définir une notification pour les mises à jour de cette page.
 
-    Or use one of the 3rd Party Sync options that you can find [HERE](/Misc/trash-sync){:target="_blank" rel="noopener noreferrer"}.
+    Vous pouvez également utiliser l'une des options de synchronisation tierce que vous pouvez trouver [ICI](/Misc/trash-sync){:target="_blank" rel="noopener noreferrer"}.
 
 ------
 
@@ -671,4 +671,4 @@ If you want to be mentioned please message me on discord, including a link for p
 
 [^1]:
 
-    The reason why this one gets positively scored is because it's the only quality scene group that exists (up until now). Scene groups don't add a streaming service to their release names, so the score is adjusted to take this into account.
+    La raison pour laquelle celui-ci obtient un score positif est que c'est le seul groupe de scène de qualité qui existe (jusqu'à présent). Les groupes de scènes n'ajoutent pas de service de streaming aux noms de leurs versions, le score est donc ajusté pour en tenir compte.

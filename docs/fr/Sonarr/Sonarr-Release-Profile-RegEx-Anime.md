@@ -1,230 +1,230 @@
 {! include-markdown "../../includes/sonarrv3-eol.md" !}
 
-# Release Profile RegEx (Anime)
+# Profil de version RegEx (Anime)
 
 !!! note
-    This guide is created and maintained by [Visorask/Visorak](https://github.com/Visorask)
+    Ce guide est créé et maintenu par [Visorask/Visorak](https://github.com/Visorask)
 
-    It's recommended to run two Sonarr instances. One for Anime and one for normal tv shows, or you can make use of tags.
+    Il est recommandé d'exécuter deux instances Sonarr. Un pour l'anime et un pour les émissions de télévision normales, ou vous pouvez utiliser des balises.
 
-    Being that release profiles are global without the use of a tag.
+    Étant donné que les profils de version sont globaux sans utilisation de balise.
 
-## Dual-Audio Regex
+## Regex double audio
 
-Having tested most of these settings, they work pretty well, but Anime is a fickle beast to toy with so be warned.
+Après avoir testé la plupart de ces paramètres, ils fonctionnent plutôt bien, mais Anime est une bête inconstante avec laquelle jouer, alors soyez prévenu.
 
 ---
 
-## Anime Delete
+## Anime Supprimer
 
-??? tip "If you have issues with extra files being downloaded like NCED or NCOP"
+??? Astuce "Si vous rencontrez des problèmes avec le téléchargement de fichiers supplémentaires comme NCED ou NCOP"
 
-    If you have issues with Sonarr picking up a bunch of:
+    Si vous rencontrez des problèmes avec Sonarr pour détecter un certain nombre de :
 
     - NCED
-    - NCOP
-    - Music Videos
-    - OP's
+    -NCOP
+    - Vidéos musicales
+    - les OP
 
-    Then this script (linux based only) will delete these files and get rid of them and you don't have to worry about them cluttering up your Auto or Manual import process.
+    Ensuite, ce script (basé sur Linux uniquement) supprimera ces fichiers et s'en débarrassera et vous n'aurez pas à vous soucier qu'ils encombrent votre processus d'importation automatique ou manuelle.
 
     ```bash
     #!/usr/bin/env bash
 
-    # Set the following location to your completed download location for Anime.
-    # Usually one of the following paths:
+    # Définissez l'emplacement suivant sur votre emplacement de téléchargement terminé pour Anime.
+    # Généralement l'un des chemins suivants :
     # Dockers => /data/{usenet|torrents}/anime
     # Cloudbox => /mnt/local/downloads/nzbs/nzbget/completed/sonarranime
-    location="/your/download/path/here"
+    location="/votre/téléchargement/chemin/ici"
 
-    find $location -type f \( -iname "*op[0-9]*" -o -iname "*nced*" -o -iname "*ncop*" -o -iname "*music video*" \) -exec rm -rf {} \;
+    find $location -type f \( -iname "*op[0-9]*" -o -iname "*nced*" -o -iname "*ncop*" -o -iname "*clip vidéo*" \) -exec rm -rf {} \;
     ```
 
-    This script will be called through a custom connection in Sonarr.
+    Ce script sera appelé via une connexion personnalisée dans Sonarr.
 
-    1. Copy the contents of the script into whatever filepath Sonarr has access to (`/config/app/` or `/appdata/sonarr/scripts`)
-    1. Edit the `location="/your/download/path/here"` and make sure it's in quotes.
-    1. Then save it and chmod +x the script.
-    1. In Sonarr go to `Settings` => `Connect` => Click on the `+` Symbol => and select `Custom Script`
-    1. Change Name to whatever you like.
-    1. Select `On Grab` and `On Import`.
-    1. Click the Folder icon or type in the path to the script you chose earlier.
+    1. Copiez le contenu du script dans le chemin de fichier auquel Sonarr a accès (`/config/app/` ou `/appdata/sonarr/scripts`)
+    1. Modifiez le `location="/your/download/path/here"` et assurez-vous qu'il est entre guillemets.
+    1. Enregistrez-le ensuite et chmod +x le script.
+    1. Dans Sonarr, allez dans `Paramètres` => `Connect` => Cliquez sur le symbole `+` => et sélectionnez `Custom Script`
+    1. Changez le nom comme vous le souhaitez.
+    1. Sélectionnez « Sur saisie » et « Sur importation ».
+    1. Cliquez sur l'icône Dossier ou saisissez le chemin d'accès au script que vous avez choisi précédemment.
 
     ![!rpa-customscript](images/rpa-customscript.png)
 
-    Now when you download or import any files the script will run and clear out those files that you most likely won't use and if you want them well this script isn't for you.
+    Désormais, lorsque vous téléchargez ou importez des fichiers, le script s'exécutera et effacera les fichiers que vous n'utiliserez probablement pas et si vous les voulez bien, ce script n'est pas pour vous.
 
 ---
 
-## Media Management
+## Gestion des médias
 
 !!! note
 
-    There are a few settings which make life a lot easier when tracking down and keeping certain information for your Anime and with tweaks to make it work better with [HamaAgent](https://github.com/ZeroQI/Hama.bundle){:target="_blank" rel="noopener noreferrer"} for Plex.
+    Il existe quelques paramètres qui facilitent grandement la recherche et la conservation de certaines informations sur votre anime, ainsi que des ajustements pour qu'il fonctionne mieux avec [HamaAgent](https://github.com/ZeroQI/Hama.bundle){ : target="_blank" rel="noopener noreferrer"} pour Plex.
 
-### Suggested naming scheme
+### Schéma de dénomination suggéré
 
-For this I used the [Sonarr Recommended naming scheme](/Sonarr/Sonarr-recommended-naming-scheme/#anime-episode-format){:target="_blank" rel="noopener noreferrer"} with only a small change for a formatting error to be fixed and the `Series Folder Format` for easier matching.
+Pour cela, j'ai utilisé le [Schéma de dénomination recommandé par Sonarr](/Sonarr/Sonarr-recommended-naming-scheme/#anime-episode-format){:target="_blank" rel="noopener noreferrer"} avec seulement un petit changement pour une erreur de formatage à corriger et le `Series Folder Format` pour une correspondance plus facile.
 
-#### Anime Episode Format
+#### Format des épisodes d'anime
 
-Has all necessary information and a little extra if you needed to rebuild.
-
-```bash
-{Series TitleYear} - S{season:00}E{episode:00} - {absolute:000} - {Episode CleanTitle} [{Preferred Words }{Quality Full}]{[MediaInfo VideoDynamicRange]}[{MediaInfo VideoBitDepth}bit]{[MediaInfo VideoCodec]}[{Mediainfo AudioCodec} { Mediainfo AudioChannels}]{MediaInfo AudioLanguages}{-Release Group}
-```
-
-??? abstract "RESULTS:"
-
-    Single Episode:
-
-    `The Series Title! (2010) - S01E01 - 001 - Episode Title 1 [AMZN WEBDL-1080p v2][HDR][10bit][x264][DTS 5.1][FLAC][JA]-RlsGrp`
-
-    Multi Episode:
-
-    `The Series Title! (2010) - S01E01-E02-E03 - 001-002-003 - Episode Title [AMZN WEBDL-1080p v2][HDR][10bit][x264][DTS 5.1][FLAC][JA]-RlsGrp`
-
-#### Series Folder Format
-
-Adding year back in with tvdb id allows matching to be correct. Thanks salty.
+A toutes les informations nécessaires et un petit plus si vous aviez besoin de reconstruire.
 
 ```bash
-{Series TitleYear} [tvdb-{TvdbId}]
+{Series TitleYear} - S{season:00}E{episode:00} - {absolute:000} - {Episode CleanTitle} [{Mots préférés }{Qualité complète}]{[MediaInfo VideoDynamicRange]}[{MediaInfo VideoBitDepth}bit ]{[MediaInfo VideoCodec]}[{Mediainfo AudioCodec} { Mediainfo AudioChannels}]{MediaInfo AudioLanguages}{-Release Group}
 ```
 
-RESULT:
+??? résumé « RÉSULTATS : »
 
-`The Series Title! (2010) [tvdb-12345]`
+    Épisode unique :
 
-#### Season Folder Format
+    `Le titre de la série ! (2010) - S01E01 - 001 - Titre de l'épisode 1 [AMZN WEBDL-1080p v2][HDR][10bit][x264][DTS 5.1][FLAC][JA]-RlsGrp`
 
-The only one real option to use in my opinion.
+    Épisode multiple :
+
+    `Le titre de la série ! (2010) - S01E01-E02-E03 - 001-002-003 - Titre de l'épisode [AMZN WEBDL-1080p v2][HDR][10bit][x264][DTS 5.1][FLAC][JA]-RlsGrp`
+
+Format de dossier de la série ####
+
+L'ajout de l'année avec l'identifiant tvdb permet que la correspondance soit correcte. Merci salé.
 
 ```bash
-Season {season:00}
+{Titre de la sérieAnnée} [tvdb-{TvdbId}]
 ```
 
-RESULT:
+RÉSULTAT:
 
-`Season 01`
+`Le titre de la série ! (2010) [tvdb-12345]`
 
-#### Multi-Episode Style
+#### Format du dossier de saison
+
+La seule vraie option à utiliser à mon avis.
 
 ```bash
-Prefixed Range
+Saison {saison:00}
 ```
 
-RESULTS:
+RÉSULTAT:
 
-![results](images/results.png)
+'Saison 01'
 
-??? success "Example"
+#### Style multi-épisodes
 
-    ![!Example image of above](images/rpa-mediamanage.png)
+```bash
+Plage préfixée
+```
+
+RÉSULTATS:
+
+![résultats](images/results.png)
+
+??? réussite "Exemple"
+
+    ![!Exemple d'image ci-dessus](images/rpa-mediamanage.png)
 
 ---
 
-## Quality Profile
+## Profil de qualité
 
-We need to add `HDTV-1080p` and `Bluray-1080p` into the same group as `WEBDL-1080p` and `WEBRip-1080p` so that it will download correctly and not upgrade past HDTV-1080P if Preferred Words does not allow it.
+Nous devons ajouter « HDTV-1080p » et « Bluray-1080p » dans le même groupe que « WEBDL-1080p » et « WEBRip-1080p » afin qu'il soit téléchargé correctement et ne soit pas mis à niveau au-delà de HDTV-1080P si les mots préférés ne le permettent pas. il.
 
 ![!rpa-quality-profile-group](images/rpa-quality-profile-group.png)
 
 ---
 
-## Indexers
+## Indexeurs
 
-We need to add the Anime Categories to our indexers otherwise this all won't work very well.
+Nous devons ajouter les catégories Anime à nos indexeurs, sinon tout cela ne fonctionnera pas très bien.
 
-??? success "Example"
+??? réussite "Exemple"
 
-    1. We need to open `Settings -> Indexers`
-    1. Select the Indexer(s) you would like to use for `Anime`
-    1. Select the dropdown for `Anime Categories`.
+    1. Nous devons ouvrir « Paramètres -> Indexeurs »
+    1. Sélectionnez le ou les indexeurs que vous souhaitez utiliser pour « Anime »
+    1. Sélectionnez la liste déroulante « Catégories d'anime ».
     ![!rpa-indexer-1](images/rpa-indexer-1.png)
-    1. Select the `Anime` category.
+    1. Sélectionnez la catégorie « Anime ».
     ![!rpa-indexer-2](images/rpa-indexer-2.png)
-    1. Click outside the pop-up modal but inside the `Add Indexer` modal.
+    1. Cliquez en dehors du modal contextuel mais à l'intérieur du modal « Ajouter un indexeur ».
     ![!rpa-indexer-3](images/rpa-indexer-3.png)
 
 ---
 
 !!! note
 
-    Check mark `Include Preferred when Renaming` where applicable and add `{Preferred Words}` to your renaming scheme else you could get a download loop issues!!!
+    Cochez « Inclure les préférences lors du renommage » le cas échéant et ajoutez « {Mots préférés} » à votre schéma de renommage, sinon vous pourriez avoir des problèmes de boucle de téléchargement !!!
 
-## Release Profiles
+## Profils de version
 
 !!! note
-    We're going to make use of **2** separate release profiles.
+    Nous allons utiliser **2** profils de version distincts.
 
-### First Release Profile
+### Profil de la première version
 
-<!-- [trash_id: 31f4dd7b08bc8a43099eed604fd8acf6] -->
-!!! tip
-    **DO** Check mark `Include Preferred when Renaming` on this release profile.
+<!-- [trash_id : 31f4dd7b08bc8a43099eed604fd8acf6] -->
+!!! conseil
+    **À FAIRE** Cochez « Inclure les préférences lors du changement de nom » sur ce profil de version.
     ![!rpa-release-sources-1](images/rpa-release-sources-1.png)
 
 #### Multi-Audio
 
-Add this to your Preferred with a score of **[500]**
+Ajoutez-le à vos favoris avec un score de **[500]**
 
 ```bash
-/(multi[ ._-]?audio)/i
+/(multi[ ._-]?audio)/je
 ```
 
-#### Dual-Audio
+#### Double audio
 
-Add this to your Preferred with a score of **[0]**. This is for renames only and that's why it is at **0**. It is also added in the second profile. This one is to ensure that the preferred words get added.
+Ajoutez-le à vos favoris avec un score de **[0]**. Ceci concerne uniquement les renommages et c'est pourquoi il est à **0**. Il est également ajouté dans le deuxième profil. Celui-ci vise à garantir que les mots préférés soient ajoutés.
 
 ```bash
-/(dual[ ._-]?audio)/i
+/(double[ ._-]?audio)/i
 ```
 
-#### Optional (uncut|unrated|uncensored)
+#### Facultatif (non coupé|non classé|non censuré)
 
-Add this to your Preferred with a score of **[100]/[-10000]**
+Ajoutez-le à vos favoris avec un score de **[100]/[-10000]**
 
-If you would like it to be priority then set to **100**. If you do not want uncensored set it to **-10000**. If you don't care either way just leave it out. The reasoning behind only **100** is so that it doesn't trump other release further up in the chain, this way it will trump maybe a couple releases, but not more. And **-10000** to hopefully put it at the bottom of any tier list if you don't want it.
+Si vous souhaitez que ce soit prioritaire, définissez-le sur **100**. Si vous ne voulez pas de censure, réglez-le sur **-10000**. Si cela ne vous intéresse pas, laissez-le de côté. Le raisonnement derrière seulement **100** est qu'il ne l'emporte pas sur les autres versions plus haut dans la chaîne, de cette façon, il l'emportera peut-être sur quelques versions, mais pas plus. Et **-10000** pour, espérons-le, le mettre au bas de n'importe quelle liste de niveaux si vous ne le souhaitez pas.
 
 ```bash
-/(uncut|unrated|uncensored|\b(AT[-_. ]?X)\b)/i
+/(non coupé|non classé|non censuré|\b(AT[-_. ]?X)\b)/i
 ```
 
 !!! note
 
-    When done it should look something like this:
+    Une fois terminé, cela devrait ressembler à ceci :
     ![!rpa-release-profile-1](images/rpa-release-profile-1.png)
 
 ---
 
-### Second Release Profile
+### Profil de la deuxième version
 
 <!-- [trash_id: c3a45e86f61f3a801428d1538918e41f] -->
-!!! warning
-    **DO NOT** Check mark `Include Preferred when Renaming`
+!!! avertissement
+    **NE PAS** Cocher « Inclure les préférences lors du changement de nom »
     ![!rpa-release-sources-2](images/rpa-release-sources-2.png)
 
-#### Must Not Contain
+#### Ne doit pas contenir
 
-The reason most of these are added is due to their shitty quality or just in general are not as good as other stuff that is out there. This can be tweaked as needed. Let me know if you run into any issues here. You should be able to just copy paste these in one go. If there is a reason something shouldn't be here let me know and your logic and I will be open to adjusting.
+La raison pour laquelle la plupart d'entre eux sont ajoutés est due à leur qualité merdique ou tout simplement, ils ne sont pas aussi bons que les autres produits disponibles. Cela peut être modifié selon les besoins. Faites-moi savoir si vous rencontrez des problèmes ici. Vous devriez pouvoir simplement les copier-coller en une seule fois. S'il y a une raison pour laquelle quelque chose ne devrait pas être ici, faites-le-moi savoir ainsi que votre logique et je serai ouvert à l'ajustement.
 
-!!! tip
+!!! conseil
 
-    If you would like `dub` releases then remove the last 2 lines and do not add them.
+    Si vous souhaitez des versions « dub », supprimez les 2 dernières lignes et ne les ajoutez pas.
 
 ```bash
 /(\[EMBER\]|-EMBER\b|DaddySubs)/i,
 /(BDMV|M2TS|\bSSA\b|\bVOSTFR\b|\bAbemaTV\b)/i,
 /(CuaP|PnPSubs|ICEBLUE|SLAX|U3-Web)/i,
 /(Raws-Maji|\bKRP\b|M@nI|Kanjouteki|PuyaSubs)/i,
-/\b(Beatrice|ohys|Kawaiika|neko|daddy)[ ._-]?(raws)\b/i,
-/\b(LowPower|Scryous)[ ._-]?(raws)\b/i,
+/\b(Béatrice|ohys|Kawaiika|neko|papa)[ ._-]?(raws)\b/i,
+/\b(LowPower|Scryous)[ ._-]?(bruts)\b/i,
 /\b(NS|AREY|BDMV|BDVD|BJX|DKB|DP|TnF)\b/i,
 /(Amb3r|DsunS|ExREN|\$tore-Chill)/i,
 /(\[Hatsuyuki\]|-Hatsuyuki\b|\[Hitoku\]|-Hitoki\b)/i,
 /(\[Foxtrot\]|-Foxtrot\b|HollowRoxas|\bMGD\b)/i,
-/(JacobSwaggedUp|KEKMASTERS|\[Mites\]|-Mites\b)/i,
+/(JacobSwaggedUp|KEKMASTERS|\[Acariens\]|-Acariens\b)/i,
 /(neoHEVC|Pantsu|\[Pao\]|-Pao\b|Plex Friendly)/i,
 /(Rando235|RandomRemux|Reaktor|RightShiftBy2)/i,
 /(\bSHFS\b|StrayGods|\bUQW\b|Yabai_Desu_Ne)/i,
@@ -233,18 +233,18 @@ The reason most of these are added is due to their shitty quality or just in gen
 /(Golumpa|torenter69|KamiFS|KaiDubs)/i
 ```
 
-#### Preferred
+#### Préféré
 
 !!! note
 
-    Two lines in one grouping is just there for readability purposes but achieves the same result and score.
+    Deux lignes dans un groupe ne sont là que pour des raisons de lisibilité, mais permettent d'obtenir le même résultat et le même score.
 
 ---
 
-Add this to your Preferred with a score of **[501]**
+Ajoutez-le à vos favoris avec un score de **[501]**
 
 !!! note
-    This is set to **501** so that it may jump one tier if need be, but not more.
+    Celui-ci est défini sur **501** afin qu'il puisse sauter d'un niveau si nécessaire, mais pas plus.
 
 ```bash
 /dual[ ._-]?audio|EN\+JA|JA\+EN/i
@@ -252,15 +252,15 @@ Add this to your Preferred with a score of **[501]**
 
 ---
 
-!!! tip
-    These next few are optional, but they are here to move releases up over lower tiers of `1080/720p` or `WEB-DL/Blu-Ray`. Will add another note like this to end the optional section.
+!!! conseil
+    Ces prochaines versions sont facultatives, mais elles sont là pour déplacer les versions vers les niveaux inférieurs de « 1080/720p » ou « WEB-DL/Blu-Ray ». Ajoutera une autre note comme celle-ci pour terminer la section facultative.
 
 ---
 
-Add this to your Preferred with a score of **[100]**
+Ajoutez-le à vos favoris avec un score de **[100]**
 
 !!! note
-    We are adding this as **100** so that any unknown `Blu-Ray` can jump tiers inside the Subs categories but not interfere with any tiers above.
+    Nous l'ajoutons à **100** afin que tout « Blu-Ray » inconnu puisse sauter des niveaux à l'intérieur des catégories Subs mais n'interfère pas avec les niveaux supérieurs.
 
 ```bash
 /\b(?:(Blu-?Ray|BDMux|BD(?!$))|(B[DR]Rip))(?:\b|$|[ .])/ix
@@ -268,15 +268,15 @@ Add this to your Preferred with a score of **[100]**
 
 ---
 
-Add this to your Preferred with a score of **[15]**
+Ajoutez-le à vos favoris avec un score de **[15]**
 
 ```bash
-/\b(WEB[-_. ]?DL|WebHD|[. ]WEB[. ](?:[xh]26[45]|DDP?5[. ]1)|[. ](?-i:WEB)$|\d+0p(?:WEB-DLMux|\b\s\/\sWEB\s\/\s\b))/ix
+/\b(WEB[-_. ]?DL|WebHD|[. ]WEB[. ](?:[xh]26[45]|DDP?5[. ]1)|[. ](?-i: WEB)$|\d+0p(?:WEB-DLMux|\b\s\/\sWEB\s\/\s\b))/ix
 ```
 
 ---
 
-Add this to your Preferred with a score of **[10]**
+Ajoutez-le à vos favoris avec un score de **[10]**
 
 ```bash
 /(Web-?Rip|WEBMux)/ix
@@ -284,25 +284,25 @@ Add this to your Preferred with a score of **[10]**
 
 ---
 
-Add this to your Preferred with a score of **[5]**
+Ajoutez-le à vos favoris avec un score de **[5]**
 
 ```bash
 /\b(?:(1080p|1920x1080|1440p|FHD|1080i|4kto1080p))\b/i
 ```
 
-!!! tip
-    This is the end of the optional section.
+!!! conseil
+    C'est la fin de la section facultative.
 
-Add this to your Preferred with a score of **[4000]**
+Ajoutez-le à vos favoris avec un score de **[4 000]**.
 
-BluRay-Remux / Dual-Audio / 1st Tier
+BluRay-Remux / Dual-Audio / 1er niveau
 
 ```bash
 /(deanzel|\bZR\b|\bCTR\b|\bSCY\b|\bMK\b|TTGA)/i
 ```
 
 ```bash
-/(\bShir\b|LostYears|BluDragon|KAWAiREMUX)/i
+/(\bShir\b|Années perdues|BluDragon|KAWAiREMUX)/i
 ```
 
 ```bash
@@ -314,27 +314,27 @@ BluRay-Remux / Dual-Audio / 1st Tier
 ```
 
 ```bash
-/(\[Vanilla\]|-Vanilla\b|\bAP\b)/i
+/(\[Vanille\]|-Vanille\b|\bAP\b)/i
 ```
 
 ---
 
-Add this to your Preferred with a score of **[3750]**
+Ajoutez ceci à vos favoris avec un score de **[3750]**
 
-BluRay / Dual-Audio / Special (Releases they have are in between below releases and remuxes above.)
+BluRay / Dual-Audio / Special (les versions dont ils disposent se situent entre les versions ci-dessous et les remux ci-dessus.)
 
 ```bash
-/(E[.-]N[.-]D)/i
+/(E[.-]N[.-]D)/je
 ```
 
 ---
 
-Add this to your Preferred with a score of **[3500]**
+Ajoutez-le à vos favoris avec un score de **[3 500]**.
 
-BluRay / Dual-Audio / 1st Tier
+BluRay / Double audio / 1er niveau
 
 ```bash
-/(\bHAiKU\b|Exiled-Destiny|\b(E-D)\b|Koten[ ._-]Gars)/i
+/(\bHAiKU\b|Destin-exilé|\b(ED)\b|Koten[ ._-]Gars)/i
 ```
 
 ```bash
@@ -347,9 +347,9 @@ BluRay / Dual-Audio / 1st Tier
 
 ---
 
-Add this to your Preferred with a score of **[3000]**
+Ajoutez-le à vos favoris avec un score de **[3 000]**.
 
-BluRay / Dual-Audio / Scene|P2P Groups
+BluRay / Dual-Audio / Scène|Groupes P2P
 
 ```bash
 /(\bDHD\b|RedBlade|TENEIGHTY|WaLMaRT)/i
@@ -365,9 +365,9 @@ BluRay / Dual-Audio / Scene|P2P Groups
 
 ---
 
-Add this to your Preferred with a score of **[2500]**
+Ajoutez-le à vos favoris avec un score de **[2 500]**.
 
-BluRay / Dual-Audio / 2ndd Tier
+BluRay / Double audio / 2e niveau
 
 ```bash
 /(\[YURASUKA\]|-YURASUKA\b|karios|Arukoru)/i
@@ -379,19 +379,19 @@ BluRay / Dual-Audio / 2ndd Tier
 
 ---
 
-Add this to your Preferred with a score of **[2000]**
+Ajoutez-le à vos favoris avec un score de **[2000]**
 
 WebSource / Dual|Multi-Audio
 
 ```bash
-/(DragsterPS)/i
+/(DragsterPS)/je
 ```
 
 ---
 
-Add this to your Preferred with a score of **[1500]**
+Ajoutez-le à vos favoris avec un score de **[1 500]**.
 
-WebSource / Dual-Audio
+WebSource / Double Audio
 
 ```bash
 /(xPearse|\bMCR\b|\bKS\b|KiyoshiStar)/i
@@ -399,19 +399,19 @@ WebSource / Dual-Audio
 
 ---
 
-Add this to your Preferred with a score of **[1000]**
+Ajoutez-le à vos favoris avec un score de **[1 000]**.
 
-DVD / Dual-Audio
+DVD/double audio
 
 ```bash
-/(\b(A-L)\b)/i
+/(\b(AL)\b)/je
 ```
 
 ---
 
-Add this to your Preferred with a score of **[300]**
+Ajoutez-le à vos favoris avec un score de **[300]**
 
-Subs with multi such as German, French , Spanish, Italian, Russian, Arabic, Portuguese and English
+Sous-marins avec multi comme l'allemand, le français, l'espagnol, l'italien, le russe, l'arabe, le portugais et l'anglais
 
 ```bash
 /(Erai-raws|KAN3D2M)/i
@@ -419,33 +419,33 @@ Subs with multi such as German, French , Spanish, Italian, Russian, Arabic, Port
 
 ---
 
-Add this to your Preferred with a score of **[250]**
+Ajoutez-le à vos favoris avec un score de **[250]**
 
-Subs
+Sous-marins
 
 ```bash
-/(HorribleSubs|SubsPlease|SallySubs)/i
+/(HorribleSubs|SubsS'il vous plaît|SallySubs)/i
 ```
 
 ---
 
-Add this to your Preferred with a score of **[200]**
+Ajoutez-le à vos favoris avec un score de **[200]**
 
-Subs 2nd Tier
+Sous-marins 2e niveau
 
 ```bash
-/(\[Mysteria\]|-Mysteria\b|Asenshi)/i
+/(\[Mystérie\]|-Mystérie\b|Asenshi)/i
 ```
 
 ```bash
-/(\[meta\]|-meta\b|BlueLobster)/i
+/(\[méta\]|-méta\b|BlueLobster)/i
 ```
 
 ---
 
-Add this to your Preferred with a score of **[150]**
+Ajoutez-le à vos favoris avec un score de **[150]**
 
-Subs 3rd Tier
+Sous-marins 3e niveau
 
 ```bash
 /(\bGJM\b|kBaraka)/i
@@ -453,9 +453,9 @@ Subs 3rd Tier
 
 ---
 
-Add this to your Preferred with a score of **[100]**
+Ajoutez-le à vos favoris avec un score de **[100]**
 
-FanSubs 1st Tier
+FanSubs 1er niveau
 
 ```bash
 /(\bCH\b|\bFFF\b|Licca|Soldado|SNSbu)/i
@@ -467,12 +467,12 @@ FanSubs 1st Tier
 
 ---
 
-Add this to your Preferred with a score of **[50]**
+Ajoutez-le à vos favoris avec un score de **[50]**
 
-FanSubs 2nd Tier
+FanSubs 2e niveau
 
 ```bash
-/(\[Orphan\]|-Orphan\b|\[Yabai\]|-Yabai\b|\bNii-sama\b)/i
+/(\[Orphelin\]|-Orphelin\b|\[Yabai\]|-Yabai\b|\bNii-sama\b)/i
 ```
 
 ```bash
@@ -485,9 +485,9 @@ FanSubs 2nd Tier
 
 ---
 
-Add this to your Preferred with a score of **[25]**
+Ajoutez-le à vos favoris avec un score de **[25]**
 
-FanSubs 3rd Tier
+FanSubs 3e niveau
 
 ```bash
 /(AkihitoSubs|\bASW\b|Commie)/i
@@ -497,29 +497,29 @@ FanSubs 3rd Tier
 
 !!! note
 
-    These are extra parameters that can help and are not needed but are nice to have. They are set low mainly to supercede themselves and not interfere with other releases.
+    Ce sont des paramètres supplémentaires qui peuvent aider et qui ne sont pas nécessaires mais qui sont agréables à avoir. Ils sont réglés à un niveau bas principalement pour se surpasser et ne pas interférer avec les autres versions.
 
-Add this to your Preferred with a score of **[1]**
+Ajoutez-le à vos favoris avec un score de **[1]**
 
-Adds Hi10|Hi10p into a match. Prefers this over some erroneous matches.
+Ajoute Hi10|Hi10p dans un match. Préfère cela à certaines correspondances erronées.
 
 ```bash
-/(10.?bit|hi10p)/i
+/(10.?bit|hi10p)/je
 ```
 
 ---
 
-Add this to your Preferred with a score of **[1]**
+Ajoutez-le à vos favoris avec un score de **[1]**
 
-Adds version due to anime groups sometimes fixing issues with their releases.
+Ajoute une version en raison des groupes d'anime qui résolvent parfois des problèmes avec leurs versions.
 
 ```bash
-/\b(v2)\b/i
+/\b(v2)\b/je
 ```
 
 ---
 
-Add this to your Preferred with a score of **[2]**
+Ajoutez-le à vos favoris avec un score de **[2]**
 
 ```bash
 /\b(v3)\b/i
@@ -527,7 +527,7 @@ Add this to your Preferred with a score of **[2]**
 
 ---
 
-Add this to your Preferred with a score of **[3]**
+Ajoutez-le à vos favoris avec un score de **[3]**
 
 ```bash
 /\b(v4)\b/i
@@ -537,25 +537,25 @@ Add this to your Preferred with a score of **[3]**
 
 !!! note
 
-    This section can be controversial but most of these releases are micro/mini encodes or crappy quality. I personally add them into the do not want section but I will leave them here with negative values so you can still grab them if all else fails.
+    Cette section peut être controversée, mais la plupart de ces versions sont des encodages micro/mini ou une qualité merdique. Personnellement, je les ajoute dans la section Je ne veux pas, mais je les laisserai ici avec des valeurs négatives afin que vous puissiez toujours les récupérer si tout le reste échoue.
 
-Add this to your Preferred with a score of **[-10000]**
+Ajoutez ceci à vos favoris avec un score de **[-10000]**
 
-Sub-Par Releases 1st Tier (Re-encoded to crap or really small filesizes) (Little less worse than the rest)
+Sub-Par Releases 1st Tier (Ré-encodé en merde ou en très petites tailles de fichiers) (Un peu moins pire que le reste)
 
 ```bash
-/(\[Judas\]|-Judas|\[Cleo\]|-Cleo)/i
+/(\[Judas\]|-Judas|\[Cléo\]|-Cléo)/i
 ```
 
 ```bash
-/(AnimeRG|bonkai77|URANiME)/i
+/(AnimeRG|bonkai77|URANIME)/je
 ```
 
 ---
 
-Add this to your Preferred with a score of **[-15000]**
+Ajoutez ceci à vos favoris avec un score de **[-15000]**
 
-Sub-Par Releases 2nd Tier (Re-encoded to crap or really small filesizes) (Seperated onto separate lines for readability)
+Sub-Par Releases 2nd Tier (Réencodé en merde ou en très petites tailles de fichiers) (Séparé sur des lignes séparées pour plus de lisibilité)
 
 ```bash
 /(\[Pixel\]|-Pixel\b\[EDGE\]|-EDGE\b|\[Ranger\]|-Ranger\b)/i
@@ -578,7 +578,7 @@ Sub-Par Releases 2nd Tier (Re-encoded to crap or really small filesizes) (Sepera
 ```
 
 ```bash
-/(NemDiggers|Project-gxs|youshikibi)/i
+/(NemDiggers|Projet-gxs|youshikibi)/i
 ```
 
 ```bash
@@ -601,7 +601,7 @@ Sub-Par Releases 2nd Tier (Re-encoded to crap or really small filesizes) (Sepera
 /(\[Davinci\]|-Davinci\b)/i
 ```
 
-??? tip "If you would like the above to be in DO NOT WANT in an easy format here it is."
+??? Astuce "Si vous souhaitez que ce qui précède soit dans NE VOULEZ PAS dans un format simple, le voici."
 
     ```bash
     /(\[Pixel\]|-Pixel\b\[EDGE\]|-EDGE\b|\[Ranger\]|-Ranger\b)/i,
@@ -609,7 +609,7 @@ Sub-Par Releases 2nd Tier (Re-encoded to crap or really small filesizes) (Sepera
     /(BakedFish|N[eo][wo]b[ ._-]?Subs|\bAnime Time\b)/i,
     /(AnimeKaizoku|Kaizoku|\bCBB\b|phazer11)/i,
     /(iPUNISHER|MiniTheatre|MiniFreeza|Mr\.Deadpool)/i,
-    /(NemDiggers|Project-gxs|youshikibi)/i,
+    /(NemDiggers|Projet-gxs|youshikibi)/i,
     /(\bMD\b|Pog42|mdcx)/i,
     /(A-Destiny|TOPKEK|\bUwU\b|DARKFLiX)/i,
     /(\[Maximus\]|-Maximus\b|\[224\]|-224\b)/i,
@@ -619,30 +619,30 @@ Sub-Par Releases 2nd Tier (Re-encoded to crap or really small filesizes) (Sepera
 
 !!! note
 
-    When done it should look something like this:
+    Une fois terminé, cela devrait ressembler à ceci :
     ![!rpa-release-profile-2](images/rpa-release-profile-2.png)
 
 ---
 
-### Completed
+### Complété
 
-When completed your Release Profiles should look like this:
+Une fois terminés, vos profils de version devraient ressembler à ceci :
 
 ![!rpa-release-profile-3](images/rpa-release-profile-3.png)
 
-### Acknowledgements
+### Remerciements
 
-Most of my information and knowledge came from:
+La plupart de mes informations et connaissances proviennent de :
 
-- Kaiser (Guidance on anime groups)
+- Kaiser (Conseils sur les groupes d'anime)
 
-- rg9400 (Guidance on regex fixes, anime groups and general knowledge share.)
+- rg9400 (Conseils sur les correctifs d'expressions régulières, les groupes d'anime et le partage de connaissances générales.)
 
-- Drazzilb (Guidance on regex fixes, anime groups and general knowledge share.)
+- Drazzilb (Conseils sur les correctifs d'expressions régulières, les groupes d'anime et le partage de connaissances générales.)
 
-- [TRaSH](https://trash-guides.info/) (For allowing me to utilize his website for my guide and general knowledge share.)
+- [TRaSH](https://trash-guides.info/) (Pour m'avoir permis d'utiliser son site Web pour mon guide et mon partage de connaissances générales.)
 
-Thanks a bunch!!
+Merci beaucoup !!
 
 {! include-markdown "../../includes/support.md" !}
 <!-- --8<-- "includes/support.md" -->

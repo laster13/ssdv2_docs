@@ -57,11 +57,6 @@ theme:
     - toc.follow
     # - toc.integrate
 
-nav:
-  - Accueil: index.md
-  - Radarr:
-    - Radarr/index.md
-
 plugins:
   - search
   - roamlinks 
@@ -90,9 +85,6 @@ plugins:
               - media: "(prefers-color-scheme: dark)"
                 primary: pink
                 scheme: slate
-          nav_translations:
-            Accueil: Home
-            Radarr: Radarr
 
 
 # Extensions

@@ -1,38 +1,38 @@
-# How to Merge Quality
+# Comment fusionner la qualité
 
-The current logic on how downloads are compared is **Quality Trumps All** :bangbang:
+La logique actuelle sur la façon dont les téléchargements sont comparés est la suivante : **La qualité l'emporte sur tout** :bangbang:
 
-In some cases it might be preferred to not have Quality Trump All, and let it be handled via Preferred Words / Custom Formats.
+Dans certains cas, il peut être préférable de ne pas avoir Quality Trump All et de le laisser gérer via les mots préférés/formats personnalisés.
 
-To accomplish this you will need to merge the qualities with each other.
+Pour y parvenir, vous devrez fusionner les qualités les unes avec les autres.
 
-## Current Logic
+## Logique actuelle
 
-Here you will see the current logic so you understand how the possible downloads are compared.
+Ici, vous verrez la logique actuelle afin de comprendre comment les téléchargements possibles sont comparés.
 
-{! include-markdown "../../../includes/merge-quality/radarr-current-logic.md" !}
-<!-- --8<-- "includes/merge-quality/radarr-current-logic.md" -->
+{! include-markdown "../../../includes/merge-quality/radar-current-logic.md" !}
+<!-- --8<-- "includes/merge-quality/radar-current-logic.md" -->
 
 {! include-markdown "../../../includes/merge-quality/sonarr-current-logic.md" !}
 <!-- --8<-- "includes/merge-quality/sonarr-current-logic.md" -->
 
-## Merge the Qualities
+## Fusionner les qualités
 
-Go to your preferred Quality Profile or create a new one.
+Accédez à votre profil de qualité préféré ou créez-en un nouveau.
 
-`Settings` => `Profiles`
+`Paramètres` => `Profils`
 
-In this example we will merge the following qualities together:
+Dans cet exemple, nous fusionnerons les qualités suivantes :
 
 - Bluray-720p
 - Bluray-1080p
 - WEBDL/WEBRip-1080p
 
-To merge them you need to click on Edit Groups.
+Pour les fusionner, vous devez cliquer sur Modifier les groupes.
 
-![!Merge Qualities](images/merge.gif)
+![!Fusionner les qualités](images/merge.gif)
 
-When done Sonarr/Radarr upgrades will be handled via Preferred Words / Custom Formats.
+Une fois terminées, les mises à niveau de Sonarr/Radarr seront gérées via les mots préférés/formats personnalisés.
 
 {! include-markdown "../../../includes/support.md" !}
 <!-- --8<-- "includes/support.md" -->

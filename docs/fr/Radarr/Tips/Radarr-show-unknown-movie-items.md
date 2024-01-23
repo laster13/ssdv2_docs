@@ -1,16 +1,16 @@
-# Show Unknown Movie Items
+# Afficher les éléments de film inconnus
 
-You downloaded a movie and it doesn't show up in your Activity in Radarr?
+Vous avez téléchargé un film et il n'apparaît pas dans votre activité dans Radarr ?
 
-By enabling the following option it will show items without a matched movie in the queue. This could include removed movies or anything else in Radarr's category.
+En activant l'option suivante, les éléments sans film correspondant dans la file d'attente seront affichés. Cela peut inclure des films supprimés ou tout autre élément dans la catégorie Radarr.
 
-Go to your Activity
+Accédez à votre activité
 
-`Activity`
+'Activité'
 
-Then on the top right click on `Options` and a new window will popup and enable `Show Unknown Movie Items`
+Ensuite, en haut à droite, cliquez sur « Options » et une nouvelle fenêtre apparaîtra et activera « Afficher les éléments de film inconnus ».
 
-![!Enable Show Unknown Movie Items](images/Radarr-show-unknown-movie-item.png)
+![!Activer l'affichage des éléments de film inconnus](images/Radar-show-unknown-movie-item.png)
 
 {! include-markdown "../../../includes/support.md" !}
 <!-- --8<-- "includes/support.md" -->

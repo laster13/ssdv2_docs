@@ -1,127 +1,127 @@
-# How to setup Quality Profiles Anime
+# Comment configurer les profils de qualité Anime
 
-*aka How to setup Custom Formats (Anime)*<br><br>
+*alias Comment configurer les formats personnalisés (Anime)*<br><br>
 
 !!! note
-    This guide is created and maintained by [FonduemangVI](https://github.com/FonduemangVI) and [rg9400](https://github.com/rg9400)
+    Ce guide est créé et maintenu par [FonduemangVI](https://github.com/FonduemangVI) et [rg9400](https://github.com/rg9400)
 
-It's recommended to run two Radarr instances. One for Anime Movies and one for Normal Movies, or you can make use of Quality Profiles and score different Custom Formats (CFs) as required.
+Il est recommandé d'exécuter deux instances Radarr. Un pour les films d'animation et un pour les films normaux, ou vous pouvez utiliser des profils de qualité et obtenir différents formats personnalisés (CF) selon vos besoins.
 
-The aim of this guide is to grab the best release overall (as per [SeaDex](https://releases.moe/){:target="_blank" rel="noopener noreferrer"}) and not necessarily just dual audio.
-The vast majority of releases can be found on [Nyaa](https://nyaa.si/){:target="_blank" rel="noopener noreferrer"} or [AB](https://animebytes.tv/){:target="_blank" rel="noopener noreferrer"}
+L'objectif de ce guide est de sélectionner la meilleure version globale (selon [SeaDex](https://releases.moe/){:target="_blank" rel="noopener noreferrer"}) et pas nécessairement seulement le double audio.
+La grande majorité des sorties peuvent être trouvées sur [Nyaa](https://nyaa.si/){:target="_blank" rel="noopener noreferrer"} ou [AB](https://animebytes.tv/). {:target="_blank" rel="noopener noreferrer"}
 
-!!! info ""
-    Nyaa is a public tracker while AB is an invite only tracker.
-
----
-
-## Media Management
-
-### Recommended naming scheme
-
-For naming please refer to [Recommended naming scheme](/Radarr/Radarr-recommended-naming-scheme/){:target="_blank" rel="noopener noreferrer"}
+!!! Info ""
+    Nyaa est un tracker public tandis qu'AB est un tracker sur invitation uniquement.
 
 ---
 
-## Quality Settings
+## Gestion des médias
 
-For quality settings please refer to [Radarr Quality Definitions](/Radarr/Radarr-Quality-Settings-File-Size/#radarr-quality-definitions){:target="_blank" rel="noopener noreferrer"}
+### Schéma de dénomination recommandé
+
+Pour la dénomination, veuillez vous référer au [Schéma de dénomination recommandé](/Radarr/Radarr-recommended-naming-scheme/){:target="_blank" rel="noopener noreferrer"}
 
 ---
 
-## Quality Profile
+## Paramètres de qualité
 
-We need to create a new profile called `Remux-1080p - Anime` due to the way anime can be named we will need to merge a few qualities together see [here](/Radarr/Tips/Merge-quality/){:target="_blank" rel="noopener noreferrer"} for an example.
+Pour les paramètres de qualité, veuillez vous référer aux [Définitions de qualité Radarr](/Radarr/Radarr-Quality-Settings-File-Size/#radar-quality-definitions){:target="_blank" rel="noopener noreferrer"}
 
-We need to add `Bluray-1080p Remux` and `Bluray-1080p` into a group together, `HDTV-1080p` into the same group as `WEBDL-1080p` and `WEBRip-1080p`, and lastly `HDTV-720p` into the same group as `WEBDL-720p` and `WEBRip-720p` so that the scoring will work correctly.
+---
 
-Go to `Settings` => `Profiles`
+## Profil de qualité
+
+Nous devons créer un nouveau profil appelé « Remux-1080p - Anime » en raison de la façon dont l'anime peut être nommé, nous devrons fusionner quelques qualités, voir [ici](/Radarr/Tips/Merge-quality/){:target ="_blank" rel="noopener noreferrer"} pour un exemple.
+
+Nous devons ajouter `Bluray-1080p Remux` et `Bluray-1080p` dans un groupe ensemble, `HDTV-1080p` dans le même groupe que `WEBDL-1080p` et `WEBRip-1080p`, et enfin `HDTV-720p` dans le même groupe que `WEBDL-720p` et `WEBRip-720p` afin que la notation fonctionne correctement.
+
+Allez dans `Paramètres` => `Profils`
 
 ![!cf-settings-profiles](images/cfa-settings-profiles.png)
 
 ![!cfa-mergedqualities](images/cfa-mergedqualities.png)
 
-We then need to select and organise the qualities like below.
+Nous devons ensuite sélectionner et organiser les qualités comme ci-dessous.
 
 ![!cfa-qualityorder](images/cfa-qualityorder.png)
 
 ---
 
-## Anime CF/Scoring
+## Anime CF/Score
 
 !!! note
-    We're going to make use of the below custom formats. See [How to import Custom Formats](/Radarr/Radarr-import-custom-formats/){:target="_blank" rel="noopener noreferrer"} for how to import them.
+    Nous allons utiliser les formats personnalisés ci-dessous. Consultez [Comment importer des formats personnalisés](/Radarr/Radarr-import-custom-formats/){:target="_blank" rel="noopener noreferrer"} pour savoir comment les importer.
 
-{! include-markdown "../../includes/cf/radarr-anime.md" !}
-<!-- --8<-- "includes/cf/radarr-anime.md" -->
+{! include-markdown "../../includes/cf/radar-anime.md" !}
+<!-- --8<-- "includes/cf/radar-anime.md" -->
 
-### Default Scoring
+### Notation par défaut
 
-The scoring that has been set is the recommended scoring, however some of the CFs are optional depending on what you prefer.
-`Anime Dual Audio`, `Uncensored` and `10bit` can be given positive scores if you want to prefer content with these attributes.
+La notation qui a été définie est la notation recommandée, cependant certains CF sont facultatifs selon ce que vous préférez.
+« Anime Dual Audio », « Non censuré » et « 10 bits » peuvent recevoir des scores positifs si vous souhaitez préférer le contenu avec ces attributs.
 
-`Anime Raws` and `Dubs Only` are negatively scored, however if you prefer these attributes you can give them a positive score.
+« Anime Raws » et « Dubs Only » ont un score négatif, mais si vous préférez ces attributs, vous pouvez leur donner un score positif.
 
-Once the custom formats have been imported you can set the scores as above. To do this go to `Settings` => `Profiles` and select the `Remux-1080p - Anime` profile that was setup before.
+Une fois les formats personnalisés importés, vous pouvez définir les scores comme ci-dessus. Pour ce faire, allez dans `Paramètres` => `Profils` et sélectionnez le profil `Remux-1080p - Anime` qui a été configuré auparavant.
 
 ![!cf-settings-profiles](images/cfa-settings-profiles.png)
 
-In the profile enter the scores as per the above table in this section.
+Dans le profil, entrez les scores selon le tableau ci-dessus dans cette section.
 
 ![!cfa-default-scoring](images/cfa-default-scoring.png)
 
-After you are done it should look like the image above.
+Une fois que vous avez terminé, cela devrait ressembler à l’image ci-dessus.
 
-### Dual Audio Scoring
+### Double notation audio
 
-If you prefer `Dual Audio` releases you have a few options depending on your preference.
+Si vous préférez les versions « Dual Audio », vous disposez de quelques options en fonction de vos préférences.
 
-If you want to prefer `Dual Audio` within the same tier give the `CF` a score of `10`, if you want it to be preferred a tier above give the `CF` a score of `101`, and if you want to prefer it over any tiers give the `CF` a score of `2000`.
+Si vous souhaitez préférer « Dual Audio » au sein du même niveau, donnez au « CF » un score de « 10 », si vous souhaitez qu'il soit préféré à un niveau supérieur, donnez au « CF » un score de « 101 », et si vous Si vous voulez le préférer à n'importe quel niveau, donnez au « CF » un score de « 2000 ».
 
-If you must have `Dual Audio` releases set the `Minimum Custom Format Score` to 2000 in the `Remux-1080p - Anime` profile that you setup earlier.
+Si vous devez disposer de versions « Dual Audio », définissez le « Score de format personnalisé minimum » sur 2000 dans le profil « Remux-1080p - Anime » que vous avez configuré précédemment.
 
-Using this scoring you will still benefit from the tiers if a better release group does a `Dual Audio` release.
+En utilisant cette notation, vous bénéficierez toujours des niveaux si un meilleur groupe de versions réalise une version « Dual Audio ».
 
-Below is an example of the scoring set to prefer `Dual Audio` over any tier.
+Vous trouverez ci-dessous un exemple de notation définie pour préférer « Dual Audio » à n'importe quel niveau.
 
 ![!cfa-da-scoring](images/cfa-da-scoring.png)
 
-### Uncensored Scoring
+### Notation non censurée
 
 !!! note
-    Most BDs are uncensored by default, so most groups do not include that in the name.
+    La plupart des BD ne sont pas censurées par défaut, donc la plupart des groupes ne l'incluent pas dans le nom.
 
-If you prefer `Uncensored` releases you have a few options depending on your preference.
+Si vous préférez les versions « non censurées », vous disposez de quelques options en fonction de vos préférences.
 
-If you want to prefer `Uncensored` within the same tier give the `CF` a score of `10`, if you want it to be preferred a tier above give the `CF` a score of `101`.
+Si vous souhaitez préférer « Non censuré » au sein du même niveau, donnez au « CF » un score de « 10 », si vous souhaitez qu'il soit préféré à un niveau supérieur, donnez au « CF » un score de « 101 ».
 
-Using this scoring you will still benefit from the tiers if a better release group does an `Uncensored` release.
+En utilisant cette notation, vous bénéficierez toujours des niveaux si un meilleur groupe de versions réalise une version « non censurée ».
 
-Below is an example of the scoring set to prefer `Uncensored` a tier above.
+Vous trouverez ci-dessous un exemple de notation définie pour préférer « Non censuré » à un niveau supérieur.
 
 ![!cfa-uncensored-scoring](images/cfa-uncensored-scoring.png)
 
-### Finishing up
+### Finir
 
-Once you have set your preferred scoring you will need to make two more changes to your `Remux-1080p - Anime` profile.
+Une fois que vous avez défini votre score préféré, vous devrez apporter deux modifications supplémentaires à votre profil « Remux-1080p - Anime ».
 
-Make sure `Upgrades Allowed` is ticked then set the `Upgrade Until` section to `Remux-1080p` and the `Upgrade Until Custom Format Score` to `10000` and set `Language` to `Original`
+Assurez-vous que « Mises à niveau autorisées » est cochée, puis définissez la section « Mise à niveau jusqu'à » sur « Remux-1080p » et la « Mise à niveau jusqu'au score de format personnalisé » sur « 10000 » et définissez « Langue » sur « Original ».
 
-After this has been done your profile should look like below. This is an example of the Default Scoring setup.
+Une fois cela fait, votre profil devrait ressembler à celui ci-dessous. Ceci est un exemple de configuration de la notation par défaut.
 
 ![!cfa-complete](images/cfa-complete.png)
 
-### Acknowledgements
+### Remerciements
 
-Most of my information and knowledge came from:
+La plupart de mes informations et connaissances proviennent de :
 
-- rg9400 (Building the Custom Formats, Guidance on anime groups and general knowledge share.)
+- rg9400 (Création des formats personnalisés, conseils sur les groupes d'anime et partage de connaissances générales.)
 
-- V01 from SeaDex (Guidance on anime groups and general knowledge share.)
+- V01 de SeaDex (Conseils sur les groupes d'anime et partage de connaissances générales.)
 
-- Drazzilb (Guidance on anime groups, testing and general knowledge share.)
+- Drazzilb (Conseils sur les groupes d'anime, tests et partage de connaissances générales.)
 
-- [TRaSH](https://trash-guides.info/) (For allowing me to utilize his website for our guide and general knowledge share.)
+- [TRaSH](https://trash-guides.info/) (Pour m'avoir permis d'utiliser son site Web pour notre guide et notre partage de connaissances générales.)
 
 {! include-markdown "../../includes/support.md" !}
 <!-- --8<-- "includes/support.md" -->

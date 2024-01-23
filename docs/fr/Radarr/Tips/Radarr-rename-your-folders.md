@@ -1,44 +1,44 @@
-# How to rename your folders
+# Comment renommer vos dossiers
 
-If you need to rename your current folder names (for example, to a new naming scheme), you can do so with a little "magic trick".
+Si vous devez renommer vos noms de dossiers actuels (par exemple, en un nouveau schéma de dénomination), vous pouvez le faire avec un petit « tour de magie ».
 
-![!radarr-wrong-folder-name](images/radarr-wrong-folder-name.png)
+![!radar-wrong-folder-name](images/radar-wrong-folder-name.png)
 
-Simply go to the movie overview section.
+Accédez simplement à la section de présentation du film.
 
-`Movies`
+« Films »
 
-Click on `Edit Movies` (at the top)
+Cliquez sur « Modifier les films » (en haut)
 
-![!radarr-movie-editor](images/radarr-movie-editor.png)
+![!radar-movie-editor](images/radar-movie-editor.png)
 
-Once you are in "edit" mode, you can select the movie(s) whose folders you want to be renamed.
+Une fois que vous êtes en mode « édition », vous pouvez sélectionner le(s) film(s) dont vous souhaitez renommer les dossiers.
 
-![!radarr-movie-editor-select](images/radarr-movie-editor-select.png)
+![!radar-movie-editor-select](images/radar-movie-editor-select.png)
 
-1. If you want all your movie's folders to be renamed with the new naming scheme you set [HERE](/Radarr/Radarr-recommended-naming-scheme){:target="_blank" rel="noopener noreferrer"}.
-1. Select the movie(s) that you want to have the folder(s) renamed.
-1. At the bottom select `Edit`
+1. Si vous souhaitez que tous les dossiers de votre film soient renommés avec le nouveau schéma de dénomination que vous avez défini [ICI](/Radarr/Radarr-recommended-naming-scheme){:target="_blank" rel="noopener noreferrer"}.
+1. Sélectionnez le(s) film(s) dont vous souhaitez que le(s) dossier(s) soit renommé(s).
+1. En bas, sélectionnez « Modifier »
 
-A new popup will be shown:
+Une nouvelle fenêtre contextuelle s'affichera :
 
-![!radarr-edit-selected-movies](images/radarr-edit-selected-movies.png)
+![!radar-edit-selected-movies](images/radar-edit-selected-movies.png)
 
-Choose the same (current) root folder for your selected movies, and choose `Apply Changes`.
+Choisissez le même dossier racine (actuel) pour vos films sélectionnés, puis choisissez « Appliquer les modifications ».
 
-![!radarr-movie-editor-move-files-yes](images/radarr-movie-editor-move-files-yes.png)
+![!radar-movie-editor-move-files-yes](images/radar-movie-editor-move-files-yes.png)
 
-You will get a warning popup where you will need to choose `Yes, Move the files`
+Vous obtiendrez une fenêtre contextuelle d'avertissement dans laquelle vous devrez choisir « Oui, déplacer les fichiers »
 
-!!! warning
-    If you have a large library, use remote or cloud storage, or your path structure isn't well planned (or doesn't support instant moves) this could take a while.
+!!! avertissement
+    Si vous disposez d'une grande bibliothèque, utilisez un stockage distant ou cloud, ou si votre structure de chemin n'est pas bien planifiée (ou ne prend pas en charge les déplacements instantanés), cela peut prendre un certain temps.
 
-    **Make sure you don't interrupt this process.** If it stops before it has been completed, it could result in quite a mess.
+    **Assurez-vous de ne pas interrompre ce processus.** S'il s'arrête avant qu'il ne soit terminé, cela pourrait entraîner un véritable gâchis.
 
-Then, Magic!
+Alors, Magie !
 
-![!radarr-correct-folder-name](images/radarr-correct-folder-name.png)
+![!radar-correct-folder-name](images/radar-correct-folder-name.png)
 
-As you can see, the folder has now been renamed to the new/updated naming scheme.
+Comme vous pouvez le constater, le dossier a maintenant été renommé selon le schéma de dénomination nouveau/mis à jour.
 
 --8<-- "includes/support.md"

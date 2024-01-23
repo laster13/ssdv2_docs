@@ -1,184 +1,184 @@
-# Recommended naming scheme
+# Schéma de dénomination recommandé
 
-On the [Radarr Discord](https://radarr.video/discord){:target="_blank" rel="noopener noreferrer"} people often ask, "What's the recommended/best way to
-name your files?" First off, it's personal preference, but it's often recommended to add non-recoverable info.
+Sur le [Radar Discord](https://radar.video/discord){:target="_blank" rel="noopener noreferrer"}, les gens demandent souvent : "Quelle est la meilleure façon de
+nommez vos fichiers ?" Tout d'abord, c'est une préférence personnelle, mais il est souvent recommandé d'ajouter des informations non récupérables.
 
-Why?
+Pourquoi?
 
-If, for what ever reason, you ever need to do a re-install or re-import in
-the Starr Apps or Plex/Emby/Jellyfin it's nice to have all that info in the filename so
-it gets imported correctly and isn't incorrectly matched as HDTV or WEB-DL etc.
+Si, pour une raison quelconque, vous devez effectuer une réinstallation ou une réimportation dans
+les applications Starr ou Plex/Emby/Jellyfin, c'est bien d'avoir toutes ces informations dans le nom de fichier donc
+il est importé correctement et ne correspond pas incorrectement à HDTV ou WEB-DL, etc.
 
-The Tokens not available in the release won't be used/shown.
+Les jetons non disponibles dans la version ne seront pas utilisés/affichés.
 
 ------
 
-## Preparation
+## Préparation
 
-Go to `Settings` => `Media Management` and make sure that `Show Advanced` at the top is enabled.
+Allez dans « Paramètres » => « Gestion des médias » et assurez-vous que « Afficher avancé » en haut est activé.
 
-![Enable Advanced](images/radarr-show-adavanced.png)
+![Activer Avancé](images/radar-show-adavanced.png)
 
-Once you clicked on the button it should look like this and you should see all the advanced options.
+Une fois que vous avez cliqué sur le bouton, cela devrait ressembler à ceci et vous devriez voir toutes les options avancées.
 
-![Unhide Advanced](images/unhide-advanced.png)
+![Afficher avancé](images/unhide-advanced.png)
 
-## Standard Movie Format
+## Format de film standard
 
-This naming scheme is made to be compatible with the [New Plex Agent](https://forums.plex.tv/t/new-plex-media-server-movie-scanner-and-agent-preview/593269/517){:target="_blank" rel="noopener noreferrer"} that now supports IMDb and TMDb IDs in filenames, if you don't need it or want it just remove `{imdb-{ImdbId}}`
+Ce schéma de dénomination est conçu pour être compatible avec le [Nouvel Agent Plex](https://forums.plex.tv/t/new-plex-media-server-movie-scanner-and-agent-preview/593269/517) {:target="_blank" rel="noopener noreferrer"} qui prend désormais en charge les ID IMDb et TMDb dans les noms de fichiers, si vous n'en avez pas besoin ou si vous le souhaitez, supprimez simplement `{imdb-{ImdbId}}`
 
-!!! warning "Starting from v4.2.2.6489, Radarr now supports Plex Multiple Edition tags in naming."
+!!! avertissement "À partir de la version 4.2.2.6489, Radarr prend désormais en charge les balises Plex Multiple Edition dans la dénomination."
 
-    If you're using a lower version or don't need it replace:
+    Si vous utilisez une version inférieure ou si vous n'en avez pas besoin, remplacez-la :
 
-    `{edition-{Edition Tags}}` with `{Edition Tags}`
+    `{edition-{Edition Tags}}` avec `{Edition Tags}`
 
-    !!! danger "Only use `{edition-{Edition Tags}}` if you are prepared to have movies separated by edition<br>when using a merged Plex library - e.g., you keep both 1080p and 2160p versions of one movie.<br><br>For example if you have the `Directors Cut` and the `Extended Cut` for one movie, those will show up as two separate movies in your library.<br><br>Note that not using `{edition-{Edition Tags}}` will prevent Plex from recognizing the edition."
+    !!! danger "N'utilisez `{edition-{Edition Tags}}` que si vous êtes prêt à avoir des films séparés par édition<br>lorsque vous utilisez une bibliothèque Plex fusionnée - par exemple, vous conservez les versions 1080p et 2160p d'un film.<br> <br>Par exemple, si vous avez « Directors Cut » et « Extended Cut » pour un film, ceux-ci apparaîtront comme deux films distincts dans votre bibliothèque.<br><br>Notez que vous n'utilisez pas `{edition-{ Les balises d'édition}}` empêcheront Plex de reconnaître l'édition. "
 
-### Plex
+###Plex
 
 ```bash
-{{ radarr['naming']['radarr-naming']['file']['default'] }}
+{{ radarr['naming']['radar-naming']['file']['default'] }}
 ```
 
-??? abstract "RESULTS: - [Click to show/hide]"
+??? résumé "RESULTATS : - [Cliquez pour afficher/masquer]"
 
-    `The Movie Title (2010) {imdb-tt0066921} {edition-Ultimate Extended Edition} [IMAX HYBRID][Bluray-1080p Proper][3D][DV HDR10][DTS 5.1][x264]-EVOLVE`
+    `Le titre du film (2010) {imdb-tt0066921} {edition-Ultimate Extended Edition} [IMAX HYBRID][Bluray-1080p Proper][3D][DV HDR10][DTS 5.1][x264]-EVOLVE`
 
 #### Plex Anime
 
 ```bash
-{{ radarr['naming']['radarr-naming']['file']['anime'] }}
+{{ radarr['naming']['radar-naming']['file']['anime'] }}
 ```
 
-??? abstract "RESULTS: - [Click to show/hide]"
+??? résumé "RESULTATS : - [Cliquez pour afficher/masquer]"
 
-    `The Movie Title (2010) {imdb-tt0066921} {edition-Ultimate Extended Edition} [Surround Sound x264][Bluray-1080p Proper][3D][DTS 5.1][DE][10bit][AVC]-EVOLVE`
+    `Le titre du film (2010) {imdb-tt0066921} {edition-Ultimate Extended Edition} [Surround Sound x264][Bluray-1080p Proper][3D][DTS 5.1][DE][10bit][AVC]-EVOLVE`
 
 ### Emby
 
 ```bash
-{{ radarr['naming']['radarr-naming']['file']['emby'] }}
+{{ radarr['naming']['radar-naming']['file']['emby'] }}
 ```
 
-??? abstract "RESULTS: - [Click to show/hide]"
+??? résumé "RESULTATS : - [Cliquez pour afficher/masquer]"
 
-    `The Movie Title (2010) [imdbid-tt0066921] - {edition-Ultimate Extended Edition} [IMAX HYBRID][Bluray-1080p Proper][3D][DV HDR10][DTS 5.1][x264]-EVOLVE`
+    `Le titre du film (2010) [imdbid-tt0066921] - {edition-Ultimate Extended Edition} [IMAX HYBRID][Bluray-1080p Proper][3D][DV HDR10][DTS 5.1][x264]-EVOLVE`
 
 #### Emby Anime
 
 ```bash
-{{ radarr['naming']['radarr-naming']['file']['anime-emby'] }}
+{{ radarr['naming']['radar-naming']['file']['anime-emby'] }}
 ```
 
-??? abstract "RESULTS: - [Click to show/hide]"
+??? résumé "RESULTATS : - [Cliquez pour afficher/masquer]"
 
-    `The Movie Title (2010) [imdbid-tt0066921] - {edition-Ultimate Extended Edition} [Surround Sound x264][Bluray-1080p Proper][3D][DTS 5.1][DE][10bit][AVC]-EVOLVE`
+    `Le titre du film (2010) [imdbid-tt0066921] - {edition-Ultimate Extended Edition} [Surround Sound x264][Bluray-1080p Proper][3D][DTS 5.1][DE][10bit][AVC]-EVOLVE`
 
-### Jellyfin
+### Gelée
 
 ```bash
-{{ radarr['naming']['radarr-naming']['file']['jellyfin'] }}
+{{ radarr['naming']['radar-naming']['file']['jellyfin'] }}
 ```
 
-??? abstract "RESULTS: - [Click to show/hide]"
+??? résumé "RESULTATS : - [Cliquez pour afficher/masquer]"
 
-    `The Movie Title (2010) [imdbid-tt0066921] - {edition-Ultimate Extended Edition} [IMAX HYBRID][Bluray-1080p Proper][3D][DV HDR10][DTS 5.1][x264]-EVOLVE`
+    `Le titre du film (2010) [imdbid-tt0066921] - {edition-Ultimate Extended Edition} [IMAX HYBRID][Bluray-1080p Proper][3D][DV HDR10][DTS 5.1][x264]-EVOLVE`
 
 #### Jellyfin Anime
 
 ```bash
-{{ radarr['naming']['radarr-naming']['file']['anime-jellyfin'] }}
+{{ radarr['naming']['radar-naming']['file']['anime-jellyfin'] }}
 ```
 
-??? abstract "RESULTS: - [Click to show/hide]"
+??? résumé "RESULTATS : - [Cliquez pour afficher/masquer]"
 
-    `The Movie Title (2010) [imdbid-tt0066921] - {edition-Ultimate Extended Edition} [Surround Sound x264][Bluray-1080p Proper][3D][DTS 5.1][DE][10bit][AVC]-EVOLVE`
-
-------
-
-## Original Title vs  Original Filename
-
-### Original Title
-
-Another option is to use `{Original Title}` rather than the recommended naming scheme outlined above. `{Original Title}` will use the title of the release which will contain all of the information included in the release itself. The benefit of this naming scheme is to prevent download loops which can occur on import when there is a discrepancy in the release title compared to the contents of the file itself (for example, if the release title says DTS-ES but the contents are actually DTS). The downside is less flexibility with how the files are named.
-
-If using this alternate naming scheme I suggest using `{Original Title}` over `{Original Filename}`
-
-Why?
-
-The filename can be Obscured where the Release naming isn't, especially when you use Usenet.
-
-`{Original Title}` => `The.Movie.Title.2010.REMASTERED.1080p.BluRay.x264-GROUP`
-
-`{Original Filename}` => `group-karatekid-1080p` or `lchd-tkk1080p` or `t1i0p3s7i8yuti`
+    `Le titre du film (2010) [imdbid-tt0066921] - {edition-Ultimate Extended Edition} [Surround Sound x264][Bluray-1080p Proper][3D][DTS 5.1][DE][10bit][AVC]-EVOLVE`
 
 ------
 
-## Movie Folder Format
+## Titre original vs nom de fichier original
+
+### Titre original
+
+Une autre option consiste à utiliser « {Titre original} » plutôt que le schéma de dénomination recommandé décrit ci-dessus. `{Titre original}` utilisera le titre de la version qui contiendra toutes les informations incluses dans la version elle-même. L'avantage de ce schéma de dénomination est d'éviter les boucles de téléchargement qui peuvent se produire lors de l'importation lorsqu'il y a une différence entre le titre de la version et le contenu du fichier lui-même (par exemple, si le titre de la version indique DTS-ES mais que le contenu est en réalité DTS). L'inconvénient est moins de flexibilité dans la façon dont les fichiers sont nommés.
+
+Si vous utilisez ce schéma de dénomination alternatif, je suggère d'utiliser `{Titre original}` plutôt que `{Nom de fichier original}`
+
+Pourquoi?
+
+Le nom du fichier peut être masqué là où le nom de la version ne l'est pas, en particulier lorsque vous utilisez Usenet.
+
+`{Titre original}` => `The.Movie.Title.2010.REMASTERED.1080p.BluRay.x264-GROUP`
+
+`{Nom de fichier original}` => `group-karatekid-1080p` ou `lchd-tkk1080p` ou `t1i0p3s7i8yuti`
+
+------
+
+## Format du dossier de film
 
 !!! danger ""
 
-    **Please note that folder names are created (in the database) whenever the movie is added to Radarr, and it may be missing or incorrect at that time and your folder would have a blank ID!!!**
+    **Veuillez noter que des noms de dossiers sont créés (dans la base de données) chaque fois que le film est ajouté à Radarr, et ils peuvent être manquants ou incorrects à ce moment-là et votre dossier aurait un identifiant vide !!!**
 
-    If you instead add it in the filename, the IMDb ID will be freshly pulled for any download or upgrade.
+    Si vous l'ajoutez plutôt dans le nom du fichier, l'ID IMDb sera fraîchement extrait pour tout téléchargement ou mise à niveau.
 
-    Another potential negative of using it in the folder is that folder renames are complex, lengthy, and potentially destructive in Radarr compared to file renames.
+    Un autre inconvénient potentiel de son utilisation dans le dossier est que les renommages de dossiers sont complexes, longs et potentiellement destructeurs dans Radarr par rapport aux renommages de fichiers.
 
-### Minimal needed and recommended
+### Minimum nécessaire et recommandé
 
 ```bash
-{{ radarr['naming']['radarr-naming']['folder']['default'] }}
+{{ radarr['naming']['radar-naming']['folder']['default'] }}
 ```
 
-<small>RESULT:</small> `The Movie Title (2010)`
+<small>RESULTAT :</small> `Le titre du film (2010)`
 
 ------
 
 !!! note
-    Keep in mind adding anything more after the release year could give issues during a fresh import in to Radarr, but it helps for movies that have the same release name and year.
+    Gardez à l'esprit que l'ajout d'autre chose après l'année de sortie pourrait poser des problèmes lors d'une nouvelle importation dans Radarr, mais cela aide pour les films qui ont le même nom de sortie et la même année.
 
-    **Radarr supports IMDb ID and TMDb ID in the folder name.**
+    ** Radarr prend en charge l'ID IMDb et l'ID TMDb dans le nom du dossier. **
 
-    !!! quote "Quote from a developer"
+    !!! citation "Citation d'un développeur"
 
-        TMDb is usually better as it guarantees a match, IMDb only gets matched if the TMDb entry has the correct IMDb ID association. We don't actually talk to IMDb.
+        TMDb est généralement meilleur car il garantit une correspondance, IMDb n'est mis en correspondance que si l'entrée TMDb a la bonne association d'ID IMDb. Nous ne parlons pas réellement à IMDb.
 
-#### Optional Movies Folder Format
+#### Format de dossier de films en option
 
-This naming scheme is made to be compatible with the new [Plex TV Series Scanner](https://forums.plex.tv/t/beta-new-plex-tv-series-scanner/696242){:target="_blank" rel="noopener noreferrer"} that now support IMDB and TVDB IDs in file names.
+Ce schéma de dénomination est conçu pour être compatible avec le nouveau [Scanner Plex TV Series](https://forums.plex.tv/t/beta-new-plex-tv-series-scanner/696242){:target="_blank " rel="noopener noreferrer"} qui prend désormais en charge les ID IMDB et TVDB dans les noms de fichiers.
 
-##### Optional Plex
-
-```bash
-{{ radarr['naming']['radarr-naming']['folder']['plex'] }}
-```
-
-<small>RESULT:</small> `The Movie Title (2010) {imdb-tt1520211}`
-
-##### Optional Emby
+##### Plex en option
 
 ```bash
-{{ radarr['naming']['radarr-naming']['folder']['emby'] }}
+{{ radarr['naming']['radar-naming']['folder']['plex'] }}
 ```
 
-<small>RESULT:</small> `The Movie Title (2010)`
+<small>RESULTAT :</small> `Le titre du film (2010) {imdb-tt1520211}`
 
-##### Optional Jellyfin
+##### Emby facultatif
 
 ```bash
-{{ radarr['naming']['radarr-naming']['folder']['jellyfin'] }}
+{{ radarr['naming']['radar-naming']['folder']['emby'] }}
 ```
 
-<small>RESULT:</small> `The Movie Title (2010) [imdbid-tt1520211]`
+<small>RESULTAT :</small> `Le titre du film (2010)`
 
-!!! tip
-    IMDb IDs are going to be very accurate and rarely change, TVDB/TMDB IDs, on the other hand, do change or are removed more frequently.
+##### Jellyfin en option
+
+```bash
+{{ radarr['naming']['radar-naming']['folder']['jellyfin'] }}
+```
+
+<small>RESULTAT :</small> `Le titre du film (2010) [imdbid-tt1520211]`
+
+!!! conseil
+    Les identifiants IMDb seront très précis et changeront rarement, les identifiants TVDB/TMDB, en revanche, changent ou sont supprimés plus fréquemment.
 
 ------
 
-Thanks:
+Merci:
 
-A big Thanks to [fryfrog](https://github.com/fryfrog) and [rg9400](https://github.com/rg9400) for the suggestions.
+Un grand merci à [fryfrog](https://github.com/fryfrog) et [rg9400](https://github.com/rg9400) pour les suggestions.
 
 --8<-- "includes/support.md"

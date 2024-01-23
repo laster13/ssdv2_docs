@@ -1,108 +1,108 @@
-# Remote Path Mappings
+# Mappages de chemins distants
 
-It seems that a lot of people don't understand how the remote path mapping works for Radarr. I will try to explain it with some screenshots and a short description.
+Il semble que beaucoup de gens ne comprennent pas comment fonctionne la cartographie des chemins à distance pour Radarr. Je vais essayer de l'expliquer avec quelques captures d'écran et une brève description.
 
-Remote Path Mapping acts as a dumb find `Remote Path` and replace with `Local Path`
+Le mappage de chemin à distance agit comme une recherche stupide de « Chemin à distance » et le remplace par « Chemin local »
 
-## When do I need remote path mappings
+## Quand ai-je besoin de mappages de chemins distants
 
-- If Radarr and your download client are not on the same server/system.
-- If you use either merged local/remote setups using mergerfs or similar.
-- You run dockers and **DON'T** have consistent and well planned paths.
+- Si Radarr et votre client de téléchargement ne sont pas sur le même serveur/système.
+- Si vous utilisez des configurations locales/à distance fusionnées à l'aide demergefs ou similaire.
+- Vous exécutez des dockers et **N'AVEZ PAS** de chemins cohérents et bien planifiés.
 
 !!! note
-    If you run dockers it would be smarter to fix the problem at the source of what's causing the actual issue.
+    Si vous exécutez Dockers, il serait plus intelligent de résoudre le problème à la source du problème réel.
 
-    - [Radarr Wiki Servarr - Docker Guide](https://wiki.servarr.com/docker-guide#consistent-and-well-planned-paths){:target="_blank" rel="noopener noreferrer"}
+    - [Radarr Wiki Servarr - Guide Docker](https://wiki.servarr.com/docker-guide#consistent-and-well-planned-paths){:target="_blank" rel="noopener noreferrer"}
 
-    - [TRaSH Guides](/Hardlinks/Hardlinks-and-Instant-Moves/){:target="_blank" rel="noopener noreferrer"}
+    - [Guides TRaSH](/Hardlinks/Hardlinks-and-Instant-Moves/){:target="_blank" rel="noopener noreferrer"}
 
 ------
 
-## How do I recognize that I need remote path mappings
+## Comment puis-je reconnaître que j'ai besoin de mappages de chemins distants
 
-Your download stays in your download client and Radarr doesn't want to import it.
+Votre téléchargement reste dans votre client de téléchargement et Radarr ne souhaite pas l'importer.
 
-Go to `Activity` => `Queue`
+Allez dans `Activité` => `File d'attente`
 
-You will see a orange download icon, hover over it with your mouse and you will get an error that looks a bit like this:
+Vous verrez une icône de téléchargement orange, survolez-la avec votre souris et vous obtiendrez une erreur qui ressemble un peu à ceci :
 
 ![!rpm-activity-waiting-for-import](images/rpm-activity-waiting-for-import.png)
 
-Go to `System` => `Events`
+Allez dans `Système` => `Événements`
 
-You will see an error that looks a bit like this:
+Vous verrez une erreur qui ressemble un peu à ceci :
 
 ![!rpm-system-events](images/rpm-system-events.png)
 
-The following error could also mean that you need remote path mappings:
+L'erreur suivante peut également signifier que vous avez besoin de mappages de chemins distants :
 
 ![!rpm-health-issue](images/rpm-health-issue.png)
 
-So looking at these screenshot it seems you need to make use of remote path mappings.
+Donc, en regardant ces captures d'écran, il semble que vous deviez utiliser des mappages de chemins distants.
 
 ------
 
-## How do I setup remote path mappings
+## Comment configurer les mappages de chemins distants
 
-Go to `Settings` => `Download Clients`
+Allez dans `Paramètres` => `Télécharger les clients`
 
-Scroll all the way down where you see `Remote path mappings` and click on the plus sign in the bottom right corner.
+Faites défiler jusqu'en bas jusqu'à l'endroit où vous voyez « Mappages de chemins distants » et cliquez sur le signe plus dans le coin inférieur droit.
 
 ![!rpm-settings-download-clients](images/rpm-settings-download-clients.png)
 
-A screen will popup with the following options:
+Un écran apparaîtra avec les options suivantes :
 
 ![!rpm-add-rpm](images/rpm-add-rpm.png)
 
-1. `Host` => This is the hostname or IP you set in your download client settings.
-1. `Remote Path` => The download path that you've set in your download client.
-1. `Local Path` => The path Radarr needs to access the same path.
+1. `Hôte` => Il s'agit du nom d'hôte ou de l'adresse IP que vous avez défini dans les paramètres de votre client de téléchargement.
+1. `Remote Path` => Le chemin de téléchargement que vous avez défini dans votre client de téléchargement.
+1. `Local Path` => Le chemin dont Radarr a besoin pour accéder au même chemin.
 
-### Host
+### Hôte
 
-To find what you need to put in your host
+Pour trouver ce que vous devez mettre dans votre hébergeur
 
-Go to `Settings` => `Download Clients`
+Allez dans `Paramètres` => `Télécharger les clients`
 
-Open up the download client. For this example I will be using SABnzbd.
+Ouvrez le client de téléchargement. Pour cet exemple, j'utiliserai SABnzbd.
 
-![!Sabnzbd Host](images/rpm-sabnzbd-host.png)
+![!Hôte Sabnzbd](images/rpm-sabnzbd-host.png)
 
-This is what you put in your Host in Remote Path Mapping.
-This could be a `hostname`, `container name` or a `IP Address`
+C'est ce que vous mettez dans votre hôte dans le mappage de chemin à distance.
+Il peut s'agir d'un « nom d'hôte », d'un « nom de conteneur » ou d'une « adresse IP ».
 
-??? example "example what to add in Add Remote Path Mapping - [Click to show/hide]"
+??? exemple "exemple de ce qu'il faut ajouter dans Ajouter un mappage de chemin distant - [Cliquez pour afficher/masquer]"
 
     ![!rpm-add-rpm-select-sabnzbd](images/rpm-add-rpm-select-sabnzbd.png)
 
-### Remote Path
+### Chemin distant
 
-To find out what you need to put in your remote path you need to open up your download client and look at what you've used there as download location.
+Pour savoir ce que vous devez mettre dans votre chemin distant, vous devez ouvrir votre client de téléchargement et regarder ce que vous avez utilisé comme emplacement de téléchargement.
 
-In SABnzbd go to `settings` => `Folders`
+Dans SABnzbd, allez dans `paramètres` => `Dossiers`
 
 ![!rpm-sabnzbd-folders-cdf](images/rpm-sabnzbd-folders-cdf.png)
 
-??? example "example what to add in Add Remote Path Mapping - [Click to show/hide]"
+??? exemple "exemple de ce qu'il faut ajouter dans Ajouter un mappage de chemin distant - [Cliquez pour afficher/masquer]"
 
     ![!rpm-add-rpm-remote-path](images/rpm-add-rpm-remote-path.png)
 
-### Local Path
+### Chemin local
 
-To find out what you need to put in in your local path you need to know how Radarr is able to access the files that your download client downloaded. This can be done in different ways. Mounting/Network shares, whatever, but Radarr needs to have local access to it, so you need to figure out the best way for Radarr to access the download client's downloaded files yourself.
+Pour savoir ce que vous devez insérer dans votre chemin local, vous devez savoir comment Radarr peut accéder aux fichiers téléchargés par votre client de téléchargement. Cela peut se faire de différentes façons. Montage/partages réseau, peu importe, mais Radarr doit y avoir un accès local, vous devez donc trouver le meilleur moyen pour Radarr d'accéder vous-même aux fichiers téléchargés du client de téléchargement.
 
-Click on the browse button and browse to the location where the files are accessible for Radarr.
+Cliquez sur le bouton Parcourir et accédez à l'emplacement où les fichiers sont accessibles pour Radarr.
 
-??? example "example what to add in Add Remote Path Mapping - [Click to show/hide]"
+??? exemple "exemple de ce qu'il faut ajouter dans Ajouter un mappage de chemin distant - [Cliquez pour afficher/masquer]"
 
     ![!rpm-add-local-path](images/rpm-add-local-path.png)
 
-The final result will look something like this:
+Le résultat final ressemblera à ceci :
 
 ![!rpm-final-results](images/rpm-final-results.png)
 
-After these changes the file should be able to be imported by Radarr.
+Après ces modifications, le fichier devrait pouvoir être importé par Radarr.
 
 {! include-markdown "../../includes/support.md" !}
 <!-- --8<-- "includes/support.md" -->

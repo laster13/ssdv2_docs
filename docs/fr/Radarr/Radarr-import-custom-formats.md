@@ -1,75 +1,75 @@
-# How to import Custom Formats
+# Comment importer des formats personnalisés
 
-Here I will try to explain how you can manually import Custom Formats for Radarr v3+.
+Ici, je vais essayer d'expliquer comment vous pouvez importer manuellement des formats personnalisés pour Radarr v3+.
 
-!!! info "Keep in mind Custom Formats are made to fine tune your Quality Profile.<br>Generally, quality trumps all"
+!!! info "Gardez à l'esprit que les formats personnalisés sont conçus pour affiner votre profil de qualité.<br>En général, la qualité l'emporte sur tout"
 
-## How to Copy/Paste the JSON from the site
+## Comment copier/coller le JSON depuis le site
 
-In this example I will use the [{{ radarr['cf']['br-disk']['name'] }}](/Radarr/Radarr-collection-of-custom-formats/#br-disk){:target="_blank" rel="noopener noreferrer"} Custom Format, the one most people don't want to download anyway. And if you do, then you probably don't use any of the Starr apps or Plex, being both don't support it.
+Dans cet exemple, j'utiliserai le [{{ radarr['cf']['br-disk']['name'] }}](/Radarr/Radar-collection-of-custom-formats/#br-disk) {:target="_blank" rel="noopener noreferrer"} Format personnalisé, celui que la plupart des gens ne veulent pas télécharger de toute façon. Et si vous le faites, vous n’utilisez probablement aucune des applications Starr ou Plex, car les deux ne les prennent pas en charge.
 
-Visit the [Collection of Custom Formats](/Radarr/Radarr-collection-of-custom-formats/){:target="_blank" rel="noopener noreferrer"} and select [{{ radarr['cf']['br-disk']['name'] }}](/Radarr/Radarr-collection-of-custom-formats/#br-disk){:target="_blank" rel="noopener noreferrer"} from the table.
+Accédez à la [Collection de formats personnalisés](/Radarr/Radarr-collection-of-custom-formats/){:target="_blank" rel="noopener noreferrer"} et sélectionnez [{{ radarr['cf'][' br-disk']['name'] }}](/Radarr/Radarr-collection-of-custom-formats/#br-disk){:target="_blank" rel="noopener noreferrer"} du tableau.
 
 ![cf-table-select-brdisk](images/cf-table-select-brdisk.png)
 
-### Expand the JSON for BR-DISK
+### Développez le JSON pour BR-DISK
 
 ![cf-json-expand](images/cf-json-expand.png)
 
-Then click the copy icon in the top right corner
+Cliquez ensuite sur l'icône de copie dans le coin supérieur droit
 
 ![cf-json-copy-paste](images/cf-json-copy-paste.png)
 
-## How to import a JSON Custom Format
+## Comment importer un format personnalisé JSON
 
-### In Radarr
+### Dans Radarr
 
-`Settings` => `Custom Formats`
+`Paramètres` => `Formats personnalisés`
 
 ![cf-settings-cf](images/cf-settings-cf.png)
 
-### Add a new Custom Format
+### Ajouter un nouveau format personnalisé
 
-Then click on the ![cf-plus-add-small](images/cf-plus-add-small.png) to add a new Custom Format.
+Cliquez ensuite sur ![cf-plus-add-small](images/cf-plus-add-small.png) pour ajouter un nouveau format personnalisé.
 
-### Import the Custom Format
+### Importer le format personnalisé
 
-Followed by the `Import` in the lower left.
+Suivi de « Importer » en bas à gauche.
 
 ![cf-import](images/cf-import.png)
 
-### Paste the Custom Format
+### Collez le format personnalisé
 
-Paste the `JSON` in the empty `Custom Format JSON` box (1) that you got from the [Custom Format Collection](/Radarr/Radarr-collection-of-custom-formats/){:target="_blank" rel="noopener noreferrer"} followed by the `Import` button (2).
+Collez le fichier "JSON" dans la zone vide "Format personnalisé JSON" (1) que vous avez obtenu de la [Collection de formats personnalisés](/Radarr/Radarr-collection-of-custom-formats/){:target="_blank" rel ="noopener noreferrer"} suivi du bouton `Importer` (2).
 
 ![cf-import-cf](images/cf-import-cf.png)
 
-### Save the Custom Format
+### Enregistrez le format personnalisé
 
-After selecting the `Import` button you will get a screen that has all the Custom Formats variables filled in correctly,
-all you need to do now is click on the `Save` button and you're done.
+Après avoir sélectionné le bouton « Importer », vous obtiendrez un écran contenant toutes les variables de formats personnalisés correctement renseignées,
+tout ce que vous avez à faire maintenant est de cliquer sur le bouton « Enregistrer » et vous avez terminé.
 
 ![cf-import-done](images/cf-import-done.png)
 
-### Setup the scores in your Quality Profile
+### Configurez les scores dans votre profil de qualité
 
-After you've added the Custom Formats, You will need to set it up in the Quality Profile you want to use/prefer to make use of the Custom Formats.
-How this is done is explained [HERE](/Radarr/radarr-setup-quality-profiles/#basics){:target="_blank" rel="noopener noreferrer"}
+Après avoir ajouté les formats personnalisés, vous devrez le configurer dans le profil de qualité que vous souhaitez utiliser/préférez utiliser les formats personnalisés.
+La manière de procéder est expliquée [ICI](/Radarr/radar-setup-quality-profiles/#basics){:target="_blank" rel="noopener noreferrer"}
 
 ------
 
-## Start adding other Custom Formats wisely
+## Commencez à ajouter judicieusement d'autres formats personnalisés
 
-!!! info ""
+!!! Info ""
 
-    Start adding more Custom Formats wisely, **Don't add all the available Custom Formats!!!**
+    Commencez à ajouter judicieusement plus de formats personnalisés, **N'ajoutez pas tous les formats personnalisés disponibles !!!**
 
-    Check out the [How to setup Quality Profiles](/Radarr/radarr-setup-quality-profiles/) where I will explain how to make the most use of custom formats and show some personal examples that I'm using. You can use these examples to get an idea on how to setup yours.
+    Consultez le [Comment configurer les profils de qualité](/Radarr/radar-setup-quality-profiles/) où j'expliquerai comment tirer le meilleur parti des formats personnalisés et montrerai quelques exemples personnels que j'utilise. Vous pouvez utiliser ces exemples pour avoir une idée sur la façon de configurer le vôtre.
 
-### TRaSH Sync
+### Synchronisation TRaSH
 
-This can be done also automatically with one of the TRaSH Sync Applications,
+Cela peut également être fait automatiquement avec l'une des applications TRaSH Sync,
 
-more info can be found [Here](/Guide-Sync/){:target="_blank" rel="noopener noreferrer"}
+plus d'informations peuvent être trouvées [Ici](/Guide-Sync/){:target="_blank" rel="noopener noreferrer"}
 
 --8<-- "includes/support.md"

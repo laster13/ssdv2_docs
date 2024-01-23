@@ -129,7 +129,7 @@ Nous avons réalisé 3 guides liés à cela.
 
 ### DTSX 
 
-??? question "DTS:X - [Cliquez pour afficher/masquer]" [ 
+??? question "DTS:X - [Cliquez pour afficher/masquer]"
 
     DTS:X est un codec audio basé sur des objets](https://www.whathifi.com/advice/dtsx-what-it-how-can-you -get-it), qui vise à créer un son multidimensionnel qui « bouge autour de vous comme il le ferait dans la vraie vie ». 
     Vous pensez peut-être que cela ressemble beaucoup à Dolby Atmos, et vous avez raison. Mais là où DTS:X diffère, c'est dans la configuration des enceintes requise. Alors que Dolby Atmos vous oblige à ajouter des canaux aériens supplémentaires à votre configuration 5.1 ou 7.1, DTS:X fonctionne avec les configurations d'enceintes surround standard, tout comme celle que vous possédez peut-être déjà à la maison. Il peut prendre en charge jusqu'à 32 emplacements d'enceintes et jusqu'à un système à 11,2 canaux. 
@@ -416,9 +416,9 @@ Nous avons réalisé 3 guides liés à cela.
 
 ------ 
 
-### 2. 
+### 2. 0 Stéréo 
 
-0 Stéréo ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
     [[% filter indent(width=4) %]][[% include 'json/radar/cf/20-stereo.json' %]][ [% endfilter %]] 
@@ -531,7 +531,9 @@ Nous avons réalisé 3 guides liés à cela.
 
     {! include-markdown "../../includes/cf-descriptions/dv-hdr10.md" ! 
 
-} ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+} 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
     [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv-hdr10.json' %]][ [% endfilter %]] 
@@ -565,7 +567,7 @@ Nous avons réalisé 3 guides liés à cela.
 
 <sub>DV = DoVi = Dolby Vision</sub> 
 
-?? ? question "DV HLG - [Cliquez pour afficher/masquer]" 
+??? question "DV HLG - [Cliquez pour afficher/masquer]" 
 
     {! include-markdown "../../includes/cf-descriptions/dv-hlg.md" !} 
 
@@ -601,7 +603,7 @@ Nous avons réalisé 3 guides liés à cela.
 
 <sub>HDR10+ = HDR10P = HDR10Plus</sub> 
 
-?? ? question "HDR10+ - [Cliquez pour afficher/masquer]" 
+??? question "HDR10+ - [Cliquez pour afficher/masquer]" 
 
     {! include-markdown "../../includes/cf-descriptions/hdr10plus.md" !} 
 
@@ -939,7 +941,7 @@ png) ??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
 <sub>Communiqués de mauvaise qualité = LQ</sub> 
 
-?? ? question "LQ - [Cliquez pour afficher/masquer]" 
+??? question "LQ - [Cliquez pour afficher/masquer]" 
 
     - Une collection de groupes connus de mauvaise qualité (souvent bannis des meilleurs trackers en raison de leur manque de qualité), de groupes de release interdits ou malhonnêtes, ou de rips/encodages de scène et rapides- pour publier des groupes P2P qui, bien qu'adéquats, ne sont généralement pas considérés comme de haute qualité. 
     - Release Groups qui brisent l'automatisation des applications Starr car leur mauvaise dénomination pourrait potentiellement provoquer des boucles de téléchargement, même si leur qualité globale est parfaite. 

@@ -57,8 +57,8 @@ theme:
     - toc.follow
     # - toc.integrate
   font:
-    text: "Noto Sans"
-    code: "Encode Sans Expanded"
+    text: Roboto
+    code: Roboto Mono
 
 plugins:
   - search

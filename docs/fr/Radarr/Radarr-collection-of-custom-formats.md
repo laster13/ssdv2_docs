@@ -643,7 +643,9 @@ Nous avons réalisé 3 guides liés à cela.
 
     {! 
 
-include-markdown "../../includes/cf-descriptions/hdr.md" !} ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+include-markdown "../../includes/cf-descriptions/hdr.md" !} 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
     [[% filter indent(width=4) %]][[% include 'json/radar/cf/hdr.json' %]][[% filtre de fin %]] 
@@ -877,9 +879,9 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !} ??? exemple "JSON - 
 
     ![!Exemple amélioré Imax](images/imax-e/imax-e.4.png) 
 
-    ![!Exemple amélioré Imax](images/imax- e/imax-e.5. 
+    ![!Exemple amélioré Imax](images/imax- e/imax-e.5.png) 
 
-png) ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json
     [[% filter indent(width=4) %]][[% include 'json/radar/cf/imax-enhanced.json' %]][[% endfilter %]] `` 
@@ -1761,7 +1763,7 @@ png) ??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
     [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Amazon_Prime_Video){:target="_blank" rel="noopener noreferrer"} 
 
-? ?? exemple "JSON - [Cliquez pour afficher/masquer]" 
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
     [[% filter indent(width=4) %]][[% include 'json/radar/cf/amzn.json' %]][[% endfilter %]] 
@@ -1777,9 +1779,9 @@ png) ??? exemple "JSON - [Cliquez pour afficher/masquer]"
 
 ??? question "Apple TV+ - [Cliquez pour afficher/masquer]" 
 
-    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Apple_TV%2B){ : 
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Apple_TV%2B){ : target="_blank" rel="noopener noreferrer"} 
 
-target="_blank" rel="noopener noreferrer"} ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
     [[% filter indent(width=4) %]][[% include 'json/radar/cf/atvp.json' %]][[% filtre de fin %]] 
@@ -1833,7 +1835,7 @@ target="_blank" rel="noopener noreferrer"} ??? exemple "JSON - [Cliquez pour aff
 
     [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/HBO){:target="_blank" rel="noopener noreferrer"}
 
-? ?? exemple "JSON - [Cliquez pour afficher/masquer]" 
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
     [[% filter indent(width=4) %]][[% include 'json/radar/cf/hbo.json' %]][[% endfilter %]] 
@@ -1923,7 +1925,7 @@ target="_blank" rel="noopener noreferrer"} ??? exemple "JSON - [Cliquez pour aff
 
     [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Netflix){:target="_blank" rel="noopener noreferrer"}
 
-? ?? exemple "JSON - [Cliquez pour afficher/masquer]" 
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
     [[% filter indent(width=4) %]][[% include 'json/radar/cf/nf.json' %]][[% endfilter %]] 
@@ -1977,7 +1979,9 @@ target="_blank" rel="noopener noreferrer"} ??? exemple "JSON - [Cliquez pour aff
 
     [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Movies_Anywhere){ : 
 
-target="_blank" rel="noopener noreferrer"} ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+target="_blank" rel="noopener noreferrer"} 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
     [[% filter indent(width=4) %]][[% include 'json/radar/cf/ma.json' %]][[% endfilter %]] 
@@ -2216,7 +2220,7 @@ target="_blank" rel="noopener noreferrer"} ??? exemple "JSON - [Cliquez pour aff
 
 ### Anime BD Tier 06 (FanSubs) 
 
-?? ? question "Anime BD Tier 06 (FanSubs) - [Cliquez pour afficher/masquer]" 
+??? question "Anime BD Tier 06 (FanSubs) - [Cliquez pour afficher/masquer]" 
     Groupes FanSub cohérents 
 
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
@@ -2246,7 +2250,7 @@ target="_blank" rel="noopener noreferrer"} ??? exemple "JSON - [Cliquez pour aff
 
 ### Anime BD Tier 08 (Mini Encodes) 
 
-? ?? question "Anime BD Tier 08 (Mini Encodes) - [Cliquez pour afficher/masquer]" 
+??? question "Anime BD Tier 08 (Mini Encodes) - [Cliquez pour afficher/masquer]" 
     Vous connaissez des groupes qui font des mini encodages 
 
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
@@ -2261,7 +2265,7 @@ target="_blank" rel="noopener noreferrer"} ??? exemple "JSON - [Cliquez pour aff
 
 ### Anime Web Tier 01 (Muxers) 
 
-?? ? question "Anime Web Tier 01 (Muxers) - [Cliquez pour afficher/masquer]"
+??? question "Anime Web Tier 01 (Muxers) - [Cliquez pour afficher/masquer]"
     Groupes qui font les meilleures versions selon SeaDex. Ils sont plus cohérents et surpassent les autres 
 
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
@@ -2276,7 +2280,7 @@ target="_blank" rel="noopener noreferrer"} ??? exemple "JSON - [Cliquez pour aff
 
 ### Anime Web Tier 02 (Top FanSubs) 
 
-? ?? question "Anime Web Tier 02 (Top FanSubs) - [Cliquez pour afficher/masquer]" 
+??? question "Anime Web Tier 02 (Top FanSubs) - [Cliquez pour afficher/masquer]" 
     Groupes qui réalisent les meilleures versions selon SeaDex. Ils sont plus cohérents et surpassent les autres 
 
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
@@ -2336,7 +2340,7 @@ target="_blank" rel="noopener noreferrer"} ??? exemple "JSON - [Cliquez pour aff
 
 ### Anime Web Tier 06 (FanSubs) 
 
-?? ? question "Anime Web Tier 06 (FanSubs) - [Cliquez pour afficher/masquer]" 
+??? question "Anime Web Tier 06 (FanSubs) - [Cliquez pour afficher/masquer]" 
     Groupes FanSub cohérents 
 
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
@@ -2535,7 +2539,7 @@ target="_blank" rel="noopener noreferrer"} ??? exemple "JSON - [Cliquez pour aff
 
 ### Multi-français 
 
-? ?? question "Multi-Français - [Cliquez pour afficher/masquer]" 
+??? question "Multi-Français - [Cliquez pour afficher/masquer]" 
 
     Reconnaître les films qui incluent l'original et l'audio français. Fonctionne uniquement après l'importation car il a besoin du résultat de FFprobe pour obtenir quels fichiers audio sont présents. Renomme la version pour conserver la reconnaissance de « Multi » par le format personnalisé [Multi-Audio](#multi-audio). 
 

@@ -1,16 +1,31 @@
-site_name: SSDV2
+site_name: SSDv2
 site_url: https://projetssd.github.io/ssdv2_docs/
-repo_url: https://github.com/projetssd/ssdv2
+site_author: ProjetSSD
+site_description: >-
+  Simple Seedbox Docker
+
+# Repository
+repo_name: projetssd/ssdv2
+repo_url: hhttps://github.com/projetssd/ssdv2
 
 docs_dir: docs/
 exclude_docs: overrides/
 
+# Configuration
 theme:
   name: material
+  custom_dir: material/overrides
+  features:
+    - navigation.expand
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - toc.follow
+    - toc.integrate
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      primary: blue
+      primary: indigo
       scheme: default
       toggle:
         icon: material/weather-sunny 
@@ -22,15 +37,43 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to light mode
-  features:
-    - navigation.expand
-    - navigation.indexes
-    - navigation.sections
-    - navigation.tabs
-    - toc.follow
-    - toc.integrate
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
 
+plugins:
+  - search
+  - roamlinks 
+  - mermaid2
+  - callouts
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: fr
+          default: true
+          name: Français
+          build: true
+        - locale: en
+          name: English
+          build: true
+          theme:
+            palette:
+              # Palette toggle for light mode
+              - media: "(prefers-color-scheme: light)"
+                primary: red
+                scheme: default
+              # Palette toggle for dark mode
+              - media: "(prefers-color-scheme: dark)"
+                primary: pink
+                scheme: slate
 
+# Extensions
 ### Configuration des extensions MarkDown :   
 markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abbreviations/
   # extensions de la bibliothèque markdown standard
@@ -73,57 +116,99 @@ markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abb
         generic: true
         smart_dollar: false 
 
+# Page tree
 nav:
-  - Accueil: index.md
-  - Démarrage Rapide:
-    - getting-started/installation.md
-    - getting-started/quick-start.md
-    - getting-started/philosophy.md
-  - Configuration:
+  - Home: index.md
+  - Getting started:
+    - Installation: getting-started.md
+    - Creating your site: creating-your-site.md
+    - Publishing your site: publishing-your-site.md
+    - Customization: customization.md
+    - Conventions: conventions.md
+    - Browser support: browser-support.md
+    - Enterprise feedback: enterprise-support.md
+    - Philosophy: philosophy.md
+    - Alternatives: alternatives.md
+    - License: license.md
+    - Changelog:
+      - changelog/index.md
+      - How to upgrade: upgrade.md
+    - Contributing:
+      - contributing/index.md
+      - Reporting a bug: contributing/reporting-a-bug.md
+      - Reporting a docs issue: contributing/reporting-a-docs-issue.md
+      - Requesting a change: contributing/requesting-a-change.md
+      - Adding translations: contributing/adding-translations.md
+      - Making a pull request: contributing/making-a-pull-request.md
+      - Asking a question: https://github.com/squidfunk/mkdocs-material/discussions
+    - Guides:
+      - Creating a reproduction: guides/creating-a-reproduction.md
+  - Setup:
     - setup/index.md
-    - setup/choosing-the-structure.md
-    - setup/setting-up-languages.md
-    - setup/translating-content.md
-    - setup/controlling-your-builds.md
-    - setup/localizing-navigation.md
-    - setup/using-i18n-context.md
-    - setup/using-alternates.md
-    - setup/upgrading-to-1.md
-    - Compatibilité des plugins:
-      - setup/setting-up-material.md
-      - setup/setting-up-search.md
-      - setup/plugins-compatibility.md
-
-plugins:
-  - search
-  - roamlinks 
-  - mermaid2
-  - callouts # Pour la conversion des callouts d'Obsidian en admonitions de MkDocs https://pypi.org/project/mkdocs-callouts/
-  - i18n:
-      docs_structure: folder
-      fallback_to_default: true
-      reconfigure_material: true
-      reconfigure_search: true
-      languages:
-        - locale: fr
-          default: true
-          name: Français
-          build: true
-        - locale: en
-          name: English
-          build: true
-          theme:
-            palette:
-              # Palette toggle for light mode
-              - media: "(prefers-color-scheme: light)"
-                primary: red
-                scheme: default
-              # Palette toggle for dark mode
-              - media: "(prefers-color-scheme: dark)"
-                primary: pink
-                scheme: slate
-          nav_translations:
-            Accueil: Home
-            Démarrage Rapide: Getting Started
-            Compatibilité des plugins: Plugins Compatibility
-
+    - Changing the colors: setup/changing-the-colors.md
+    - Changing the fonts: setup/changing-the-fonts.md
+    - Changing the language: setup/changing-the-language.md
+    - Changing the logo and icons: setup/changing-the-logo-and-icons.md
+    - Ensuring data privacy: setup/ensuring-data-privacy.md
+    - Setting up navigation: setup/setting-up-navigation.md
+    - Setting up site search: setup/setting-up-site-search.md
+    - Setting up site analytics: setup/setting-up-site-analytics.md
+    - Setting up social cards: setup/setting-up-social-cards.md
+    - Setting up a blog: setup/setting-up-a-blog.md
+    - Setting up tags: setup/setting-up-tags.md
+    - Setting up versioning: setup/setting-up-versioning.md
+    - Setting up the header: setup/setting-up-the-header.md
+    - Setting up the footer: setup/setting-up-the-footer.md
+    - Adding a git repository: setup/adding-a-git-repository.md
+    - Adding a comment system: setup/adding-a-comment-system.md
+    - Building an optimized site: setup/building-an-optimized-site.md
+    - Building for offline usage: setup/building-for-offline-usage.md
+    - Extensions:
+      - setup/extensions/index.md
+      - Python Markdown: setup/extensions/python-markdown.md
+      - Python Markdown Extensions: setup/extensions/python-markdown-extensions.md
+  - Plugins:
+    - plugins/index.md
+    - Blog: plugins/blog.md
+    - Group: plugins/group.md
+    - Info: plugins/info.md
+    - Meta: plugins/meta.md
+    - Offline: plugins/offline.md
+    - Optimize: plugins/optimize.md
+    - Privacy: plugins/privacy.md
+    - Projects: plugins/projects.md
+    - Search: plugins/search.md
+    - Social: plugins/social.md
+    - Tags: plugins/tags.md
+    - Typeset: plugins/typeset.md
+    - Requirements:
+      - Image processing: plugins/requirements/image-processing.md
+      - Caching: plugins/requirements/caching.md
+  - Reference:
+    - reference/index.md
+    - Admonitions: reference/admonitions.md
+    - Annotations: reference/annotations.md
+    - Buttons: reference/buttons.md
+    - Code blocks: reference/code-blocks.md
+    - Content tabs: reference/content-tabs.md
+    - Data tables: reference/data-tables.md
+    - Diagrams: reference/diagrams.md
+    - Footnotes: reference/footnotes.md
+    - Formatting: reference/formatting.md
+    - Grids: reference/grids.md
+    - Icons, Emojis: reference/icons-emojis.md
+    - Images: reference/images.md
+    - Lists: reference/lists.md
+    - Math: reference/math.md
+    - Tooltips: reference/tooltips.md
+  - Insiders:
+    - insiders/index.md
+    - Getting started: insiders/getting-started.md
+    - FAQ: insiders/faq/sponsoring.md
+    - Changelog:
+      - insiders/changelog/index.md
+      - How to upgrade: insiders/upgrade.md
+    - Community Experts Program:
+      - insiders/community-experts-program/index.md
+  - Blog:
+    - blog/index.md

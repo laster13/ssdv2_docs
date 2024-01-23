@@ -14,18 +14,10 @@ exclude_docs: overrides/
 # Configuration
 theme:
   name: material
-  custom_dir: material/overrides
-  features:
-    - navigation.expand
-    - navigation.indexes
-    - navigation.sections
-    - navigation.tabs
-    - toc.follow
-    - toc.integrate
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      primary: indigo
+      primary: blue
       scheme: default
       toggle:
         icon: material/weather-sunny 
@@ -37,6 +29,13 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to light mode
+  features:
+    - navigation.expand
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - toc.follow
+    - toc.integrate
 
 plugins:
   - search

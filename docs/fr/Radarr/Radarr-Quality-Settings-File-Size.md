@@ -64,6 +64,3 @@ Ces paramètres de qualité ont été créés et testés avec des informations o
     La qualité préférée la plus élevée que vous pouvez saisir manuellement est inférieure de 1 à la qualité maximale. Si vous utilisez le curseur, la qualité préférée peut être jusqu'à 5 inférieure à la qualité maximale.
 
     Assurez-vous d'avoir activé « Afficher avancé » dans Radarr, si vous ne voyez pas de disposition permettant de saisir les scores, sous les paramètres de qualité.
-
-{! include-markdown "../../includes/support.md" !}
-<!-- --8<-- "includes/support.md" -->

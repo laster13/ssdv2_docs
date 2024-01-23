@@ -64,6 +64,3 @@ These Quality Settings have been created and tested with info I got from others,
     The highest preferred quality you can manually enter is 1 less than the Maximum quality. If you use the slider, the preferred quality can be up to 5 lesser than the Maximum quality.
 
     Make sure you have enabled 'Show Advanced' in Radarr, if you don't see a provision to enter the scores, under the Quality settings.
-
-{! include-markdown "../../includes/support.md" !}
-<!-- --8<-- "includes/support.md" -->

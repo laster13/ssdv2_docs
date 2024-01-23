@@ -41,4 +41,3 @@ Alors, Magie !
 
 Comme vous pouvez le constater, le dossier a maintenant été renommé selon le schéma de dénomination nouveau/mis à jour.
 
---8<-- "includes/support.md"

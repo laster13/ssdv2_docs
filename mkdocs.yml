@@ -56,6 +56,9 @@ theme:
     - search.suggest
     - toc.follow
     # - toc.integrate
+  font:
+    text: "Noto Sans"
+    code: "Encode Sans Expanded"
 
 plugins:
   - search

@@ -122,6 +122,3 @@ La plupart de mes informations et connaissances proviennent de :
 - Drazzilb (Conseils sur les groupes d'anime, tests et partage de connaissances générales.)
 
 - [TRaSH](https://trash-guides.info/) (Pour m'avoir permis d'utiliser son site Web pour notre guide et notre partage de connaissances générales.)
-
-{! include-markdown "../../includes/support.md" !}
-<!-- --8<-- "includes/support.md" -->

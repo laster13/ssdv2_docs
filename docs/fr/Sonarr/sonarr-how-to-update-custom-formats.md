@@ -38,4 +38,3 @@ Cela peut également être fait automatiquement avec l'une des applications TRaS
 
 plus d'informations peuvent être trouvées [Ici](/Guide-Sync/){:target="_blank" rel="noopener noreferrer"}
 
---8<-- "includes/support.md"

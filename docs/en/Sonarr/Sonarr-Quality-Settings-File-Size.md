@@ -87,4 +87,3 @@ I only do WEB-DL myself for TV shows because in my opinion WEB-DL is the sweet s
 
     Make sure you have enabled 'Show Advanced' in Sonarr, if you don't see a provision to enter the scores, under the Quality settings.
 
---8<-- "includes/support.md"

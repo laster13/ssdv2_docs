@@ -34,5 +34,3 @@ Pour les fusionner, vous devez cliquer sur Modifier les groupes.
 
 Une fois terminées, les mises à niveau de Sonarr/Radarr seront gérées via les mots préférés/formats personnalisés.
 
-{! include-markdown "../../../includes/support.md" !}
-<!-- --8<-- "includes/support.md" -->

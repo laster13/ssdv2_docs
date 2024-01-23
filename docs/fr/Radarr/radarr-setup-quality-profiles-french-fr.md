@@ -284,4 +284,3 @@ TRaSH fournit d'excellents guides et explications à leur sujet dans les liens s
 - Une mention spéciale pour Piou et Wikoul qui sont potentiellement tous les deux maintenant dans des asiles en raison de la quantité de tests effectués.
 - [TRaSH](https://trash-guides.info/), pour m'avoir accordé un petit espace sur son guide, ses connaissances, et sa gentillesse.
 
---8<-- "includes/support.md"

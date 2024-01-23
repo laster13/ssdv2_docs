@@ -1,5 +1,3 @@
-{! include-markdown "../../includes/sonarrv3-eol.md" !}
-
 # Libérer le profil RegEx (WEB-DL)
 
 Sonarr V3 possède une fonctionnalité intéressante appelée Release Profile.
@@ -665,9 +663,6 @@ Si vous souhaitez être mentionné, veuillez m'envoyer un message sur Discord, e
     Vous pouvez également utiliser l'une des options de synchronisation tierce que vous pouvez trouver [ICI](/Misc/trash-sync){:target="_blank" rel="noopener noreferrer"}.
 
 ------
-
-{! include-markdown "../../includes/support.md" !}
-<!-- --8<-- "includes/support.md" -->
 
 [^1]:
 

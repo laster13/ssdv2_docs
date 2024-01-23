@@ -666,9 +666,6 @@ If you want to be mentioned please message me on discord, including a link for p
 
 ------
 
-{! include-markdown "../../includes/support.md" !}
-<!-- --8<-- "includes/support.md" -->
-
 [^1]:
 
     The reason why this one gets positively scored is because it's the only quality scene group that exists (up until now). Scene groups don't add a streaming service to their release names, so the score is adjusted to take this into account.

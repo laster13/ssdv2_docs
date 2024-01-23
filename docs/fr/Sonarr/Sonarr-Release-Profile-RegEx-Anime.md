@@ -1,5 +1,3 @@
-{! include-markdown "../../includes/sonarrv3-eol.md" !}
-
 # Profil de version RegEx (Anime)
 
 !!! note
@@ -644,5 +642,3 @@ La plupart de mes informations et connaissances proviennent de :
 
 Merci beaucoup !!
 
-{! include-markdown "../../includes/support.md" !}
-<!-- --8<-- "includes/support.md" -->

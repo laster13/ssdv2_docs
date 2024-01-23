@@ -362,4 +362,3 @@ This is a must-have for every Quality Profile you use in my opinion. All these C
 
 Special thanks to everyone who helped with the testing and creation of these Custom Formats.
 
---8<-- "includes/support.md"

@@ -81,6 +81,3 @@ Un écran apparaîtra avec les options suivantes :
         Le résultat final ressemblera à ceci.
 
         ![Résultat final Qbittorrent](images/qbit_final.png)
-
-{! include-markdown "../../includes/support.md" !}
-<!-- --8<-- "includes/support.md" -->

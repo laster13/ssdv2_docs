@@ -187,4 +187,3 @@ Ajoutez le json suivant à votre Radarr/Sonarr avec un score de « 10 ».
 
     ![!Langue originale de TheTVDB](images/original-langue-tvdb.png)
 
---8<-- "includes/support.md"

@@ -158,4 +158,3 @@ Merci:
 
 Un grand merci à [fryfrog](https://github.com/fryfrog), [rg9400](https://github.com/rg9400) et [bakerboy448](https://github.com/bakerboy448) pour le suggestions.
 
---8<-- "includes/support.md"

@@ -181,4 +181,3 @@ Merci:
 
 Un grand merci à [fryfrog](https://github.com/fryfrog) et [rg9400](https://github.com/rg9400) pour les suggestions.
 
---8<-- "includes/support.md"

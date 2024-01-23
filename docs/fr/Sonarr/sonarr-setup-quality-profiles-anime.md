@@ -182,4 +182,3 @@ La plupart de mes informations et connaissances proviennent de :
 
 - [TRaSH](https://trash-guides.info/) (Pour m'avoir permis d'utiliser son site Web pour notre guide et notre partage de connaissances générales.)
 
---8<-- "includes/support.md"

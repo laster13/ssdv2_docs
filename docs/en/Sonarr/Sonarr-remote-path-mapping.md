@@ -82,5 +82,3 @@ A screen will pop up with the following options:
 
         ![Qbittorrent final result](images/qbit_final.png)
 
-{! include-markdown "../../includes/support.md" !}
-<!-- --8<-- "includes/support.md" -->

@@ -104,5 +104,3 @@ Le résultat final ressemblera à ceci :
 
 Après ces modifications, le fichier devrait pouvoir être importé par Radarr.
 
-{! include-markdown "../../includes/support.md" !}
-<!-- --8<-- "includes/support.md" -->

@@ -87,4 +87,3 @@ Je fais moi-même du WEB-DL uniquement pour les émissions de télévision car, 
 
     Assurez-vous d'avoir activé « Afficher avancé » dans Sonarr, si vous ne voyez pas de disposition pour saisir les scores, sous les paramètres de qualité.
 
---8<-- "includes/support.md"

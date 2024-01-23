@@ -361,5 +361,3 @@ Les groupes de formats personnalisés suivants doivent être combinés avec les 
 ## Merci
 
 Un merci spécial à tous ceux qui ont contribué aux tests et à la création de ces formats personnalisés.
-
---8<-- "includes/support.md"

@@ -284,5 +284,3 @@ TRaSH provides great guides and explanations about them at the following links:
 - A special one to MySuperChef and PrL for their time and explanations.
 - A special one to Piou and Wikoul who are potentially both now in asylums due to the amount of testing.
 - [TRaSH](https://trash-guides.info/), for granting me a small space on his guide for this, his knowledge, and his friendliness.
-
---8<-- "includes/support.md"

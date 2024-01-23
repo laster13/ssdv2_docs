@@ -200,5 +200,3 @@ A FAQ regarding most of the questions you could have is provided by TRaSH: [FAQ 
 - A special one to SeiyaGame, TheFrenchNaruto and Maxence which provided all of the Anime information.
 - A special one to Piou and Wikoul who are potentially both now in asylums due to the amount of testing.
 - [TRaSH](https://trash-guides.info/), for granting me a small space on his guide for this, his knowledge, and his friendliness.
-
---8<-- "includes/support.md"

@@ -1,5 +1,5 @@
 site_name: SSDv2
-site_url: https://projetssd.github.io/ssdv2_docs/
+site_url: https://laster13.github.io/ssdv2_docs/
 site_author: ProjetSSD
 site_description: >-
   Simple Seedbox Docker
@@ -30,12 +30,32 @@ theme:
         icon: material/weather-night
         name: Switch to light mode
   features:
-    - navigation.expand
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
     - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
     - navigation.sections
     - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
     - toc.follow
-    - toc.integrate
+    # - toc.integrate
 
 plugins:
   - search

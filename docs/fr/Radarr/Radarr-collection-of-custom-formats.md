@@ -1,32 +1,31 @@
-# Collection of Custom Formats
+# Collection de formats personnalisés Vous 
 
-Below is a collection of what we've come to regard as the most needed and commonly used Custom Formats.
-These CFs have been collected from discussions on Discord or created with help from others.
+trouverez ci-dessous une collection de ce que nous considérons comme les formats personnalisés les plus nécessaires et les plus couramment utilisés. 
+Ces CF ont été collectés à partir de discussions sur Discord ou créés avec l'aide d'autres personnes. 
 
-Special thanks to everyone that has helped in the creation and testing of these Custom Formats, my team at TRaSH guides, Team Radarr, and the community.
+Un merci spécial à tous ceux qui ont aidé à la création et aux tests de ces formats personnalisés, à mon équipe des guides TRaSH, à l'équipe Radarr et à la communauté. 
 
-With Radarr V3, Custom Formats are much more advanced/powerful than with V2, although this also means a Custom Format can require more knowledge to set up or create.
+Avec Radarr V3, les formats personnalisés sont beaucoup plus avancés/puissants qu'avec la V2, bien que cela signifie également qu'un format personnalisé peut nécessiter plus de connaissances pour être configuré ou créé. 
 
-After requesting with Team Radarr, we now have the option to import/export the Custom Formats in a JSON format. This provides everyone with an easy way to share and use Custom Formats.
+Après avoir fait une demande auprès de Team Radarr, nous avons désormais la possibilité d'importer/exporter les formats personnalisés au format JSON. Cela offre à chacun un moyen simple de partager et d’utiliser des formats personnalisés. 
 
-We've made 3 guides related to this.
+Nous avons réalisé 3 guides liés à cela. 
 
-- [How to import Custom Formats](/Radarr/Radarr-import-custom-formats){:target="_blank" rel="noopener noreferrer"} - Explains how to import the Custom Formats.
-- [How to upgrade Custom Formats](/Radarr/Radarr-how-to-update-custom-formats){:target="_blank" rel="noopener noreferrer"} - Explains how to upgrade your existing Custom Formats.
-- [How to set up Quality Profiles](/Radarr/radarr-setup-quality-profiles){:target="_blank" rel="noopener noreferrer"} - Explains how to make the most use of Custom Formats and shows some specifics of my configuration. You can use these examples to get an idea of how to set up your preferences.
+- [Comment importer des formats personnalisés](/Radarr/Radarr-import-custom-formats){:target="_blank" rel="noopener noreferrer"} - Explique comment importer les formats personnalisés. 
+- [Comment mettre à niveau les formats personnalisés](/Radarr/Radarr-how-to-update-custom-formats){:target="_blank" rel="noopener noreferrer"} - Explique comment mettre à niveau vos formats personnalisés existants. 
+- [Comment configurer des profils de qualité](/Radarr/radar-setup-quality-profiles){:target="_blank" rel="noopener noreferrer"} - Explique comment tirer le meilleur parti des formats personnalisés et présente quelques détails. de ma configuration. Vous pouvez utiliser ces exemples pour avoir une idée de la façon de configurer vos préférences. 
 
-!!! tip
+!!! astuce 
 
-    It also is recommended to change the Propers and Repacks settings in Radarr's `Settings`.
+    Il est également recommandé de modifier les paramètres Propers et Repacks dans les « Paramètres » de Radarr. 
 
-    `Media Management` => `File Management` to `Do Not Prefer` and use the [Repack/Proper](#repackproper) Custom Format.
+    `Media Management` => `File Management` sur `Ne pas préférer` et utilisez le format personnalisé [Repack/Proper](#repackproper). 
 
-    ![!cf-mm-propers-repacks-disable](images/cf-mm-propers-repacks-disable.png)
+    ![!cf-mm-propers-repacks-disable](images/cf-mm-propers-repacks-disable.png) 
 
-    This way you make sure the Custom Format scoring and preferences will be fully utilized.
+    De cette façon, vous vous assurez que la notation et les préférences du format personnalisé seront pleinement utilisées. 
 
---8<-- "includes/support.md"
-
+--8<-- "includes/support.md" 
 ------
 
 ## INDEX
@@ -109,2856 +108,2849 @@ We've made 3 guides related to this.
 | [Anime BD Tier 07 (P2P/Scene)](#anime-bd-tier-07-p2pscene)                  | [Anime Raws](#anime-raws)                                             |             |                                       |
 | [Anime BD Tier 08 (Mini Encodes)](#anime-bd-tier-08-mini-encodes)           | [Anime LQ Groups](#anime-lq-groups)                                   |             |                                       |
 
-## Audio Advanced
+## Audio Avancé 
 
-------
+------ 
 
-### TrueHD ATMOS
+### TrueHD ATMOS 
 
-??? question "TrueHD ATMOS - [Click to show/hide]"
+??? question "TrueHD ATMOS - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Dolby_Atmos){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Dolby_Atmos){:target="_blank" rel="noopener noreferrer"} 
 
-    Dolby Atmos is a surround sound technology developed by Dolby Laboratories. It expands on existing surround sound systems by adding height channels, allowing sounds to be interpreted as three-dimensional objects.
+    Dolby Atmos est une technologie de son surround développée par Dolby Laboratories. Il étend les systèmes de son surround existants en ajoutant des canaux de hauteur, permettant aux sons d'être interprétés comme des objets tridimensionnels. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/truehd-atmos.
+
+
+
+### DTSX 
+
+??? question "DTS:X - [Cliquez pour afficher/masquer]" [ 
+
+    DTS:X est un codec audio basé sur des objets](https://www.whathifi.com/advice/dtsx-what-it-how-can-you -get-it), qui vise à créer un son multidimensionnel qui « bouge autour de vous comme il le ferait dans la vraie vie ». 
+    Vous pensez peut-être que cela ressemble beaucoup à Dolby Atmos, et vous avez raison. Mais là où DTS:X diffère, c'est dans la configuration des enceintes requise. Alors que Dolby Atmos vous oblige à ajouter des canaux aériens supplémentaires à votre configuration 5.1 ou 7.1, DTS:X fonctionne avec les configurations d'enceintes surround standard, tout comme celle que vous possédez peut-être déjà à la maison. Il peut prendre en charge jusqu'à 32 emplacements d'enceintes et jusqu'à un système à 11,2 canaux. 
+    DTS:X, comme les autres formats DTS de qualité supérieure (par exemple DTS-HD MA), est sans perte. 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dts-x.json' %]][ [% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### ATMOS (non défini) 
+
+??? question "ATMOS (non défini) - [Cliquez pour afficher/masquer]" 
+
+    Gère les cas où seul Atmos est spécifié dans le titre mais pas DD+ ou TrueHD (où il n'est pas spécifié s'il est avec perte ou sans perte) 
+
+    !!! note 
+        Donnez-lui le même score que Lossy Atmos, puis lors de l'importation, il sera modifié en avec ou sans perte en fonction des informations sur les médias. 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/atmos-undefined.json' %]][ [% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### DDPlus ATMOS 
+
+??? question "DD+ ATMOS - [Cliquez pour afficher/masquer]" 
+
+    Atmos via UHD Blu-ray sera sans perte, ou avec perte via les services de streaming donc dans ce cas ce sera avec perte + Atmos 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/ddplus-atmos.json' %]][ [% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### TrueHD 
+
+??? question "TrueHD - [Cliquez pour afficher/masquer]" 
+
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Dolby_TrueHD){:target="_blank" rel="noopener noreferrer"} 
+
+    Dolby TrueHD est un codec audio multicanal sans perte développé par Dolby Laboratories pour la vidéo domestique, utilisé principalement dans les disques Blu-ray et le matériel compatible. 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/truehd.
+
+
+
+
+??? question "DTS-HD MA - [Cliquez pour afficher/masquer]" 
+
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/DTS-HD_Master_Audio){:target="_blank" rel=" noopener noreferrer"} 
+
+    DTS-HD Master Audio est un codec audio multicanal sans perte développé par DTS comme une extension du codec avec perte DTS Coherent Acoustics (DTS CA ; généralement lui-même appelé simplement DTS). Plutôt que d'être un mécanisme de codage entièrement nouveau, DTS-HD MA encode d'abord un maître audio en DTS avec perte, puis stocke un flux simultané de données supplémentaires représentant tout ce que l'encodeur DTS a rejeté. Cela donne au DTS-HD MA un « noyau » avec perte capable d'être lu par des appareils qui ne peuvent pas décoder l'audio sans perte plus complexe. L'application principale du DTS-HD MA est le stockage et la lecture audio pour les supports Blu-ray Disc. 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dts-hd-ma.json' %] ][[% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### FLAC 
+
+??? question "FLAC - [Cliquez pour afficher/masquer]" 
+
+    FLAC signifie Free Lossless Audio Codec, un format audio similaire au MP3, mais sans perte, ce qui signifie que l'audio est compressé en FLAC sans aucune perte de qualité. Ceci est similaire au fonctionnement de Zip, sauf qu'avec FLAC, vous obtiendrez une bien meilleure compression car il est conçu spécifiquement pour l'audio 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/flac.json' %]][[% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### PCM 
+
+??? question "PCM - [Cliquez pour afficher/masquer]" 
+
+    PCM est la méthode d'encodage généralement utilisée pour l'audio numérique non compressé 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/pcm.json' %]][[% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### DTS-HD HRA 
+
+??? question "DTS-HD HRA - [Cliquez pour afficher/masquer]" 
+
+    [Livre blanc technique](https://www.opusproductions.com/pdfs/DTS_HD_WhitePaper.pdf){:target="_blank" rel="noopener noreferrer"} 
+
+    | Codecs | Pages | Paragraphe | 
+    | ---------- | ------ | --------- | 
+    | DTS-HD MA | Page 6 | 5.1.1 | 
+    | DTS-HD HRA | Page 7 | 5.1.2 | 
+
+    DTS-HD HRA est la version avec perte de DTS-HD MA. 
+
+    | Codecs | DTS-HRA | DTS-MA | 
+    | ---------- | ---------------- | ----------------- | 
+    | Avec/sans perte | Avec perte | Sans perte |
+    | Débit de données | 1,5 - 6,0 Mbit/s | VBR-24,5 Mbit/s | 
+    | Chaînes | Jusqu'à 7,1 ch | Jusqu'à 7,1 ch | 
+    | Fréquence d'échantillonnage. | 96 kHz | 192 kHz | 
+    | Résolution | - | Jusqu'à 24 bits | 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dts-hd-hra.json' %] ][[% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### DDPlus 
+
+<sub>Dolby Digital Plus = DD+ = DDPlus</ sous> 
+
+??? question "DD+ - [Cliquez pour afficher/masquer]" 
+
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Dolby_Digital_Plus){:target="_blank" rel="noopener noreferrer"} 
+
+    Dolby Digital Plus, également connu sous le nom d'Enhanced AC-3 (et communément abrégé en DD+ ou E-AC-3, ou EC-3) est un système de compression audio numérique développé par Dolby Labs pour le transport et le stockage de l'audio numérique multicanal. C'est le successeur du Dolby Digital (AC-3). 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/ddplus.json' %]][[% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### DTS-ES 
+
+??? question "DTS-ES - [Cliquez pour afficher/masquer]" 
+
+    DTS-ES (DTS Extended Surround) comprend deux variantes, DTS-ES Discrete 6.1 et DTS-ES Matrix 5.1, selon la manière dont le son a été initialement masterisé et stocké. 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dts-es.json' %]][ [% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### DTS 
+
+<sub>DTS = DTS de base</sub> 
+
+??? question "DTS - [Cliquez pour afficher/masquer]" 
+    Espace réservé pour la description 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dts.json' %]][[% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### AAC 
+
+??? question "AAC - [Cliquez pour afficher/masquer]" 
+
+    Advanced Audio Coding 
+
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Advanced_Audio_Coding){:target="_blank" rel="noopener noreferrer "} 
+    Advanced Audio Coding (AAC) est une norme de codage audio pour la compression audio numérique avec perte. Conçu pour être le successeur du format MP3, AAC permet généralement d'obtenir une qualité sonore supérieure à celle du MP3 au même débit binaire. 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/truehd-atmos.json' %]][[% endfilter %]]
-    ```
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/aac.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP] (#index)</sup> 
 
-------
+------ 
 
-### DTS X
+### DD 
 
-??? question "DTS:X - [Click to show/hide]"
+<sub>(Basique) Dolby Digital = DD</sub> 
 
-    [DTS:X is an object-based audio codec](https://www.whathifi.com/advice/dtsx-what-it-how-can-you-get-it), which aims to create a multi-dimensional sound that “moves around you like it would in real life”.
-    You may think that sounds a lot like Dolby Atmos, and you’d be right. But where DTS:X differs lies in the required speaker configuration. While Dolby Atmos requires you to add extra overhead channels to your 5.1 or 7.1 setup, DTS:X works with standard surround speaker setups – just like the one you might already have at home. It can support up to 32 speaker locations and up to an 11.2-channel system.
-    DTS:X like other higher quality DTS formats (e.g. DTS-HD MA) is lossless.
+??? question "DD - [Cliquez pour afficher/masquer]" 
 
-??? example "JSON - [Click to show/hide]"
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Dolby_Digital){:target="_blank" rel="noopener noreferrer"} 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dts-x.json' %]][[% endfilter %]]
-    ```
+    Dolby Numérique, également connu sous le nom de Dolby AC-3, la compression audio est avec perte. 
 
-<sub><sup>[TOP](#index)</sup>
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-------
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dd.json' %]][[% endfilter %]] 
+    ``` 
 
-### ATMOS (undefined)
+<sub><sup>[TOP](#index)</sup> 
 
-??? question "ATMOS (undefined) - [Click to show/hide]"
+------ 
 
-    Handles cases where only Atmos is specified in title but not DD+ or TrueHD (Where it is not specified if it is Lossy or Lossless)
+### MP3 
 
-    !!! note
-        Give this the same score as Lossy Atmos, and then on import, it will get changed to either lossy or lossless based on mediainfo.
+??? question "MP3 - [Cliquez pour afficher/masquer]" 
+    Espace réservé pour la description 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/atmos-undefined.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/mp3.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### DDPlus ATMOS
+### Opus 
 
-??? question "DD+ ATMOS - [Click to show/hide]"
+??? question "Opus - [Cliquez pour afficher/masquer]" 
 
-    Atmos via UHD Blu-ray will be lossless, or lossy via streaming services so in this case it will be lossy + Atmos
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Opus_(audio_format)){:target="_blank" rel="noopener noreferrer "} 
 
-??? example "JSON - [Click to show/hide]"
+    Opus est un format de codage audio avec perte développé par la Fondation Xiph.Org et standardisé par l'Internet Engineering Task Force, conçu pour coder efficacement la parole et l'audio général dans un format unique, tout en restant suffisamment faible pour une communication interactive en temps réel. et suffisamment peu complexe pour les processeurs embarqués bas de gamme. Opus remplace à la fois Vorbis et Speex pour de nouvelles applications, et plusieurs tests d'écoute aveugle l'ont classé comme étant de meilleure qualité que tout autre format audio standard à n'importe quel débit binaire donné jusqu'à ce que la transparence soit atteinte, y compris MP3. , AAC et HE-AAC 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/ddplus-atmos.json' %]][[% endfilter %]]
-    ```
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-<sub><sup>[TOP](#index)</sup>
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/opus.json' %]][[% endfilter %]] 
+    ``` 
 
-------
+<sub><sup>[TOP](#index)</sup> 
 
-### TrueHD
+------ 
 
-??? question "TrueHD - [Click to show/hide]"
+## Canaux audio 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Dolby_TrueHD){:target="_blank" rel="noopener noreferrer"}
+------ 
 
-    Dolby TrueHD is a lossless, multi-channel audio codec developed by Dolby Laboratories for home video, used principally in Blu-ray Disc and compatible hardware.
+### 1.0 Mono 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/truehd.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/10-mono.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### DTS-HD MA
+### 2. 
 
-??? question "DTS-HD MA - [Click to show/hide]"
+0 Stéréo ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/DTS-HD_Master_Audio){:target="_blank" rel="noopener noreferrer"}
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/20-stereo.json' %]][ [% endfilter %]] 
+    ``` 
 
-    DTS-HD Master Audio is a multi-channel, lossless audio codec developed by DTS as an extension of the lossy DTS Coherent Acoustics codec (DTS CA; usually itself referred to as just DTS). Rather than being an entirely new coding mechanism, DTS-HD MA encodes an audio master in lossy DTS first, then stores a concurrent stream of supplementary data representing whatever the DTS encoder discarded. This gives DTS-HD MA a lossy "core" able to be played back by devices that cannot decode the more complex lossless audio. DTS-HD MA's primary application is audio storage and playback for Blu-ray Disc media.
+<sub><sup>[TOP](#index)</sup> 
 
-??? example "JSON - [Click to show/hide]"
+------ 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dts-hd-ma.json' %]][[% endfilter %]]
-    ```
+### Son 3.0
 
-<sub><sup>[TOP](#index)</sup>
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-------
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/30-sound.json' %]][ [% endfilter %]] 
+    ``` 
 
-### FLAC
+<sub><sup>[TOP](#index)</sup> 
 
-??? question "FLAC - [Click to show/hide]"
+------ 
 
-    FLAC stands for Free Lossless Audio Codec, an audio format similar to MP3, but lossless, meaning that audio is compressed in FLAC without any loss in quality. This is similar to how Zip works, except with FLAC you will get much better compression because it is designed specifically for audio
+### 4.0 Son 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/flac.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/40-sound.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### PCM
+### Surround 5.1 
 
-??? question "PCM - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    PCM is the method of encoding typically used for uncompressed digital audio
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/51-surround.json' %]][ [% endfilter %]] 
+    ``` 
 
-??? example "JSON - [Click to show/hide]"
+<sub><sup>[TOP](#index)</sup> 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/pcm.json' %]][[% endfilter %]]
-    ```
+------ 
 
-<sub><sup>[TOP](#index)</sup>
+### Surround 6.1 
 
-------
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-### DTS-HD HRA
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/61-surround.json' %]][ [% endfilter %]] 
+    ``` 
 
-??? question "DTS-HD HRA - [Click to show/hide]"
+<sub><sup>[TOP](#index)</sup> 
 
-    [Technical Whitepaper](https://www.opusproductions.com/pdfs/DTS_HD_WhitePaper.pdf){:target="_blank" rel="noopener noreferrer"}
+------ 
 
-    | Codec      | Page   | Paragraph |
-    | ---------- | ------ | --------- |
-    | DTS-HD MA  | Page 6 | 5.1.1     |
-    | DTS-HD HRA | Page 7 | 5.1.2     |
+### Surround 7.1 
 
-    DTS-HD HRA is the lossy version of DTS-HD MA.
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    | Codec          | DTS-HRA          | DTS-MA            |
-    | -------------- | ---------------- | ----------------- |
-    | Lossy/lossless | Lossy            | Lossless          |
-    | Data rate      | 1.5 - 6.0 Mbit/s | VBR - 24.5 Mbit/s |
-    | Channels       | Up to 7.1 ch     | Up to 7.1 ch      |
-    | Sampling Freq. | 96 kHz           | 192 kHz           |
-    | Resolution     | -                | Up to 24-bit      |
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/71-surround.json' %]][ [% endfilter %]] 
+    ``` 
 
-??? example "JSON - [Click to show/hide]"
+<sub><sup>[TOP](#index)</sup> 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dts-hd-hra.json' %]][[% endfilter %]]
-    ```
+------ 
 
-<sub><sup>[TOP](#index)</sup>
+### 9.1 Surround 
 
-------
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-### DDPlus
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/91-surround.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub>Dolby Digital Plus = DD+ = DDPlus</sub>
+<sub><sup>[TOP](#index)</sup> 
 
-??? question "DD+ - [Click to show/hide]"
+------ 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Dolby_Digital_Plus){:target="_blank" rel="noopener noreferrer"}
+## Formats HDR 
 
-    Dolby Digital Plus, also known as Enhanced AC-3 (and commonly abbreviated as DD+ or E-AC-3, or EC-3) is a digital audio compression scheme developed by Dolby Labs for transport and storage of multi-channel digital audio. It is a successor to Dolby Digital (AC-3).
+------ 
 
-??? example "JSON - [Click to show/hide]"
+### DV HDR10Plus 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/ddplus.json' %]][[% endfilter %]]
-    ```
+<sub> DV = DoVi = Dolby Vision</sub><br> 
+<sub>HDR10+ = HDR10P = HDR10Plus</sub> 
 
-<sub><sup>[TOP](#index)</sup>
+??? question "DV HDR10+ - [Cliquez pour afficher/masquer]" 
 
-------
+    {! include-markdown "../../includes/cf-descriptions/dv-hdr10plus.md" !} 
 
-### DTS-ES
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-??? question "DTS-ES - [Click to show/hide]"
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv-hdr10plus.json' %]][ [% endfilter %]] 
+    ``` 
 
-    DTS-ES (DTS Extended Surround) includes two variants, DTS-ES Discrete 6.1, and DTS-ES Matrix 5.1, depending on how the sound was originally mastered and stored.
+<sub><sup>[TOP](#index)</sup> 
 
-??? example "JSON - [Click to show/hide]"
+------ 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dts-es.json' %]][[% endfilter %]]
-    ```
+### DV HDR10 
 
-<sub><sup>[TOP](#index)</sup>
+<sub>DV = DoVi = Dolby Vision</sub> 
 
-------
+??? question "DV HDR10 - [Cliquez pour afficher/masquer]" 
 
-### DTS
+    {! include-markdown "../../includes/cf-descriptions/dv-hdr10.md" ! 
 
-<sub>DTS = Basic DTS</sub>
+} ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-??? question "DTS - [Click to show/hide]"
-    Description placeholder
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv-hdr10.json' %]][ [% endfilter %]] 
+    ``` 
 
-??? example "JSON - [Click to show/hide]"
+<sub><sup>[TOP](#index)</sup> 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dts.json' %]][[% endfilter %]]
-    ```
+------ 
 
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### AAC
-
-??? question "AAC - [Click to show/hide]"
-
-    Advanced Audio Coding
-
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Advanced_Audio_Coding){:target="_blank" rel="noopener noreferrer"}
-    Advanced Audio Coding (AAC) is an audio coding standard for lossy digital audio compression. Designed to be the successor of the MP3 format, AAC generally achieves higher sound quality than MP3 at the same bit rate.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/aac.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### DD
-
-<sub>(Basic) Dolby Digital = DD</sub>
-
-??? question "DD - [Click to show/hide]"
-
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Dolby_Digital){:target="_blank" rel="noopener noreferrer"}
-
-    Dolby Digital, also known as Dolby AC-3, the audio compression is lossy.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dd.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### MP3
-
-??? question "MP3 - [Click to show/hide]"
-    Description placeholder
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/mp3.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### Opus
-
-??? question "Opus - [Click to show/hide]"
-
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Opus_(audio_format)){:target="_blank" rel="noopener noreferrer"}
-
-    Opus is a lossy audio coding format developed by the Xiph.Org Foundation and standardized by the Internet Engineering Task Force, designed to efficiently code speech and general audio in a single format, while remaining low-latency enough for real-time interactive communication and low-complexity enough for low-end embedded processors.Opus replaces both Vorbis and Speex for new applications, and several blind listening tests have ranked it higher-quality than any other standard audio format at any given bitrate until transparency is reached, including MP3, AAC, and HE-AAC
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/opus.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-## Audio Channels
-
-------
-
-### 1.0 Mono
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/10-mono.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### 2.0 Stereo
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/20-stereo.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### 3.0 Sound
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/30-sound.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### 4.0 Sound
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/40-sound.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### 5.1 Surround
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/51-surround.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### 6.1 Surround
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/61-surround.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### 7.1 Surround
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/71-surround.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### 9.1 Surround
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/91-surround.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-## HDR Formats
-
-------
-
-### DV HDR10Plus
-
-<sub>DV = DoVi = Dolby Vision</sub><br>
-<sub>HDR10+ = HDR10P = HDR10Plus</sub>
-
-??? question "DV HDR10+ - [Click to show/hide]"
-
-    {! include-markdown "../../includes/cf-descriptions/dv-hdr10plus.md" !}
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dv-hdr10plus.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### DV HDR10
+### DV 
 
 <sub>DV = DoVi = Dolby Vision</sub>
 
-??? question "DV HDR10 - [Click to show/hide]"
+??? question "DV - [Cliquez pour afficher/masquer]" 
 
-    {! include-markdown "../../includes/cf-descriptions/dv-hdr10.md" !}
+    --8<-- "includes/cf-descriptions/dv.md" 
 
-??? example "JSON - [Click to show/hide]"
+<! -- la raison pour laquelle nous n'avons pas utilisé ici `include-markdown` est que tous les en-têtes lors de l'utilisation de `include-markdown` rechercheront dans `/includes` et non dans le fichier markdown actuel, dans ce cas le pointeur vers ` #dv-webdl` dans `includes/dv.md` --> 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dv-hdr10.json' %]][[% endfilter %]]
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv.json' %]][[% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### DV HLG 
+
+<sub>DV = DoVi = Dolby Vision</sub> 
+
+?? ? question "DV HLG - [Cliquez pour afficher/masquer]" 
+
+    {! include-markdown "../../includes/cf-descriptions/dv-hlg.md" !} 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv-hlg.json' %]][ [% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### DV SDR 
+
+<sub>DV = DoVi = Dolby Vision</sub> 
+
+??? question "DV SDR - [Cliquez pour afficher/masquer]" 
+
+    {! include-markdown "../../includes/cf-descriptions/dv-sdr.md" !} 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv-sdr.json' %]][ [% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### HDR10Plus 
+
+<sub>HDR10+ = HDR10P = HDR10Plus</sub> 
+
+?? ? question "HDR10+ - [Cliquez pour afficher/masquer]" 
+
+    {! include-markdown "../../includes/cf-descriptions/hdr10plus.md" !} 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hdr10plus.json' %]][[% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### HDR10 
+
+<sub>HDR10</sub> 
+
+??? question "HDR10 - [Cliquez pour afficher/masquer]" 
+
+    {! include-markdown "../../includes/cf-descriptions/hdr10.md" !} 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hdr10.json' %]][[% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### HDR 
+
+<sub>HDR</sub> 
+
+??? question "HDR - [Cliquez pour afficher/masquer]" 
+
+    {! 
+
+include-markdown "../../includes/cf-descriptions/hdr.md" !} ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hdr.json' %]][[% filtre de fin %]] 
     ```
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### DV
+### HDR (non défini) 
 
-<sub>DV = DoVi = Dolby Vision</sub>
+??? question "HDR (non défini) - [Cliquez pour afficher/masquer]" 
 
-??? question "DV - [Click to show/hide]"
+    {! include-markdown "../../includes/cf-descriptions/hdr-undefined.md" !} 
 
-    --8<-- "includes/cf-descriptions/dv.md"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-<! -- the reason why we didn't use here `include-markdown` is because all the headers when using `include-markdown` will be looking in `/includes` and not the current markdown file, in this case the pointer to `#dv-webdl` in `includes/dv.md` -->
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hdr-undefined.json' %]][ [% endfilter %]] 
+    ``` 
 
-??? example "JSON - [Click to show/hide]"
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### PQ 
+
+<sub>PQ = PQ10</sub> 
+
+??? question "PQ - [Cliquez pour afficher/masquer]" 
+
+    {! include-markdown "../../includes/cf-descriptions/pq.md" !} 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/pq.json' %]][[% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### HLG 
+
+<sub>HLG = HLG10</sub> 
+
+??? question "HLG - [Cliquez pour afficher/masquer]" 
+
+    {! include-markdown "../../includes/cf-descriptions/hlg.md" !} 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hlg.json' %]][[% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+## Versions du film 
+
+------ 
+
+### Hybride 
+
+??? question "Hybride - [Cliquez pour afficher/masquer]" 
+
+    Une version hybride signifie toute combinaison de sources (vidéo + audio) et non un encodage direct d'une seule source. En général, vous pouvez être sûr que tout hybride créé constitue la version de la meilleure qualité d’un titre particulier. 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hybrid.json' %]][[% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### Remasteriser 
+
+??? question "Remaster - [Cliquez pour afficher/masquer]" 
+
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Remaster){:target="_blank" rel="noopener noreferrer"} 
+
+    Pour le terme logiciel, voir Remasterisation de logiciels. 
+    Le remaster (également remasterisation numérique et remasterisé numériquement) fait référence à la modification de la qualité du son ou de l'image, ou des deux, d'enregistrements précédemment créés, qu'ils soient audiophoniques, cinématographiques ou vidéographiques. 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+     [[% filter indent(width=4) %]][[% include 'json/radar/cf/remaster.json' %]][[% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### Remasterisation 4K 
+
+??? question "4K Remaster - [Cliquez pour afficher/masquer]"
+
+    Un film remasterisé ou masterisé en 4K devrait généralement vous offrir la meilleure image et le meilleur son actuellement pour le film. Les deux ne sont que des noms pour décrire le meilleur possible actuellement pour le film. 
+
+    Pour être clair, les films numériques finaux sur les Blu-ray masterisés en 4K n'ont toujours que la même résolution réelle de 1920 x 1080 pixels que les Blu-ray normaux. Mais l’argument est que, parce que ces fichiers Full HD sont dérivés de masters à plus haute résolution, leurs images seront plus précises, avec de meilleures couleurs, moins de bruit et une netteté et des détails améliorés. Notamment parce que le processus de mastering à plus haute résolution fournira plus de détails à partir de l’impression originale sur lesquels les masters Blu-ray pourront s’appuyer lors de leur (espérons-le…) processus de compression image par image. 
+
+    Un autre élément important des disques masterisés en 4K est qu'ils sont tous masterisés avec la spécification de couleur « xvYCC ». Cela offre une gamme de couleurs élargie, plus proche de celle contenue dans le matériel source original. 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/4k-remaster.json' %]][ [% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### Collection de critères 
+
+??? question "Criterion Collection - [Cliquez pour afficher/masquer]" 
+
+    The Criterion Collection, Inc. (ou simplement Criterion) est une société américaine de distribution de vidéos à domicile qui se concentre sur l'octroi de licences pour "des films classiques et contemporains importants" et sur leur vente aux amateurs de cinéma. Criterion a contribué à standardiser les caractéristiques de la vidéo domestique telles que la restauration de films, l'utilisation du format boîte aux lettres pour les films grand écran et l'ajout de fonctionnalités bonus et de pistes de commentaires. 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/criterion-collection.json' %]][ [% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### Maîtres du cinéma 
+
+??? question "Masters of Cinema - [Cliquez pour afficher/masquer]" 
+
+    Masters of Cinema est une gamme de sorties DVD et Blu-ray publiées par Eureka Entertainment. En raison de l'emballage uniformément marqué et numéroté et de l'inclusion standard de livrets et d'analyses par des historiens du cinéma récurrents, la ligne est souvent perçue comme l'équivalent britannique de The Criterion Collection. 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer}" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/masters-of-cinema. 
+    json' %]][[% endfilter %]] ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### Syndrome du vinaigre 
+
+??? question "Syndrome du vinaigre - [Cliquez pour afficher/masquer]"
+
+    Vinegar Syndrome est une société américaine fondée en 2012 pour préserver et distribuer d'anciens films classés X. Au fil du temps, ils ont élargi leur catalogue pour inclure d’autres types de films cultes et d’exploitation, spécialisés dans les genres d’horreur et d’action. 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer}" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/vinegar-syndrome.json' %]][ [% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### Coupe théâtrale 
+
+??? question "Theatrical Cut - [Cliquez pour afficher/masquer]" 
+
+    Le Theatrical Cut est la version du film qui a été projetée dans les cinémas. 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/theatrical-cut.json' %]][ [% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### Édition spéciale 
+
+??? question "Édition spéciale - [Cliquez pour afficher/masquer]" 
+
+    Format personnalisé pour plusieurs éditions spéciales 
+
+    - Le Director's Cut est la version éditée par le réalisateur, généralement pour des communiqués de presse supplémentaires à domicile. 
+    - Un montage étendu est généralement toute version du film qui est plus longue que le montage cinéma (bien que dans de très rares cas, elle soit plus courte). 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/special-edition.json' %]][ [% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### IMAX 
+
+??? question "IMAX - [Cliquez pour afficher/masquer]" 
+    Espace réservé pour la description 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/imax.json' %]][[% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP](#index)</sup> 
+
+------ 
+
+### IMAX amélioré 
+
+??? question "IMAX Enhanced - [Cliquez pour afficher/masquer]" 
+    IMAX Enhanced : obtenez plus d'image au lieu de barres noires. 
+
+    Le rapport d'aspect étendu exclusif IMAX Enhanced est de 1:90:1, ce qui offre jusqu'à 26 % d'image en plus pour certaines séquences, ce qui signifie plus de l'action est visible à l'écran. 
+
+    ![!Exemple amélioré Imax](images/imax-e/imax-e.1.png) 
+
+    ![!Exemple amélioré Imax](images/imax-e/imax-e.2.png) 
+
+    ![!Exemple amélioré Imax ](images/imax-e/imax-e.3.png) 
+
+    ![!Exemple amélioré Imax](images/imax-e/imax-e.4.png) 
+
+    ![!Exemple amélioré Imax](images/imax- e/imax-e.5. 
+
+png) ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dv.json' %]][[% endfilter %]]
-    ```
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/imax-enhanced.json' %]][[% endfilter %]] `` 
+    ` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[ TOP](#index)</sup> 
 
-------
+------ 
 
-### DV HLG
+### Cache ouvert 
 
-<sub>DV = DoVi = Dolby Vision</sub>
+??? question "Open Matte - [Cliquez pour afficher/masquer]" 
 
-??? question "DV HLG - [Click to show/hide]"
+    Le cache ouvert est une technique de tournage qui consiste à mater le haut et le bas de l'image du film dans le projecteur de film (appelé cache doux) pour la sortie en salles sur grand écran, puis à numériser. le film sans cache (au ratio Academy) pour une sortie vidéo domestique en plein écran. 
 
-    {! include-markdown "../../includes/cf-descriptions/dv-hlg.md" !}
+??? exemple "JSON - [Cliquez pour afficher/masquer}" 
 
-??? example "JSON - [Click to show/hide]"
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/open-matte.json' %]][ [% endfilter %]] 
+    ``` 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dv-hlg.json' %]][[% endfilter %]]
-    ```
+<sub><sup>[TOP](#index)</sup> 
 
-<sub><sup>[TOP](#index)</sup>
+------ 
 
-------
+## Indésirable 
 
-### DV SDR
+------ 
 
-<sub>DV = DoVi = Dolby Vision</sub>
+### BR-DISK 
 
-??? question "DV SDR - [Click to show/hide]"
+??? question "BR-DISK - [Cliquez pour afficher/masquer]" 
 
-    {! include-markdown "../../includes/cf-descriptions/dv-sdr.md" !}
+    Il s'agit d'un format personnalisé pour aider Radarr à reconnaître et ignorer BR-DISK (structure des dossiers ISO et Blu-ray) en plus de la qualité BR-DISK standard. 
 
-??? example "JSON - [Click to show/hide]"
+    Vous devrez ajouter les éléments suivants à votre nouveau format personnalisé lors de sa création dans votre profil de qualité (`Setting` => `Profiles`), puis définir le score sur `-10000`. 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dv-sdr.json' %]][[% endfilter %]]
-    ```
+    !!! note 
 
-<sub><sup>[TOP](#index)</sup>
+        En fonction de votre schéma de renommage, il peut arriver que Radarr corresponde aux fichiers renommés après leur téléchargement et leur importation en tant que « BR-DISK ». 
+        Il s'agit d'un ennui esthétique jusqu'à ce que nous trouvions une autre façon de résoudre ce problème, 
+        étant donné que ce format personnalisé est utilisé pour ne pas télécharger BR-DISK, il remplit son rôle comme prévu. 
+        Plusieurs raisons expliquent ce phénomène : 
 
-------
+        - La faute à la dénomination souvent mal utilisée des encodes x265. 
+        - Radarr v3/v4 utilise des formats personnalisés dynamiques. 
 
-### HDR10Plus
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-<sub>HDR10+ = HDR10P = HDR10Plus</sub>
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/br-disk.json' %]][ [% endfilter %]] 
+    ``` 
 
-??? question "HDR10+ - [Click to show/hide]"
+<sub><sup>[TOP](#index)</sup> 
 
-    {! include-markdown "../../includes/cf-descriptions/hdr10plus.md" !}
+------ 
 
-??? example "JSON - [Click to show/hide]"
+### LQ 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hdr10plus.json' %]][[% endfilter %]]
-    ```
+<sub>Communiqués de mauvaise qualité = LQ</sub> 
 
-<sub><sup>[TOP](#index)</sup>
+?? ? question "LQ - [Cliquez pour afficher/masquer]" 
 
-------
+    - Une collection de groupes connus de mauvaise qualité (souvent bannis des meilleurs trackers en raison de leur manque de qualité), de groupes de release interdits ou malhonnêtes, ou de rips/encodages de scène et rapides- pour publier des groupes P2P qui, bien qu'adéquats, ne sont généralement pas considérés comme de haute qualité. 
+    - Release Groups qui brisent l'automatisation des applications Starr car leur mauvaise dénomination pourrait potentiellement provoquer des boucles de téléchargement, même si leur qualité globale est parfaite. 
 
-### HDR10
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-<sub>HDR10</sub>
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/lq.json' %]][[% filtre de fin %]]
+    ``` 
 
-??? question "HDR10 - [Click to show/hide]"
+<sub><sup>[TOP](#index)</sup> 
 
-    {! include-markdown "../../includes/cf-descriptions/hdr10.md" !}
+------ 
 
-??? example "JSON - [Click to show/hide]"
+### LQ (titre de la version) 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hdr10.json' %]][[% endfilter %]]
-    ```
+<sub>Communications de faible qualité = LQ</sub> 
 
-<sub><sup>[TOP](#index)</sup>
+??? question "LQ (titre de la version) - [Cliquez pour afficher/masquer]" 
 
-------
+    Une collection de termes vus dans les titres des versions de basse qualité qui ne sont pas capturés à l'aide d'un nom de groupe de versions. 
 
-### HDR
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-<sub>HDR</sub>
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/lq-release-title.json' %] ][[% endfilter %]] 
+    ``` 
 
-??? question "HDR - [Click to show/hide]"
+<sub><sup>[TOP](#index)</sup> 
 
-    {! include-markdown "../../includes/cf-descriptions/hdr.md" !}
+------ 
 
-??? example "JSON - [Click to show/hide]"
+### 3D 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hdr.json' %]][[% endfilter %]]
-    ```
+??? question "3D - [Cliquez pour afficher/masquer]" 
 
-<sub><sup>[TOP](#index)</sup>
+    Si vous préférez ou non la 3D. 
 
-------
+    Vous pouvez utiliser un format personnalisé ou utiliser des restrictions (`Paramètres` => `Indexeurs` => `Restrictions`) selon votre préférence. 
 
-### HDR (undefined)
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-??? question "HDR (undefined) - [Click to show/hide]"
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/3d.json' %]][[% endfilter %]] 
+    ``` 
 
-    {! include-markdown "../../includes/cf-descriptions/hdr-undefined.md" !}
+<sub><sup>[TOP](#index)</sup> 
 
-??? example "JSON - [Click to show/hide]"
+------ 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hdr-undefined.json' %]][[% endfilter %]]
-    ```
+### x265 (HD) 
 
-<sub><sup>[TOP](#index)</sup>
+<sub>720/1080p non x265 = x265 (720/ 1080p) = x265 (HD)</sub> 
 
-------
+??? question "x265 (HD) - [Cliquez pour afficher/masquer]" 
 
-### PQ
+    Cela bloque toutes les versions 720/1080p (HD) codées en x265. 
 
-<sub>PQ = PQ10</sub>
+    Dans votre profil de qualité, utilisez le score suivant pour ce format personnalisé : `{{ radarr['cf']['x265-hd']['trash_scores']['default'] }}` 
 
-??? question "PQ - [Click to show/hide]"
+    !!! échec "" 
+        --8<-- "includes/docker/x265.md" 
 
-    {! include-markdown "../../includes/cf-descriptions/pq.md" !}
+            !!! Danger "Ne l'utilisez pas avec [{{ radarr['cf']['x265-no-hdrdv']['name'] }}](/Radarr/Radarr-collection-of-custom-formats/# x265-no-hdrdv), n'en inclure qu'un :avertissement:" 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/pq.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/x265-hd.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### HLG
+### Mise à l'échelle 
 
-<sub>HLG = HLG10</sub>
+??? question « Mise à l'échelle - [Cliquez pour afficher/masquer] » 
 
-??? question "HLG - [Click to show/hide]"
+    Ce format personnalisé est utilisé pour empêcher Radarr de récupérer les versions mises à l'échelle. 
 
-    {! include-markdown "../../includes/cf-descriptions/hlg.md" !}
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-??? example "JSON - [Click to show/hide]"
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/upscaled. 
+    json' %]][[% endfilter %]] ``` 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hlg.json' %]][[% endfilter %]]
-    ```
+<sub><sup>[TOP](#index)</sup> 
 
-<sub><sup>[TOP](#index)</sup>
+------ 
 
-------
+### Extras 
 
-## Movie Versions
+??? question "Extras - [Cliquez pour afficher/masquer]" 
 
-------
+    Ce format personnalisé est utilisé pour empêcher Radarr de récupérer des versions contenant uniquement des extras/bonus. 
 
-### Hybrid
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-??? question "Hybrid - [Click to show/hide]"
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/extras.json' %]][[% filtre de fin %]]
+    ``` 
 
-    A hybrid release means any combination of sources (video + audio) and not a direct encode of a single source. Generally you can be sure that any hybrid that has been put together is the best quality release of a particular title.
+<sub><sup>[TOP](#index)</sup> 
 
-??? example "JSON - [Click to show/hide]"
+------ 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hybrid.json' %]][[% endfilter %]]
-    ```
+## Facultatif 
 
-<sub><sup>[TOP](#index)</sup>
+------ 
 
-------
+### Mauvais groupes doubles 
 
-### Remaster
+??? question "Mauvais groupes doubles - [Cliquez pour afficher/masquer]" 
+    Ces groupes prennent la version originale et ajoutent leur propre langue (ex. le portugais) comme piste audio principale (AAC 2.0). Le résultat après avoir renommé et FFprobe est que le média Le fichier sera reconnu comme audio AAC portugais. Il est courant d'ajouter le meilleur son comme première piste. 
+    De plus, ils traduisent/renomment souvent même le nom de la version en portugais. 
 
-??? question "Remaster - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Remaster){:target="_blank" rel="noopener noreferrer"}
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/bad-dual-groups.json' %] ][[% endfilter %]] 
+    ``` 
 
-    For the software term, see Software remastering.
-    Remaster (also digital remastering and digitally remastered) refers to changing the quality of the sound or of the image, or both, of previously created recordings, either audiophonic, cinematic, or videographic.
+<sub><sup>[TOP](#index)</sup> 
 
-??? example "JSON - [Click to show/hide]"
+------ 
 
-    ```json
-     [[% filter indent(width=4) %]][[% include 'json/radarr/cf/remaster.json' %]][[% endfilter %]]
-    ```
+### DV (WEBDL) 
 
-<sub><sup>[TOP](#index)</sup>
+<sub>DV = DoVi = Dolby Vision </sub> 
 
-------
+??? question "DV (WEBDL) - [Cliquez pour afficher/masquer]" 
+    Il s'agit d'un format personnalisé spécial qui bloque les WEBDL **avec** Dolby Vision mais **sans** solution de secours HDR10. 
 
-### 4K Remaster
+    Vous devrez ajouter les éléments suivants en tant que nouveau format personnalisé et, une fois créé, ajuster la note dans votre profil de qualité (`Setting` => `Profiles`) à `-10000`. 
 
-??? question "4K Remaster - [Click to show/hide]"
+    Ce format personnalisé fonctionne avec le format personnalisé [DV](#dv) normal que vous utiliseriez pour préférer Dolby Vision. 
 
-    A remastered or mastered in 4K should give you usually the best picture and audio currently for the movie. Both are just names to describe the best possible currently for the movie.
+    La plupart des WEBDL des services de streaming ne disposent pas de solution de repli vers HDR10. Ce qui peut résulter pendant la lecture, ce sont des problèmes de couleurs étranges (généralement une teinte verte) lorsque vous essayez de le lire sur une configuration non compatible Dolby Vision. 
 
-    To be clear, the final digital films on the Mastered in 4K Blu-rays still only have the same 1920 x 1080 pixels of actual resolution as normal Blu-rays. But the argument goes that because these full HD files were derived from higher-resolution masters, their images will be more precise, with better colors, less noise, and enhanced sharpness and detail. Not least because the higher-resolution mastering process will provide more detail from the original print for the Blu-ray masters to draw on when going through their (hopefully…) frame-by-frame compression process.
+    Les remux et Bluray ont un recours au HDR10. 
 
-    Another important element of the Mastered in 4K discs is that they’re all mastered with ‘x.v.YCC’ color specification. This delivers an expanded color range closer to that contained in original source material.
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-??? example "JSON - [Click to show/hide]"
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv-webdl.json' %]][ [% endfilter %]] 
+    ``` 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/4k-remaster.json' %]][[% endfilter %]]
-    ```
+<sub><sup>[TOP](#index)</sup> 
 
-<sub><sup>[TOP](#index)</sup>
+------ 
 
-------
+### EVO (pas de WEBDL) 
 
-### Criterion Collection
+??? question "EVO (pas de WEBDL) - [Cliquez pour afficher/masquer]" 
 
-??? question "Criterion Collection - [Click to show/hide]"
+    Ce groupe est souvent interdit pour les versions Blu-ray de mauvaise qualité, mais leurs WEB-DL sont corrects. 
 
-    The Criterion Collection, Inc. (or simply Criterion) is an American home video distribution company which focuses on licensing "important classic and contemporary films" and selling them to film aficionados. Criterion has helped to standardize characteristics of home video such as film restoration, using the letterbox format for widescreen films, and adding bonus features and commentary tracks.
+    Vous devrez ajouter les éléments suivants en tant que nouveau format personnalisé et, une fois créé, ajuster la note dans votre profil de qualité (`Setting` => `Profiles`) à `-10000`. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/criterion-collection.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/evo-no-webdl.json' %] ][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Masters of Cinema
+### HDR10Plus Boost 
 
-??? question "Masters of Cinema - [Click to show/hide]"
+??? question "HDR10+ Boost - [Cliquez pour afficher/masquer]" 
 
-    Masters of Cinema is a line of DVD and Blu-ray releases published through Eureka Entertainment. Because of the uniformly branded and spine-numbered packaging and the standard inclusion of booklets and analysis by recurring film historians, the line is often perceived as the UK equivalent of The Criterion Collection.
+    Facultatif.
 
-??? example "JSON - [Click to show/hide}"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/masters-of-cinema.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hdr10plus-boost.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Vinegar Syndrome
+### DV HDR10Plus Boost 
 
-??? question "Vinegar Syndrome - [Click to show/hide]"
+??? question "DV HDR10+ Boost - [Cliquez pour afficher/masquer]" 
 
-    Vinegar Syndrome is a US-based company founded in 2012 to preserve and distribute old X-rated films. Over time, they expanded their catalog to include other types of cult and exploitation films, specializing in horror and action genres.
+    Facultatif : utilisez celle-ci si vous souhaitez passer du DV HDR10 au DV HDR10+ pour prendre en charge le meilleur des deux mondes. 
 
-??? example "JSON - [Click to show/hide}"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/vinegar-syndrome.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv-hdr10plus-boost.json' %] ][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Theatrical Cut
+### No-RlsGroup 
 
-??? question "Theatrical Cut - [Click to show/hide]"
+??? question "No-RlsGroup - [Cliquez pour afficher/masquer]" 
 
-    The Theatrical Cut is the version of the film that was shown at cinemas.
+    Certains indexeurs suppriment le groupe de versions, ce qui pourrait permettre aux groupes LQ d'obtenir un score plus élevé. 
+    Par exemple, beaucoup de versions d'EVO finissent par être dépourvues du nom du groupe, elles apparaissent donc comme des "mises à niveau" et finissent par obtenir un score décent si d'autres choses correspondent 
 
-??? example "JSON - [Click to show/hide]"
+    !!! avertissement 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/theatrical-cut.json' %]][[% endfilter %]]
-    ```
+        Si vous n'utilisez pas de noms de fichiers corrects (comme ne pas ajouter de groupes de versions), n'ajoutez pas ce format personnalisé, sauf si vous souhaitez les mettre à niveau. 
 
-<sub><sup>[TOP](#index)</sup>
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-------
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/no-rlsgroup.json' %]][ [% endfilter %]] 
+    ``` 
 
-### Special Edition
+<sub><sup>[TOP](#index)</sup> 
 
-??? question "Special Edition - [Click to show/hide]"
+------ 
 
-    Custom format for several Special Editions
+### Obscurci 
 
-    - The Director's Cut is the version edited by the Director, usually for additional home media releases.
-    - An Extended Cut is usually any version of the film which is longer than the theatrical cut (though in very rare cases, its shorter).
+??? question "Obfuscated - [Cliquez pour afficher/masquer]" 
 
-??? example "JSON - [Click to show/hide]"
+    Facultatif (utilisez-les uniquement si vous n'aimez pas les versions renommées) 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/special-edition.json' %]][[% endfilter %]]
-    ```
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-<sub><sup>[TOP](#index)</sup>
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/obfuscated.json' %]][[% endfilter %]] 
+    ``` 
 
-------
+<sub><sup>[TOP](#index)</sup> 
 
-### IMAX
+------ 
 
-??? question "IMAX - [Click to show/hide]"
-    Description placeholder
+### Retags 
 
-??? example "JSON - [Click to show/hide]"
+??? question "Retags - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/imax.json' %]][[% endfilter %]]
-    ```
+    Facultatif (utilisez-les uniquement si vous n'aimez pas les versions retaggées) 
 
-<sub><sup>[TOP](#index)</sup>
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-------
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/retags.json' %]][[% endfilter %]] 
+    ``` 
 
-### IMAX Enhanced
+<sub><sup>[TOP](#index)</sup> 
 
-??? question "IMAX Enhanced - [Click to show/hide]"
-    IMAX Enhanced: Get More Picture Instead of Black Bars
+------ 
 
-    IMAX Enhanced exclusive expanded aspect ratio is 1:90:1, which offers up to 26% more picture for select sequences, meaning more of the action is visible on screen.
+### Scène 
 
-    ![!Imax Enhanced Example](images/imax-e/imax-e.1.png)
+??? question "Scène - [Cliquez pour afficher/masquer]" 
 
-    ![!Imax Enhanced Example](images/imax-e/imax-e.2.png)
+    Ce format personnalisé tentera de reconnaître ce qu'on appelle les "libérations de scène". Selon vos préférences, vous pouvez lui attribuer une note négative '-10000', une note positive, ou évitez simplement de l'ajouter complètement. 
 
-    ![!Imax Enhanced Example](images/imax-e/imax-e.3.png)
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ![!Imax Enhanced Example](images/imax-e/imax-e.4.png)
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/scene.json' %]][[% filtre de fin %]]
+    ``` 
 
-    ![!Imax Enhanced Example](images/imax-e/imax-e.5.png)
+<sub><sup>[TOP](#index)</sup> 
 
-??? example "JSON - [Click to show/hide]"
+------ 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/imax-enhanced.json' %]][[% endfilter %]]
-    ```
+### x265 (pas de HDR/DV) 
 
-<sub><sup>[TOP](#index)</sup>
+??? question "x265 (pas de HDR/DV) - [Cliquez pour afficher/masquer]" 
 
-------
+    Cela bloque la plupart des versions 720/1080p (HD) codées en x265. 
 
-### Open Matte
+    **Mais cela autorisera les versions 720/1080p x265 si elles ont du HDR et/ou du DV** 
 
-??? question "Open Matte - [Click to show/hide]"
+    *Étant donné que certaines versions NF ne seront pas publiées en 4K, mais vous souhaitez avoir des versions DV/HDR.* 
 
-    Open matte is a filming technique that involves matting out the top and bottom of the film frame in the movie projector (known as a soft matte) for the widescreen theatrical release and then scanning the film without a matte (at Academy ratio) for a full screen home video release.
+    Dans votre profil de qualité utilisez le score suivant pour ce format personnalisé : `{{ radarr['cf']['x265-no-hdrdv']['trash_scores']['default'] }}` 
 
-??? example "JSON - [Click to show/hide}"
+    !!! Danger "Ne l'utilisez pas avec [{{ radarr['cf']['x265-hd']['name'] }}](/Radarr/Radarr-collection-of-custom-formats/#x265- hd), n'en inclure qu'un :avertissement:" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/open-matte.json' %]][[% endfilter %]]
-    ```
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-<sub><sup>[TOP](#index)</sup>
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/x265-no-hdrdv.json' %] ][[% endfilter %]] 
+    ``` 
 
-------
+<sub><sup>[TOP](#index)</sup> 
 
-## Unwanted
+------ 
 
-------
+### AV1 
 
-### BR-DISK
+??? question "AV1 - [Cliquez pour afficher/masquer]" 
 
-??? question "BR-DISK - [Click to show/hide]"
+    - Il s'agit d'un nouveau codec et vous avez besoin d'appareils modernes qui le prennent en charge. 
+    - Nous avons également eu des rapports faisant état de problèmes de lecture/transcodage. 
+    - Aucun groupe principal ne l'utilise (encore). 
+    - Il est préférable d'ignorer ce nouveau codec pour éviter des problèmes de compatibilité. 
 
-    This is a custom format to help Radarr recognize & ignore BR-DISK (ISO's and Blu-ray folder structure) in addition to the standard BR-DISK quality.
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    You will need to add the following to your new Custom Format when created in your Quality Profile (`Setting` => `Profiles`) and then set the score to `-10000`.
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/av1.json' %]][[% endfilter %]] 
+    ``` 
 
-    !!! note
+<sub><sup>[TOP](#index)</sup> 
 
-        Depending on your renaming scheme it could happen that Radarr will match renamed files after they are downloaded and imported as `BR-DISK`,
-        This is a cosmetic annoyance until we come up with another way to solve this,
-        being that this Custom Format is used to not download BR-DISK it does its purpose as intended.
-        Several reasons why this is happening:
+------ 
 
-        - Blame the often wrongly used naming of x265 encodes.
-        - Radarr v3/v4 uses dynamic custom formats.
+### VP9 
 
-??? example "JSON - [Click to show/hide]"
+??? question "VP9 - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/br-disk.json' %]][[% endfilter %]]
-    ```
+    - Il s'agit d'un nouveau codec et vous avez besoin d'appareils modernes qui le prennent en charge. 
+    - Nous avons également eu des rapports faisant état de problèmes de lecture/transcodage. 
+    - Aucun groupe principal ne l'utilise (encore). 
+    - Il est préférable d'ignorer ce nouveau codec pour éviter des problèmes de compatibilité. 
 
-<sub><sup>[TOP](#index)</sup>
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-------
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/vp9.json' %]][[% endfilter %]] 
+    ``` 
 
-### LQ
+<sub><sup>[TOP](#index)</sup> 
 
-<sub>Low Quality Releases = LQ</sub>
+------ 
 
-??? question "LQ - [Click to show/hide]"
+### Interne 
 
-    - A collection of known low quality groups (often banned from the top trackers due to their lack of quality), banned or dishonest release groups, or rips/encodes from scene and quick-to-release P2P groups that, while adequate, are usually not considered high quality.
-    - Release Groups that break the Starr apps automation because their bad naming could potentially cause download loops, even if their overall quality is perfect.
+??? question "Interne - [Cliquez pour afficher/masquer]" 
 
-??? example "JSON - [Click to show/hide]"
+    - Pour ceux qui préfèrent les versions de scène, vous souhaiterez peut-être améliorer les composants internes car ils ont généralement des paramètres plus élevés qui peuvent ne pas être conformes aux règles. 
+    - Dans de rares cas, le P2P utilise également INTERNE. 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/lq.json' %]][[% endfilter %]]
-    ```
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-<sub><sup>[TOP](#index)</sup>
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/internal.json' %]][[% endfilter %]] 
+    ``` 
 
-------
+<sub><sup>[TOP](#index)</sup> 
 
-### LQ (Release Title)
-
-<sub>Low Quality Releases = LQ</sub>
-
-??? question "LQ (Release Title)- [Click to show/hide]"
-
-    A collection of terms seen in the titles of Low Quality releases that are not captured by using a release group name.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/lq-release-title.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### 3D
-
-??? question "3D - [Click to show/hide]"
-
-    If you prefer or not prefer 3D.
-
-    You can use Custom Format or use Restrictions (`Settings` => `Indexers` => `Restrictions`) what ever you prefer.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/3d.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### x265 (HD)
-
-<sub>720/1080p no x265 = x265 (720/1080p) = x265 (HD)</sub>
-
-??? question "x265 (HD) - [Click to show/hide]"
-
-    This blocks all 720/1080p (HD) releases that are encoded in x265.
-
-    In your quality profile use the following score for this Custom Format: `{{ radarr['cf']['x265-hd']['trash_scores']['default'] }}`
-
-    !!! failure ""
-        --8<-- "includes/docker/x265.md"
-
-            !!! Danger "Don't use this together with [{{ radarr['cf']['x265-no-hdrdv']['name'] }}](/Radarr/Radarr-collection-of-custom-formats/#x265-no-hdrdv), Only ever include one of them :warning:"
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/x265-hd.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### Upscaled
-
-??? question "Upscaled - [Click to show/hide]"
-
-    This custom format is used to prevent Radarr from grabbing upscaled releases.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/upscaled.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### Extras
-
-??? question "Extras - [Click to show/hide]"
-
-    This custom format is used to prevent Radarr from grabbing releases containing only extras/bonus material.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/extras.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-## Optional
-
-------
-
-### Bad Dual Groups
-
-??? question "Bad dual groups - [Click to show/hide]"
-    These groups take the original release and add their own language (ex. Portuguese) as the main audio track (AAC 2.0), What results after renaming and FFprobe is that the media file will be recognized as Portuguese AAC audio. It's a common rule that you add the best audio as the first track.
-    Also they often even translate/rename the release name to Portuguese.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/bad-dual-groups.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### DV (WEBDL)
-
-<sub>DV = DoVi = Dolby Vision</sub>
-
-??? question "DV (WEBDL) - [Click to show/hide]"
-    This is a special Custom Format that blocks WEBDLs **with** Dolby Vision but **without** HDR10 fallback.
-
-    You will need to add the following as a new Custom Format, and when created adjust the scoring in your Quality Profile (`Setting` => `Profiles`) to `-10000`.
-
-    This Custom Format works together with the normal [DV](#dv) Custom Format that you would use to prefer Dolby Vision.
-
-    Most WEBDL from Streaming Services don't have the fallback to HDR10. What can result during playback is issues with weird colors (typically a green hue) when you attempt to play it on a non Dolby Vision compatible setup.
-
-    Remuxes and Bluray have a fallback to HDR10.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dv-webdl.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### EVO (no WEBDL)
-
-??? question "EVO (no WEBDL) - [Click to show/hide]"
-
-    This group is often banned for the low-quality Blu-ray releases, but their WEB-DLs are okay.
-
-    You will need to add the following as a new Custom Format, and when created adjust the scoring in your Quality Profile (`Setting` => `Profiles`) to `-10000`.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/evo-no-webdl.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### HDR10Plus Boost
-
-??? question "HDR10+ Boost - [Click to show/hide]"
-
-    Optional. Use this one only if you have a (Samsung) TV that supports HDR10+ and you don't have a Setup that supports DV or you prefer HDR10+.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hdr10plus-boost.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### DV HDR10Plus Boost
-
-??? question "DV HDR10+ Boost - [Click to show/hide]"
-
-    Optional: use this one if you want to upgrade from DV HDR10 to DV HDR10+ to support the best of both worlds.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dv-hdr10plus-boost.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### No-RlsGroup
-
-??? question "No-RlsGroup - [Click to show/hide]"
-
-    Some indexers strip out the release group which could result in LQ groups getting a higher score.
-    For example, a lot of EVO releases end up stripped of the group name so they appear as "upgrades" and they end up getting a decent score if other things match
-
-    !!! warning
-
-        If you don't use decent filenames (like not adding release groups) don't add this Custom Format, except if you want to upgrade them.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/no-rlsgroup.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### Obfuscated
-
-??? question "Obfuscated - [Click to show/hide]"
-
-    Optional (use these only if you dislike renamed releases)
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/obfuscated.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### Retags
-
-??? question "Retags - [Click to show/hide]"
-
-    Optional (use these only if you dislike retagged releases)
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/retags.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### Scene
-
-??? question "Scene - [Click to show/hide]"
-
-    This Custom Format will try to recognize so-called "scene releases". Depending on your preferences, you can give it a negative score `-10000`, a positive score, or just skip adding it altogether.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/scene.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### x265 (no HDR/DV)
-
-??? question "x265 (no HDR/DV) - [Click to show/hide]"
-
-    This blocks most 720/1080p (HD) releases that are encoded in x265.
-
-    **But it will allow 720/1080p x265 releases if they have HDR and/or DV**
-
-    *Being that some NF releases won't be released as 4k, but you want to have DV/HDR releases.*
-
-    In your quality profile use the following score for this Custom Format: `{{ radarr['cf']['x265-no-hdrdv']['trash_scores']['default'] }}`
-
-    !!! Danger "Don't use this together with [{{ radarr['cf']['x265-hd']['name'] }}](/Radarr/Radarr-collection-of-custom-formats/#x265-hd), Only ever include one of them :warning:"
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/x265-no-hdrdv.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### AV1
-
-??? question "AV1 - [Click to show/hide]"
-
-    - This is a new codec and you need modern devices that support it.
-    - We also had reports of playback/transcoding issues.
-    - No main group is actually using it (yet).
-    - It's better to ignore this new codec to prevent compatibility issues.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/av1.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### VP9
-
-??? question "VP9 - [Click to show/hide]"
-
-    - This is a new codec and you need modern devices that support it.
-    - We also had reports of playback/transcoding issues.
-    - No main group is actually using it (yet).
-    - It's better to ignore this new codec to prevent compatibility issues.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/vp9.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### Internal
-
-??? question "Internal - [Click to show/hide]"
-
-    - For those that prefer scene releases may want to boost internals as they generally have higher settings that may not conform to ruleset.
-    - In some rare cases P2P use also INTERNAL.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/internal.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
-
-------
+------ 
 
 ### SDR
 
-??? question "SDR - [Click to show/hide]"
+??? question "SDR - [Cliquez pour afficher/masquer]" 
 
-    - This will prevent grabbing UHD/4k releases without HDR Formats.
+    - Cela empêchera la récupération des versions UHD/4k sans formats HDR. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/sdr.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/sdr.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### SDR (no WEBDL)
+### SDR (pas de WEBDL) 
 
-??? question "SDR (no WEBDL) - [Click to show/hide]"
+??? question "SDR (pas de WEBDL) - [Cliquez pour afficher/masquer]" 
 
-    - This will prevent grabbing UHD/4k Remux and Bluray encode releases without HDR Formats - i.e., SDR WEB releases will still be allowed. 4K SDR WEB releases can look better than the 1080p version, owing to improved bitrates.
+    - Cela empêchera de récupérer les versions encodées UHD/4k Remux et Bluray sans formats HDR - c'est-à-dire que les versions WEB SDR seront toujours autorisées. Les versions WEB 4K SDR peuvent être plus belles que la version 1080p, grâce à des débits binaires améliorés. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/sdr-no-webdl.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/sdr-no-webdl.json' %] ][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### DV (Disk)
+### DV (Disque) 
 
-??? question "DV (Disk) - [Click to show/hide]"
+??? question "DV (Disque) - [Cliquez pour afficher/masquer]" 
 
-    - This will boost the score for Dolby Vision Releases using the original full quality Dolby Vision layer from the disc release to replace the old WEBDL HYBRID release.
+    - Cela augmentera le score des versions Dolby Vision en utilisant la couche Dolby Vision originale de pleine qualité de la version disque pour remplacer l'ancienne version WEBDL HYBRID. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dv-disk.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv-disk.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Line/Mic Dubbed
+### Ligne/Mic doublé 
 
-??? question "Line/Mic Dubbed - [Click to show/hide]"
+??? question "Line/Mic Dubbed - [Cliquez pour afficher/masquer]" 
 
-    - This seems to be often used with German releases, and this will block the low quality audio.
-    - Line Dubbed = Sound extracted in the cinema by cable.
-    - Mic Dubbed = Sound extracted in the cinema by a microphone.
+    - Cela semble être souvent utilisé avec les versions allemandes, et cela bloquera l'audio de faible qualité. 
+    - Line Dubbed = Son extrait au cinéma par câble. 
+    - Mic Dubbed = Son extrait au cinéma par un microphone. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/line-mic-dubbed.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/line-mic-dubbed.json' %] ][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### HFR
+### HFR 
 
-??? question "HFR - [Click to show/hide]"
+??? question "HFR - [Cliquez pour afficher/masquer]" 
 
-    - This will boost the score for HFR releases. HFR stands for High Frame Rate and refers to a video format that uses a higher number of frames per second than traditional video, resulting in smoother and more detailed motion.
+    - Cela augmentera le score des versions HFR. HFR signifie High Frame Rate et fait référence à un format vidéo qui utilise un nombre d'images par seconde plus élevé que la vidéo traditionnelle, ce qui donne un mouvement plus fluide et plus détaillé. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hfr.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hfr. 
+    json' %]][[% endfilter %]] ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-## Misc
+## Divers 
 
-------
+------ 
 
-### Repack/Proper
+### Remballer/correctement 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/repack-proper.json' %]][[% endfilter %]]
-    ```
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/repack-proper.json' %]][[% endfilter %]] `` 
+    ` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[ TOP](#index)</sup> 
 
-------
+------ 
 
-### Repack2
+### Repack2 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/repack2.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/repack2.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### x264
+### x264 
 
-??? question "x264 - [Click to show/hide]"
+??? question "x264 - [Cliquez pour afficher/masquer]" 
 
-    x264 is a *free software library* and *application* for encoding video streams into the [H.264/MPEG-4 AVC](https://en.wikipedia.org/wiki/H.264){:target="_blank" rel="noopener noreferrer"} compression format, and is released under the terms of the [GNU GPL](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html){:target="_blank" rel="noopener noreferrer"}.
+    x264 est une *bibliothèque de logiciels gratuits* et une *application* pour encoder des flux vidéo au format [H.264/MPEG-4 AVC](https://en.wikipedia.org /wiki/H.264){:target="_blank" rel="noopener noreferrer"} format de compression et est publié selon les termes de la [GNU GPL](https://www.gnu.org/licenses/old -licenses/gpl-2.0.html){:target="_blank" rel="noopener noreferrer"}. 
 
-    If you want maximum compatibility and have much better direct play support then use x264 for 720p/1080p.
+    Si vous souhaitez une compatibilité maximale et bénéficier d’une bien meilleure prise en charge de la lecture directe, utilisez x264 pour 720p/1080p. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/x264.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/x264.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### x265
+### x265 
 
-??? question "x265 - [Click to show/hide]"
+??? question "x265 - [Cliquez pour afficher/masquer]" 
 
-    x265 is a *free software library* and *application* for encoding video streams into the [H.265/MPEG-H HEVC](http://en.wikipedia.org/wiki/H.265){:target="_blank" rel="noopener noreferrer"} compression format, and is released under the terms of the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html){:target="_blank" rel="noopener noreferrer"}.
-    This applies to all releases that are x265/HEVC that are not Remux.
+    x265 est une *bibliothèque de logiciels gratuits* et une *application* permettant d'encoder des flux vidéo au format [H.265/MPEG-H HEVC](http://en.wikipedia.org /wiki/H.265){:target="_blank" rel="noopener noreferrer"} format de compression et est publié selon les termes de la [GNU GPL](http://www.gnu.org/licenses/old -licenses/gpl-2.0.html){:target="_blank" rel="noopener noreferrer"}. 
+    Cela s'applique à toutes les versions x265/HEVC qui ne sont pas Remux. 
 
-    !!! failure ""
-        Please don't forget to read the following [Microsized & Wrong Source](#microsized-wrong-source)
+    !!! échec "" 
+        N'oubliez pas de lire ce qui suit [Microsized & Wrong Source](#microsized-wrong-source) 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/x265.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/x265.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### FreeLeech
+### FreeLeech 
 
-??? question "FreeLeech - [Click to show/hide]"
+??? question "FreeLeech - [Cliquez pour afficher/masquer]" 
 
-    Sometimes, torrent sites set a torrent to be freeleech. This means, that the download of this torrent will not count towards your download quota or ratio. This is really useful, if you do not have the best ratio yet.
+    Parfois, les sites torrent définissent un torrent comme étant freeleech. Cela signifie que le téléchargement de ce torrent ne comptera pas dans votre quota ou ratio de téléchargement. C’est vraiment utile si vous n’avez pas encore le meilleur ratio. 
 
-    !!! warning
-        Keep in mind not all trackers support this option.
+    !!! avertissement 
+        Gardez à l'esprit que tous les trackers ne prennent pas en charge cette option. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/freeleech.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/freeleech.json' %]][[% endfilter %]] 
+    ``` 
 
 <sub><sup>[TOP](#index)</sup>
 
-------
+------ 
 
-### Dutch Groups
+### Groupes néerlandais 
 
-??? question "Dutch Groups - [Click to show/hide]"
+??? question "Groupes néerlandais - [Cliquez pour afficher/masquer]" 
 
-    If you prefer movies with also a Dutch audio track.
+    Si vous préférez les films avec également une piste audio néerlandaise. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dutch-groups.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dutch-groups.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### MPEG2
+### MPEG2 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/mpeg2.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/mpeg2.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Multi
+### Multi 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/multi.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/multi.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-## HQ Release Groups
+## Groupes de versions HQ 
 
-------
+------ 
 
-### Remux Tier 01
+### Remux Tier 01 
 
-??? question "Remux Tier 01 - [Click to show/hide]"
+??? question "Remux Tier 01 - [Cliquez pour afficher/masquer]" 
 
-    Groups that:
+    Groupes qui : 
 
-    - Have established themselves as consistently delivering high-quality releases.
-    - Produce remuxes from multiple sources (discs) and combine them to produce the best end result.
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - Se sont imposés comme fournissant régulièrement des versions de haute qualité. 
+    - Produisez des remux à partir de plusieurs sources (disques) et combinez-les pour produire le meilleur résultat final. 
+    - Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/remux-tier-01.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/remux-tier-01.json' %] ][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Remux Tier 02
+### Remux Tier 02 
 
-??? question "Remux Tier 02 - [Click to show/hide]"
+??? question "Remux Tier 02 - [Cliquez pour afficher/masquer]" 
 
-    Groups that:
+    Groupes qui : 
 
-    - Haven't released much. (yet)
-    - Produce remuxes from multiple sources (discs) and combine them to produce the best end result.
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - N'ont pas publié grand-chose. (encore) 
+    - Produisez des remux à partir de plusieurs sources (disques) et combinez-les pour produire le meilleur résultat final. 
+    - Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/remux-tier-02.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/remux-tier-02. 
+    json' %]][[% endfilter %]] ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Remux Tier 03
+### Remux Tier 03 
 
-??? question "Remux Tier 03 - [Click to show/hide]"
+??? question "Remux Tier 03 - [Cliquez pour afficher/masquer]" 
 
-    Groups that:
+    Groupes qui : 
 
-    - Only use one source (poetically dubbed "one disc wonders").
-    - Use a fully automated method without double-checking.
-    - Don't check/review their releases prior to uploading.
-    - Haven't released much. (yet)
-    - Have retired and don't have the best quality by today's standards
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - N'utilisent qu'une seule source (surnommée poétiquement "les merveilles d'un disque"). 
+    - Utilisez une méthode entièrement automatisée sans double vérification.
+    - Ne vérifiez/n'examinez pas leurs versions avant de les télécharger. 
+    - Je n'ai pas publié grand-chose. (encore) 
+    - Vous avez pris votre retraite et n'avez pas la meilleure qualité selon les normes actuelles 
+    - Suivez les [Directives générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general- directives){:target="_blank" rel="noopener noreferrer"}. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/remux-tier-03.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/remux-tier-03.json' %] ][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### UHD Bluray Tier 01
+### UHD Bluray Tier 01 
 
-??? question "UHD Bluray Tier 01 - [Click to show/hide]"
+??? question "UHD Bluray Tier 01 - [Cliquez pour afficher/masquer]" 
 
-    Groups that:
+    Groupes qui : 
 
-    - Have established themselves as consistently delivering high-quality releases.
-    - Use remuxes as their source without micro-sizing them.
-    - HDR/DoVi (Depending on what's offered and often both).
-    - Use Lossless Audio (TrueHD, DTS-X, DTS-HD, etc).
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - Se sont imposés comme fournissant régulièrement des sorties de haute qualité. 
+    - Utilisez les remux comme source sans les micro-dimensionner. 
+    - HDR/DoVi (Selon ce qui est proposé et souvent les deux). 
+    - Utilisez l'audio sans perte (TrueHD, DTS-X, DTS-HD, etc.). 
+    - Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/uhd-bluray-tier-01.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/uhd-bluray-tier-01.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### UHD Bluray Tier 02
+### UHD Bluray Tier 02 
 
-??? question "UHD Bluray Tier 02 - [Click to show/hide]"
+??? question "UHD Bluray Tier 02 - [Cliquez pour afficher/masquer]" 
 
-    Groups that:
+    Groupes qui : 
 
-    - Use remuxes as their source without micro-sizing them.
-    - HDR/DoVi (Depending on what's offered and often both).
-    - Use Lossless Audio (TrueHD, DTS-X, DTS-HD, etc).
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - Utilisent des remux comme source sans les micro-dimensionner. 
+    - HDR/DoVi (Selon ce qui est proposé et souvent les deux). 
+    - Utilisez l'audio sans perte (TrueHD, DTS-X, DTS-HD, etc.). 
+    - Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/uhd-bluray-tier-02.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/uhd-bluray-tier-02.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### UHD Bluray Tier 03
+### UHD Bluray Tier 03 
 
-??? question "UHD Bluray Tier 03 - [Click to show/hide]"
+??? question "UHD Bluray Tier 03 - [Cliquez pour afficher/masquer]" 
 
-    Groups that:
+    Groupes qui : 
 
-    - Use remuxes as their source without micro-sizing them.
-    - HDR/DoVi (Depending on what's offered and often both).
-    - Use Lossless Audio (TrueHD, DTS-X, DTS-HD, etc) or Lossy audio formats (DD, DD+, etc).
-    - That are added for a specific reason for other guides quality profiles.
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - Utilisent des remux comme source sans les micro-dimensionner. 
+    - HDR/DoVi (Selon ce qui est proposé et souvent les deux). 
+    - Utilisez les formats audio sans perte (TrueHD, DTS-X, DTS-HD, etc.) ou avec perte (DD, DD+, etc). 
+    - Qui sont ajoutés pour une raison précise aux profils de qualité d'autres guides.
+    - Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/uhd-bluray-tier-03.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/uhd-bluray-tier-03.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### HD Bluray Tier 01
+### HD Bluray Tier 01 
 
-??? question "HD Bluray Tier 01 - [Click to show/hide]"
+??? question "HD Bluray Tier 01 - [Cliquez pour afficher/masquer]" 
 
-    Groups that:
+    Groupes qui : 
 
-    - Have established themselves as consistently delivering high-quality releases.
-    - Use remuxes as their source without micro-sizing them.
-    - Have a minimum of GP releases. (best encode in it's class  1080p and lower)
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - Se sont imposés comme fournissant régulièrement des sorties de haute qualité. 
+    - Utilisez les remux comme source sans les micro-dimensionner. 
+    - Avoir un minimum de versions GP. (meilleur encodage de sa catégorie 1080p et inférieur) 
+    – Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target=" _blank" rel="noopener noreferrer"}. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hd-bluray-tier-01.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hd-bluray-tier-01.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### HD Bluray Tier 02
+### HD Bluray Tier 02 
 
-??? question "HD Bluray Tier 02 - [Click to show/hide]"
+??? question "HD Bluray Tier 02 - [Cliquez pour afficher/masquer]" 
 
-    Groups that:
+    Groupes qui : 
 
-    - Use remuxes as their source without micro-sizing them.
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - Utilisent des remux comme source sans les micro-dimensionner. 
+    - Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hd-bluray-tier-02.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hd-bluray-tier-02.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### HD Bluray Tier 03
+### HD Bluray Tier 03 
 
-??? question "HD Bluray Tier 03 - [Click to show/hide]"
+??? question "HD Bluray Tier 03 - [Cliquez pour afficher/masquer]" 
 
-    Groups that:
+    Groupes qui : 
 
-    - Use remuxes as their source without micro-sizing them.
-    - That are added for a specific reason for other guides quality profiles.
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - Utilisent des remux comme source sans les micro-dimensionner. 
+    - Qui sont ajoutés pour une raison précise aux profils de qualité d'autres guides. 
+    - Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hd-bluray-tier-03.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hd-bluray-tier-03. 
+    json' %]][[% endfilter %]] ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### WEB Tier 01
+### WEB Tier 01 
 
-??? question "WEB Tier 01 - [Click to show/hide]"
+??? question "WEB Tier 01 - [Cliquez pour afficher/masquer]" 
 
-    Groups that:
+    Groupes qui :
 
-    - Have established themselves as consistently delivering high-quality releases.
-    - Create hybrids.
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - Se sont imposés comme fournissant constamment des versions de haute qualité. 
+    - Créer des hybrides. 
+    - Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/web-tier-01.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/web-tier-01.json' %] ][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### WEB Tier 02
+### WEB Niveau 02 
 
-??? question "WEB Tier 02 - [Click to show/hide]"
+??? question "WEB Tier 02 - [Cliquez pour afficher/masquer]" 
 
-    Groups that:
+    Groupes qui : 
 
-    - Only have done a few releases
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - N'ont publié que quelques versions 
+    - Suivez les [Directives générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master /CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/web-tier-02.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/web-tier-02.json' %] ][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### WEB Tier 03
+### WEB Niveau 03 
 
-??? question "WEB Tier 03 - [Click to show/hide]"
+??? question "WEB Tier 03 - [Cliquez pour afficher/masquer]" 
 
-    Groups that:
+    Groupes qui : 
 
-    - That are added for a specific reason for other guides quality profiles.
-    - Follow the [Contributing General Guidelines](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}.
+    - Qui sont ajoutés pour une raison spécifique aux profils de qualité d'autres guides. 
+    - Suivez les [Consignes générales de contribution](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md#general-guidelines){:target="_blank" rel="noopener noreferrer"}. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/web-tier-03.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/web-tier-03.json' %] ][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-## Streaming Services
+## Services de streaming 
 
-------
+------ 
 
-### AMZN
+### AMZN 
 
-<sub>Amazon</sub>
+<sub >Amazon</sub> 
 
-??? question "Amazon - [Click to show/hide]"
+??? question "Amazon - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Amazon_Prime_Video){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Amazon_Prime_Video){:target="_blank" rel="noopener noreferrer"} 
 
-??? example "JSON - [Click to show/hide]"
+? ?? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/amzn.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/amzn.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### ATVP
+### ATVP 
 
-<sub>Apple TV+</sub>
+<sub>Apple TV+</sub> 
 
-??? question "Apple TV+ - [Click to show/hide]"
+??? question "Apple TV+ - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Apple_TV%2B){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Apple_TV%2B){ : 
 
-??? example "JSON - [Click to show/hide]"
+target="_blank" rel="noopener noreferrer"} ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/atvp.json' %]][[% endfilter %]]
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/atvp.json' %]][[% filtre de fin %]] 
     ```
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### CRiT
+### CRiT 
 
-<sub>Criterion Channel</sub>
+<sub>Canal critère</sub> 
 
-??? question "Criterion Channel - [Click to show/hide]"
+??? question "Criterion Channel - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/The_Criterion_Collection#Streaming_as_The_Criterion_Channel){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/The_Criterion_Collection#Streaming_as_The_Criterion_Channel){:target="_blank" rel="noopener noreferrer "} 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/crit.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/crit.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### DSNP
+### DSNP 
 
-<sub>Disney+</sub>
+<sub>Disney+</sub> 
 
-??? question "Disney+ - [Click to show/hide]"
+??? question "Disney+ - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Disney%2B){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Disney%2B){:target="_blank" rel="noopener noreferrer" } 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dsnp.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dsnp.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### HBO
+### HBO 
 
-<sub>HBO</sub>
+<sub>HBO</sub> 
 
-??? question "HBO - [Click to show/hide]"
+??? question "HBO - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/HBO){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/HBO){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+? ?? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hbo.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hbo.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### HMAX
+### HMAX 
 
-<sub>HBO Max</sub>
+<sub>HBO Max</sub> 
 
-??? question "HBO Max - [Click to show/hide]"
+??? question "HBO Max - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/HBO_Max){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/HBO_Max){:target="_blank" rel="noopener noreferrer"} 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hmax.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hmax.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Max
+### Max 
 
-<sub>Max</sub>
+<sub>Max</sub> 
 
-??? question "Max - [Click to show/hide]"
+??? question "Max - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Max_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Max_(streaming_service)){:target="_blank" rel="noopener noreferrer "} 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/max.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/max. 
+    json' %]][[% endfilter %]] ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Hulu
+### Hulu 
 
-<sub>Hulu</sub>
+<sub>Hulu</sub> 
 
-??? question "Hulu - [Click to show/hide]"
+??? question "Hulu - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Hulu){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Hulu){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hulu.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hulu.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### IP
+### IP 
 
-<sub>BBC iPlayer</sub>
+<sub>BBC iPlayer</sub> 
 
-??? question "BBC iPlayer - [Click to show/hide]"
+??? question "BBC iPlayer - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/BBC_iPlayer){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/BBC_iPlayer){:target="_blank" rel="noopener noreferrer"} 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/ip.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/ip.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### NF
+### NF 
 
-<sub>Netflix</sub>
+<sub>Netflix</sub> 
 
-??? question "Netflix - [Click to show/hide]"
+??? question "Netflix - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Netflix){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Netflix){:target="_blank" rel="noopener noreferrer"}
 
-??? example "JSON - [Click to show/hide]"
+? ?? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/nf.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/nf.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### PCOK
+### PCOK 
 
-<sub>Peacock TV</sub>
+<sub>Peacock TV</sub> 
 
-??? question "Peacock TV - [Click to show/hide]"
+??? question "Peacock TV - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Peacock_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Peacock_(streaming_service)){:target="_blank" rel="noopener noreferrer"} 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/pcok.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/pcok.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### PMTP
+### PMTP 
 
-<sub>Paramount+</sub>
+<sub>Paramount+</sub> 
 
-??? question "Paramount+ - [Click to show/hide]"
+??? question "Paramount+ - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Paramount%2B){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Paramount%2B){:target="_blank" rel="noopener noreferrer" } 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/pmtp.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/pmtp.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### MA
+### MA 
 
-<sub>Movies Anywhere</sub>
+<sub>Films n'importe où</sub> 
 
-??? question "Movies Anywhere - [Click to show/hide]"
+??? question "Movies Anywhere - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Movies_Anywhere){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Movies_Anywhere){ : 
 
-??? example "JSON - [Click to show/hide]"
+target="_blank" rel="noopener noreferrer"} ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/ma.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/ma.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Pathe
+### Pathé
 
-<sub>Pathé Thuis</sub>
+<sub>Pathé Thuis</sub> 
 
-??? question "Pathé Thuis - [Click to show/hide]"
+??? question "Pathé Thuis - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://nl.wikipedia.org/wiki/Path%C3%A9_Thuis){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://nl.wikipedia.org/wiki/Path%C3%A9_Thuis){:target="_blank" rel=" noopener noreferrer"} 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/pathe.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/pathe.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### BCORE
+### BCORE 
 
-<sub>Bravia Core</sub>
+<sub>Bravia Core</sub> 
 
-??? question "Bravia Core - [Click to show/hide]"
+??? question "Bravia Core - [Cliquez pour afficher/masquer]" 
 
-    [From Sony, no wiki link available](https://electronics.sony.com/bravia-core){:target="_blank" rel="noopener noreferrer"}
+    [De Sony, aucun lien wiki disponible](https://electronics.sony.com/bravia-core){:target="_blank" rel="noopener noreferrer" } 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/bcore.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/bcore.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### STAN
+### STAN 
 
-<sub>Stan</sub>
+<sub>Stan</sub> 
 
-??? question "STAN - [Click to show/hide]"
+??? question "STAN - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Stan_(service)){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Stan_(service)){:target="_blank" rel="noopener noreferrer "} 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/stan.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/stan.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Crav
+### Crav 
 
-<sub>Crave</sub>
+<sub>Crave</sub> 
 
-??? question "CRAVE - [Click to show/hide]"
+??? question "CRAVE - [Cliquez pour afficher/masquer]" 
 
-    [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Crave_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
+    [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/Crave_(streaming_service)){:target="_blank" rel="noopener noreferrer "} 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/crav.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/crav.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### OViD
+### OViD 
 
-<sub>OViD</sub>
+<sub>OViD</sub> 
 
-??? question "OViD - [Click to show/hide]"
+??? question "OViD - [Cliquez pour afficher/masquer]" 
 
-    [OViD Website](https://search.ovid.tv/other/about){:target="_blank" rel="noopener noreferrer"}
+    [Site Web OViD](https://search.ovid.tv/other/about){:target="_blank" rel="noopener noreferrer"} 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/ovid.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/ovid. 
+    json' %]][[% endfilter %]] ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### FOD
+### FOD 
 
-<sub>FOD</sub>
+<sub>FOD</sub> 
 
-??? question "FOD - [Click to show/hide]"
+??? question "FOD - [Cliquez pour afficher/masquer]" 
 
-    - Fuji Television On Demand
-    - [From Wikipedia, the free encyclopedia](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%B8%E3%83%86%E3%83%AC%E3%83%93%E3%82%AA%E3%83%B3%E3%83%87%E3%83%9E%E3%83%B3%E3%83%89){:target="_blank" rel="noopener noreferrer"}
-    - [FOD Website](https://fod-sp.fujitv.co.jp){:target="_blank" rel="noopener noreferrer"}
+    - Fuji Television On Demand 
+    - [De Wikipédia, l'encyclopédie gratuite](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82% B8%E3%83%86%E3%83%AC%E3%83%93%E3%82%AA%E3%83%B3%E3%83%87%E3%83%9E%E3%83%B3% E3%83%89){:target="_blank" rel="noopener noreferrer"}
+    - [Site Web FOD](https://fod-sp.fujitv.co.jp){:target="_blank" rel="noopener noreferrer"} 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/fod.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/fod.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### TVer
+### TVer 
 
-<sub>TVer</sub>
+<sub>TVer</sub> 
 
-??? question "TVer - [Click to show/hide]"
+??? question "TVer - [Cliquez pour afficher/masquer]" 
 
-    - [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/TVer_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
-    - [TVer Website](https://tver.jp){:target="_blank" rel="noopener noreferrer"}
+    - [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/TVer_(streaming_service)){:target="_blank" rel="noopener noreferrer"} 
+    - [Site Web TVer](https://tver.jp){:target="_blank" rel="noopener noreferrer"} 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/tver.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/tver.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### U-NEXT
+### U-NEXT 
 
-<sub>U-NEXT</sub>
+<sub>U-NEXT</sub> 
 
-??? question "U-NEXT - [Click to show/hide]"
+??? question "U-NEXT - [Cliquez pour afficher/masquer]" 
 
-    - [From Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/U-Next){:target="_blank" rel="noopener noreferrer"}
-    - [U-NEXT Website](https://video.unext.jp){:target="_blank" rel="noopener noreferrer"}
+    - [De Wikipédia, l'encyclopédie gratuite](https://en.wikipedia.org/wiki/U-Next){:target="_blank" rel=" noopener noreferrer"} 
+    - [Site Web U-NEXT](https://video.unext.jp){:target="_blank" rel="noopener noreferrer"} 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/u-next.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/u-next.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-## Anime
+## Anime 
 
-------
+------ 
 
-### Anime BD Tier 01 (Top SeaDex Muxers)
+### Anime BD Tier 01 (Haut Multiplexeurs SeaDex) 
 
-??? question "Anime BD Tier 01 (Top SeaDex Muxers) - [Click to show/hide]"
-    Groups that do the best releases as per SeaDex. They are more consistent and trump others
+??? question "Anime BD Tier 01 (Meilleurs multiplexeurs SeaDex) - [Cliquez pour afficher/masquer]" 
+    Groupes qui réalisent les meilleures versions selon SeaDex. Ils sont plus cohérents et surpassent les autres 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-bd-tier-01-top-seadex-muxers.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-bd-tier-01-top- seadex-muxers.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Anime BD Tier 02 (SeaDex Muxers)
+### Anime BD Tier 02 ( Multiplexeurs SeaDex) 
 
-??? question "Anime BD Tier 02 (SeaDex Muxers) - [Click to show/hide]"
-    Groups that do the best releases as per SeaDex. They are more consistent and trump others
+??? question "Anime BD Tier 02 (SeaDex Muxers) - [Cliquez pour afficher/masquer]" 
+    Groupes qui réalisent les meilleures versions selon SeaDex. Ils sont plus cohérents et surpassent les autres 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-bd-tier-02-seadex-muxers.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-bd-tier-02-seadex- multiplexeurs. 
+    json' %]][[% endfilter %]] ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Anime BD Tier 03 (SeaDex Muxers)
+### Anime BD Tier 03 (SeaDex Muxers) 
 
-??? question "Anime BD Tier 03 (SeaDex Muxers) - [Click to show/hide]"
-    Groups that do the best releases as per SeaDex. They are more consistent and trump others
+? ?? question "Anime BD Tier 03 (SeaDex Muxers) - [Cliquez pour afficher/masquer]"
+    Groupes qui font les meilleures versions selon SeaDex. Ils sont plus cohérents et surpassent les autres 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-bd-tier-03-seadex-muxers.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-bd-tier-03-seadex- muxers.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Anime BD Tier 04 (SeaDex Muxers)
+### Anime BD Tier 04 (SeaDex Muxers ) 
 
-??? question "Anime BD Tier 04 (SeaDex Muxers) - [Click to show/hide]"
-    Groups that do the best releases as per SeaDex. They are more consistent and trump others
+??? question "Anime BD Tier 04 (SeaDex Muxers) - [Cliquez pour afficher/masquer]" 
+    Groupes qui réalisent les meilleures versions selon SeaDex. Ils sont plus cohérents et surpassent les autres 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-bd-tier-04-seadex-muxers.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-bd-tier-04-seadex- muxers.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Anime BD Tier 05 (Remuxes)
+### Anime BD Tier 05 (Remux) 
 
-??? question "Anime BD Tier 05 (Remuxes) - [Click to show/hide]"
-    Groups that are consistent and do Remuxes
+??? question "Anime BD Tier 05 (Remuxes) - [Cliquez pour afficher/masquer]" 
+    Groupes cohérents et faisant des Remux 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-bd-tier-05-remuxes.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-bd-tier-05-remuxes. json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Anime BD Tier 06 (FanSubs)
+### Anime BD Tier 06 (FanSubs) 
 
-??? question "Anime BD Tier 06 (FanSubs) - [Click to show/hide]"
-    FanSub groups that are consistent
+?? ? question "Anime BD Tier 06 (FanSubs) - [Cliquez pour afficher/masquer]" 
+    Groupes FanSub cohérents 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-bd-tier-06-fansubs.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-bd-tier-06-fansubs. json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Anime BD Tier 07 (P2P/Scene)
+### Anime BD Tier 07 (P2P/Scène) 
 
-??? question "Anime BD Tier 07 (P2P/Scene) - [Click to show/hide]"
-    Known P2P and Scene Anime groups
+??? question "Anime BD Tier 07 (P2P/Scene) - [Cliquez pour afficher/masquer]" 
+    Groupes P2P et Scene Anime connus 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-bd-tier-07-p2pscene.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-bd-tier-07-p2pscene. json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Anime BD Tier 08 (Mini Encodes)
+### Anime BD Tier 08 (Mini Encodes) 
 
-??? question "Anime BD Tier 08 (Mini Encodes) - [Click to show/hide]"
-    Know groups that do mini encodes
+? ?? question "Anime BD Tier 08 (Mini Encodes) - [Cliquez pour afficher/masquer]" 
+    Vous connaissez des groupes qui font des mini encodages 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-bd-tier-08-mini-encodes.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-bd-tier-08-mini- encode. 
+    json' %]][[% endfilter %]] ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Anime Web Tier 01 (Muxers)
+### Anime Web Tier 01 (Muxers) 
 
-??? question "Anime Web Tier 01 (Muxers) - [Click to show/hide]"
-    Groups that do the best releases as per SeaDex. They are more consistent and trump others
+?? ? question "Anime Web Tier 01 (Muxers) - [Cliquez pour afficher/masquer]"
+    Groupes qui font les meilleures versions selon SeaDex. Ils sont plus cohérents et surpassent les autres 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-web-tier-01-muxers.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-web-tier-01-muxers. json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Anime Web Tier 02 (Top FanSubs)
+### Anime Web Tier 02 (Top FanSubs) 
 
-??? question "Anime Web Tier 02 (Top FanSubs) - [Click to show/hide]"
-    Groups that do the best releases as per SeaDex. They are more consistent and trump others
+? ?? question "Anime Web Tier 02 (Top FanSubs) - [Cliquez pour afficher/masquer]" 
+    Groupes qui réalisent les meilleures versions selon SeaDex. Ils sont plus cohérents et surpassent les autres 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-web-tier-02-top-fansubs.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-web-tier-02-top- fansubs.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Anime Web Tier 03 (Official Subs)
+### Anime Web Tier 03 (Sous-marins officiels ) 
 
-??? question "Anime Web Tier 03 Official Subs) - [Click to show/hide]"
-    Official sub groups that tend to be more consistent and release fast
+??? question "Sous-groupes officiels Anime Web Tier 03) - [Cliquez pour afficher/masquer]" 
+    Des sous-groupes officiels qui ont tendance à être plus cohérents et à sortir rapidement 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-web-tier-03-official-subs.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-web-tier-03-official- subs.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Anime Web Tier 04 (Official Subs)
+### Anime Web Tier 04 (Sous-marins officiels ) 
 
-??? question "Anime Web Tier 04 (Official Subs) - [Click to show/hide]"
-    Official sub groups
+??? question "Anime Web Tier 04 (Official Subs) - [Cliquez pour afficher/masquer]" 
+    Sous-groupes officiels 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-web-tier-04-official-subs.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-web-tier-04-official- subs.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Anime Web Tier 05 (FanSubs)
+### Anime Web Tier 05 (FanSubs) 
 
-??? question "Anime Web Tier 05 (FanSubs) - [Click to show/hide]"
-    FanSub groups that are consistent
+??? question "Anime Web Tier 05 (FanSubs) - [Cliquez pour afficher/masquer]" 
+    Groupes FanSub cohérents 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-web-tier-05-fansubs.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-web-tier-05-fansubs. json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Anime Web Tier 06 (FanSubs)
+### Anime Web Tier 06 (FanSubs) 
 
-??? question "Anime Web Tier 06 (FanSubs) - [Click to show/hide]"
-    FanSub groups that are consistent
+?? ? question "Anime Web Tier 06 (FanSubs) - [Cliquez pour afficher/masquer]" 
+    Groupes FanSub cohérents 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-web-tier-06-fansubs.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-web-tier-06-fansubs. 
+    json' %]][[% endfilter %]] ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Anime Raws
+### Anime Raws 
 
-??? question "Anime Raws - [Click to show/hide]"
-    A collection of know groups that release raws
+??? question "Anime Raws - [Cliquez pour afficher/masquer]"
+    Une collection de groupes connus qui publient des raws 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-raws.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-raws.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Anime LQ Groups
+### Groupes Anime LQ 
 
-??? question "Anime LQ Groups - [Click to show/hide]"
-    A collection of known Low Quality groups.
+??? question "Groupes Anime LQ - [Cliquez pour afficher/masquer]" 
+    Une collection de groupes connus de faible qualité. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-lq-groups.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-lq-groups.json' %] ][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Uncensored
+### Non censuré 
 
-??? question "Uncensored - [Click to show/hide]"
-    This CF covers releases that are uncensored
+??? question "Non censuré - [Cliquez pour afficher/masquer]" 
+    Ce CF couvre les versions non censurées 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/uncensored.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/uncensored.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### v0
+### v0 
 
-??? question "v0 - [Click to show/hide]"
-    CF to cover releases named with v0 which we don't want
+??? question "v0 - [Cliquez pour afficher/masquer]" 
+    CF pour couvrir les versions nommées avec v0 dont nous ne voulons pas 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/v0.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/v0.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### v1
+### v1 
 
-??? question "v1 - [Click to show/hide]"
-    CF to cover v1 releases
+??? question "v1 - [Cliquez pour afficher/masquer]" 
+    CF pour couvrir les versions v1 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/v1.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/v1.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### v2
+### v2 
 
-??? question "v2 - [Click to show/hide]"
-    CF to cover v2 releases
+??? question "v2 - [Cliquez pour afficher/masquer]" 
+    CF pour couvrir les versions v2 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/v2.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/v2.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### v3
+### v3 
 
-??? question "v3 - [Click to show/hide]"
-    CF to cover v3 releases
+??? question "v3 - [Cliquez pour afficher/masquer]" 
+    CF pour couvrir les versions v3 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/v3.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/v3. 
+    json' %]][[% endfilter %]] ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### v4
+### v4 
 
-??? question "v4 - [Click to show/hide]"
-    CF to cover v4 releases
+??? question "v4 - [Cliquez pour afficher/masquer]" 
+    CF pour couvrir les versions v4 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/v4.json' %]][[% endfilter %]]
-    ```
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/v4.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP] (#index)</sup> 
 
-------
+------ 
 
-### VRV
+### VRV 
 
-??? question "VRV - [Click to show/hide]"
-    [From Wikipedia, the free encyclopedia](https://www.wikiwand.com/en/VRV_(streaming_service)){:target="_blank" rel="noopener noreferrer"}
+??? question "VRV - [Cliquez pour afficher/masquer]" 
+    [De Wikipédia, l'encyclopédie gratuite](https://www.wikiwand.com/en/VRV_(streaming_service)){:target="_blank" rel="noopener noreferrer "} 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/vrv.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/vrv.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### 10bit
+### 10 bits 
 
-??? question "10bit - [Click to show/hide]"
-    This CF covers releases that are 10bit
+??? question "10 bits - [Cliquez pour afficher/masquer]" 
+    Ce CF couvre les versions 10 bits 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/10bit.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/10bit.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Anime Dual Audio
+### Anime Dual Audio 
 
-??? question "Anime Dual Audio - [Click to show/hide]"
-    This CF covers releases that have Dual Audio
+??? question "Anime Dual Audio - [Cliquez pour afficher/masquer]" 
+    Ce CF couvre les versions dotées de Dual Audio 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-dual-audio.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-dual-audio.json' %] ][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Dubs Only
+### Doublage uniquement 
 
-??? question "Dubs Only - [Click to show/hide]"
-    This CF covers releases that only have Dubs
+??? question "Dubs uniquement - [Cliquez pour afficher/masquer]" 
+    Ce CF couvre les versions qui n'ont que des Dubs 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dubs-only.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dubs-only.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-## French Audio Version
+## Version audio française 
 
-------
+------ 
 
-### Multi-French
+### Multi-français 
 
-??? question "Multi-French - [Click to show/hide]"
+? ?? question "Multi-Français - [Cliquez pour afficher/masquer]" 
 
-    Recognize movies that include the original and the french audio. Work only after import as it need the result from FFprobe to get which audio are present. Will rename the release to keep the recognition of 'Multi' by the [Multi-Audio](#multi-audio) custom format.
+    Reconnaître les films qui incluent l'original et l'audio français. Fonctionne uniquement après l'importation car il a besoin du résultat de FFprobe pour obtenir quels fichiers audio sont présents. Renomme la version pour conserver la reconnaissance de « Multi » par le format personnalisé [Multi-Audio](#multi-audio). 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/multi-french.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/multi-french. 
+    json' %]][[% endfilter %]] ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### Multi-Audio
+### Multi-Audio 
 
-??? question "Multi-Audio - [Click to show/hide]"
+??? question "Multi-Audio - [Cliquez pour afficher/masquer]" 
 
-    A slightly modified [Multi](#multi) Custom Formats that recognize VF and VO inside the name.
+    Un format personnalisé [Multi](#multi) légèrement modifié qui reconnaît VF et VO à l'intérieur du nom. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/multi-audio.json' %]][[% endfilter %]]
-    ```
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/multi-audio.json' %]][[% endfilter %]] `` 
+    ` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[ TOP](#index)</sup> 
 
-------
+------ 
 
-### French Audio
+### Audio français 
 
-??? question "French Audio - [Click to show/hide]"
+??? question "Audio français - [Cliquez pour afficher/masquer]" 
 
-    This will recognize every kind of French Audio.
+    Cela reconnaîtra tous les types d'audio français. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-audio.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-audio.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### VFF
+### VFF 
 
-??? question "VFF - [Click to show/hide]"
+??? question "VFF - [Cliquez pour afficher/masquer]" 
 
-    Full French version (dubbing done in France) and French version (normally equivalent to VFQ).
+    Version française complète (doublage réalisé en France) et version française (normalement équivalente à VFQ). 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-vff.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-vff.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### VOF
+### VOF 
 
-??? question "VOF - [Click to show/hide]"
+??? question "VOF - [Cliquez pour afficher/masquer]" 
 
-    Original French Version.
+    Version originale française. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-vof.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-vof.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### VFI
+### VFI 
 
-??? question "VFI - [Click to show/hide]"
+??? question "VFI - [Cliquez pour afficher/masquer]" 
 
-    International French Version.
+    Version Française Internationale. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-vfi.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-vfi.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### VF2
+### VF2 
 
-??? question "VF2 - [Click to show/hide]"
+??? la question "VF2 - [Cliquez pour afficher/masquer]" 
 
-    VF[1-9] or FR[1-9] indicates the number of dubs present (normally VF2 being VFF and VFQ).
+    VF[1-9] ou FR[1-9] indique le nombre de doublages présents (normalement VF2 étant VFF et VFQ). 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-vf2.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-vf2.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### VFQ
+### VFQ 
 
-??? question "VFQ - [Click to show/hide]"
+??? question "VFQ - [Cliquez pour afficher/masquer]" 
 
-    Canadian French Version.
+    Version française canadienne. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-vfq.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-vfq. 
+    json' %]][[% endfilter %]] ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### VOQ
+### VOQ 
 
-??? question "VOQ - [Click to show/hide]"
+??? question "VOQ - [Cliquez pour afficher/masquer]" 
 
-    Quebec Original Version.
+    Version originale québécoise. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-voq.json' %]][[% endfilter %]]
-    ```
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-voq.json' %]][[% endfilter %]] `` 
+    ` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[ TOP](#index)</sup> 
 
-------
+------ 
 
-### VQ
+### VQ 
 
-??? question "VQ - [Click to show/hide]"
+??? question "VQ - [Cliquez pour afficher/masquer]" 
 
-    Quebec Version (strong Quebec accent, ex: The Simpsons movie).
+    Version québécoise (fort accent québécois, ex : film Les Simpsons). 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-vq.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-vq.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### VFB
+### VFB 
 
-??? question "VFB - [Click to show/hide]"
+??? question "VFB - [Cliquez pour afficher/masquer]" 
 
-    Belgian French Version.
+    Version belge française. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-vfb.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-vfb.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### VOSTFR
+### VOSTFR 
 
-??? question "VOSTFR - [Click to show/hide]"
+??? question "VOSTFR - [Cliquez pour afficher/masquer]" 
 
-    Indicates soundtrack in the original language, with French subtitles. It should be noted that SUBFRENCH is included inside this Custom Format. However, SUB often mean that the subtitle was embedded inside the picture (hardcoded). French releases tend to mix both, leading some VOSTFR being labelled as SUBFRENCH and SUBFRENCH as VOSTFR.
+    Indique la bande originale en langue originale, sous-titrée en français. Il convient de noter que SUBFRENCH est inclus dans ce format personnalisé. Cependant, SUB signifie souvent que le sous-titre a été intégré à l'image (codé en dur). Les versions françaises ont tendance à mélanger les deux, ce qui conduit certains VOSTFR à être étiquetés SUBFRENCH et SUBFRENCH à VOSTFR. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-vostfr.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-vostfr.json' %]][ [% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### FanSUB
+### FanSUB 
 
-??? question "FanSUB - [Click to show/hide]"
+??? question "FanSUB - [Cliquez pour afficher/masquer]" 
 
-    Action of subtitling a video for personal and non-professional purposes. The quality of FanSUBs can vary enormously (accuracy of translation, mistakes, etc.) and could lead to so called FastSUBs.
+    Action de sous-titrer une vidéo à des fins personnelles et non professionnelles. La qualité des FanSUB peut varier énormément (précision de la traduction, erreurs, etc.) et peut conduire à ce que l'on appelle des FastSUB. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/fansub.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/fansub.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### FastSUB
+### FastSUB 
 
-??? question "FastSUB - [Click to show/hide]"
+??? question "FastSUB - [Cliquez pour afficher/masquer]" 
 
-    FanSUB, but made as quickly as possible, at the expense of quality.
+    FanSUB, mais réalisé le plus rapidement possible, au détriment de la qualité. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/fastsub.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/fastsub. 
+    json' %]][[% endfilter %]] ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-## French HQ Source Groups
+## Groupes sources du siège français 
 
-------
+------ 
 
-### FR Remux Tier 01
+### FR Remux Niveau 01 
 
-??? question "Remux Tier 01 - [Click to show/hide]"
+??? question "Remux Tier 01 - [Cliquez pour afficher/masquer]" 
 
     - WiP
-    - Groups that produce remuxes from multiple sources (discs) and combine them to produce the best end result.
-    - Groups producing remuxes with a group from Remux Tier 01 or 02 adding the best available French Audio.
+    - Des groupes qui produisent des remux à partir de plusieurs sources (disques) et les combinent pour produire le meilleur résultat final. 
+    - Groupes produisant des remux avec un groupe de Remux Tier 01 ou 02 ajoutant le meilleur Audio Français disponible. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-remux-tier-01.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-remux-tier-01.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### FR Remux Tier 02
+### FR Remux Tier 02 
 
-??? question "Remux Tier 02 - [Click to show/hide]"
+??? question "Remux Tier 02 - [Cliquez pour afficher/masquer]" 
 
-    - WiP
-    - Groups that use an automated way.
-    - Groups actively doing remuxes from a single source (disc).
-    - Groups that had the best French audio track to an English release.
-    - Groups that haven't released much or are not well recognized. (yet)
-    - Groups that retired and don't have the best quality by today's standards.
+    - WiP 
+    - Groupes qui utilisent une méthode automatisée. 
+    - Groupes effectuant activement des remux à partir d'une seule source (disque). 
+    - Groupes ayant la meilleure piste audio en français pour une sortie en anglais. 
+    - Des groupes qui n'ont pas beaucoup sorti ou qui ne sont pas bien reconnus. (encore) 
+    - Des groupes qui ont pris leur retraite et qui n'ont pas la meilleure qualité selon les normes actuelles. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-remux-tier-02.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-remux-tier-02.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### FR UHD Bluray Tier 01
+### FR UHD Bluray Tier 01 
 
-??? question "FR UHD Bluray Tier 01 - [Click to show/hide]"
+??? question "FR UHD Bluray Tier 01 - [Cliquez pour afficher/masquer]" 
 
-    - WiP
-    - Groups that created encodes from the remuxes without micro-sizing them.
-    - Groups that add the best French audio track to an English release from Tier 01 or 02.
-    - HDR/DoVi (Depending on what's offered and often both).
-    - HD Audio (Atmos, TrueHD etc...).
+    - WiP 
+    - Groupes qui ont créé des encodages à partir des remux sans les micro-dimensionner. 
+    - Groupes qui ajoutent la meilleure piste audio française à une version anglaise de niveau 01 ou 02. 
+    - HDR/DoVi (Selon ce qui est proposé et souvent les deux). 
+    - Audio HD (Atmos, TrueHD etc...). 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-uhd-bluray-tier-01.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-uhd-bluray-tier-01. json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### FR UHD Bluray Tier 02
+### FR UHD Bluray Tier 02 
 
-??? question "FR UHD Bluray Tier 02 - [Click to show/hide]"
+??? question "FR UHD Bluray Tier 02 - [Cliquez pour afficher/masquer]" 
 
-    - WiP
-    - Groups that create encodes from a remux without micro-sizing them.
-    - Groups that had the best French audio track to an English release.
-    - HDR/DoVi (Depending on what's offered and often both).
-    - HD Audio (Atmos, TrueHD etc...).
-    - Groups that haven't released much or are not well recognized. (yet)
-    - Groups that retired and don't have the best quality by today's standards.
+    - WiP 
+    - Groupes qui créent des encodages à partir d'un remux sans les micro-dimensionner. 
+    - Groupes ayant la meilleure piste audio en français pour une sortie en anglais. 
+    - HDR/DoVi (Selon ce qui est proposé et souvent les deux). 
+    - Audio HD (Atmos, TrueHD etc...). 
+    - Des groupes qui n'ont pas beaucoup sorti ou qui ne sont pas bien reconnus. (encore) 
+    - Des groupes qui ont pris leur retraite et qui n'ont pas la meilleure qualité selon les normes actuelles. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-uhd-bluray-tier-02.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-uhd-bluray-tier-02. json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
-
-------
-
-### FR HD Bluray Tier 01
-
-??? question "FR HD Bluray Tier 01 - [Click to show/hide]"
-
-    - WiP
-    - Groups that create encodes from a remux without micro-sizing them.
-    - Groups that have a minimum count of great releases (best encode in its class 1080p and lower).
-    - Groups that add the best French audio track to an English release from Tier 01 or 02.
-
-??? example "JSON - [Click to show/hide]"
-
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-hd-bluray-tier-01.json' %]][[% endfilter %]]
-    ```
-
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
 ------
 
-### FR HD Bluray Tier 02
+### FR HD Bluray Niveau 01 
 
-??? question "FR HD Bluray Tier 02 - [Click to show/hide]"
+??? question "FR HD Bluray Tier 01 - [Cliquez pour afficher/masquer]" 
 
-    - WiP
-    - Groups that create encodes from a remux without micro-sizing them.
-    - Groups that havae the best French audio track to an English release.
-    - Groups that haven't released much or are not well recognized. (yet)
-    - Groups that retired and don't have the best quality by today's standards.
+    - WiP 
+    - Groupes qui créent des encodages à partir d'un remux sans les micro-dimensionner. 
+    - Groupes qui ont un nombre minimum de bonnes versions (meilleur encodage de sa catégorie 1080p et inférieur). 
+    - Les groupes qui ajoutent la meilleure piste audio française à une version anglaise du Tier 01 ou 02. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-hd-bluray-tier-02.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-hd-bluray-tier-01. json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### FR WEB Tier 01
+### FR HD Bluray Tier 02 
 
-??? question "FR WEB Tier 01 - [Click to show/hide]"
+??? question "FR HD Bluray Tier 02 - [Cliquez pour afficher/masquer]" 
 
-    - WiP
-    - Groups that get their releases directly from the source.
-    - Groups that source and add the French audio track from the source to an English release from Tier 01 or 02.
+    - WiP 
+    - Groupes qui créent des encodages à partir d'un remux sans les micro-dimensionner. 
+    - Groupes ayant la meilleure piste audio en français pour une sortie en anglais. 
+    - Des groupes qui n'ont pas beaucoup sorti ou qui ne sont pas bien reconnus. (encore) 
+    - Des groupes qui ont pris leur retraite et qui n'ont pas la meilleure qualité selon les normes actuelles. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-web-tier-01.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-hd-bluray-tier-02. json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### FR WEB Tier 02
+### FR WEB Tier 01 
 
-??? question "FR WEB Tier 02 - [Click to show/hide]"
+??? question "FR WEB Tier 01 - [Cliquez pour afficher/masquer]" 
 
-    - WiP
-    - Groups that source and add the French audio track from the source to an English release.
-    - Groups that haven't released much or are not well recognized. (yet)
-    - Groups that retired and don't have the best quality by today's standards.
+    - WiP 
+    - Groupes qui obtiennent leurs sorties directement à la source. 
+    - Regroupe cette source et ajoute la piste audio française de la source à une version anglaise du niveau 01 ou 02. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-web-tier-02.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-web-tier-01.json' %]][[% endfilter %]] 
+    ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### FR Scene Groups
+### FR WEB Tier 02 
 
-??? question "FR Scene Groups - [Click to show/hide]"
+??? question "FR WEB Tier 02 - [Cliquez pour afficher/masquer]" 
 
-    Known French Scene groups.
+    - WiP 
+    - Regroupe cette source et ajoute la piste audio française de la source à une version anglaise. 
+    - Des groupes qui n'ont pas beaucoup sorti ou qui ne sont pas bien reconnus. (encore) 
+    - Des groupes qui ont pris leur retraite et qui n'ont pas la meilleure qualité selon les normes actuelles. 
 
-??? example "JSON - [Click to show/hide]"
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-scene.json' %]][[% endfilter %]]
-    ```
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-web-tier-02. 
+    json' %]][[% endfilter %]] ``` 
 
-<sub><sup>[TOP](#index)</sup>
+<sub><sup>[TOP](#index)</sup> 
 
-------
+------ 
 
-### FR LQ
+### Groupes de scènes FR 
 
-<sub>French Low-Quality Releases = FR LQ</sub>
+??? question "Groupes de Scène FR - [Cliquez pour afficher/masquer]" 
 
-??? question "FR LQ - [Click to show/hide]"
+    Groupes de Scène Français connus.
 
-    A collection of known French Low-Quality groups that are often banned from the top trackers due to their lack of quality.
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
-    !!! note
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-scene.json' %]][ [% endfilter %]] 
+    ``` 
 
-        - Ads/Watermarks = Groups that are known to put ads or watermarks in their releases.
-        - Bad/False releases = Groups that are known for lying about their quality, type, or the name of their releases.
-        - DeTAG/ReTAG = Detagging or stealing groups.
-        - Other reasons = Banned Release Groups.
+<sub><sup>[TOP](#index)</sup> 
 
-??? example "JSON - [Click to show/hide]"
+------ 
 
-    ```json
-    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-lq.json' %]][[% endfilter %]]
-    ```
+### FR LQ 
 
-<sub><sup>[TOP](#index)</sup>
+<sub>Sorties françaises de mauvaise qualité = FR LQ</ sous> 
+
+??? question "FR LQ - [Cliquez pour afficher/masquer]" 
+
+    Une collection de groupes français connus de Low-Quality qui sont souvent bannis des top trackers en raison de leur manque de qualité. 
+
+    !!! remarque 
+
+        - Annonces/Filigranes = Groupes connus pour mettre des publicités ou des filigranes dans leurs versions. 
+        - Mauvaises/Fausses versions = Groupes connus pour mentir sur la qualité, le type ou le nom de leurs versions. 
+        - DeTAG/ReTAG = Détagging ou vol de groupes. 
+        - Autres raisons = Groupes de libération interdits. 
+
+??? exemple "JSON - [Cliquez pour afficher/masquer]" 
+
+    ```json 
+    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-lq.json' %]][ [% endfilter %]] 
+    ``` 
+
+<sub><sup>[TOP

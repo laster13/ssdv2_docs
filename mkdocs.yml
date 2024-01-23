@@ -8,39 +8,55 @@ site_description: >-
 repo_name: projetssd/ssdv2
 repo_url: hhttps://github.com/projetssd/ssdv2
 
-# Copyright
-copyright: Copyright &copy; 2016 - 2024 Martin Donath
+docs_dir: docs/
+exclude_docs: overrides/
 
 # Configuration
 theme:
   name: material
   custom_dir: material/overrides
   features:
-    - navigation.expand
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
     - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
     - navigation.sections
     - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
     - toc.follow
-    - toc.integrate
+    # - toc.integrate
   palette:
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
+    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
+      primary: blue
       scheme: default
-      primary: indigo
-      accent: indigo
       toggle:
-        icon: material/toggle-switch
+        icon: material/weather-sunny 
         name: Switch to dark mode
+    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
+      primary: blue grey
       scheme: slate
-      primary: black
-      accent: indigo
       toggle:
         icon: material/weather-night
-        name: Switch to system preference
+        name: Switch to light mode
   font:
     text: Roboto
     code: Roboto Mono
@@ -77,80 +93,48 @@ plugins:
                 primary: pink
                 scheme: slate
 
-# Hooks
-hooks:
-  - material/overrides/hooks/shortcodes.py
-  - material/overrides/hooks/translations.py
-
-# Additional configuration
-extra:
-  status:
-    new: Recently added
-    deprecated: Deprecated
-  analytics:
-    provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/squidfunk
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
-    - icon: fontawesome/brands/python
-      link: https://pypi.org/project/mkdocs-material/
-    - icon: fontawesome/brands/mastodon
-      link: https://fosstodon.org/@squidfunk
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/squidfunk
-
 # Extensions
-markdown_extensions:
-  - abbr
-  - admonition
-  - attr_list
-  - def_list
-  - footnotes
-  - md_in_html
-  - toc:
-      permalink: true
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.magiclink:
-      normalize_issue_symbols: true
-      repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.snippets:
-      auto_append:
-        - includes/mkdocs.md
-  - pymdownx.superfences:
+### Configuration des extensions MarkDown :   
+markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abbreviations/
+  # extensions de la bibliothèque markdown standard
+  - meta                          # Métadonnées
+  - def_list                      # Listes de définition.
+  - attr_list                     # Sélecteurs CSS et attributs HTML personnalisés
+  - footnotes                     # Notes[^1] de bas de page.  [^1]: ma note.
+  - admonition                    # Pour permettre les admonitions de MkDocs # Boite d'avertissements  !!! info "ma remarque"
+  - toc:                          # Configuration de la table des matières générée automatiquement à partir des titres du niveau 2
+        permalink: "&lozf;"          # Ajoute un symbole lien hypertexte vers l'ancre du titre #le-titre 
+        toc_depth: 4                # Limite de la profondeur d'inclusion des titres dans la table des matières
+  - nl2br                         # Ajoute un retour à la ligne <br> après un saut de ligne simple # A activer pour admonition et si l'option "Sauts de ligne stricts" n'est pas activée dans les réglages de l'éditeur d'Obsidian
+  - mdx_breakless_lists           # Permet de commencer une liste sans faire de saut de ligne en amont en ajoutant systématiquement un saut de ligne
+  - sane_lists                    # Produit le même affichage de liste qu'Obsidian démarage au nombre indiqué au début d'une liste ordonné : https://python-markdown.github.io/extensions/sane_lists/ 
+  - smarty                        # The SmartyPants extension converts ASCII dashes, quotes and ellipses to their HTML entity equivalents https://python-markdown.github.io/extensions/smarty/
+  - tables                        # Pour les tableaux https://squidfunk.github.io/mkdocs-material/reference/data-tables/
+  # extensions de python-markdown https://facelessuser.github.io/pymdown-extensions/
+  - pymdownx.details              # plier/déplier les avertissements - admonition collapsable
+  - pymdownx.caret                # texte ^^souligné^^ ou en ^exposant^.
+  - pymdownx.mark                 # texte ==surligné==.
+  - pymdownx.tilde                # texte ~~barré~~ ou en ~indice~.
+  - pymdownx.critic               # Pour du marquage et commentaires de révision de texte
+  - pymdownx.magiclink            # Reconnait automatiquement un lien, une adresse à partir de son URL et bien plus : https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/
+  - pymdownx.highlight            # Coloration syntaxique du code
+  - pymdownx.inlinehilite         # pour  `#!python  <python en ligne>`
+  - pymdownx.tasklist:            # Cases à cocher  - [ ]  et - [x]
+        custom_checkbox:    true    #   avec cases d'origine
+        # clickable_checkbox: true    #   et cliquables.
+  - pymdownx.superfences:    # Imbrication de blocs. # pour admonitions MkDocs
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
-      combine_header_slug: true
-      slugify: !!python/object/apply:pymdownx.slugs.slugify
-        kwds:
-          case: lower
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
+          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.keys:                # Touches du clavier.  ++ctrl+d++
+        separator: "\uff0b"
+  - pymdownx.emoji:               # Émojis  :boom:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:          # Formules en LaTeX 
+        generic: true
+        smart_dollar: false 
 
 # Page tree
 nav:

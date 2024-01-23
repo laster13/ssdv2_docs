@@ -57,6 +57,21 @@ theme:
     - toc.follow
     # - toc.integrate
 
+nav:
+  - Home: index.md
+  - Radarr:
+    - Radarr/index.md
+    - Radarr/Radarr-collection-of-custom-formats.md
+    - Radarr/Radarr-how-to-update-custom-formats.md
+    - Radarr/Radarr-import-custom-formats.md
+    - Radarr/Radarr-Quality-Settings-File-Size.md
+    - Radarr/Radarr-recommended-naming-scheme.md
+    - Radarr/Radarr-remote-path-mapping.md
+    - Radarr/radarr-setup-quality-profiles.md
+    - Radarr/radarr-setup-quality-profiles-anime.md
+    - Radarr/radarr-setup-quality-profiles-french-en.md
+    - Radarr/radarr-setup-quality-profiles-french-fr.md
+
 plugins:
   - search
   - roamlinks 

@@ -1,37 +1,37 @@
-# Radarr
+#Radarr
 
-Here you will find a collection of Radarr Guides I made.
+Vous trouverez ici une collection de guides Radarr que j'ai créés.
 
-!!! info "Radarr is a movie collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available."
+!!! info "Radarr est un gestionnaire de collection de films pour les utilisateurs Usenet et BitTorrent. Il peut surveiller plusieurs flux RSS pour les nouveaux films et s'interfacera avec les clients et les indexeurs pour les récupérer, les trier et les renommer. Il peut également être configuré pour mettre automatiquement à niveau la qualité de fichiers existants dans la bibliothèque lorsqu'un format de meilleure qualité sera disponible."
 
-For Installation and Quick Start Guide please check the official [WikiArr](https://wiki.servarr.com/en/radarr){:target="_blank" rel="noopener noreferrer"}
+Pour obtenir le guide d'installation et de démarrage rapide, veuillez consulter le [WikiArr](https://wiki.servarr.com/en/radar){:target="_blank" rel="noopener noreferrer"} officiel.
 
-## Master
+## Maître
 
-![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=4051B5&style=for-the-badge&label=Master&query=%24%5B0%5D.version&url=https://radarr.servarr.com/v1/update/master/changes){ .off-glb }
+![Maître actuel/Stable](https://img.shields.io/badge/dynamic/json?color=4051B5&style=for-the-badge&label=Master&query=%24%5B0%5D.version&url=https://radar .servarr.com/v1/update/master/changes){ .off-glb }
 
-(Default/Stable): It has been tested by users on the develop and nightly branches and it’s not known to have any major issues. This version will receive updates approximately monthly. On GitHub, this is the `master` branch.
+(Par défaut/Stable) : il a été testé par les utilisateurs sur les branches develop et nightly et il n'est pas connu pour avoir de problèmes majeurs. Cette version recevra des mises à jour environ mensuellement. Sur GitHub, il s'agit de la branche « master ».
 
-## Develop
+## Développer
 
-![Current Develop/Beta](https://img.shields.io/badge/dynamic/json?color=4051B5&style=for-the-badge&label=Develop&query=%24%5B0%5D.version&url=https://radarr.servarr.com/v1/update/develop/changes){ .off-glb }
+![Développement actuel/Bêta](https://img.shields.io/badge/dynamic/json?color=4051B5&style=for-the-badge&label=Develop&query=%24%5B0%5D.version&url=https://radar .servarr.com/v1/update/develop/changes){ .off-glb }
 
-(Beta): This is the testing edge. Released after tested in nightly to ensure no immediate issues. New features and bug fixes released here first after nightly. It can be considered semi-stable, but is still `beta`. This version will receive updates either weekly or biweekly depending on development.
+(Bêta) : Il s’agit de l’avantage des tests. Publié après test nocturne pour garantir l'absence de problèmes immédiats. Nouvelles fonctionnalités et corrections de bugs publiées ici d'abord après la nuit. Il peut être considéré comme semi-stable, mais il est toujours « bêta ». Cette version recevra des mises à jour hebdomadaires ou bihebdomadaires en fonction du développement.
 
-!!! warning "**Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is a snapshot of the `develop` branch at a specific point in time."
+!!! avertissement "**Avertissement : vous ne pourrez peut-être pas revenir à `master` après être passé à cette branche.** Sur GitHub, il s'agit d'un instantané de la branche `develop` à un moment précis."
 
-## Nightly
+## Tous les soirs
 
-![Current Nightly/Unstable](https://img.shields.io/badge/dynamic/json?color=4051B5&style=for-the-badge&label=Nightly&query=%24%5B0%5D.version&url=https://radarr.servarr.com/v1/update/nightly/changes){ .off-glb }
+![Actuellement nocturne/Instable](https://img.shields.io/badge/dynamic/json?color=4051B5&style=for-the-badge&label=Nightly&query=%24%5B0%5D.version&url=https://radar .servarr.com/v1/update/nightly/changes){ .off-glb }
 
-(Alpha/Unstable) : This is the bleeding edge. It is released as soon as code is committed and passes all automated tests. This build may have not been used by us or other users yet. There is no guarantee that it will even run in some cases. This branch is only recommended for advanced users. Issues and self investigation are expected in this branch.
+(Alpha/Unstable) : C'est la pointe de la technologie. Il est publié dès que le code est validé et réussit tous les tests automatisés. Cette version n'a peut-être pas encore été utilisée par nous ou par d'autres utilisateurs. Il n'y a aucune garantie qu'il fonctionnera même dans certains cas. Cette branche n'est recommandée qu'aux utilisateurs avancés. Des problèmes et des auto-enquêtes sont attendus dans cette branche.
 
-***Use this branch only if you know what you are doing and are willing to get your hands dirty to recover a failed update.***
+***Utilisez cette branche uniquement si vous savez ce que vous faites et êtes prêt à vous salir les mains pour récupérer une mise à jour ayant échoué.***
 
-This version is updated immediately.
+Cette version est mise à jour immédiatement.
 
-!!! danger "**Warning: You may not be able to go back to `master` after switching to this branch.** On GitHub, this is the `develop` branch."
+!!! danger "**Attention : vous ne pourrez peut-être pas revenir à `master` après être passé à cette branche.** Sur GitHub, il s'agit de la branche `develop`."
 
-### How do I update Radarr
+### Comment mettre à jour Radarr
 
-External link to the official [WikiArr](https://wiki.servarr.com/en/radarr/faq#how-do-i-update-radarr){:target="_blank" rel="noopener noreferrer"}.
+Lien externe vers le [WikiArr](https://wiki.servarr.com/en/radar/faq#how-to-do-i-update-radar){:target="_blank" rel="noopener noreferrer" officiel }.

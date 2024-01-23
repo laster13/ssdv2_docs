@@ -72,7 +72,7 @@ plugins:
   - search
   - roamlinks 
   - mermaid2
-  - callouts # Pour la conversion des callouts d'Obsidian en admonitions de MkDocs https://pypi.org/project/mkdocs-callouts/
+  - callouts
   - i18n:
       docs_structure: folder
       fallback_to_default: true

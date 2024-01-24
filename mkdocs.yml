@@ -88,6 +88,9 @@ plugins:
               - media: "(prefers-color-scheme: dark)"
                 primary: pink
                 scheme: slate
+          nav_translations:
+            Home: Accueil: Home
+            Setup: Installation
   - git-revision-date-localized:
 
 

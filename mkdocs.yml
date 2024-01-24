@@ -147,6 +147,8 @@ nav:
     - Installation/installation.md
     - Utilitaires:
       - Installation/oauth.md
+      - Installation/optimisation-cloudflare.md
+      - Installation/ufw-Installation-configuration.md
   - Radarr:
     - Radarr/radarr-setup-quality-profiles-french-fr.md
     - Radarr/radarr-setup-quality-profiles-anime.md

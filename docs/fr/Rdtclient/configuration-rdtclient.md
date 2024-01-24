@@ -20,10 +20,14 @@ Configurer Rdtclient exactement comme mentionner sur les images ci dessous
 3. mettre `/home/user/local` comme “mapped path”
 
 !!! note
-💡 IMPORTANT : le dossier mapped correspond au dossier local dans lequel les liens symboliques seront stockés.
+    💡 IMPORTANT : Le dossier mapped correspond au dossier local dans lequel les liens symboliques seront stockés.
 
 
 ![Capture2](https://github.com/projetssd/ssdv2/assets/7422124/8b3e52be-ce2c-4941-b19c-219f47bdc6a3)
+
+!!! note
+    Préciser le chemin de “Rclone mount path”, en remplacant "user" par votre nom d'utilisateur
+
 
 ![Capture3](https://github.com/projetssd/ssdv2/assets/7422124/267c93a6-5a33-4ec3-9699-cca4365eb039)
 

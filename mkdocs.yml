@@ -155,9 +155,9 @@ nav:
     - Radarr/Radarr-how-to-update-custom-formats.md
     - Radarr/Radarr-collection-of-custom-formats.md    
     - Tips:
-      - Tips/Merge-quality.md
-      - Tips/Sync-2-radarr-sonarr.md
-      - Tips/How-to-setup-language-custom-formats.md
+      - Radarr/Tips/Merge-quality.md
+      - Radarr/Tips/Sync-2-radarr-sonarr.md
+      - Radarr/Tips/How-to-setup-language-custom-formats.md
   - Sonarr:
     - plugins/index.md
     - Blog: plugins/blog.md

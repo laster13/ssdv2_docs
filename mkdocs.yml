@@ -142,8 +142,7 @@ nav:
     - Cloudflare: cloudflare.md
     - Nom de domaine: nom-de-domaine.md
   - Radarr:
-    - Acceuil/index.md
-    - Comment configurer ses Profiles: Radarr/radarr-setup-quality-profiles-french-fr.md
+    - Radarr/radarr-setup-quality-profiles-french-fr.md
     - Changing the fonts: setup/changing-the-fonts.md
     - Changing the language: setup/changing-the-language.md
     - Changing the logo and icons: setup/changing-the-logo-and-icons.md

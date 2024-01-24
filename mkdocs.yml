@@ -180,6 +180,7 @@ nav:
     - Sonarr/sonarr-import-custom-formats.md
     - Sonarr/sonarr-how-to-update-custom-formats.md
     - Sonarr/sonarr-collection-of-custom-formats.md
+    - Tips:
       - Sonarr/Tips/Merge-quality.md
       - Sonarr/Tips/Sync-2-radarr-sonarr.md
       - Sonarr/Tips/How-to-setup-language-custom-formats.md

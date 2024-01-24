@@ -1,4 +1,4 @@
-# Configurer le serveur
+# Choix d'un serveur
 
 ## Obtenir un serveur distant
 

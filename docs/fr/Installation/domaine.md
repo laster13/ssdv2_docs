@@ -1,4 +1,4 @@
-# Configurer le domaine
+# Nom de domaine
 
 Vous aurez besoin d'un nom de domaine pour l'accès aux applications.  
 Le script permet l'ajout et la personnalisation du sous domaine pour chaque application 

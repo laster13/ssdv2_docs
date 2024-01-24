@@ -146,27 +146,18 @@ nav:
     - Installation/nom-de-domaine.md
   - Radarr:
     - Radarr/radarr-setup-quality-profiles-french-fr.md
-    - Changing the fonts: setup/changing-the-fonts.md
-    - Changing the language: setup/changing-the-language.md
-    - Changing the logo and icons: setup/changing-the-logo-and-icons.md
-    - Ensuring data privacy: setup/ensuring-data-privacy.md
-    - Setting up navigation: setup/setting-up-navigation.md
-    - Setting up site search: setup/setting-up-site-search.md
-    - Setting up site analytics: setup/setting-up-site-analytics.md
-    - Setting up social cards: setup/setting-up-social-cards.md
-    - Setting up a blog: setup/setting-up-a-blog.md
-    - Setting up tags: setup/setting-up-tags.md
-    - Setting up versioning: setup/setting-up-versioning.md
-    - Setting up the header: setup/setting-up-the-header.md
-    - Setting up the footer: setup/setting-up-the-footer.md
-    - Adding a git repository: setup/adding-a-git-repository.md
-    - Adding a comment system: setup/adding-a-comment-system.md
-    - Building an optimized site: setup/building-an-optimized-site.md
-    - Building for offline usage: setup/building-for-offline-usage.md
-    - Extensions:
-      - setup/extensions/index.md
-      - Python Markdown: setup/extensions/python-markdown.md
-      - Python Markdown Extensions: setup/extensions/python-markdown-extensions.md
+    - Radarr/radarr-setup-quality-profiles-anime.md
+    - Radarr/radarr-setup-quality-profiles.md
+    - Radarr/Radarr-remote-path-mapping.md
+    - Radarr/Radarr-recommended-naming-scheme.md
+    - Radarr/Radarr-Quality-Settings-File-Size.md
+    - Radarr/Radarr-import-custom-formats.md
+    - Radarr/Radarr-how-to-update-custom-formats.md
+    - Radarr/Radarr-collection-of-custom-formats.md    
+    - Radarr/Tips:
+      - Merge-quality.md
+      - Sync-2-radarr-sonarr.md
+      - How-to-setup-language-custom-formats.md
   - Sonarr:
     - plugins/index.md
     - Blog: plugins/blog.md

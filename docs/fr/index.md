@@ -6,6 +6,9 @@
 
 [![Discord: https://discord.gg/EyV5f5ZyYF](https://img.shields.io/badge/Discord-gray.svg?style=for-the-badge)](https://discordapp.com/invite/kkwEvV6dfj)
 
+[![Discord chat](https://img.shields.io/discord/533736783414820864?style=for-the-badge&color=4051B5&logo=discord){ .off-glb }](https://discord.gg/qbfdKVYB){:target="_blank" rel="noopener noreferrer"}
+
+
 ### Le script SSD permet l'installation d'une seedbox complète avec Docker
 
 Pour se lancer dans l’installation, il faut au préalable suivre les étapes suivantes:

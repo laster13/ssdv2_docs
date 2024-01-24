@@ -153,6 +153,7 @@ nav:
       - Installation/ufw-Installation-configuration.md
   - Rdtclient:
     - Rdtclient/configuration-rdtclient.md
+    - Rdtclient/configuration-qbitorrent.md
   - Radarr:
     - Radarr/radarr-setup-quality-profiles-french-fr.md
     - Radarr/radarr-setup-quality-profiles-anime.md

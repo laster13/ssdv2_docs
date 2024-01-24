@@ -64,9 +64,6 @@ nav:
   - Radarr:
 
 plugins:
-  - include-markdown:
-      opening_tag: "{!"
-      closing_tag: "!}"
   - search
   - roamlinks 
   - mermaid2

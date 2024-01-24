@@ -77,6 +77,7 @@ Now you will have to wait a little while the DNS propagation takes place (up to 
 
 ### Step 4. Changing the SSL/TLS encryption mode 
 
-![Cloudflare - SSL:TLS](https://user-images.githubusercontent. com/64525827/105042745-e5966400-5a64-11eb-9dd9-aa4bed5bd8b7.png)
+![Cloudflare - SSL:TLS](https://user-images.githubusercontent.com/64525827/105042745-e5966400-5a64-11eb-9dd9-aa4bed5bd8b7.png)
+
 
  

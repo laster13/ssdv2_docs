@@ -9,10 +9,9 @@
 ### Le script SSD permet l'installation d'une seedbox complète avec Docker
 
 Pour se lancer dans l’installation, il faut au préalable suivre les étapes suivantes:
-* [Un serveur distant](https://github.com/projetssd/ssdv2/wiki/Serveur)
+* [[serveur.md|Serveur en test]]
 * [Un nom de domaine](https://github.com/projetssd/ssdv2/wiki/Nom-de-domaine)
 * [DNS Cloudflare](https://github.com/projetssd/ssdv2/wiki/Cloudflare)
-* [Création API Google Drive](https://github.com/projetssd/ssdv2/wiki/Cr%C3%A9ation-API-Google)
 
 Une fois les pré-requis validés pous pouvez suivre le guide :
 

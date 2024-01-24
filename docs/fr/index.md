@@ -10,8 +10,8 @@
 
 Pour se lancer dans l’installation, il faut au préalable suivre les étapes suivantes:
 * [[Installation/serveur.md|Serveur]]
-* [Un nom de domaine](https://github.com/projetssd/ssdv2/wiki/Nom-de-domaine)
-* [DNS Cloudflare](https://github.com/projetssd/ssdv2/wiki/Cloudflare)
+* [[Installation/domaine.md|domaine]]
+* [[Installation/cloudflare.md|Cloudflare]]
 
 Une fois les pré-requis validés pous pouvez suivre le guide :
 

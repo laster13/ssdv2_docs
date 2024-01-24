@@ -6,7 +6,7 @@ site_description: >-
 
 # Repository
 repo_name: projetssd/ssdv2
-repo_url: hhttps://github.com/projetssd/ssdv2
+repo_url: https://github.com/projetssd/ssdv2
 
 docs_dir: docs/
 exclude_docs: overrides/

@@ -169,20 +169,17 @@ nav:
       - Radarr/Tips/Sync-2-radarr-sonarr.md
       - Radarr/Tips/How-to-setup-language-custom-formats.md
   - Sonarr:
-    - plugins/index.md
-    - Blog: plugins/blog.md
-    - Group: plugins/group.md
-    - Info: plugins/info.md
-    - Meta: plugins/meta.md
-    - Offline: plugins/offline.md
-    - Optimize: plugins/optimize.md
-    - Privacy: plugins/privacy.md
-    - Projects: plugins/projects.md
-    - Search: plugins/search.md
-    - Social: plugins/social.md
-    - Tags: plugins/tags.md
-    - Typeset: plugins/typeset.md
-    - Requirements:
-      - Image processing: plugins/requirements/image-processing.md
-      - Caching: plugins/requirements/caching.md
-
+    - Sonarr/sonarr-setup-quality-profiles-french-en.md
+    - Sonarr/sonarr-setup-quality-profiles-anime.md
+    - Sonarr/sonarr-setup-quality-profiles.md
+    - Sonarr/Sonarr-remote-path-mapping.md
+    - Sonarr/Sonarr-Release-Profile-RegEx-Anime.md
+    - Sonarr/Sonarr-Release-Profile-RegEx.md
+    - Sonarr/Sonarr-recommended-naming-scheme.md
+    - Sonarr/Sonarr-Quality-Settings-File-Size.md
+    - Sonarr/sonarr-import-custom-formats.md
+    - Sonarr/sonarr-how-to-update-custom-formats.md
+    - Sonarr/sonarr-collection-of-custom-formats.md
+      - Sonarr/Tips/Merge-quality.md
+      - Sonarr/Tips/Sync-2-radarr-sonarr.md
+      - Sonarr/Tips/How-to-setup-language-custom-formats.md

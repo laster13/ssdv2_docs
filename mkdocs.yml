@@ -75,6 +75,8 @@ plugins:
           default: true
           name: Français
           build: true
+          nav_translations:
+            index: Acceuil
         - locale: en
           name: English
           build: true
@@ -88,6 +90,8 @@ plugins:
               - media: "(prefers-color-scheme: dark)"
                 primary: pink
                 scheme: slate
+          nav_translations:
+            index: Home
   - git-revision-date-localized:
 
 

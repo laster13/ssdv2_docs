@@ -1,0 +1,5 @@
+nav:
+    - Acceuil: index.md
+    - Configuration du serveur: serveur.md
+    - Configuration du domaine: nom-de-domaine.md
+    - Configuration Cloudflare: cloudflare.md

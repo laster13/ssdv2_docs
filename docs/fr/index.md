@@ -1,13 +1,10 @@
+[![Discord chat](https://img.shields.io/discord/533736783414820864?style=for-the-badge&color=4051B5&logo=discord){ .off-glb }](https://discord.gg/qbfdKVYB){:target="_blank" rel="noopener noreferrer"}
+
 <br /><img src="https://user-images.githubusercontent.com/64525827/107496602-ceddbb80-6b91-11eb-9a05-ac311eedf150.png" width="450">
 <br />
 
 >[!note]+
 > Il faut un user NON root, qui ait les droits de faire du sudo.
-
-[![Discord: https://discord.gg/EyV5f5ZyYF](https://img.shields.io/badge/Discord-gray.svg?style=for-the-badge)](https://discordapp.com/invite/kkwEvV6dfj)
-
-[![Discord chat](https://img.shields.io/discord/533736783414820864?style=for-the-badge&color=4051B5&logo=discord){ .off-glb }](https://discord.gg/qbfdKVYB){:target="_blank" rel="noopener noreferrer"}
-
 
 ### Le script SSD permet l'installation d'une seedbox complète avec Docker
 
@@ -62,8 +59,7 @@ Alors déconnexion puis Reconnexion et on continue avec la même commande
 cd /home/${USER}/seedbox-compose && ./seedbox.sh
 ```
 
-[![Discord: https://discordapp.com/invite/kkwEvV6dfj](https://img.shields.io/badge/Discord-gray.svg?style=for-the-badge)](https://discordapp.com/invite/kkwEvV6dfj)
-
+[![Discord chat](https://img.shields.io/discord/533736783414820864?style=for-the-badge&color=4051B5&logo=discord){ .off-glb }](https://discord.gg/qbfdKVYB){:target="_blank" rel="noopener noreferrer"}
 
 #### Une fois les pré requis validé pous pouvez suivre le guide :  
 * [Pas à pas d'installation](https://github.com/projetssd/ssdv2/wiki/pas-%C3%A0-pas)

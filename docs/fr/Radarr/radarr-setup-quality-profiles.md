@@ -59,8 +59,6 @@ En bas, dans le profil que vous avez choisi, vous verrez les formats personnalis
 
 ------
 
-{! include-markdown "../includes/merge-quality/radar-current-logic.md" !}
-
 ------
 
 ## Quel profil de qualité choisir

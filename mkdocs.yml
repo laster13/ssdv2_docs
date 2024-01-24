@@ -60,9 +60,6 @@ theme:
     text: Roboto
     code: Roboto Mono
 
-nav:
-  - Radarr:
-
 plugins:
   - search
   - roamlinks 

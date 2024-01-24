@@ -8,8 +8,10 @@ Configurer Rdtclient exactement comme mentionner sur les images ci dessous
 
 ![Capture](https://github.com/projetssd/ssdv2/assets/7422124/368ef533-5d3b-4b46-ad29-ae05be76b6b9)
 
+
 1. Compléter les catégories `radarr,sonarr` (vous pouvez en rajouter plus si vous le souhaitez)
 2. Augmenter le nombre “parallel download” à 100, ainsi que le maximum unpack process
+
 
 ![Capture1](https://github.com/projetssd/ssdv2/assets/7422124/60057ea0-69c1-4a98-a369-3ac51bb91a8e)
 
@@ -17,10 +19,9 @@ Configurer Rdtclient exactement comme mentionner sur les images ci dessous
 2. mettre `/data/downloads` comme “download path”
 3. mettre `/home/user/local` comme “mapped path”
 
-<aside>
-💡 **IMPORTANT** : le dossier mapped correspond au dossier local dans lequel les liens symboliques seront stockés.
+!!! note
+💡 IMPORTANT : le dossier mapped correspond au dossier local dans lequel les liens symboliques seront stockés.
 
-</aside>
 
 ![Capture2](https://github.com/projetssd/ssdv2/assets/7422124/8b3e52be-ce2c-4941-b19c-219f47bdc6a3)
 

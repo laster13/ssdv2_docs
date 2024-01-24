@@ -1,7 +1,5 @@
----
-layout: default
-title: ssdv2
----
+# Qbittorrent
+
 ## Réglages Qbittorrent
 
 Par défaut il faut utiliser comme identifant (admin/adminadmin)

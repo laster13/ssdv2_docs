@@ -1,8 +1,5 @@
----
-layout: default
-title: applications.wordpress
-permalink: /wordpress/
----
+# wordpress
+
 #### Faire pointer son nom de domaine vers Wordpress
 
 

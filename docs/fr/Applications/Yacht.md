@@ -1,9 +1,6 @@
----
-layout: default
-title: applications.yacht
-permalink: /yacht/
----
+# Yacht
+
 # Installation de Yacht
 
-{% t applications.user %} : `admin@yacht.local`   
-{% t applications.password %} :  `pass `
+user : `admin@yacht.local`   
+password :  `pass `

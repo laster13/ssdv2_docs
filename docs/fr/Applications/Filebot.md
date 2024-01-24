@@ -1,8 +1,4 @@
----
-layout: page
-title: applications.filebot
-permalink: /filebot/
----
+# Filebot
 
 #### Enregistrer une licence
 

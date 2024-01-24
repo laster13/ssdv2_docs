@@ -1,7 +1,5 @@
----
-layout: default
-title: ssdv2
----
+# Cloudplow
+
 #### Synchroniser deux drives avec 2 remotes nommés respectivement google et tata
 
 Cloudplow upload vers le 1er drive et ensuite, dans un delais préalablement defini, synchonise le 1er drive avec le 2ème drive

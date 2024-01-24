@@ -1,7 +1,5 @@
----
-layout: default
-title: ssdv2
----
+# Trakt.tv-et-Kitana
+
 Attention : première écriture.
 
 ## Vous avez envie de synchroniser vos lectures avec votre compte Trakt.tv, vous êtes à la bonne adresse.

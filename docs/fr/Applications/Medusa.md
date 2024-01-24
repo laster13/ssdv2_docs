@@ -1,8 +1,5 @@
----
-layout: default
-title: applications.medusa
-permalink: /medusa/
----
+# Medusa
+
 ## Attention
 
 Tous les exemples ci dessous sont faits avec le user seed. Merci d'adapter à votre configuration

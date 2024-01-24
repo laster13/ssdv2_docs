@@ -1,7 +1,5 @@
----
-layout: default
-title: ssdv2
----
+# Traefik
+
 #### Ajouter un 2ème Domaine à traefik  
 En considérant que vous utilisez cloudflare, ce qui à mon sens est le meilleur choix.  Dans un 1er temps on supprime le container traefik  
 

@@ -1,6 +1,3 @@
----
-layout: page
-title: applications.grocy
-permalink: /grocy/
----
+# Grocy
+ 
 Les logins password par défaut sont admin/admin

@@ -1,8 +1,5 @@
----
-layout: default
-title: applications.ombi
-permalink: /ombi/
----
+# Ombi
+
 > > La première chose est d'enlever authentification sur Ombi pour que les autres utilisateurs puissent accéder au site.
 Rassurez-vous, il y a déjà un système de connexion intégrée sur Ombi.
 

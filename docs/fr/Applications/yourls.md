@@ -1,8 +1,5 @@
----
-layout: default
-title: applications.yourls
-permalink: /yourls/
----
+# yourls
+
 > YOURLS signifie votre propre raccourcisseur d'URL. Il s'agit d'un petit ensemble de scripts PHP qui vous permettront d'exécuter votre propre service de raccourcissement d'URL (à la TinyURL ou Bitly).  
 
 ***

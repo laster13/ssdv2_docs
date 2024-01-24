@@ -1,7 +1,5 @@
----
-layout: default
-title: ssdv2
----
+# PlexTratkSync
+
 Vous devez créer une API Trakt pour utiliser ce produit :
 
 Visit https://trakt.tv/oauth/applications/new

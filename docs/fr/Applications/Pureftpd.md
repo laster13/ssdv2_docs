@@ -1,7 +1,5 @@
----
-layout: default
-title: ssdv2
----
+# Pureftpd
+
 L'image utilisée est https://hub.docker.com/r/stilliard/pure-ftpd/
 
 Le user et password par défaut sont ceux choisis par l'utilisateur lors de l'installation de la seedbox.

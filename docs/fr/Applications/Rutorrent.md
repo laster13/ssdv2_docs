@@ -1,7 +1,5 @@
----
-layout: default
-title: ssdv2
----
+# Rutorrent
+
 ## Séparation des Téléchargement terminés
 > Vous devrez ensuite indiquer le chemin dans Radarr et Sonarr.
 

@@ -1,8 +1,5 @@
----
-layout: default
-title: applications.vikunja
-permalink: /vikunja/
----
+# Vikunja
+
 # Default Password
 
 Après avoir installé Vikunja avec succès, il n'y a pas d'utilisateur ou de mot de passe par défaut.

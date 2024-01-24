@@ -1,8 +1,5 @@
----
-layout: default
-title: applications.minecraft
-permalink: /minecraft/
----
+# Minecraft
+
 ![](https://nextcloud.teamsyno.com/s/2jzfHCLjTdB2WTF/preview)
 
 #### Login et password pour McMyAdmin 

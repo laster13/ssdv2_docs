@@ -1,8 +1,3 @@
----
-layout: page
-title: applications.handbrake
-permalink: /handbrake/
----
 # Handbrake
 
 Ceci est un conteneur Docker pour HandBrake .

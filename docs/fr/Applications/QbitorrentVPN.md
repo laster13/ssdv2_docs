@@ -1,7 +1,5 @@
----
-layout: default
-title: ssdv2
----
+# QbitorrentVPN
+
 > > Dépôt : https://hub.docker.com/r/dyonr/qbittorrentvpn
 
 ## Installation de Qbitorrent VPN

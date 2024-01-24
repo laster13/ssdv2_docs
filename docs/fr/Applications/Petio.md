@@ -1,10 +1,4 @@
----
-layout: default
-title: applications.petio
-permalink: /petio/
----
-# Installation de Petio
-
+# Petio
 
 ### étape 1 
 

@@ -1,8 +1,5 @@
----
-layout: default
-title: applications.speedtest
-permalink: /speedtest/
----
-{% t applications.user %} : `admin@admin.com`	
+# Speedtest
 
-{% t applications.password %} : `password`	
+user : : `admin@admin.com`	
+
+password : `password`	

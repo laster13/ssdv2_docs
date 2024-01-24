@@ -185,5 +185,39 @@ nav:
       - Sonarr/Tips/Sync-2-radarr-sonarr.md
       - Sonarr/Tips/How-to-setup-language-custom-formats.md
   - Applications:
-    - Applications/*
+    - Applications/Authelia.md
+    - Applications/Chevereto.md
+    - Applications/Cloudflare.md
+    - Applications/Cloudplow.md
+    - Applications/Filebot.md
+    - Applications/Filerun.md
+    - Applications/Grocy.md
+    - Applications/Guacamole.md
+    - Applications/Handbrake.md
+    - Applications/Jackett---Flaresolverr.md
+    - Applications/Medusa.md
+    - Applications/Minecraft.md
+    - Applications/Nextcloud.md
+    - Applications/Ombi.md
+    - Applications/Organizr.md
+    - Applications/Petio.md
+    - Applications/Plex.md
+    - Applications/Plex-Dupefinder.md
+    - Applications/PlexTratkSync.md
+    - Applications/Prestashop.md
+    - Applications/Pureftpd.md
+    - Applications/QbitorrentVPN.md
+    - Applications/Qbittorrent.md
+    - Applications/Qflood.md
+    - Applications/Rflood.md
+    - Applications/Rutorrent.md
+    - Applications/Speedtest.md
+    - Applications/Traefik.md
+    - Applications/Trakt.tv-et-Kitana.md
+    - Applications/Traktarr.md
+    - Applications/Vikunja.md
+    - Applications/watchtower.md
+    - Applications/Wordpress.md
+    - Applications/Yacht.md
+    - Applications/yourls.md
 

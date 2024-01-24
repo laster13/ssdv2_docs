@@ -1,7 +1,5 @@
----
-layout: default
-title: ssdv2
----
+# Prestashop
+
 Pour supprimer le dossier install  
 ```
 docker exec -ti prestashop bash

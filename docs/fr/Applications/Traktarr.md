@@ -1,8 +1,5 @@
----
-layout: default
-title: applications.traktarr
-permalink: /traktarr/
----
+# Traktarr
+
 Traktarr utilise Trakt.tv pour rechercher des émissions et des films à ajouter à Sonarr et Radarr, respectivement.  
 
 https://github.com/Cloudbox/Community/wiki/Traktarr-Tips  

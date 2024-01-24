@@ -1,8 +1,4 @@
----
-layout: default
-title: ssdv2
----
-# installation de Rflood :
+# Rflood :
 
 Depuis le menu ou avec la commande `launch_service rflood`  
 

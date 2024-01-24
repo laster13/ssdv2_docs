@@ -1,7 +1,5 @@
----
-layout: default
-title: ssdv2
----
+# Organizr
+
 #### Qu'est-ce qu'Organizr?
 
 Organizr vous permet de configurer des «onglets» qui seront tous chargés dans une seule page Web. 

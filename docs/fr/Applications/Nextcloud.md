@@ -1,8 +1,5 @@
----
-layout: default
-title: applications.nextcloud
-permalink: /nextcloud/
----
+# Nextcloud
+
 ## Comment installer & configurer Nextcloud
 
 #### À propos de mariadb et la base de données

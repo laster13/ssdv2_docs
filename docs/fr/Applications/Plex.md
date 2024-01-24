@@ -1,7 +1,5 @@
----
-layout: default
-title: ssdv2
----
+# Plex
+
 ## Dans le cas ou vous utilisez le stockage Gdrive ou Sharedrive. 
 > Il faut indiquer le chemin suivant pour vos bibliothèques afin de pouvoir utiliser ensuite [Plex_Autoscan](Plex-Autoscan.md)
 

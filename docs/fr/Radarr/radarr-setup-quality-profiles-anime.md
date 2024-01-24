@@ -52,9 +52,6 @@ Nous devons ensuite sélectionner et organiser les qualités comme ci-dessous.
 !!! note
     Nous allons utiliser les formats personnalisés ci-dessous. Consultez [Comment importer des formats personnalisés](/Radarr/Radarr-import-custom-formats/){:target="_blank" rel="noopener noreferrer"} pour savoir comment les importer.
 
-{! include-markdown "../../includes/cf/radar-anime.md" !}
-<!-- --8<-- "includes/cf/radar-anime.md" -->
-
 ### Notation par défaut
 
 La notation qui a été définie est la notation recommandée, cependant certains CF sont facultatifs selon ce que vous préférez.

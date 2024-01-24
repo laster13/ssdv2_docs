@@ -60,6 +60,9 @@ theme:
     text: Roboto
     code: Roboto Mono
 
+nav:
+  - Radarr:
+
 plugins:
   - include-markdown:
       opening_tag: "{!"

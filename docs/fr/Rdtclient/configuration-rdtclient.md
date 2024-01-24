@@ -1,6 +1,6 @@
 # configuration rdtclient
 
-Garder à l’esprit qu’aucun des torrents téléchargés par qbitttorrent ne seront pas physiquement sur votre serveur, tout est stocké sur les serveurs de Realdebrid. En clair vous n’avez pas besoin d’espace de stockage hormis celui nécessaire pour installer le script ainsi que les applications.
+Garder à l’esprit qu’aucun des torrents téléchargés par qbitttorrent ne sera physiquement sur votre serveur, tout est stocké sur les serveurs de Realdebrid. En clair vous n’avez pas besoin d’espace de stockage hormis celui nécessaire pour installer le script ainsi que les applications.
 
 Go to http://localhost:6500/ ou https:[/](http://rdtclient:6500/)[/](http://rdtclient:6500/)[rdtclient.domain.com](http://rdtclient.domain.com/), puis enregistrez vous. Aller ensuite sur settings : 
 

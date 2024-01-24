@@ -145,6 +145,8 @@ nav:
     - Installation/cloudflare.md
     - Installation/domaine.md
     - Installation/installation.md
+    - Installation/ajouter-supprimer-reinitialiser.md
+    - Installation/manipulations-manuelles.md
     - Utilitaires:
       - Installation/oauth.md
       - Installation/optimisation-cloudflare.md

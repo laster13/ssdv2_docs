@@ -64,8 +64,6 @@ plugins:
   - include-markdown:
       opening_tag: "{!"
       closing_tag: "!}"
-  - markdownextradata:
-      data: docs/json
   - search
   - roamlinks 
   - mermaid2
@@ -93,6 +91,7 @@ plugins:
               - media: "(prefers-color-scheme: dark)"
                 primary: pink
                 scheme: slate
+  - git-revision-date-localized:
 
 
 # Extensions

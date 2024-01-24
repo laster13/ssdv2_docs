@@ -89,9 +89,9 @@ Si vous préférez les encodages HD de haute qualité (Bluray-720p/1080p)
 
 - *Taille : 6-15 Go pour un Bluray-1080p selon la durée d'exécution.*
 
-{! include-markdown "../../includes/cf/radar-suggest-attention.md" !}
+{! include-markdown "../includes/cf/radar-suggest-attention.md" !}
 
-{! include-markdown "../../includes/cf/radar-movie-versions-imaxe-noremux.md" !}
+{! include-markdown "../includes/cf/radar-movie-versions-imaxe-noremux.md" !}
 
 {! include-markdown "../../includes/cf/radar-cf-hd-bluray-web-scoring.md" !}
 

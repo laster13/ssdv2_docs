@@ -154,10 +154,10 @@ nav:
     - Radarr/Radarr-import-custom-formats.md
     - Radarr/Radarr-how-to-update-custom-formats.md
     - Radarr/Radarr-collection-of-custom-formats.md    
-    - Radarr/Tips:
-      - Merge-quality.md
-      - Sync-2-radarr-sonarr.md
-      - How-to-setup-language-custom-formats.md
+    - Tips:
+      - Tips/Merge-quality.md
+      - Tips/Sync-2-radarr-sonarr.md
+      - Tips/How-to-setup-language-custom-formats.md
   - Sonarr:
     - plugins/index.md
     - Blog: plugins/blog.md

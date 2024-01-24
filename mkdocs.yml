@@ -60,9 +60,6 @@ theme:
     text: Roboto
     code: Roboto Mono
 
-nav:
-  - Acceuil: index.md
-
 plugins:
   - search
   - roamlinks 
@@ -91,8 +88,6 @@ plugins:
               - media: "(prefers-color-scheme: dark)"
                 primary: pink
                 scheme: slate
-          nav_translations:
-            Accueil: Home
   - git-revision-date-localized:
 
 

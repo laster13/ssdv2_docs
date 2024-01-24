@@ -1,29 +1,29 @@
-# Différences entre ajout, suppression et réinitialiser
+# Differences between add, delete and reset
 
-## 1) Ajout application
+## 1) Add application
 
-- Permet de faire une installation complète d’application
-- Permet d’appliquer les modifications faites sur le fichier .yml local (commencer par supprimer le container `docker rm -f appli`)
+- Allows you to do a complete application installation
+- Allows you to apply modifications made to the local .yml file (start by deleting the `docker rm -f appli` container)
 
-## 2) Suppression d’application
+## 2) Application removal
 
-- Permet de supprimer le .yml local ainsi que les données sous `opt/seedbox/docker/${USER}` et les informations
-d’authentification et de sous domaines dans le fichier account
+- Allows you to delete the local .yml as well as the data under `opt/seedbox/docker/${USER}` and the information
+authentication and subdomains in the account file
 
-## 3) Réinitialisation container
+## 3) Container reset
 
-- Permet de restaurer le fichier .yml d’origine et d’appliquer les changements
-pas de suppression des données utilisateurs ni des données contenu dans le fichier account
+- Allows you to restore the original .yml file and apply changes
+no deletion of user data or data contained in the account file
 
-## 4) Relance container
+## 4) Container restart
 
-- Permet d'arrêter/relancer un container sans suppression des parametres personnalisés. A utiliser si vous avez modifié le .yml d'origine de l'application.
-pas de suppression des données utilisateurs ni des données contenu dans le fichier account
+- Allows you to stop/restart a container without deleting custom settings. Use if you have modified the original .yml of the application.
+no deletion of user data or data contained in the account file
 
-## Astuces
+## Tips
 
-Il est possible d'utiliser des commandes rapide à la condition d'être dans le venv
+It is possible to use quick commands provided you are in the Friday
 
-``suppression_appli app`` : supprimes le container, les infos dans account et le yml local  
-``suppression_appli app 1`` : supprimes le container, les infos dans account, le yml local ainsi que les données sous opt  
-``launch_service app`` : installation de l'application demandé  
+``suppression_appli app``: delete the container, the information in account and the local yml  
+``suppression_appli app 1``: delete the container, the information in account, the local yml as well as the data under opt  
+``launch_service app``: installation of the application requested  

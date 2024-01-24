@@ -1,89 +1,89 @@
-# Manipulations manuelles
+# Manual manipulations
 
-Pour toute opération, assurez vous de ne pas être root.
+For any operation, make sure you are not root.
 
-Charger l'environnement : 
+Load environment:
 ```
 cd /opt/seedbox-compose
 source profile.sh
 ```
 
-Après cela, vous devriez voir (venv) devant l'invite de commande.
+After that, you should see (venv) in front of the command prompt.
 
 
-# Afficher dans le shell tout le contenu du account.yml
+# Show all the contents of account.yml in the shell
 ```
 get_from_account_yml
 ```
 
-# Manipuler le account.yml
+# Handle the account.yml
 
-Les clés sont séparées par des points. Par exemple
+The keys are separated by periods. For example
 ```
 user
   domain: mydomain.net
 ```
 
-La clé sera user.domain, et sa valeur sera mydomain.net
+The key will be user.domain, and its value will be mydomain.net
 
-## Ecrire une clé
-Cela va créer la clé si elle n'existe pas, ou l'écraser si elle existe
-
-```
-manage_account_yml cle valeur
-```
-Par exemple
-```
-manage_account_yml user.domain mondomaine.com
-```
-
-## Effacer une clé
-Cela va effacer la clé ainsi que toutes les sous clés associées
+## Write a key
+This will create the key if it doesn't exist, or overwrite it if it does.
 
 ```
-manage_account_yml cle " "
+manage_account_yml key value
 ```
-Par exemple
+For example
+```
+manage_account_yml user.domain mydomain.com
+```
+
+## Delete a key
+This will erase the key as well as all associated subkeys.
+
+```
+manage_account_yml key " "
+```
+For example
 ```
 manage_account_yml user.domain " "
 ```
 
-## Obtenir la valeur d'une clé
+## Get the value of a key
 
 ```
-get_from_account_yml cle
+get_from_account_yml key
 ```
-Par exemple
+For example
 ```
 get_from_account_yml user.domain
 ```
-va retourner
+will return
 ```
-mondomaine.com
+mydomain.com
 ```
-Si la valeur n'est pas trouvé, cela retourne "notfound"
+If the value is not found, it returns "notfound"
 
-On peut également retourner une clé et toutes ses sous clés : 
+You can also return a key and all its subkeys:
 ```
 get_from_account_yml user
 ```
-va retourner
+will return
 ```
-domain: mondomaine.com group: null groupid: 1001 htpwd: seed:xxxxxxxxxxxxxx mail: moi@mondomaine.com name: seed pass: xxxxxxxxxxxxxx userid: 1001
+domain: mydomain.com group: null groupid: 1001 htpwd: seed:xxxxxxxxxxxxxx mail: me@mydomain.com name: seed pass: xxxxxxxxxxxxxx userid: 1001
 ```
 
-# Installer/Lancer une application sans passer par le menu
+# Install/Launch an application without going through the menu
 
 ```
-launch_service nomduservice
+launch_service servicename
 ```
-# Désinstaller une application sans passer par le menu
+# Uninstall an application without going through the menu
 ```
-suppression_appli nomduservice
+delete_app service name
 ```
-# Quitter l'environnement de manipulation
+# Exit the manipulation environment
 
-Lancer la commande
+Run the command
 ```
 deactivate
 ```

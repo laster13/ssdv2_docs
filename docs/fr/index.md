@@ -1,5 +1,10 @@
 [![Discord chat](https://img.shields.io/discord/533736783414820864?style=for-the-badge&color=4051B5&logo=discord){ .off-glb }](https://discord.gg/qbfdKVYB){:target="_blank" rel="noopener noreferrer"}
 
+Je pose ça là pour l'instant notamment parce que je pense qu'il faudra revoir la page d'acceuil.
+Avant tout, un grand merci à TRaSH-Guides et leur travail que j'ai mis à profit pour créer les rubriques radarr/sonarr, ce qui me permet également de proposer une traduction en francais.
+https://trash-guides.info/ 
+Radarr/Sonarr méritaient bien d'avoir une documentation approfondie sachant que leurs configurations posent souvent questions et ne sont pas forcément évidentes pour un débutant.
+
 <br /><img src="https://user-images.githubusercontent.com/64525827/107496602-ceddbb80-6b91-11eb-9a05-ac311eedf150.png" width="450">
 <br />
 

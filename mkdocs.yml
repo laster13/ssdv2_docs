@@ -89,8 +89,8 @@ plugins:
                 primary: pink
                 scheme: slate
           nav_translations:
-            Home: Accueil
-            Setup: Installation
+            Accueil: Home
+            Installation: Setup
   - git-revision-date-localized:
 
 

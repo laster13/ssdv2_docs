@@ -61,6 +61,11 @@ theme:
     code: Roboto Mono
 
 plugins:
+  - include-markdown:
+      opening_tag: "{!"
+      closing_tag: "!}"
+  - markdownextradata:
+      data: docs/json
   - search
   - roamlinks 
   - mermaid2

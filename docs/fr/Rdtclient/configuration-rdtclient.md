@@ -8,10 +8,8 @@ Configurer Rdtclient exactement comme mentionner sur les images ci dessous
 
 ![Capture](https://github.com/projetssd/ssdv2/assets/7422124/368ef533-5d3b-4b46-ad29-ae05be76b6b9)
 
-
 1. Compléter les catégories `radarr,sonarr` (vous pouvez en rajouter plus si vous le souhaitez)
 2. Augmenter le nombre “parallel download” à 100, ainsi que le maximum unpack process
-
 
 ![Capture1](https://github.com/projetssd/ssdv2/assets/7422124/60057ea0-69c1-4a98-a369-3ac51bb91a8e)
 

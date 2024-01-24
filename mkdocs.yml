@@ -145,6 +145,8 @@ nav:
     - Installation/cloudflare.md
     - Installation/domaine.md
     - Installation/installation.md
+    - Utilitaires
+      - Installation/oauth.md
   - Radarr:
     - Radarr/radarr-setup-quality-profiles-french-fr.md
     - Radarr/radarr-setup-quality-profiles-anime.md

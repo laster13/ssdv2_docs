@@ -141,9 +141,9 @@ markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abb
 nav:
   - Accueil: index.md
   - Installation:
-    - Serveur: serveur.md
-    - Cloudflare: cloudflare.md
-    - Nom de domaine: nom-de-domaine.md
+    - Installation/serveur.md
+    - Installation/cloudflare.md
+    - Installation/nom-de-domaine.md
   - Radarr:
     - Radarr/radarr-setup-quality-profiles-french-fr.md
     - Changing the fonts: setup/changing-the-fonts.md

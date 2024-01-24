@@ -76,7 +76,7 @@ plugins:
           name: Français
           build: true
           nav_translations:
-            index: Acceuil
+            Index: Acceuil
         - locale: en
           name: English
           build: true
@@ -91,7 +91,7 @@ plugins:
                 primary: pink
                 scheme: slate
           nav_translations:
-            index: Home
+            Index: Home
   - git-revision-date-localized:
 
 

@@ -1,3 +1,5 @@
+# Configurer le serveur
+
 ## Obtenir un serveur distant
 
 * Vous aurez besoin d'un serveur dédié, disponible par exemple chez Hetzner, Kimsufi, OVH, Oneprovider, etc...

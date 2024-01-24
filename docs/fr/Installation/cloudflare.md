@@ -1,3 +1,5 @@
+# Configurer Cloudflare
+
 ### Présentation
 Plus que des services de CDN, les clients font confiance au réseau mondial de Cloudflare pour améliorer la sécurité, la performance et la fiabilité de tout ce qui est connecté à Internet.
 

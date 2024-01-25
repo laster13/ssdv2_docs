@@ -3,21 +3,21 @@
 trouverez ci-dessous une collection de ce que nous considérons comme les formats personnalisés les plus nécessaires et les plus couramment utilisés. 
 Ces CF ont été collectés à partir de discussions sur Discord ou créés avec l'aide d'autres personnes. 
 
-Un merci spécial à tous ceux qui ont aidé à la création et aux tests de ces formats personnalisés, à mon équipe des guides TRaSH, à l'équipe Radarr et à la communauté. 
+Un merci spécial à tous ceux qui ont aidé à la création et aux tests de ces formats personnalisés, à mon équipe des guides TRaSH, à l'équipe radarrr et à la communauté. 
 
-Avec Radarr V3, les formats personnalisés sont beaucoup plus avancés/puissants qu'avec la V2, bien que cela signifie également qu'un format personnalisé peut nécessiter plus de connaissances pour être configuré ou créé. 
+Avec radarrr V3, les formats personnalisés sont beaucoup plus avancés/puissants qu'avec la V2, bien que cela signifie également qu'un format personnalisé peut nécessiter plus de connaissances pour être configuré ou créé. 
 
-Après avoir fait une demande auprès de Team Radarr, nous avons désormais la possibilité d'importer/exporter les formats personnalisés au format JSON. Cela offre à chacun un moyen simple de partager et d’utiliser des formats personnalisés. 
+Après avoir fait une demande auprès de Team radarrr, nous avons désormais la possibilité d'importer/exporter les formats personnalisés au format JSON. Cela offre à chacun un moyen simple de partager et d’utiliser des formats personnalisés. 
 
 Nous avons réalisé 3 guides liés à cela. 
 
-- [Comment importer des formats personnalisés](/Radarr/Radarr-import-custom-formats){:target="_blank" rel="noopener noreferrer"} - Explique comment importer les formats personnalisés. 
-- [Comment mettre à niveau les formats personnalisés](/Radarr/Radarr-how-to-update-custom-formats){:target="_blank" rel="noopener noreferrer"} - Explique comment mettre à niveau vos formats personnalisés existants. 
-- [Comment configurer des profils de qualité](/Radarr/radar-setup-quality-profiles){:target="_blank" rel="noopener noreferrer"} - Explique comment tirer le meilleur parti des formats personnalisés et présente quelques détails. de ma configuration. Vous pouvez utiliser ces exemples pour avoir une idée de la façon de configurer vos préférences. 
+- [Comment importer des formats personnalisés](/radarrr/radarrr-import-custom-formats){:target="_blank" rel="noopener noreferrer"} - Explique comment importer les formats personnalisés. 
+- [Comment mettre à niveau les formats personnalisés](/radarrr/radarrr-how-to-update-custom-formats){:target="_blank" rel="noopener noreferrer"} - Explique comment mettre à niveau vos formats personnalisés existants. 
+- [Comment configurer des profils de qualité](/radarrr/radarr-setup-quality-profiles){:target="_blank" rel="noopener noreferrer"} - Explique comment tirer le meilleur parti des formats personnalisés et présente quelques détails. de ma configuration. Vous pouvez utiliser ces exemples pour avoir une idée de la façon de configurer vos préférences. 
 
 !!! astuce 
 
-    Il est également recommandé de modifier les paramètres Propers et Repacks dans les « Paramètres » de Radarr. 
+    Il est également recommandé de modifier les paramètres Propers et Repacks dans les « Paramètres » de radarrr. 
 
     `Media Management` => `File Management` sur `Ne pas préférer` et utilisez le format personnalisé [Repack/Proper](#repackproper). 
 
@@ -123,7 +123,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/truehd-atmos.
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/truehd-atmos.
 
 
 
@@ -138,7 +138,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dts-x.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dts-x.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -157,7 +157,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/atmos-undefined.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/atmos-undefined.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -173,7 +173,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/ddplus-atmos.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/ddplus-atmos.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -191,7 +191,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/truehd.
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/truehd.
 
 
 
@@ -205,7 +205,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dts-hd-ma.json' %] ][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dts-hd-ma.json' %] ][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -221,7 +221,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/flac.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/flac.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -237,7 +237,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/pcm.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/pcm.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -268,7 +268,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dts-hd-hra.json' %] ][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dts-hd-hra.json' %] ][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -288,7 +288,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/ddplus.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/ddplus.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -304,7 +304,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dts-es.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dts-es.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -321,7 +321,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dts.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dts.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -340,7 +340,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/aac.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/aac.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP] (#index)</sup> 
@@ -360,7 +360,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dd.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dd.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -375,7 +375,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/mp3.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/mp3.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -393,7 +393,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/opus.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/opus.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -409,7 +409,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/10-mono.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/10-mono.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -421,7 +421,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/20-stereo.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/20-stereo.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -433,7 +433,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/30-sound.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/30-sound.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -445,7 +445,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/40-sound.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/40-sound.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -457,7 +457,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/51-surround.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/51-surround.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -469,7 +469,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/61-surround.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/61-surround.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -481,7 +481,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/71-surround.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/71-surround.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -493,7 +493,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/91-surround.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/91-surround.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -516,7 +516,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv-hdr10plus.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dv-hdr10plus.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -536,7 +536,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv-hdr10.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dv-hdr10.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -556,7 +556,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dv.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -574,7 +574,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv-hlg.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dv-hlg.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -592,7 +592,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv-sdr.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dv-sdr.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -610,7 +610,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hdr10plus.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hdr10plus.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -628,7 +628,7 @@ Nous avons réalisé 3 guides liés à cela.
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hdr10.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hdr10.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -648,7 +648,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hdr.json' %]][[% filtre de fin %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hdr.json' %]][[% filtre de fin %]] 
     ```
 
 <sub><sup>[TOP](#index)</sup> 
@@ -664,7 +664,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hdr-undefined.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hdr-undefined.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -682,7 +682,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/pq.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/pq.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -700,7 +700,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hlg.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hlg.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -720,7 +720,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hybrid.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hybrid.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -739,7 +739,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-     [[% filter indent(width=4) %]][[% include 'json/radar/cf/remaster.json' %]][[% endfilter %]] 
+     [[% filter indent(width=4) %]][[% include 'json/radarr/cf/remaster.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -759,7 +759,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/4k-remaster.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/4k-remaster.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -775,7 +775,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/criterion-collection.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/criterion-collection.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -791,7 +791,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer}" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/masters-of-cinema. 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/masters-of-cinema. 
     json' %]][[% endfilter %]] ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -807,7 +807,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer}" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/vinegar-syndrome.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/vinegar-syndrome.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -823,7 +823,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/theatrical-cut.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/theatrical-cut.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -842,7 +842,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/special-edition.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/special-edition.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -857,7 +857,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/imax.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/imax.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -884,7 +884,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/imax-enhanced.json' %]][[% endfilter %]] `` 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/imax-enhanced.json' %]][[% endfilter %]] `` 
     ` 
 
 <sub><sup>[ TOP](#index)</sup> 
@@ -900,7 +900,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer}" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/open-matte.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/open-matte.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -915,24 +915,24 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 
 ??? question "BR-DISK - [Cliquez pour afficher/masquer]" 
 
-    Il s'agit d'un format personnalisé pour aider Radarr à reconnaître et ignorer BR-DISK (structure des dossiers ISO et Blu-ray) en plus de la qualité BR-DISK standard. 
+    Il s'agit d'un format personnalisé pour aider radarrr à reconnaître et ignorer BR-DISK (structure des dossiers ISO et Blu-ray) en plus de la qualité BR-DISK standard. 
 
     Vous devrez ajouter les éléments suivants à votre nouveau format personnalisé lors de sa création dans votre profil de qualité (`Setting` => `Profiles`), puis définir le score sur `-10000`. 
 
     !!! note 
 
-        En fonction de votre schéma de renommage, il peut arriver que Radarr corresponde aux fichiers renommés après leur téléchargement et leur importation en tant que « BR-DISK ». 
+        En fonction de votre schéma de renommage, il peut arriver que radarrr corresponde aux fichiers renommés après leur téléchargement et leur importation en tant que « BR-DISK ». 
         Il s'agit d'un ennui esthétique jusqu'à ce que nous trouvions une autre façon de résoudre ce problème, 
         étant donné que ce format personnalisé est utilisé pour ne pas télécharger BR-DISK, il remplit son rôle comme prévu. 
         Plusieurs raisons expliquent ce phénomène : 
 
         - La faute à la dénomination souvent mal utilisée des encodes x265. 
-        - Radarr v3/v4 utilise des formats personnalisés dynamiques. 
+        - radarrr v3/v4 utilise des formats personnalisés dynamiques. 
 
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/br-disk.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/br-disk.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -951,7 +951,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/lq.json' %]][[% filtre de fin %]]
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/lq.json' %]][[% filtre de fin %]]
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -969,7 +969,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/lq-release-title.json' %] ][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/lq-release-title.json' %] ][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -987,7 +987,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/3d.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/3d.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1002,17 +1002,17 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 
     Cela bloque toutes les versions 720/1080p (HD) codées en x265. 
 
-    Dans votre profil de qualité, utilisez le score suivant pour ce format personnalisé : `{{ radarr['cf']['x265-hd']['trash_scores']['default'] }}` 
+    Dans votre profil de qualité, utilisez le score suivant pour ce format personnalisé : `{{ radarrr['cf']['x265-hd']['trash_scores']['default'] }}` 
 
     !!! échec "" 
         --8<-- "includes/docker/x265.md" 
 
-            !!! Danger "Ne l'utilisez pas avec [{{ radarr['cf']['x265-no-hdrdv']['name'] }}](/Radarr/Radarr-collection-of-custom-formats/# x265-no-hdrdv), n'en inclure qu'un :avertissement:" 
+            !!! Danger "Ne l'utilisez pas avec [{{ radarrr['cf']['x265-no-hdrdv']['name'] }}](/radarrr/radarrr-collection-of-custom-formats/# x265-no-hdrdv), n'en inclure qu'un :avertissement:" 
 
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/x265-hd.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/x265-hd.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1023,12 +1023,12 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 
 ??? question « Mise à l'échelle - [Cliquez pour afficher/masquer] » 
 
-    Ce format personnalisé est utilisé pour empêcher Radarr de récupérer les versions mises à l'échelle. 
+    Ce format personnalisé est utilisé pour empêcher radarrr de récupérer les versions mises à l'échelle. 
 
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/upscaled. 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/upscaled. 
     json' %]][[% endfilter %]] ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1039,12 +1039,12 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 
 ??? question "Extras - [Cliquez pour afficher/masquer]" 
 
-    Ce format personnalisé est utilisé pour empêcher Radarr de récupérer des versions contenant uniquement des extras/bonus. 
+    Ce format personnalisé est utilisé pour empêcher radarrr de récupérer des versions contenant uniquement des extras/bonus. 
 
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/extras.json' %]][[% filtre de fin %]]
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/extras.json' %]][[% filtre de fin %]]
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1064,7 +1064,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/bad-dual-groups.json' %] ][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/bad-dual-groups.json' %] ][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1089,7 +1089,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv-webdl.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dv-webdl.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1107,7 +1107,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/evo-no-webdl.json' %] ][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/evo-no-webdl.json' %] ][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1123,7 +1123,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hdr10plus-boost.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hdr10plus-boost.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1139,7 +1139,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv-hdr10plus-boost.json' %] ][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dv-hdr10plus-boost.json' %] ][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1160,7 +1160,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/no-rlsgroup.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/no-rlsgroup.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1176,7 +1176,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/obfuscated.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/obfuscated.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1192,7 +1192,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/retags.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/retags.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1208,7 +1208,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/scene.json' %]][[% filtre de fin %]]
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/scene.json' %]][[% filtre de fin %]]
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1225,14 +1225,14 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 
     *Étant donné que certaines versions NF ne seront pas publiées en 4K, mais vous souhaitez avoir des versions DV/HDR.* 
 
-    Dans votre profil de qualité utilisez le score suivant pour ce format personnalisé : `{{ radarr['cf']['x265-no-hdrdv']['trash_scores']['default'] }}` 
+    Dans votre profil de qualité utilisez le score suivant pour ce format personnalisé : `{{ radarrr['cf']['x265-no-hdrdv']['trash_scores']['default'] }}` 
 
-    !!! Danger "Ne l'utilisez pas avec [{{ radarr['cf']['x265-hd']['name'] }}](/Radarr/Radarr-collection-of-custom-formats/#x265- hd), n'en inclure qu'un :avertissement:" 
+    !!! Danger "Ne l'utilisez pas avec [{{ radarrr['cf']['x265-hd']['name'] }}](/radarrr/radarrr-collection-of-custom-formats/#x265- hd), n'en inclure qu'un :avertissement:" 
 
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/x265-no-hdrdv.json' %] ][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/x265-no-hdrdv.json' %] ][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1251,7 +1251,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/av1.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/av1.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1270,7 +1270,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/vp9.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/vp9.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1287,7 +1287,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/internal.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/internal.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1303,7 +1303,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/sdr.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/sdr.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1319,7 +1319,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/sdr-no-webdl.json' %] ][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/sdr-no-webdl.json' %] ][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1335,7 +1335,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dv-disk.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dv-disk.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1353,7 +1353,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/line-mic-dubbed.json' %] ][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/line-mic-dubbed.json' %] ][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1369,7 +1369,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hfr. 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hfr. 
     json' %]][[% endfilter %]] ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1385,7 +1385,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/repack-proper.json' %]][[% endfilter %]] `` 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/repack-proper.json' %]][[% endfilter %]] `` 
     ` 
 
 <sub><sup>[ TOP](#index)</sup> 
@@ -1397,7 +1397,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/repack2.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/repack2.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1415,7 +1415,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/x264.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/x264.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1435,7 +1435,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/x265.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/x265.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1454,7 +1454,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/freeleech.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/freeleech.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup>
@@ -1470,7 +1470,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dutch-groups.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dutch-groups.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1482,7 +1482,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/mpeg2.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/mpeg2.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1494,7 +1494,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/multi.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/multi.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1518,7 +1518,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/remux-tier-01.json' %] ][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/remux-tier-01.json' %] ][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1538,7 +1538,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/remux-tier-02. 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/remux-tier-02. 
     json' %]][[% endfilter %]] ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1561,7 +1561,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/remux-tier-03.json' %] ][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/remux-tier-03.json' %] ][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1583,7 +1583,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/uhd-bluray-tier-01.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/uhd-bluray-tier-01.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1604,7 +1604,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/uhd-bluray-tier-02.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/uhd-bluray-tier-02.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1626,7 +1626,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/uhd-bluray-tier-03.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/uhd-bluray-tier-03.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1647,7 +1647,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hd-bluray-tier-01.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hd-bluray-tier-01.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1666,7 +1666,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hd-bluray-tier-02.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hd-bluray-tier-02.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1686,7 +1686,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hd-bluray-tier-03. 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hd-bluray-tier-03. 
     json' %]][[% endfilter %]] ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1706,7 +1706,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/web-tier-01.json' %] ][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/web-tier-01.json' %] ][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1725,7 +1725,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/web-tier-02.json' %] ][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/web-tier-02.json' %] ][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1744,7 +1744,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/web-tier-03.json' %] ][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/web-tier-03.json' %] ][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1766,7 +1766,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/amzn.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/amzn.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1784,7 +1784,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/atvp.json' %]][[% filtre de fin %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/atvp.json' %]][[% filtre de fin %]] 
     ```
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1802,7 +1802,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/crit.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/crit.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1820,7 +1820,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dsnp.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dsnp.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1838,7 +1838,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hbo.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hbo.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1856,7 +1856,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hmax.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hmax.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1874,7 +1874,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/max. 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/max. 
     json' %]][[% endfilter %]] ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1892,7 +1892,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/hulu.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/hulu.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1910,7 +1910,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/ip.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/ip.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1928,7 +1928,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/nf.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/nf.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1946,7 +1946,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/pcok.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/pcok.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1964,7 +1964,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/pmtp.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/pmtp.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -1984,7 +1984,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/ma.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/ma.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2002,7 +2002,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/pathe.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/pathe.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2020,7 +2020,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/bcore.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/bcore.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2038,7 +2038,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/stan.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/stan.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2056,7 +2056,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/crav.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/crav.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2074,7 +2074,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/ovid. 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/ovid. 
     json' %]][[% endfilter %]] ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2094,7 +2094,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/fod.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/fod.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2113,7 +2113,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/tver.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/tver.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2132,7 +2132,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/u-next.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/u-next.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2151,7 +2151,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-bd-tier-01-top- seadex-muxers.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-bd-tier-01-top- seadex-muxers.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2166,7 +2166,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-bd-tier-02-seadex- multiplexeurs. 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-bd-tier-02-seadex- multiplexeurs. 
     json' %]][[% endfilter %]] ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2181,7 +2181,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-bd-tier-03-seadex- muxers.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-bd-tier-03-seadex- muxers.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2196,7 +2196,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-bd-tier-04-seadex- muxers.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-bd-tier-04-seadex- muxers.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2211,7 +2211,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-bd-tier-05-remuxes. json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-bd-tier-05-remuxes. json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2226,7 +2226,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-bd-tier-06-fansubs. json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-bd-tier-06-fansubs. json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2241,7 +2241,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-bd-tier-07-p2pscene. json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-bd-tier-07-p2pscene. json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2256,7 +2256,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-bd-tier-08-mini- encode. 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-bd-tier-08-mini- encode. 
     json' %]][[% endfilter %]] ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2271,7 +2271,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-web-tier-01-muxers. json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-web-tier-01-muxers. json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2286,7 +2286,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-web-tier-02-top- fansubs.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-web-tier-02-top- fansubs.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2301,7 +2301,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-web-tier-03-official- subs.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-web-tier-03-official- subs.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2316,7 +2316,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-web-tier-04-official- subs.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-web-tier-04-official- subs.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2331,7 +2331,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-web-tier-05-fansubs. json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-web-tier-05-fansubs. json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2346,7 +2346,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-web-tier-06-fansubs. 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-web-tier-06-fansubs. 
     json' %]][[% endfilter %]] ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2361,7 +2361,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-raws.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-raws.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2376,7 +2376,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-lq-groups.json' %] ][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-lq-groups.json' %] ][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2391,7 +2391,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/uncensored.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/uncensored.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2406,7 +2406,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/v0.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/v0.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2421,7 +2421,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/v1.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/v1.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2436,7 +2436,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/v2.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/v2.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2451,7 +2451,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/v3. 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/v3. 
     json' %]][[% endfilter %]] ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2466,7 +2466,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/v4.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/v4.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP] (#index)</sup> 
@@ -2481,7 +2481,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/vrv.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/vrv.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2496,7 +2496,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/10bit.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/10bit.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2511,7 +2511,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/anime-dual-audio.json' %] ][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/anime-dual-audio.json' %] ][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2526,7 +2526,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/dubs-only.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/dubs-only.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2546,7 +2546,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/multi-french. 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/multi-french. 
     json' %]][[% endfilter %]] ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2562,7 +2562,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/multi-audio.json' %]][[% endfilter %]] `` 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/multi-audio.json' %]][[% endfilter %]] `` 
     ` 
 
 <sub><sup>[ TOP](#index)</sup> 
@@ -2578,7 +2578,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-audio.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-audio.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2594,7 +2594,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-vff.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-vff.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2610,7 +2610,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-vof.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-vof.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2626,7 +2626,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-vfi.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-vfi.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2642,7 +2642,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-vf2.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-vf2.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2658,7 +2658,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-vfq. 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-vfq. 
     json' %]][[% endfilter %]] ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2674,7 +2674,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-voq.json' %]][[% endfilter %]] `` 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-voq.json' %]][[% endfilter %]] `` 
     ` 
 
 <sub><sup>[ TOP](#index)</sup> 
@@ -2690,7 +2690,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-vq.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-vq.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2706,7 +2706,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-vfb.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-vfb.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2722,7 +2722,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-vostfr.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-vostfr.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2738,7 +2738,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/fansub.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/fansub.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2754,7 +2754,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/fastsub. 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/fastsub. 
     json' %]][[% endfilter %]] ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2776,7 +2776,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-remux-tier-01.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-remux-tier-01.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2797,7 +2797,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-remux-tier-02.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-remux-tier-02.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2817,7 +2817,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-uhd-bluray-tier-01. json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-uhd-bluray-tier-01. json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2839,7 +2839,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-uhd-bluray-tier-02. json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-uhd-bluray-tier-02. json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2858,7 +2858,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-hd-bluray-tier-01. json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-hd-bluray-tier-01. json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2878,7 +2878,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-hd-bluray-tier-02. json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-hd-bluray-tier-02. json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2896,7 +2896,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-web-tier-01.json' %]][[% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-web-tier-01.json' %]][[% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2915,7 +2915,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-web-tier-02. 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-web-tier-02. 
     json' %]][[% endfilter %]] ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2931,7 +2931,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-scene.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-scene.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP](#index)</sup> 
@@ -2956,7 +2956,7 @@ target="_blank" rel="noopener noreferrer"}
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
     ```json 
-    [[% filter indent(width=4) %]][[% include 'json/radar/cf/french-lq.json' %]][ [% endfilter %]] 
+    [[% filter indent(width=4) %]][[% include 'json/radarr/cf/french-lq.json' %]][ [% endfilter %]] 
     ``` 
 
 <sub><sup>[TOP

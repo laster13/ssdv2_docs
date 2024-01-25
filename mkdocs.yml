@@ -62,9 +62,6 @@ theme:
 
 plugins:
   - search
-  - include-markdown:
-      opening_tag: "{!"
-      closing_tag: "!}"
   - roamlinks 
   - mermaid2
   - callouts

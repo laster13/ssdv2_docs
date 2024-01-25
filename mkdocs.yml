@@ -65,6 +65,8 @@ plugins:
   - include-markdown:
       opening_tag: "{!"
       closing_tag: "!}"
+  - markdownextradata:
+      data: docs/json
   - roamlinks 
   - mermaid2
   - callouts

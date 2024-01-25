@@ -1,497 +1,499 @@
-# Suggested Plex Media Server Settings
+# Paramètres suggérés pour le serveur multimédia Plex 
 
-So, what are the best Plex Media Server settings?
+Alors, quels sont les meilleurs paramètres pour le serveur multimédia Plex ? 
 
-This is something that can't really be answered because it depends on the use case and your personal preference.
+C'est une question à laquelle on ne peut pas vraiment répondre car cela dépend du cas d'utilisation et de vos préférences personnelles. 
 
-!!! danger ""
-    Here I will provide some suggestions and try to explain why I recommend these settings. Adjust it to your own liking and keep in mind that it is only a suggestion. I'm not a Plex Pro in anyway :bangbang:
+!!! danger "" 
+    Ici, je vais fournir quelques suggestions et essayer d'expliquer pourquoi je recommande ces paramètres. Ajustez-le à votre guise et gardez à l'esprit qu'il ne s'agit que d'une suggestion. Je ne suis pas un Plex Pro de toute façon :bangbang: 
 
-!!! warning
-    Some settings are only visible for Plex Pass holders.
+!!! avertissement 
+    Certains paramètres ne sont visibles que pour les détenteurs de Plex Pass. 
 
-All changes need to be done on your Plex Media Server.
+Toutes les modifications doivent être effectuées sur votre serveur multimédia Plex. 
 
-![!Plex App](images/plex-settings-icon.png)
+![!Application Plex](images/plex-settings-icon.png) 
 
-!!! info "Why didn't you cover option .... ?"
-     I will only cover settings that I think might be interesting or are personal preference, if you would like me to cover some other settings, please contact me on [![Discord chat](https://img.shields.io/discord/492590071455940612?style=for-the-badge&color=4051B5&logo=discord)](https://trash-guides.info/discord){:target="_blank" rel="noopener noreferrer"}
+!!! info "Pourquoi n'avez-vous pas couvert l'option .... ?" 
+     Je ne couvrirai que les paramètres qui, à mon avis, pourraient être intéressants ou qui correspondent à des préférences personnelles. Si vous souhaitez que je couvre d'autres paramètres, veuillez me contacter sur [![Discord chat](https://img.shields.io/discord/ 492590071455940612?style=for-the-badge&color=4051B5&logo=discord)](https://trash-guides.info/discord){:target="_blank" rel="noopener noreferrer"} 
 
-## Settings
+## Paramètres 
 
-![!Plex: Settings](images/settings-settings.png)
+![!Plex : Paramètres](images/settings-settings.png) 
 
-### Remote Access
+### Accès à distance 
 
-![!Plex: Settings - Remote Access](images/settings-remote-access.png)
+![!Plex : Paramètres - Accès à distance](images/settings-remote-access.png) 
 
-1. Make sure you have enabled advanced settings (This will be needed for all the settings)
-1. Enable/Disable Remote access (if you disable it ignore the rest of these settings)
-1. LAN/container IP
-1. Public IP **If you need to provide a screenshot always mask this IP :bangbang:**
-1. Manually specify public port if you run Docker or want a fixed port.
-1. Enter the Plex port you want to use. (default: `32400`)
-1. Click on `Apply` and when everything is setup correctly, your Plex Media Server should be fully accessible outside of your network, so you can connect to your Plex  server from outside. You may also need to configure port forwarding on your router. Detailed instructions are available [HERE](https://support.plex.tv/articles/200931138-troubleshooting-remote-access/){:target="_blank" rel="noopener noreferrer"}.
-1. Enter your internet upload speed here and Plex can ensure it operates within this boundary.
-1. Set the maximum bitrate of a remote stream from this server.
+1. Assurez-vous d'avoir activé les paramètres avancés (ce sera nécessaire pour tous les paramètres) 
+1. Activer/Désactiver l'accès à distance (si vous le désactivez, ignorez le reste de ces paramètres) 
+1. IP LAN/conteneur 
+1. IP publique ** Si vous devez fournir une capture d'écran, masquez toujours cette IP : bangbang :** 
+1. Spécifiez manuellement le port public si vous exécutez Docker ou si vous souhaitez un port fixe. 
+1. Entrez le port Plex que vous souhaitez utiliser. (par défaut : « 32400 ») 
+1. Cliquez sur « Appliquer » et lorsque tout est correctement configuré, votre serveur multimédia Plex doit être entièrement accessible en dehors de votre réseau, afin que vous puissiez vous connecter à votre serveur Plex de l'extérieur. Vous devrez peut-être également configurer la redirection de port sur votre routeur. Des instructions détaillées sont disponibles [ICI](https://support.plex.tv/articles/200931138-troubleshooting-remote-access/){:target="_blank" rel="noopener noreferrer"}. 
+1. Entrez ici votre vitesse de téléchargement Internet et Plex peut garantir qu'il fonctionne dans cette limite. 
+1. Définissez le débit binaire maximum d'un flux distant de ce serveur. 
 
-------
+------ 
 
-### Agents
+### Agents 
 
-This can be ignored if you use the new Plex agents,
+Ceci peut être ignoré si vous utilisez les nouveaux agents Plex, 
 
-The new agent settings are now managed “per library”.
+les nouveaux paramètres d'agent sont désormais gérés « par bibliothèque ». 
 
-------
+------ 
 
-### Library
+### Bibliothèque 
 
-#### Scan my library automatically
+#### Analyser ma bibliothèque automatiquement 
 
-![!Settings - Library - Scan my library automatically](images/settings-library-scan-my-library-automatically.png)
+![!Paramètres - Bibliothèque - Analyser ma bibliothèque automatiquement](images/settings-library-scan-my-library-automatically.png)
 
-When a change is detected in the source location for a library’s content, the appropriate library will be scanned. This function relies on the computer’s operating system providing the “something changed” trigger. Some operating systems don’t provide this trigger and content mounted via a network will also typically not work. If your library doesn’t automatically scan, you may have to set a periodical scan or do it manually.
+Lorsqu'un changement est détecté dans l'emplacement source du contenu d'une bibliothèque, la bibliothèque appropriée sera analysée. Cette fonction s'appuie sur le système d'exploitation de l'ordinateur qui fournit le déclencheur « quelque chose a changé ». Certains systèmes d'exploitation ne fournissent pas ce déclencheur et le contenu monté via un réseau ne fonctionnera généralement pas non plus. Si votre bibliothèque n'analyse pas automatiquement, vous devrez peut-être définir une analyse périodique ou la faire manuellement. 
 
-!!! success ""
-    **Suggested: `Enabled`**
+!!! succès "" 
+    **Suggéré : `Activé`** 
 
-??? tip "TIP - Autoscan - [Click to show/hide]"
+??? tip "TIP - Autoscan - [Cliquez pour afficher/masquer]" 
 
-    If for some reason ex. your operating systems don’t provide this trigger or your storage is mounted on a network (SMB/NFS/Cloud Storage) or your library just doesn't automatically scan, or is just plain impractical, You might want to consider using autoscan. IBRACORP (A Youtube channel I collaborate with) has a video explaining it in further detail.
+    Si pour une raison quelconque, ex. vos systèmes d'exploitation ne fournissent pas ce déclencheur ou votre stockage est monté sur un réseau (SMB/NFS/Cloud Storage) ou votre bibliothèque n'analyse tout simplement pas automatiquement, ou est tout simplement peu pratique, vous voudrez peut-être envisager d'utiliser l'analyse automatique. IBRACORP (une chaîne Youtube avec laquelle je collabore) propose une vidéo l'expliquant plus en détail. 
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/JYBVAzJBw2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/JYBVAzJBw2w" title="Lecteur vidéo YouTube" frameborder="0" allow="accéléromètre ; lecture automatique ; presse-papiers- écrire ; médias cryptés ; gyroscope ; image dans l'image "allowfullscreen></iframe> 
 
-    Please don't forget to check out his other Unraid Video's [HERE](https://www.youtube.com/c/IBRACORP/videos){:target="_blank" rel="noopener noreferrer"}
+    N'oubliez pas de consulter ses autres vidéos Unraid [ICI](https://www.youtube.com/c/IBRACORP/ vidéos){:target="_blank" rel="noopener noreferrer"} 
 
-#### Run a partial scan when changes are detected
+#### Exécuter une analyse partielle lorsque des modifications sont détectées 
 
-![!Settings - Library - Run a partial scan when changes are detected](images/settings-library-run-a-partial-scan-when-changes-are-detected.png)
+![!Settings - Library - Exécuter une analyse partielle lorsque des modifications sont détectées](images/settings-library -run-a-partial-scan-when-changes-are-detected.png) 
 
-When changes to library folders are detected, only scan the folder which changed rather than scanning the entire content location. This works together with the normal Update my library automatically setting (and requires that setting to be enabled).
+Lorsque des modifications apportées aux dossiers de bibliothèque sont détectées, analysez uniquement le dossier qui a changé plutôt que d'analyser l'intégralité de l'emplacement du contenu. Cela fonctionne avec le paramètre normal Mettre à jour automatiquement ma bibliothèque (et nécessite que ce paramètre soit activé). 
 
-!!! success ""
-    **Suggested: `Enabled`**
+!!! success "" 
+    **Suggéré : `Activé`** 
 
-#### Include music libraries in automatic updates
+#### Inclure les bibliothèques musicales dans les mises à jour automatiques 
 
-![!Settings - Library - Include music libraries in automatic updates](images/settings-library-include-music-libraries-in-automatic-updates.png)
+![!Paramètres - Bibliothèque - Inclure les bibliothèques musicales dans les mises à jour automatiques](images/settings-library-include-music-libraries-in -automatic-updates.png) 
 
-I don't do music, so this choice is up to you, and I won't be covering it.
+Je ne fais pas de musique, donc ce choix dépend de vous, et je n'en parlerai pas. 
 
-#### Scan my library periodically
+#### Analyser ma bibliothèque périodiquement 
 
-![!Settings - Library - Scan my library periodically](images/settings-library-scan-my-library-periodically.png)
+![!Paramètres - Bibliothèque - Analyser ma bibliothèque périodiquement](images/settings-library-scan-my-library-periodically.png) 
 
-Turning this on will cause your Plex Media Server to run scans on your libraries using the designated interval.
+L'activation de cette option entraînera l'exécution d'analyses par votre serveur multimédia Plex vos bibliothèques en utilisant l'intervalle désigné. 
 
-!!! success ""
-    **Suggested: `Disabled`**
+!!! success "" 
+    **Suggéré : `Désactivé`** 
 
-    *Do you need a extra scan for your library to recognize new media?*
+    *Avez-vous besoin d'une analyse supplémentaire pour que votre bibliothèque reconnaisse les nouveaux médias ?* 
 
-#### Empty trash automatically after every scan
+#### Videz automatiquement la corbeille après chaque analyse 
 
-![!Settings - Library - Empty trash automatically after every scan](images/settings-library-empty-trash-automatically-after-every-scan.png)
+![!
 
-With this option enabled, when an item’s file is deleted from the drive, it will be removed from the Plex library on the next scan. Disabling this option keeps the item in the library with an overlay over the item’s poster when the item is removed.
+Avec cette option activée, lorsque le fichier d'un élément est supprimé du lecteur, il sera supprimé de la bibliothèque Plex lors de la prochaine analyse. La désactivation de cette option conserve l'élément dans la bibliothèque avec une superposition sur l'affiche de l'élément lorsque l'élément est supprimé. 
 
-!!! success ""
-    **Suggested: `Enabled`**
+!!! success "" 
+    **Suggéré : `Enabled`** 
 
-#### Allow media deletion
+#### Autoriser la suppression des médias 
 
-![!Settings - Library - Allow media deletion](images/settings-library-allow-media-deletion.png)
+![!Settings - Library - Autoriser la suppression des médias](images/settings-library-allow-media-deletion.png) 
 
-The owner of the server will be allowed to delete media files from disk.
+Le propriétaire du serveur sera autorisé à supprimer des fichiers multimédias du disque. 
 
-!!! success ""
-    **Suggested: `Disabled`**
+!!! succès "" 
+    **Suggéré : `Désactivé`** 
 
-    *In my opinion Plex shouldn't touch your media files. Use Sonarr/Radarr to manage your media library. (For extra security I've setup Plex with Read Only access to the media library)*
+    *À mon avis, Plex ne devrait pas toucher vos fichiers multimédias. Utilisez Sonarr/Radarr pour gérer votre médiathèque. (Pour plus de sécurité, j'ai configuré Plex avec un accès en lecture seule à la bibliothèque multimédia)* 
 
-#### Run scanner tasks at a lower priority
+#### Exécutez les tâches du scanner avec une priorité inférieure 
 
-![!Settings - Library - Run scanner tasks at a lower priority](images/settings-library-run-scanner-tasks-at-a-lower-priority.png)
+![!Paramètres - Bibliothèque - Exécutez les tâches du scanner avec une priorité inférieure](images/paramètres- library-run-scanner-tasks-at-a-lower-priority.png) 
 
-On low-powered systems (e.g. ARM-based NAS devices), it can be beneficial to run scanner tasks at a lower priority than other tasks. This can help ensure they do not interfere with regular streaming.
+Sur les systèmes à faible consommation (par exemple, les périphériques NAS basés sur ARM), il peut être avantageux d'exécuter des tâches de scanner avec une priorité inférieure aux autres tâches. Cela peut aider à garantir qu’ils n’interfèrent pas avec la diffusion régulière. 
 
-!!! success ""
-    **Suggested: `Enabled`**
+!!! success "" 
+    **Suggéré : `Activé`** 
 
-    *Makes sure it uses less resources and ensure they do not interfere with regular streaming.*
+    *Veille à ce qu'il utilise moins de ressources et s'assure qu'elles n'interfèrent pas avec la diffusion régulière.* 
 
-#### Generate video preview thumbnails
+#### Générer des vignettes d'aperçu vidéo 
 
-![!Settings - Library - Generate video preview thumbnails](images/settings-library-generate-video-preview-thumbnails.png)
+![!Paramètres - Bibliothèque - Générer des vignettes d'aperçu vidéo] (images/settings-library-generate-video-preview-thumbnails.png) 
 
-This option creates a series of preview thumbnails from a media item when it is analyzed. These images are used by some Plex apps when you move back and forward in an app with the timeline scrubber. They’ll also be displayed in Now Playing when someone is streaming from you so that you can see where they are in the video.
+Cette option crée une série de vignettes d'aperçu à partir d'un élément multimédia lors de son analyse. Ces images sont utilisées par certaines applications Plex lorsque vous avancez et avancez dans une application avec le curseur de chronologie. Ils seront également affichés dans Now Playing lorsque quelqu'un diffuse du streaming depuis vous afin que vous puissiez voir où il se trouve dans la vidéo. 
 
-!!! success ""
-    **Suggested: `Never`**
+!!! succès "" 
+    **Suggéré : `Jamais`** 
 
-    *Besides that, it uses a lot of disk space and high I/O, No one in my family uses FastForward/Rewind but they use the skip forward/backward.*
+    *En plus de cela, il utilise beaucoup d'espace disque et des E/S élevées. Personne dans ma famille n'utilise FastForward/Rewind mais ils utilisent le saut en avant/en arrière.* 
 
-!!! danger "ATTENTION"
-    Creating these images can
+!! ! danger "ATTENTION" 
+    La création de ces images peut 
 
-    - <u>Take a considerable amount of time</u>
-    - <u>Use a lot of CPU resources</u>
-    - <u>Increase the storage space used</u>
+    - <u>Prendre un temps considérable</u> 
+    - <u>Utiliser beaucoup de ressources CPU</u> 
+    - <u>Augmenter l'espace de stockage utilisé</u> 
 
-    The images are stored in your Plex database location (/config) so <u>be careful you don’t fill the drive :bangbang:</u>
+    Le les images sont stockées dans l'emplacement de votre base de données Plex (/config), donc <u>faites attention à ne pas remplir le lecteur :bangbang:</u> 
 
-#### Generate intro video markers
+#### Générez des marqueurs vidéo d'introduction 
 
-![!Settings - Library - Generate intro video markers](images/settings-library-generate-intro-video-markers.png)
+![!Paramètres - Bibliothèque - Générer une vidéo d'introduction marqueurs](images/settings-library-generate-intro-video-markers.png) 
 
-You can choose to have TV episodes analyzed to try and detect when the “intro” occurs during playback. When detected, apps will then offer a `Skip Intro` button, allowing you to quickly jump over the intro.
+Vous pouvez choisir d'analyser les épisodes télévisés pour essayer de détecter le moment où « l'intro » se produit pendant la lecture. Une fois détectées, les applications proposeront alors un bouton « Passer l'introduction », vous permettant de sauter rapidement par-dessus l'intro. 
 
-!!! success ""
-    **Suggested: `as a scheduled task`**
+!!! succès ""
+    **Suggéré : `en tant que tâche planifiée`** 
 
-    *or*
+    *ou* 
 
-    **Suggested: `as a scheduled task and when media is added`**
+    **Suggéré : `en tant que tâche planifiée et lorsque le média est ajouté`** 
 
-#### Generate chapter thumbnails
+#### Générer des vignettes de chapitre 
 
-![!Settings - Library - Generate chapter thumbnails](images/settings-library-generate-chapter-thumbnails.png)
+![!Paramètres - Bibliothèque - Générer des vignettes de chapitre] (images/settings-library-generate-chapter-thumbnails.png) 
 
-Chapter thumbnails provide images in the chapter view on supported apps. They can take a little time to generate and consume very minor additional disk space.
+Les vignettes de chapitre fournissent des images dans la vue de chapitre sur les applications prises en charge. Leur génération peut prendre un peu de temps et consommer très peu d’espace disque supplémentaire. 
 
-!!! success ""
-    **Suggested: `as a scheduled task`**
+!!! success "" 
+    **Suggéré : `en tant que tâche planifiée`** 
 
-    *or*
+    *ou* 
 
-    **Suggested: `as a scheduled task and when media is added`**
+    **Suggéré : `en tant que tâche planifiée et lorsque le média est ajouté`** 
 
-------
+------ 
 
-### Network
+### Réseau 
 
-#### Enable IPv6 support
+#### Activer Prise en charge IPv6 
 
-![!Settings - Network - Enable server support for IPv6](images/settings-network-enable-server-support-for-ipv6.png)
+![!Paramètres - Réseau - Activer la prise en charge du serveur pour IPv6](images/settings-network-enable-server-support-for-ipv6.png) 
 
-Enable IPv6 support.
+Activer la prise en charge IPv6. 
 
-!!! success ""
-    **Suggested: `Disabled`**
+!!! success "" 
+    **Suggéré : `Désactivé`** 
 
-    *If you're not sure your network 100% works with ip6 <u>don't Enable it</u>.*
+    *Si vous n'êtes pas sûr que votre réseau fonctionne à 100 % avec ip6 <u>ne l'activez pas</u>.* 
 
-#### Secure connections
+#### Connexions sécurisées 
 
-![!Settings - Network - Secure connections](images/settings-network-secure-connections.png)
+![!Paramètres - Réseau - Connexions sécurisées](images/settings-network-secure-connections.png) 
 
-Choose how your Plex Media Server handles secure connections.
+Choisissez comment votre serveur multimédia Plex gère les connexions sécurisées. 
 
-!!! success ""
-    **Suggested: `Preferred`**
+!!! success "" 
+    **Suggéré : `Préféré`** 
 
-    *Accept and prefer secure connections when they’re available for a Plex app, but allow regular HTTP connections if the app doesn’t support secure connections or if one can’t be established*
+    *Acceptez et préférez les connexions sécurisées lorsqu'elles sont disponibles pour une application Plex, mais autorisez les connexions HTTP régulières si l'application ne prend pas en charge les connexions sécurisées ou si une connexion ne peut pas être établie * 
 
-#### Preferred network interface
+#### Interface réseau préférée 
 
-![!Settings - Network - Preferred network interface](images/settings-network-preferred-network-interface.png)
+![!Paramètres - Réseau - Interface réseau préférée](images/settings-network-preferred-network-interface.png) 
 
-For users with multiple network cards or systems such as NAS or Docker where there is always another network interface which Plex client applications may try to use to connect to the Plex Media Server, with this option you can ensure that your local Plex clients would only try that interface.
+Pour les utilisateurs disposant de plusieurs cartes réseau ou de systèmes tels que NAS ou Docker où il y a toujours une autre interface réseau que les applications clientes Plex peuvent essayer d'utiliser pour se connecter au serveur multimédia Plex. Avec cette option, vous pouvez vous assurer que vos clients Plex locaux n'essaieront que cette interface. 
 
-!!! warning
-    If you have enabled Remote Access enabled and are having Plex automatically map the port (as opposed to specifying a port manually), then Plex Media Server has no control over which network interface is used for an automatically-mapped port. Thus, it’s possible that Remote Access connections could come through an interface other than the one specified here.
+!!! avertissement 
+    Si vous avez activé l'accès à distance et que Plex mappe automatiquement le port (au lieu de spécifier un port manuellement), alors Plex Media Server n'a aucun contrôle sur l'interface réseau utilisée pour un port automatiquement mappé. Ainsi, il est possible que les connexions d'accès à distance passent par une interface autre que celle spécifiée ici. 
 
-!!! success ""
-    **Suggested: `Whatever suits your setup`**
+!!! success "" 
+    **Suggéré : `Ce qui convient à votre configuration`** 
 
-#### Strict TLS configuration
+#### Configuration TLS stricte 
 
-![!Settings - Network - Strict TLS configuration](images/settings-network-strict-tls-configuration.png)
+![!Paramètres - Réseau - Configuration TLS stricte](images/settings-network-strict-tls-configuration.png)
 
-If this setting is enabled, it prevents Plex Media Server from using or accepting the deprecated TLSv1.0 and v1.1 protocols, as well as legacy weak ciphers. May prevent older clients from connecting. The vast majority of users will have no reason to enable this option (and receive no benefit from doing so).
+Si ce paramètre est activé, il empêche Plex Media Server d'utiliser ou d'accepter les protocoles TLSv1.0 et v1.1 obsolètes, ainsi que les chiffrements faibles existants. Peut empêcher les clients plus âgés de se connecter. La grande majorité des utilisateurs n’auront aucune raison d’activer cette option (et n’en tireront aucun avantage). 
 
-!!! success ""
-    **Suggested: `Disabled`**
+!!! success "" 
+    **Suggéré : `Désactivé`** 
 
-#### Enable local network discovery (GDM)
+#### Activer la découverte du réseau local (GDM) 
 
-![!Settings - Network - Enable local network discovery (GDM)](images/settings-network-enable-local-network-discovery-(gdm).png)
+![!Paramètres - Réseau - Activer la découverte du réseau local (GDM)](images/settings-network-enable-local-network -discovery-(gdm).png) 
 
-Enable “G’Day Mate” discovery. This is used to allows Plex apps and servers to find each other automatically on a local network.
+Activer la découverte « G'Day Mate ». Ceci est utilisé pour permettre aux applications et aux serveurs Plex de se trouver automatiquement sur un réseau local. 
 
-!!! success ""
-    **Suggested: `Enabled`**
+!!! success "" 
+    **Suggéré : `Activé`** 
 
-#### Remote streams allowed per user
+#### Flux distants autorisés par utilisateur 
 
-![!Settings - Network - Remote streams allowed per user](images/settings-network-remote-streams-allowed-per-user.png)
+![!Paramètres - Réseau - Flux distants autorisés par utilisateur](images/settings-network-remote-streams-allowed-per-user .png) 
 
-You can set the maximum number of simultaneous streams each remote user is allowed to have.
+Vous pouvez définir le nombre maximum de flux simultanés que chaque utilisateur distant est autorisé à avoir. 
 
-!!! success ""
-    **Suggested: `Whatever suits your setup`**
+!!! success "" 
+    **Suggéré : `Ce qui convient à votre configuration`** 
 
-#### LAN Networks
+#### Réseaux LAN 
 
-![!Settings - Network - LAN Networks](images/settings-network-lan-networks.png)
+![!Paramètres - Réseau - Réseaux LAN](images/settings-network-lan-networks.png) 
 
-It lets you specify which IP addresses or networks will be considered to be “local” to you.
+Il vous permet de spécifier quelle adresse IP les adresses ou réseaux seront considérés comme « locaux » pour vous. 
 
-!!! success ""
-    **Suggested: `Your local IP/netmasks`**
+!!! success "" 
+    **Suggéré : `Votre IP/masques de réseau locaux`** 
 
-    *If your local devices are seen as remote devices, then this could solve your issue. (Do not include spaces or tabs.)*
+    *Si vos appareils locaux sont considérés comme des appareils distants, cela pourrait résoudre votre problème. (N'incluez pas d'espaces ni de tabulations.)* 
 
-#### Treat WAN IP As LAN Bandwidth
+#### Traitez l'IP WAN comme une bande passante LAN 
 
-![!Settings - Network - LAN Networks](images/settings-network-treat-wan-ip-as-lan-bandwidth.png)
+![!Paramètres - Réseau - Réseaux LAN](images/settings-network-treat-wan-ip-as-lan-bandwidth.png ) 
 
-Allows incoming requests from this network’s WAN IP address to be treated as LAN requests in terms of bandwidth. This often occurs when DNS rebinding protection is in place and clients on the LAN cannot contact the server directly but instead have to go through the WAN IP address.
+Permet aux requêtes entrantes provenant de l'adresse IP WAN de ce réseau d'être traitées comme des requêtes LAN en termes de bande passante. Cela se produit souvent lorsque la protection de rebinding DNS est en place et que les clients sur le réseau local ne peuvent pas contacter directement le serveur mais doivent plutôt passer par l'adresse IP du WAN. 
 
-!!! success ""
-    **Suggested: `Enabled`**
+!!! success "" 
+    **Suggéré : `Enabled`** 
 
-#### Enable Relay
+#### Activer le relais 
 
-![!Settings - Network - Enable Relay](images/settings-network-enable-relay.png)
+![!Paramètres - Réseau - Activer le relais](images/settings-network-enable-relay.png) 
 
-The Relay allows connections to the server through a proxy relay when the server is not accessible otherwise. Relay connections are bandwidth limited.
+Le relais permet les connexions au serveur via un relais proxy lorsque le serveur n'est pas accessible autrement. Les connexions relais sont limitées en bande passante. 
 
-!!! success ""
-    **Suggested: `Disabled`**
+!!! success "" 
+    **Suggéré : `Désactivé`** 
 
-    *I've seen several reports where people that had this Enabled had playback issues because it seems to be limited at 2 Mbps.*
+    *J'ai vu plusieurs rapports dans lesquels des personnes qui avaient cette option activée avaient des problèmes de lecture car elle semble être limitée à 2 Mbps.* 
 
-#### Custom server access URLs
+#### URL d'accès au serveur personnalisées 
 
-![!Settings - Network - Custom server access URLs](images/settings-network-custom-server-access-urls.png)
+![! Paramètres - Réseau - URL d'accès au serveur personnalisées](images/settings-network-custom-server-access-urls.png)
 
-A comma-separated list of URLs (either HTTP or HTTPS), which will be published to plex.tv for server discovery. This can be very useful in a few cases: if you’re using a reverse proxy in front of the media server, or if your networking configuration is otherwise unique. For instance, if you have your own custom domain with subdomain.
+Une liste d'URL séparées par des virgules (HTTP ou HTTPS), qui seront publiées sur plex.tv pour la découverte du serveur. Cela peut être très utile dans quelques cas : si vous utilisez un proxy inverse devant le serveur multimédia, ou si votre configuration réseau est par ailleurs unique. Par exemple, si vous disposez de votre propre domaine personnalisé avec sous-domaine. 
 
-!!! success ""
-    **Suggested: `Depending on your setup`**
+!!! success "" 
+    **Suggéré : `En fonction de votre configuration`** 
 
-    *Example: `https://plex.mycustomdomain.com:32400`*
+    *Exemple : `https://plex.mycustomdomain.com:32400`* 
 
-#### Webhooks
+#### Webhooks 
 
-![!Settings - Network - Webhooks](images/settings-network-webhooks.png)
+![!Paramètres - Réseau - Webhooks](images/paramètres -network-webhooks.png) 
 
-This feature can be enabled to allow your server to send events to external services. For example [Notifiarr](/Notifiarr/Quick-Start/){:target="_blank" rel="noopener noreferrer"}
+Cette fonctionnalité peut être activée pour permettre à votre serveur d'envoyer des événements à des services externes. Par exemple [Notifiarr](/Notifiarr/Quick-Start/){:target="_blank" rel="noopener noreferrer"} 
 
-------
+------ 
 
-### Transcoders
+### Transcodeurs 
 
-#### Transcoder quality
+#### Qualité du transcodeur 
 
-![!Settings - Transcoder - Transcoder quality](images/settings-transcoder-transcoder-quality.png)
+![!Paramètres - Transcodeur - Qualité du transcodeur](images/settings-transcoder-transcoder-quality.png) 
 
-This will influence the quality used when transcoding media.
+Cela influencera la qualité utilisée lors du transcodage du média. 
 
-!!! success ""
-    **Suggested: `Automatic`**
+!!! success "" 
+    **Suggéré : `Automatique`** 
 
-    *Most users should leave it set to Automatic. Hardware-Accelerated Streaming is not affected by this setting.*
+    *La plupart des utilisateurs devraient le laisser défini sur Automatique. Le streaming accéléré par le matériel n'est pas affecté par ce paramètre.* 
 
-#### Transcoder temporary directory
+#### Répertoire temporaire du transcodeur 
 
-![!Settings - Transcoder - Transcoder temporary directory](images/settings-transcoder-transcoder-temporary-directory.png)
+![!Settings - Transcoder - Répertoire temporaire du transcodeur](images/settings-transcoder-transcoder-temporary-directory.png) 
 
-Directory to use when transcoding temporary files for streaming.
+Répertoire à utiliser lors du transcodage fichiers temporaires pour le streaming. 
 
-!!! success ""
-    **Suggested: `Depending on your setup, if possible, your RAM (disk)`**
+!!! succès "" 
+    **Suggéré : `En fonction de votre configuration, si possible, votre RAM (disque)`** 
 
-    *Speeds up transcoding and less I/O, transcode data is temporary and doesn't need to be writing to a disk.*
+    *Accélére le transcodage et moins d'E/S, les données de transcodage sont temporaires et n'ont pas besoin d'être écrites sur un disque. * 
 
-    *If you run docker set this to `/transcode` and map it to `/tmp/plex`*
+    *Si vous exécutez Docker, définissez-le sur `/transcode` et mappez-le sur `/tmp/plex`* * 
 
-    *Default Linux only allocates a max of 50% of total system RAM to any ram directories (ie. /tmp, /dev/shm, etc.)*
+    Par défaut, Linux n'alloue qu'un maximum de 50 % de la RAM totale du système à tous les répertoires RAM (c'est-à-dire /tmp, /dev /shm, etc.)* 
 
-    !!! danger "WARNING"
-        :bangbang: **YOU SHOULD NOT SPECIFY A LOCATION THAT RESIDES ON A NETWORK SHARE/DISK.** :bangbang:
+    !!! danger "AVERTISSEMENT" 
+        :bangbang: **VOUS NE DEVEZ PAS SPÉCIFIER UN EMPLACEMENT QUI RÉSIDE SUR UN PARTAGE/DISQUE RÉSEAU.** :bangbang: 
 
-#### Enable HDR tone mapping
+#### Activer le mappage de tonalité HDR 
 
-![!Settings - Transcoder - Enable HDR tone mapping](images/settings-transcoder-enable-hdr-tone-mapping.png)
+![!Paramètres - Transcodeur - Activer le mappage de tonalité HDR]( images/settings-transcoder-enable-hdr-tone-mapping.png) 
 
-This feature allows Plex Media Server to maintain high visual fidelity of content, by applying tone mapping to convert it to SDR when transcoding HDR content.
+Cette fonctionnalité permet à Plex Media Server de maintenir une haute fidélité visuelle du contenu, en appliquant un mappage de tons pour le convertir en SDR lors du transcodage du contenu HDR. 
 
-!!! success ""
-    **Suggested: `Depending on your setup`**
+!!! succès "" 
+    **Suggéré : `En fonction de votre configuration`** 
 
-    *Most HDR content will be in 4K resolution. If your platform has to use software transcoding to perform the tone mapping, then it may well struggle convert 4K content in real-time, unless you’re running on a very powerful system.*
+    *La plupart des contenus HDR seront en résolution 4K. Si votre plate-forme doit utiliser un transcodage logiciel pour effectuer le mappage de tons, elle risque alors d'avoir du mal à convertir le contenu 4K en temps réel, à moins que vous n'utilisiez un système très puissant.* 
 
 !!! note
-    Plex’s tone mapping support should generally be able to produce good color mapping and help avoid the “washed out” colors that occur when converting HDR content without tone mapping.
+    La prise en charge du mappage de tons de Plex devrait généralement être capable de produire un bon mappage de couleurs et d'éviter les couleurs « délavées » qui se produisent lors de la conversion de contenu HDR sans mappage de tons. 
 
-#### Use hardware acceleration when available
+#### Utilisez l'accélération matérielle lorsqu'elle est disponible 
 
-![!Settings - Transcoder - Use hardware acceleration when available](images/settings-transcoder-use-hardware-acceleration-when-available.png)
+![!Settings - Transcoder - Utiliser l'accélération matérielle lorsqu'elle est disponible](images/settings-transcoder-use-hardware-acceleration-when-available.png) 
 
-To use Hardware-Accelerated Streaming in Plex Media Server.
+Pour utiliser le streaming avec accélération matérielle dans Plex Media Serveur. 
 
-!!! success ""
-    **Suggested: `Enabled`**
+!!! success "" 
+    **Suggéré : `Activé`** 
 
-#### Use hardware-accelerated video encoding
+#### Utiliser l'encodage vidéo accéléré par le matériel 
 
-![!Settings - Transcoder - Use hardware-accelerated video encoding](images/settings-transcoder-use-hardware-accelerated-video-encoding.png)
+![!Paramètres - Transcodeur - Utiliser l'encodage vidéo accéléré par le matériel](images/settings-transcoder-use-hardware-accelerated-video -encoding.png) 
 
-To use Hardware-Accelerated Encoding in Plex Media Server.
+Pour utiliser le codage accéléré par le matériel dans Plex Media Server. 
 
-!!! success ""
-    **Suggested: `Enabled`**
+!!! success "" 
+    **Suggéré : `Activé`** 
 
-------
+------ 
 
-## Manage
+## Gérer 
 
-![!Plex Settings - Manage](images/settings-manage.png)
+![!Plex Settings - Manage](images/settings-manage.png) 
 
-### Libraries
+### Bibliothèques 
 
-Here you will find your libraries you've added to your Plex Media Server.
+Ici vous trouverez vos bibliothèques que vous' que vous avez ajouté à votre serveur multimédia Plex. 
 
-??? example "Examples - [Click to show/hide]"
+??? exemple "Exemples - [Cliquez pour afficher/masquer]" 
 
-    - Movies `(/data/media/movies)`
-    - Movies-4K/Movies-UHD `(/data/media/movies4k)`/`(/data/media/movies-uhd)`
-    - Movies-Kids `(/data/media/movies-kids)`
-    - Movies-Anime `(/data/media/movies-anime)`
-    - TV `(/data/media/tv)`
-    - TV-4k/TV-UHD `(/data/media/tv-4k)`/`(/data/media/tv-uhd)`
-    - TV-Kids `(/data/media/tv-kids)`
-    - TV-Anime `(/data/media/tv-anime)`
-    - Anime `(/data/media/anime)`
-    - etc
+    - Films `(/data/media/movies)` 
+    - Films-4K/Films-UHD `(/data/media/movies4k)`/`(/data/media/ films-uhd)` 
+    - Films-enfants `(/data/media/movies-kids)` 
+    - Films-Anime `(/data/media/movies-anime)` 
+    - TV `(/data/media/tv)` 
+    - TV-4k/TV-UHD `(/data/media/tv-4k)`/`(/data/media/tv-uhd)` 
+    - TV-Kids `(/data/media/tv-kids)` 
+    - TV -Anime `(/data/media/tv-anime)` 
+    - Anime `(/data/media/anime)` 
+    - etc 
 
-!!! info "I will only cover the libraries settings for Movies and TV shows"
+!!! info "Je ne couvrirai que les paramètres des bibliothèques pour les films et les émissions de télévision" 
 
-#### Movies
+#### Films 
 
-![!Plex Settings - Libraries - Movies](images/manage-libraries-movies-part1.png)
+![!Paramètres Plex - Bibliothèques - Films](images/manage-libraries-movies-part1.png) 
 
-1. The new version of the Plex Movie agent/scanner
+1. La nouvelle version du Agent/scanner de films Plex 
 
-    !!! success ""
-        **Suggested: `Plex Movie`**
+    !!! succès "" 
+        **Suggéré : `Plex Movie`** 
 
-        *Besides being much faster at scanning and getting metadata, one of the benefits of the new agent is that all agent settings are set at the library level, so that different libraries using the same agent can have different agent settings.*
+        *En plus d'être beaucoup plus rapide pour analyser et obtenir des métadonnées, l'un des avantages du nouvel agent est que tous les paramètres de l'agent sont définis au niveau de la bibliothèque, de sorte que les différentes bibliothèques utilisant le le même agent peut avoir des paramètres d'agent différents.* 
 
-![!Plex Settings - Libraries - Movies](images/manage-libraries-movies-part2.png)
+![!Paramètres Plex - Bibliothèques - Films](images/manage-libraries-movies-part2.png) 
 
-1. When scanning this library, use local posters and artwork if present. (Local subtitles files will be used whether this is enabled or not)
+1. Lors de la numérisation de cette bibliothèque, utilisez des affiches et des illustrations locales le cas échéant. (Les fichiers de sous-titres locaux seront utilisés, que cela soit activé ou non) 
 
-    !!! success ""
-        **Suggested: `Enabled`**
+    !!! success "" 
+        **Suggéré : `Activé`** 
 
-        *I had this enabled because I thought it was needed for local subtitles (.srt), but after research it seems it isn't needed.
-        If you want you could disable it, the choice is yours.*
+        *J'ai activé cette option parce que je pensais que c'était nécessaire pour les sous-titres locaux (.srt), mais après recherche, il semble que ce ne soit pas nécessaire. 
+        Si vous le souhaitez, vous pouvez le désactiver, le choix vous appartient.*
 
-1. When scanning this library, prefer embedded tags and local files if present.
+1. Lors de l'analyse de cette bibliothèque, préférez les balises intégrées et les fichiers locaux s'ils sont présents. 
 
-    !!! success ""
-        **Suggested: `Disabled`**
+    !!! succès "" 
+        **Suggéré : `Désactivé`** 
 
-        *If enabled you could end up with weird movie naming you don't want, happens especially from releases from `RARBG`*
+        *Si cette option est activée, vous pourriez vous retrouver avec un nom de film étrange dont vous ne voulez pas, cela se produit en particulier à partir des versions de `RARBG`* 
 
-![!Plex Settings - Libraries - Movies](images/manage-libraries-movies-part3.png)
+![!Paramètres Plex - Bibliothèques - Films](images /manage-libraries-movies-part3.png) 
 
-1. Automatically create collections when there are more than the selected number of items for an available collection.
+1. Créez automatiquement des collections lorsqu'il y a plus que le nombre sélectionné d'éléments pour une collection disponible. 
 
-    !!! success ""
-        **Suggested: `2`**
+    !!! success "" 
+        **Suggéré : `2`** 
 
-        *Only show collections when you have more than one item in your library*
+        *Afficher les collections uniquement lorsque vous avez plus d'un élément dans votre bibliothèque* 
 
-![!Plex Settings - Libraries - Movies](images/manage-libraries-movies-part4.png)
+![!Paramètres Plex - Bibliothèques - Films](images/manage-libraries-movies-part4.png) 
 
-1. This option creates a series of preview thumbnails from a media item when it is analyzed. These images are used by some Plex apps when you move back and forward in an app with the timeline scrubber. They’ll also be displayed in Now Playing when someone is streaming from you so that you can see where they are in the video.
+1. Cette option crée une série de vignettes d'aperçu à partir d'un élément multimédia lors de son analyse. Ces images sont utilisées par certaines applications Plex lorsque vous avancez et avancez dans une application avec le curseur de chronologie. Ils seront également affichés dans Now Playing lorsque quelqu'un diffuse du streaming depuis vous afin que vous puissiez voir où il se trouve dans la vidéo. 
 
-    !!! danger "ATTENTION"
-        Creating these images can <u>take a considerable amount of time</u>, <u>CPU resources</u>, and <u>increase the storage space used</u>. The images are stored in your Plex database so <u>be careful you don’t fill the drive :bangbang:</u>
+    !!! danger "ATTENTION" 
+        La création de ces images peut <u>prendre un temps considérable</u>, des <u>ressources CPU</u> et <u>augmenter l'espace de stockage utilisé</u>. Les images sont stockées dans votre base de données Plex donc <u>faites attention à ne pas remplir le lecteur :bangbang:</u> 
 
-    !!! success ""
-        **Suggested: `Disabled`**
+    !!! success "" 
+        **Suggéré : `Désactivé`** 
 
-        *Besides that, it uses a lot of disk space and high I/O, No one in my family uses FastForward/Rewind but they use the skip forward/backward.*
+        *En plus de cela, il utilise beaucoup d'espace disque et des E/S élevées. Personne dans ma famille n'utilise FastForward/Rewind mais ils utilisent le saut en avant/en arrière.* 
 
-1. This deletes the preview thumbnails it generated before you disabled this option
-1. If you want to show your Collection in your library
+1. Cela supprime les vignettes d'aperçu générées avant de désactiver cette option. 
+1. Si vous souhaitez afficher votre collection dans votre bibliothèque 
 
-    !!! success ""
-        **Suggested: `Disabled`**
+    !!! succès "" 
+        **Suggéré : `Désactivé`** 
 
-        *When Disabled your movies will show up normally when you use library view, This doesn't mean it will disable the collection view.*
+        *Lorsque désactivé, vos films s'afficheront normalement lorsque vous utilisez la vue bibliothèque, cela ne signifie pas que cela désactivera la vue collection.* 
 
-#### TV
+#### TV 
 
-![!Plex Settings - Libraries - TV](images/manage-libraries-tv-part1.png)
+![!Paramètres Plex - Bibliothèques - TV](images/manage-libraries-tv-part1.png) 
 
-1. The new version of the Plex Movie agent/scanner
+1. La nouvelle version de l'agent/scanner Plex Movie 
 
-    !!! success ""
-        **Suggested: `Plex TV Series`**
+    !!! succès "" 
+        **Suggéré : `Plex TV Series`** 
 
-        *Besides being much faster at scanning and getting metadata, one of the benefits of the new agent is that all agent settings are set at the library level, so that different libraries using the same agent can have different agent settings.*
+        *En plus d'être beaucoup plus rapide pour analyser et obtenir des métadonnées, l'un des avantages du nouvel agent est que tous les paramètres de l'agent sont définis au niveau de la bibliothèque, de sorte que les différentes bibliothèques utilisant le même agent peut avoir des paramètres d'agent différents.* 
 
-![!Plex Settings - Libraries - TV](images/manage-libraries-tv-part2.png)
+![!Paramètres Plex - Bibliothèques - TV](images/manage-libraries-tv-part2.png) 
 
-1. How episodes are named on disk. If your naming follows The MovieDB or TheTVDB choose that here.
-1. Use season titles when available.
-1. When scanning this library, use local posters and artwork if present. (Local subtitles files will be used whether this is enabled or not)
+1. Comment les épisodes sont nommés sur le disque. Si votre nom suit The MovieDB ou TheTVDB, choisissez-le ici. 
+1. Utilisez les titres de saison lorsqu'ils sont disponibles. 
+1. Lors de la numérisation de cette bibliothèque, utilisez des affiches et des illustrations locales le cas échéant.
 
-    !!! success ""
-        **Suggested: `Enabled`**
+    !!! success "" 
+        **Suggéré : `Activé`** 
 
-        *I had this enabled because I thought it was needed for local subtitles (.srt), but after research it seems it isn't needed.
-        If you want you could disable it, the choice is yours.*
+        *J'ai activé cette option parce que je pensais que c'était nécessaire pour les sous-titres locaux (.srt), mais après recherche, il semble que ce ne soit pas nécessaire. 
+        Si vous le souhaitez, vous pouvez le désactiver, à vous de choisir.* 
 
-![!Plex Settings - Libraries - TV](images/manage-libraries-tv-part3.png)
+![!Paramètres Plex - Bibliothèques - TV](images/manage-libraries-tv-part3.png) 
 
-1. When scanning this library, prefer embedded tags and local files if present.
+1. Lors de l'analyse de cette bibliothèque, préférez les balises intégrées et les fichiers locaux si présent. 
 
-    !!! success ""
-        **Suggested: `Disabled`**
+    !!! succès "" 
+        **Suggéré : `Désactivé`** 
 
-        *If enabled you could end up with weird movie naming you don't want, happens especially from releases from `RARBG`*
+        *Si cette option est activée, vous pourriez vous retrouver avec un nom de film étrange dont vous ne voulez pas, cela se produit en particulier avec les versions de `RARBG`* 
 
-![!Plex Settings - Libraries - TV](images/manage-libraries-tv-part4.png)
+![!Paramètres Plex - Bibliothèques - TV](images /manage-libraries-tv-part4.png) 
 
-1. This option creates a series of preview thumbnails from a media item when it is analyzed. These images are used by some Plex apps when you move back and forward in an app with the timeline scrubber. They’ll also be displayed in Now Playing when someone is streaming from you so that you can see where they are in the video.
+1. Cette option crée une série de vignettes d'aperçu à partir d'un élément multimédia lors de son analyse. Ces images sont utilisées par certaines applications Plex lorsque vous avancez et avancez dans une application avec le curseur de chronologie. Ils seront également affichés dans Now Playing lorsque quelqu'un diffuse du streaming depuis vous afin que vous puissiez voir où il se trouve dans la vidéo. 
 
-    !!! danger "ATTENTION"
-        Creating these images can <u>take a considerable amount of time</u>, <u>CPU resources</u>, and <u>increase the storage space used</u>. The images are stored in your Plex database so <u>be careful you don’t fill the drive :bangbang:</u>
+    !!! danger "ATTENTION" 
+        La création de ces images peut <u>prendre un temps considérable</u>, des <u>ressources CPU</u> et <u>augmenter l'espace de stockage utilisé</u>. Les images sont stockées dans votre base de données Plex donc <u>faites attention à ne pas remplir le lecteur :bangbang:</u> 
 
-    !!! success ""
-        **Suggested: `Disabled`**
+    !!! success "" 
+        **Suggéré : `Désactivé`** 
 
-        *Besides that, it uses a lot of disk space and high I/O, No one in my family uses FastForward/Rewind but they use the skip forward/backward.*
+        *En plus de cela, il utilise beaucoup d'espace disque et des E/S élevées. Personne dans ma famille n'utilise FastForward/Rewind mais ils utilisent le saut en avant/en arrière.* 
 
-1. This deletes the preview thumbnails it generated before you disabled this option
-1. If you want to show your Collection in your library
+1. Cela supprime les vignettes d'aperçu générées avant de désactiver cette option. 
+1. Si vous souhaitez afficher votre collection dans votre bibliothèque 
 
-    !!! success ""
-        **Suggested: `Disabled`**
+    !!! success "" 
+        **Suggéré : `Désactivé`** 
 
-        *When Disabled your tv show will show up normally when you use library view, This doesn't mean it will disable the collection view.*
+        *Lorsque cette option est désactivée, votre émission de télévision s'affichera normalement lorsque vous utilisez la vue bibliothèque. Cela ne signifie pas qu'elle désactivera la vue collection.* 
 
-1. Generate intro detection for items in this library when enabled in server settings.
+1. Générez une détection d'introduction pour les éléments de cette bibliothèque lorsqu'elle est activée dans les paramètres du serveur. 
 
-    !!! success ""
-        **Suggested: `Enabled`**
+    !!! succès "" 
+        **Suggéré : `Activé`** 
 
-        *Ever watch a TV show and it starts playing that same minute and a half credits intro that you've already watched multiple times? Well, you can have your Plex Media Server analyze the TV shows to try and detect those introductions and then let you skip through them with a single click!*
+        *Avez-vous déjà regardé une émission de télévision et elle commence à jouer la même introduction de générique d'une minute et demie que vous avez déjà regardée plusieurs fois ? Eh bien, vous pouvez demander à votre Plex Media Server d'analyser les émissions de télévision pour essayer de détecter ces introductions, puis de les parcourir d'un simple clic !* 
 
-------
+------ 
 
-For the information of this guide, I made use of the following sources
+Pour les informations de ce guide, j'ai utilisé le sources suivantes 
 
-- Information I gathered from Several Discord servers
-- [Plex Support Articles](https://support.plex.tv/articles/){:target="_blank" rel="noopener noreferrer"}
-- Extra Information gathered from a Plex employee
-- Own experience
+– Informations que j'ai recueillies sur plusieurs serveurs Discord 
+– [Articles d'assistance Plex](https://support.plex.tv/articles/){ : 
+target="_blank" rel="noopener noreferrer"} - Informations supplémentaires recueillies auprès d'un employé de Plex 
+- Propre expérience 
 
+{! include-markdown "../../../includes/support.md" !}
+<!-- --8<-- "includes/support.md" -->

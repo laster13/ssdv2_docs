@@ -87,7 +87,19 @@ Si vous préférez les encodages HD de haute qualité (Bluray-720p/1080p)
 
 - *Taille : 6-15 Go pour un Bluray-1080p selon la durée d'exécution.*
 
-{! include-markdown "../../includes/cf/radarr-suggest-attention.md" !}
+{! include-markdown "../../includes/cf/radar-suggest-attention.md" !}
+
+{! include-markdown "../../includes/cf/radar-movie-versions-imaxe-noremux.md" !}
+
+{! include-markdown "../../includes/cf/radar-cf-hd-bluray-web-scoring.md" !}
+
+{! include-markdown "../../includes/cf/radar-misc.md" !}
+
+{! include-markdown "../../includes/cf/radar-unwanted.md" !}
+
+{! include-markdown "../../includes/cf/radar-optional.md" !}
+
+{! include-markdown "../../includes/cf/radar-streaming-services.md" !}
 
 J'ai décidé de ne pas ajouter de formats personnalisés « Audio Advanced » au profil d'encodage. Vous trouverez difficilement de l’audio HD avec les encodages HD Bluray. Lors du téléchargement de HD Bluray Encodes, je suggère d’opter pour la qualité. Si vous souhaitez des formats audio HD, je vous suggère d'opter pour un Remux ou un UHD Encode.
 
@@ -99,6 +111,7 @@ Utilisez les paramètres principaux suivants dans votre profil.
 
 La raison pour laquelle je n'ai pas sélectionné le WEB-DL 720p est que vous ne trouverez pratiquement aucune version qui ne soit pas réalisée en WEB-DL 1080p.
 
+{! include-markdown "../../includes/starr/move-quality-to-top.md" !}
 
 ??? résumé "Workflow Logic - [Cliquez pour afficher/masquer]"
 
@@ -118,12 +131,33 @@ Si vous préférez les encodages UHD de haute qualité (Bluray-2160p)
 
 - *Taille : 20 à 60 Go pour un Bluray-2160p en fonction de la durée d'exécution.*
 
+{! include-markdown "../../includes/cf/radar-suggest-attention.md" !}
+
+{! include-markdown "../../includes/cf/radar-audio.md" !}
+
+{! include-markdown "../../includes/cf/radar-all-hdr-formats.md" !}
+
+{! include-markdown "../../includes/cf/radar-movie-versions-imaxe-noremux.md" !}
+
+{! include-markdown "../../includes/cf/radar-cf-uhd-bluray-web-scoring.md" !}
+
+{! include-markdown "../../includes/cf/radar-misc.md" !}
+
+{! include-markdown "../../includes/cf/radar-unwanted-uhd.md" !}
+
+{! include-markdown "../../includes/cf/radar-optional.md" !}
+
+{! include-markdown "../../includes/cf/radar-optional-uhd.md" !}
+
+{! include-markdown "../../includes/cf/radar-streaming-services.md" !}
+
 Utilisez les paramètres principaux suivants dans votre profil.
 
 ![UHD Bluray + WEB](images/qp-uhd-bluray-webdl.png)
 
 !!! avertissement "Assurez-vous de ne pas vérifier le BR-DISK."
 
+{! include-markdown "../../includes/starr/move-quality-to-top.md" !}
 
 ??? résumé "Workflow Logic - [Cliquez pour afficher/masquer]"
 
@@ -145,6 +179,22 @@ Si vous préférez les remux 1080p (Remux-1080p)
 
 - *Taille : 20-40 Go pour un Remux-1080p selon la durée d'exécution.*
 
+{! include-markdown "../../includes/cf/radar-suggest-attention.md" !}
+
+{! include-markdown "../../includes/cf/radar-audio.md" !}
+
+{! include-markdown "../../includes/cf/radar-movie-versions-imaxe.md" !}
+
+{! include-markdown "../../includes/cf/radar-cf-remux-web-scoring.md" !}
+
+{! include-markdown "../../includes/cf/radar-misc.md" !}
+
+{! include-markdown "../../includes/cf/radar-unwanted.md" !}
+
+{! include-markdown "../../includes/cf/radar-optional.md" !}
+
+{! include-markdown "../../includes/cf/radar-streaming-services.md" !}
+
 Utilisez les paramètres principaux suivants dans votre profil.
 
 ![Remux + WEB 1080p](images/qp-remux-webdl-1080p.png)
@@ -153,6 +203,7 @@ Utilisez les paramètres principaux suivants dans votre profil.
 
 La raison pour laquelle je n'ai pas sélectionné le WEB-DL 720p est que vous ne trouverez pratiquement aucune version qui ne soit pas réalisée en WEB-DL 1080p.
 
+{! include-markdown "../../includes/starr/move-quality-to-top.md" !}
 
 ??? résumé "Workflow Logic - [Cliquez pour afficher/masquer]"
 
@@ -172,6 +223,25 @@ Si vous préférez les remux 2160p (Remux-2160p)
 
 - *Taille : 40-100 Go pour un Remux-2160p selon la durée d'exécution.*
 
+{! include-markdown "../../includes/cf/radar-suggest-attention.md" !}
+
+{! include-markdown "../../includes/cf/radar-audio.md" !}
+
+{! include-markdown "../../includes/cf/radar-all-hdr-formats.md" !}
+
+{! include-markdown "../../includes/cf/radar-movie-versions-imaxe.md" !}
+
+{! include-markdown "../../includes/cf/radar-cf-remux-web-scoring.md" !}
+
+{! include-markdown "../../includes/cf/radar-misc.md" !}
+
+{! include-markdown "../../includes/cf/radar-unwanted-uhd.md" !}
+
+{! include-markdown "../../includes/cf/radar-optional.md" !}
+
+{! include-markdown "../../includes/cf/radar-optional-uhd.md" !}
+
+{! include-markdown "../../includes/cf/radar-streaming-services.md" !}
 
 Utilisez les paramètres principaux suivants dans votre profil.
 
@@ -179,6 +249,7 @@ Utilisez les paramètres principaux suivants dans votre profil.
 
 !!! avertissement "Assurez-vous de ne pas vérifier le BR-DISK."
 
+{! include-markdown "../../includes/starr/move-quality-to-top.md" !}
 
 ??? résumé "Workflow Logic - [Cliquez pour afficher/masquer]"
 
@@ -204,6 +275,7 @@ Les groupes de formats personnalisés suivants doivent être combinés avec les 
 
 *La raison pour laquelle j'obtiens un Atmos avec perte plus élevé que le DTS-HD MA sans perte est que je préfère avoir les métadonnées de l'objet (Atmos) plutôt que l'audio sans perte.*
 
+{! include-markdown "../../includes/cf/radar-audio.md" !}
 
 ------
 
@@ -211,6 +283,7 @@ Les groupes de formats personnalisés suivants doivent être combinés avec les 
 
 - Vous disposez d'un téléviseur 4K et d'un lecteur multimédia matériel (tel que Roku, AppleTV, Shield, SmartTV App, etc.) prenant en charge plusieurs formats HDR (tels que Dolby Vision, HDR10, HDR10+, etc.).
 
+{! include-markdown "../../includes/cf/radar-all-hdr-formats.md" !}
 
 ------
 
@@ -239,6 +312,7 @@ Les groupes de formats personnalisés suivants doivent être combinés avec les 
 
 À mon avis, c'est un incontournable pour chaque profil de qualité que vous utilisez. Tous ces formats personnalisés garantissent que vous n'obtiendrez pas de versions de mauvaise qualité.
 
+{! include-markdown "../../includes/cf/radar-unwanted.md" !}
 
 ### Formats personnalisés avec un score de 0
 
@@ -276,9 +350,11 @@ Les groupes de formats personnalisés suivants doivent être combinés avec les 
 
 ### Pourquoi est-ce que j'obtiens des couleurs violettes ou vertes
 
+{! include-markdown "../../includes/cf/dv-info-green-purple.md" !}
 
 ### Profils Dolby Vision
 
+{! include-markdown "../../includes/cf/dv-info-profiles.md" !}
 
 ## Merci
 

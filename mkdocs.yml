@@ -83,8 +83,7 @@ plugins:
       auto_caption: false
       caption_position: bottom
   - roamlinks
-  - pages-j2:
-      use_extra: true 
+  - awesome-pages
   - mermaid2
   - callouts
   - i18n:

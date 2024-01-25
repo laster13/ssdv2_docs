@@ -66,7 +66,7 @@ plugins:
       opening_tag: "{!"
       closing_tag: "!}"
   - markdownextradata:
-      data: docs/fr/json
+      data: docs/en/json
   - glightbox:
       touchNavigation: true
       loop: false

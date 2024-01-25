@@ -10,7 +10,7 @@ Pour y parvenir, vous devrez fusionner les qualités les unes avec les autres.
 
 Ici, vous verrez la logique actuelle afin de comprendre comment les téléchargements possibles sont comparés.
 
-{! include-markdown "../../../includes/merge-quality/radar-current-logic.md" !}
+{! include-markdown "../../../includes/merge-quality/radarr-current-logic.md" !}
 <!-- --8<-- "includes/merge-quality/radar-current-logic.md" -->
 
 {! include-markdown "../../../includes/merge-quality/sonarr-current-logic.md" !}

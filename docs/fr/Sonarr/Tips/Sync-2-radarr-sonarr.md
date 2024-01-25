@@ -1,202 +1,202 @@
-# How to Sync 2 Radarr or Sonarr with each other
+# Comment synchroniser 2 Radarr ou Sonarr entre eux
 
-In this guide I will try to explain how you can sync two (or more) Radarr/Sonarr instances with each other.
+Dans ce guide, je vais essayer d'expliquer comment synchroniser deux (ou plusieurs) instances Radarr/Sonarr entre elles.
 
-I'm going to show two different options on how you can setup your sync with two Radarr/Sonarr instances.
+Je vais montrer deux options différentes sur la façon dont vous pouvez configurer votre synchronisation avec deux instances Radarr/Sonarr.
 
-- Option 1: This option is best used if you want a 1:1 copy of your Radarr/Sonarr instances as it'll sync everything.
-- Option 2: This option is best used if you only want to cherry pick which Movies/TV Shows you want as 4K/2160p (UHD).
+- Option 1 : Cette option est mieux utilisée si vous souhaitez une copie 1:1 de vos instances Radarr/Sonarr car elle synchronisera tout.
+- Option 2 : Cette option est mieux utilisée si vous souhaitez uniquement sélectionner les films/émissions de télévision que vous souhaitez en 4K/2160p (UHD).
 
-!!! bug ""
-    I'm not going to explain how to set up two Radarr/Sonarr instances for your system, being it depends on how you have it installed/running.  [Radarr Multiple Instance Information](https://wiki.servarr.com/radarr/installation#multiple-instances) and [Sonarr Multiple Instance Information](https://wiki.servarr.com/sonarr/installation#multiple-instances)
+!!! bogue ""
+    Je ne vais pas expliquer comment configurer deux instances Radarr/Sonarr pour votre système, car cela dépend de la façon dont vous l'avez installé/exécuté. [Informations sur les instances multiples Radarr](https://wiki.servarr.com/radarr/installation#multiple-instances) et [Informations sur les instances multiples Sonarr](https://wiki.servarr.com/sonarr/installation#multiple-instances )
 
-## Preparation
+## Préparation
 
-For this you need to have prepared the following:
+Pour cela, vous devez avoir préparé ce qui suit :
 
-- Two Radarr/Sonarr instances fully setup (Indexers, Custom Formats, Downloaders, etc).
-- One download client (*Two if you prefer Usenet and Torrents*).
-- Your download client has two separate categories (movies-hd, movies-uhd, tv-hd, tv-uhd, etc)
+- Deux instances Radarr/Sonarr entièrement configurées (indexeurs, formats personnalisés, téléchargeurs, etc.).
+- Un client de téléchargement (*Deux si vous préférez Usenet et Torrents*).
+- Votre client de téléchargement comporte deux catégories distinctes (films-hd, films-uhd, tv-hd, tv-uhd, etc.)
 
-!!! warning
+!!! avertissement
 
-    :bangbang:You can't use the same root (media library) folder for both Radarr's/Sonarr's:bangbang:
+    :bangbang:Vous ne pouvez pas utiliser le même dossier racine (bibliothèque multimédia) pour les deux Radarr/Sonarr :bangbang:
 
-    Make sure you use two separate root folders in Radarr/Sonarr (movies-hd, movies-uhd, tv-hd, tv-uhd, etc)
+    Assurez-vous d'utiliser deux dossiers racine distincts dans Radarr/Sonarr (movies-hd, movies-uhd, tv-hd, tv-uhd, etc.)
 
 ------
 
 ### Option 1
 
-!!! info ""
-    In this example I'm going to use two Radarr instances (The basics is the same for Sonarr).
+!!! Info ""
+    Dans cet exemple, je vais utiliser deux instances Radarr (les bases sont les mêmes pour Sonarr).
 
-    - `Radarr 1` = My main 4K/2160p (UHD) Radarr.
-    - `Radarr 2` = My 1080p Radarr that I've setup for a streaming optimized quality profile.[^1]
+    - `Radarr 1` = Mon radarr principal 4K/2160p (UHD).
+    - `Radarr 2` = Mon Radarr 1080p que j'ai configuré pour un profil de qualité optimisé pour le streaming.[^1]
 
-    This option is best used if you want a 1:1 copy of your Radarr/Sonarr instances
+    Cette option est mieux utilisée si vous souhaitez une copie 1:1 de vos instances Radarr/Sonarr
 
-#### Adding the Radarr Sync list
+#### Ajout de la liste Radarr Sync
 
-In `Radarr 2` go to `Settings` => `Lists`
+Dans `Radarr 2` allez dans `Paramètres` => `Listes`
 
-![Radarr Settings Lists](images/radarr-settings-lists.png)
+![Listes de paramètres Radarr](images/radarr-settings-lists.png)
 
-Click on the + to add a list and select `Radarr`
+Cliquez sur le + pour ajouter une liste et sélectionnez « Radarr »
 
-![Radarr add List](images/radarr-add-list.png)
+![Radarr ajouter une liste](images/radarr-add-list.png)
 
-Then you get a screen with the following options:
+Ensuite, vous obtenez un écran avec les options suivantes :
 
-![Radarr Add Lists Options](images/radarr-add-lists-options.png)
+![Options d'ajout de listes Radarr](images/radarr-add-lists-options.png)
 
-1. The name you want to call your Sync list.
-1. Enable to Enable the list.
-1. Enable so the movies will be automatically added.
-1. Enable so the movies will be added and monitored (if disabled then there will be no search done for the movies).
-1. Enable so Radarr will perform a search when a movie is added.
-1. When Radarr shall consider a movie as available.[^2]
-1. The Quality Profile you want to use on `Radarr 2`.
-1. Your root location for your media library.
-1. The Full URL to `Radarr 1` (Use local URL if they run on the same system).
-1. Your API Key of `Radarr 1`.
-1. Which Profile of `Radarr 1` you want to Sync with `Radarr 2`.
-1. Test the connection to `Radarr 1`.
-1. Save your settings.
+1. Le nom que vous souhaitez appeler votre liste de synchronisation.
+1. Activez pour activer la liste.
+1. Activez pour que les films soient automatiquement ajoutés.
+1. Activez pour que les films soient ajoutés et surveillés (si désactivé, aucune recherche de films ne sera effectuée).
+1. Activez pour que Radarr effectue une recherche lorsqu'un film est ajouté.
+1. Lorsque Radarr considère un film comme disponible.[^2]
+1. Le profil de qualité que vous souhaitez utiliser sur « Radarr 2 ».
+1. Votre emplacement racine pour votre bibliothèque multimédia.
+1. L'URL complète de « Radarr 1 » (utilisez l'URL locale s'ils fonctionnent sur le même système).
+1. Votre clé API de « Radarr 1 ».
+1. Quel profil de « Radarr 1 » vous souhaitez synchroniser avec « Radarr 2 ».
+1. Testez la connexion à « Radarr 1 ».
+1. Enregistrez vos paramètres.
 
-#### Radarr Download client setup
+#### Radarr Télécharger la configuration du client
 
- You don't need a separate download client for your two Radarr instances, this all can be done with one download client (*Two if you prefer Usenet and Torrents*).
+ Vous n'avez pas besoin d'un client de téléchargement distinct pour vos deux instances Radarr, tout cela peut être fait avec un seul client de téléchargement (*Deux si vous préférez Usenet et Torrents*).
 
-`Settings` => `Download Clients`
+`Paramètres` => `Télécharger les clients`
 
-![!Radarr - Settings Download Clients](images/radarr-settings-download-clients.png)
+![!Radarr - Clients de téléchargement de paramètres](images/radarr-settings-download-clients.png)
 
-Select your preferred download client.
+Sélectionnez votre client de téléchargement préféré.
 
-![!Radarr - Settings Download Clients Categories](images/radarr-settings-download-clients-categories.png)
+![!Radarr - Paramètres de téléchargement des catégories de clients](images/radarr-settings-download-clients-categories.png)
 
-The only thing you need to change/create is a separate `Category` that you're going to use for `Radarr 2`
+La seule chose que vous devez modifier/créer est une « Catégorie » distincte que vous allez utiliser pour « Radarr 2 ».
 
-!!! warning
+!!! avertissement
 
-    This can't and shouldn't be the same category you use for `Radarr 1` but a separate `Category`.
+    Cela ne peut pas et ne doit pas être la même catégorie que celle que vous utilisez pour « Radarr 1 », mais une « Catégorie » distincte.
 
-### How does this Radarr Sync work
+### Comment fonctionne cette synchronisation Radarr
 
-You now only need to make use of `Radarr 1`. All movies you add to `Radarr 1` will be synced to `Radarr 2` at a scheduled time.
+Il ne vous reste plus qu'à utiliser `Radarr 1`. Tous les films que vous ajoutez à « Radarr 1 » seront synchronisés avec « Radarr 2 » à une heure programmée.
 
 ------
 
 ### Option 2
 
-!!! info ""
-    In this example I'm going to use two Sonarr instances (The basics is the same for Radarr).
+!!! Info ""
+    Dans cet exemple, je vais utiliser deux instances Sonarr (les bases sont les mêmes pour Radarr).
 
-    - `Sonarr 1` = My main 1080p WEB-DL Sonarr.
-    - `Sonarr 2` = 4K/2160p (UHD) WEB-DL Sonarr.
+    - `Sonarr 1` = Mon Sonarr WEB-DL 1080p principal.
+    - `Sonarr 2` = Sonarr WEB-DL 4K/2160p (UHD).
 
-    This option is best used if you only want to have a few TV shows (or movies if you use this option with Radarr) as 4K/2160p (UHD)
+    Cette option est mieux utilisée si vous souhaitez uniquement avoir quelques émissions de télévision (ou films si vous utilisez cette option avec Radarr) en 4K/2160p (UHD).
 
-#### Extra preparation
+#### Préparation supplémentaire
 
-In `Sonarr 1` go to `Settings` => `Profiles`
+Dans `Sonarr 1` allez dans `Paramètres` => `Profils`
 
-![!Sonarr - Settings - Profiles](images/sonarr-settings-profiles.png)
+![!Sonarr - Paramètres - Profils](images/sonarr-settings-profiles.png)
 
-Clone your used profile and rename your profile from `Profilename - Copy` to `Profilename!`
+Clonez votre profil utilisé et renommez votre profil de « Nom de profil - Copier » en « Nom de profil ! »
 
-![!Sonarr - Clone Profile](images/sonarr-clone-profile.png)
+![!Sonarr - Profil de clone](images/sonarr-clone-profile.png)
 
-#### Adding the Sonarr Sync list
+#### Ajout de la liste Sonarr Sync
 
-In `Sonarr 2` go to `Settings` => `Import Lists`
+Dans `Sonarr 2` allez dans `Paramètres` => `Importer des listes`
 
-![!Sonarr Settings Import Lists](images/sonarr-settings-import-lists.png)
+![!Listes d'importation des paramètres Sonarr](images/sonarr-settings-import-lists.png)
 
-Click on the + to add a list and select `Sonarr`
+Cliquez sur le + pour ajouter une liste et sélectionnez `Sonarr`
 
-![!Sonarr add List](images/sonarr-add-list.png)
+![!Sonarr ajouter une liste](images/sonarr-add-list.png)
 
-Then you get a screen with the following options:
+Ensuite, vous obtenez un écran avec les options suivantes :
 
-![!Sonarr Add Lists Options](images/sonarr-add-lists-options.png)
+![!Options d'ajout de listes Sonarr](images/sonarr-add-lists-options.png)
 
-1. The name you want to call your Sync list.
-1. Enable so the shows will be automatically added.
-1. Choose your monitoring options.[^3]
-1. Your root location for your media library.
-1. The Quality Profile you want to use on `Sonarr 2`.
-1. Series Type.[^4]
-1. If you want to use Season Folders.
-1. The Full URL to `Sonarr 1` (Use local URL if they run on the same system).
-1. Your API Key of `Sonarr 1`.
-1. The Cloned Profile of `Sonarr 1` that we're going to use to sync with `Sonarr 2`.
-1. Test the connection to `Sonarr 1`.
-1. Save your settings.
+1. Le nom que vous souhaitez appeler votre liste de synchronisation.
+1. Activez pour que les émissions soient automatiquement ajoutées.
+1. Choisissez vos options de surveillance.[^3]
+1. Votre emplacement racine pour votre bibliothèque multimédia.
+1. Le profil de qualité que vous souhaitez utiliser sur `Sonarr 2`.
+1. Type de série.[^4]
+1. Si vous souhaitez utiliser les dossiers saisonniers.
+1. L'URL complète de « Sonarr 1 » (utilisez l'URL locale s'ils fonctionnent sur le même système).
+1. Votre clé API de « Sonarr 1 ».
+1. Le profil cloné de « Sonarr 1 » que nous allons utiliser pour synchroniser avec « Sonarr 2 ».
+1. Testez la connexion à `Sonarr 1`.
+1. Enregistrez vos paramètres.
 
-#### Sonarr Download client setup
+#### Sonarr Télécharger la configuration du client
 
- You don't need a separate download client for your two Sonarr/Radarr instances, this can all be done with one download client (*Two if you prefer Usenet and Torrents*).
+ Vous n'avez pas besoin d'un client de téléchargement séparé pour vos deux instances Sonarr/Radarr, tout cela peut être fait avec un seul client de téléchargement (*Deux si vous préférez Usenet et Torrents*).
 
-`Settings` => `Download Clients`
+`Paramètres` => `Télécharger les clients`
 
-![!Sonarr - Settings Download Clients](images/sonarr-settings-download-clients.png)
+![!Sonarr - Clients de téléchargement de paramètres](images/sonarr-settings-download-clients.png)
 
-Select your preferred download client.
+Sélectionnez votre client de téléchargement préféré.
 
-![!Sonarr Categories](images/sonarr-categories.png)
+![!Catégories Sonarr](images/sonarr-categories.png)
 
-Only thing you need to change/create is a separate `Category` that you're going to use for `Sonarr 2`
+La seule chose que vous devez modifier/créer est une « Catégorie » distincte que vous allez utiliser pour « Sonarr 2 ».
 
-!!! tip
+!!! conseil
 
-    This can't and shouldn't be the same category you use for `Sonarr 1` but a separate `Category`.
+    Cela ne peut pas et ne doit pas être la même catégorie que celle que vous utilisez pour « Sonarr 1 », mais une « Catégorie » distincte.
 
-### How does this Sonarr Sync work
+### Comment fonctionne cette synchronisation Sonarr
 
-You now only need to make use of `Sonarr 1`. When you got a TV show (or a movie if you use this option with Radarr) that you also want as 4K/2160p (UHD) then you make sure you make use of the Cloned Quality Profile. And it will sync at a scheduled time.
+Il ne vous reste plus qu'à utiliser `Sonarr 1`. Lorsque vous obtenez une émission de télévision (ou un film si vous utilisez cette option avec Radarr) que vous souhaitez également en 4K/2160p (UHD), assurez-vous d'utiliser le profil de qualité cloné. Et il se synchronisera à une heure programmée.
 
 ------
 
-[^1]:
+[^1] :
 
-    If you're interested in the 1080p streaming optimized quality profile you can join my [discord](https://trash-guides.info/discord) and get access to the Special Quality Profiles channel (access-to-sqp) by accepting the rules.
+    Si vous êtes intéressé par le profil de qualité optimisée pour le streaming 1080p, vous pouvez rejoindre mon [discord](https://trash-guides.info/discord) et accéder à la chaîne Special Quality Profiles (access-to-sqp) en acceptant les règles.
 
-    This is a special quality profile I created for people who are really interested in it.
+    Il s'agit d'un profil de qualité spécial que j'ai créé pour les personnes qui s'y intéressent vraiment.
 
-    This release profile is fine tuned for when you want to run a 2nd Radarr for 1080p, and want minimum to none transcoding and smaller sizes for the second copies.
+    Ce profil de version est adapté lorsque vous souhaitez exécuter un deuxième Radarr pour 1080p et que vous souhaitez un transcodage minimum ou nul et des tailles plus petites pour les deuxièmes copies.
 
-    Why choose this quality profile?
+    Pourquoi choisir ce profil de qualité ?
 
-    - Streaming optimized (optimized for PLEX, emby, Jellyfin, and other streaming platforms)
-    - Small sizes
-    - Good quality
-    - Only AC3 Audio (downmixed lossless audio track to Dolby Digital 5.1 for optimal compatibility)
-    - You want maximum compatibility between all devices and still have a HQ release.
-    - You run two instances of Radarr and want both versions or just for the 1080p ones.
-    - You want to have minimum to none transcoding for low powered devices or remote streaming.
+    - Streaming optimisé (optimisé pour PLEX, emby, Jellyfin et autres plateformes de streaming)
+    - Petites tailles
+    - Bonne qualité
+    - Uniquement AC3 Audio (piste audio sous-mixée sans perte en Dolby Digital 5.1 pour une compatibilité optimale)
+    - Vous souhaitez une compatibilité maximale entre tous les appareils et disposez toujours d'une version HQ.
+    - Vous exécutez deux instances de Radarr et souhaitez les deux versions ou uniquement celles en 1080p.
+    - Vous souhaitez avoir un transcodage minimum, voire aucun, pour les appareils à faible consommation ou le streaming à distance.
 
-[^2]:
+[^2] :
 
-    - **Announced**: Radarr will consider movies available as soon as they are added to Radarr. This setting is recommended if you have good private trackers that do not have fakes.
-    - **In Cinemas**: Radarr will consider movies available as soon as movies hit cinemas. This option is not recommended.
-    - **Released**: Radarr will consider movies available as soon as the Blu-ray is released. This option is recommended if your indexers contain fakes often.
+    - **Annoncé** : Radarr considérera les films disponibles dès qu'ils seront ajoutés à Radarr. Ce paramètre est recommandé si vous disposez de bons trackers privés qui n’ont pas de contrefaçons.
+    - **Dans les cinémas** : Radarr considérera les films disponibles dès qu'ils sortiront en salles. Cette option n'est pas recommandée.
+    - **Sortie** : Radarr considérera les films disponibles dès la sortie du Blu-ray. Cette option est recommandée si vos indexeurs contiennent souvent des contrefaçons.
 
-[^3]:
+[^3] :
 
-    - **All Episodes**: Monitor all episodes except specials
-    - **Future Episodes**: Monitor episodes that have not aired yet
-    - **Missing Episodes**: Monitor episodes that do not have files or have not aired yet
-    - **Existing Episodes**: Monitor episodes that have files or have not aired yet
-    - **First Season**: Monitor all episodes of the first season. All other seasons will be ignored
-    - **Latest Season**: Monitor all episodes of the latest season and future seasons
-    - **None**: No episodes will be monitored
+    - **Tous les épisodes** : surveillez tous les épisodes sauf les spéciaux
+    - **Futurs épisodes** : surveillez les épisodes qui n'ont pas encore été diffusés
+    - **Épisodes manquants** : surveillez les épisodes qui n'ont pas de fichiers ou qui n'ont pas encore été diffusés
+    - **Épisodes existants** : surveillez les épisodes contenant des fichiers ou qui n'ont pas encore été diffusés
+    - **Première saison** : surveillez tous les épisodes de la première saison. Toutes les autres saisons seront ignorées
+    - **Dernière saison** : surveillez tous les épisodes de la dernière saison et des saisons à venir
+    - **Aucun** : aucun épisode ne sera surveillé
 
-[^4]:
+[^4] :
 
-    - **Anime**: Episodes released using an absolute episode number
-    - **Daily**: Episodes released daily or less frequently that use year-month-day (2017-05-25)
-    - **Standard**: Episodes released with SxxEyy pattern
+    - **Anime** : épisodes publiés en utilisant un numéro d'épisode absolu
+    - **Quotidien** : épisodes diffusés quotidiennement ou moins fréquemment qui utilisent l'année-mois-jour (2017-05-25)
+    - **Standard** : épisodes publiés avec le modèle SxxEyy
 
 --8<-- "includes/support.md"

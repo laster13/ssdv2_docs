@@ -159,7 +159,7 @@ Ce schéma de dénomination est conçu pour être compatible avec le nouveau [Sc
 ##### Emby facultatif
 
 ```bash
-{{ radarr['naming']['radar-naming']['folder']['emby'] }}
+{{ radarr['naming']['radarr-naming']['folder']['emby'] }}
 ```
 
 <small>RESULTAT :</small> `Le titre du film (2010)`

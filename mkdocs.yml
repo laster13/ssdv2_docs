@@ -128,6 +128,11 @@ markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abb
   - tables                        # Pour les tableaux https://squidfunk.github.io/mkdocs-material/reference/data-tables/
   # extensions de python-markdown https://facelessuser.github.io/pymdown-extensions/
   - pymdownx.details              # plier/déplier les avertissements - admonition collapsable
+  - pymdownx.extra
+  - pymdownx.snippets
+  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.caret                # texte ^^souligné^^ ou en ^exposant^.
   - pymdownx.mark                 # texte ==surligné==.
   - pymdownx.tilde                # texte ~~barré~~ ou en ~indice~.

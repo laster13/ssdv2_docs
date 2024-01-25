@@ -511,7 +511,7 @@ Nous avons réalisé 3 guides liés à cela.
 
 ??? question "DV HDR10+ - [Cliquez pour afficher/masquer]" 
 
-    {! include-markdown "../includes/cf-descriptions/dv-hdr10plus.md" !} 
+    {! include-markdown "../../includes/cf-descriptions/dv-hdr10plus.md" !} 
 
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 

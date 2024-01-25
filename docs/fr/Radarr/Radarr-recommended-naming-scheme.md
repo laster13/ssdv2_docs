@@ -38,7 +38,7 @@ Ce schéma de dénomination est conçu pour être compatible avec le [Nouvel Age
 ###Plex
 
 ```bash
-{{ radarr['naming']['radar-naming']['file']['default'] }}
+{{ radarr['naming']['radarr-naming']['file']['default'] }}
 ```
 
 ??? résumé "RESULTATS : - [Cliquez pour afficher/masquer]"
@@ -48,7 +48,7 @@ Ce schéma de dénomination est conçu pour être compatible avec le [Nouvel Age
 #### Plex Anime
 
 ```bash
-{{ radarr['naming']['radar-naming']['file']['anime'] }}
+{{ radarr['naming']['radarr-naming']['file']['anime'] }}
 ```
 
 ??? résumé "RESULTATS : - [Cliquez pour afficher/masquer]"
@@ -58,7 +58,7 @@ Ce schéma de dénomination est conçu pour être compatible avec le [Nouvel Age
 ### Emby
 
 ```bash
-{{ radarr['naming']['radar-naming']['file']['emby'] }}
+{{ radarr['naming']['radarr-naming']['file']['emby'] }}
 ```
 
 ??? résumé "RESULTATS : - [Cliquez pour afficher/masquer]"
@@ -68,7 +68,7 @@ Ce schéma de dénomination est conçu pour être compatible avec le [Nouvel Age
 #### Emby Anime
 
 ```bash
-{{ radarr['naming']['radar-naming']['file']['anime-emby'] }}
+{{ radarr['naming']['radarr-naming']['file']['anime-emby'] }}
 ```
 
 ??? résumé "RESULTATS : - [Cliquez pour afficher/masquer]"
@@ -78,7 +78,7 @@ Ce schéma de dénomination est conçu pour être compatible avec le [Nouvel Age
 ### Gelée
 
 ```bash
-{{ radarr['naming']['radar-naming']['file']['jellyfin'] }}
+{{ radarr['naming']['radarr-naming']['file']['jellyfin'] }}
 ```
 
 ??? résumé "RESULTATS : - [Cliquez pour afficher/masquer]"
@@ -88,7 +88,7 @@ Ce schéma de dénomination est conçu pour être compatible avec le [Nouvel Age
 #### Jellyfin Anime
 
 ```bash
-{{ radarr['naming']['radar-naming']['file']['anime-jellyfin'] }}
+{{ radarr['naming']['radarr-naming']['file']['anime-jellyfin'] }}
 ```
 
 ??? résumé "RESULTATS : - [Cliquez pour afficher/masquer]"
@@ -128,7 +128,7 @@ Le nom du fichier peut être masqué là où le nom de la version ne l'est pas, 
 ### Minimum nécessaire et recommandé
 
 ```bash
-{{ radarr['naming']['radar-naming']['folder']['default'] }}
+{{ radarr['naming']['radarr-naming']['folder']['default'] }}
 ```
 
 <small>RESULTAT :</small> `Le titre du film (2010)`
@@ -151,7 +151,7 @@ Ce schéma de dénomination est conçu pour être compatible avec le nouveau [Sc
 ##### Plex en option
 
 ```bash
-{{ radarr['naming']['radar-naming']['folder']['plex'] }}
+{{ radarr['naming']['radarr-naming']['folder']['plex'] }}
 ```
 
 <small>RESULTAT :</small> `Le titre du film (2010) {imdb-tt1520211}`
@@ -167,7 +167,7 @@ Ce schéma de dénomination est conçu pour être compatible avec le nouveau [Sc
 ##### Jellyfin en option
 
 ```bash
-{{ radarr['naming']['radar-naming']['folder']['jellyfin'] }}
+{{ radarr['naming']['radarr-naming']['folder']['jellyfin'] }}
 ```
 
 <small>RESULTAT :</small> `Le titre du film (2010) [imdbid-tt1520211]`

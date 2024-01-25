@@ -87,7 +87,7 @@ Si vous préférez les encodages HD de haute qualité (Bluray-720p/1080p)
 
 - *Taille : 6-15 Go pour un Bluray-1080p selon la durée d'exécution.*
 
-{! include-markdown "../includes/cf/radar-suggest-attention.md" !}
+{! include-markdown "../includes/cf/radarr-suggest-attention.md" !}
 
 J'ai décidé de ne pas ajouter de formats personnalisés « Audio Advanced » au profil d'encodage. Vous trouverez difficilement de l’audio HD avec les encodages HD Bluray. Lors du téléchargement de HD Bluray Encodes, je suggère d’opter pour la qualité. Si vous souhaitez des formats audio HD, je vous suggère d'opter pour un Remux ou un UHD Encode.
 

@@ -1002,12 +1002,12 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 
     Cela bloque toutes les versions 720/1080p (HD) codées en x265. 
 
-    Dans votre profil de qualité, utilisez le score suivant pour ce format personnalisé : `{{ radarrr['cf']['x265-hd']['trash_scores']['default'] }}` 
+    Dans votre profil de qualité, utilisez le score suivant pour ce format personnalisé : `{{ radarr['cf']['x265-hd']['trash_scores']['default'] }}` 
 
     !!! échec "" 
         --8<-- "includes/docker/x265.md" 
 
-            !!! Danger "Ne l'utilisez pas avec [{{ radarrr['cf']['x265-no-hdrdv']['name'] }}](/radarrr/radarrr-collection-of-custom-formats/# x265-no-hdrdv), n'en inclure qu'un :avertissement:" 
+            !!! Danger "Ne l'utilisez pas avec [{{ radarr['cf']['x265-no-hdrdv']['name'] }}](/radarr/radarr-collection-of-custom-formats/# x265-no-hdrdv), n'en inclure qu'un :avertissement:" 
 
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
@@ -1023,7 +1023,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 
 ??? question « Mise à l'échelle - [Cliquez pour afficher/masquer] » 
 
-    Ce format personnalisé est utilisé pour empêcher radarrr de récupérer les versions mises à l'échelle. 
+    Ce format personnalisé est utilisé pour empêcher radarr de récupérer les versions mises à l'échelle. 
 
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
@@ -1039,7 +1039,7 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 
 ??? question "Extras - [Cliquez pour afficher/masquer]" 
 
-    Ce format personnalisé est utilisé pour empêcher radarrr de récupérer des versions contenant uniquement des extras/bonus. 
+    Ce format personnalisé est utilisé pour empêcher radarr de récupérer des versions contenant uniquement des extras/bonus. 
 
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 
@@ -1225,9 +1225,9 @@ include-markdown "../../includes/cf-descriptions/hdr.md" !}
 
     *Étant donné que certaines versions NF ne seront pas publiées en 4K, mais vous souhaitez avoir des versions DV/HDR.* 
 
-    Dans votre profil de qualité utilisez le score suivant pour ce format personnalisé : `{{ radarrr['cf']['x265-no-hdrdv']['trash_scores']['default'] }}` 
+    Dans votre profil de qualité utilisez le score suivant pour ce format personnalisé : `{{ radarr['cf']['x265-no-hdrdv']['trash_scores']['default'] }}` 
 
-    !!! Danger "Ne l'utilisez pas avec [{{ radarrr['cf']['x265-hd']['name'] }}](/radarrr/radarrr-collection-of-custom-formats/#x265- hd), n'en inclure qu'un :avertissement:" 
+    !!! Danger "Ne l'utilisez pas avec [{{ radarr['cf']['x265-hd']['name'] }}](/radarr/radarr-collection-of-custom-formats/#x265- hd), n'en inclure qu'un :avertissement:" 
 
 ??? exemple "JSON - [Cliquez pour afficher/masquer]" 
 

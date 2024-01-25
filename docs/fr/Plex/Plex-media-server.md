@@ -494,6 +494,3 @@ Pour les informations de ce guide, j'ai utilisé le sources suivantes
 – [Articles d'assistance Plex](https://support.plex.tv/articles/){ : 
 target="_blank" rel="noopener noreferrer"} - Informations supplémentaires recueillies auprès d'un employé de Plex 
 - Propre expérience 
-
-{! include-markdown "../../../includes/support.md" !}
-<!-- --8<-- "includes/support.md" -->

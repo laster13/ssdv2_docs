@@ -494,6 +494,3 @@ For the information of this guide, I made use of the following sources
 - [Plex Support Articles](https://support.plex.tv/articles/){:target="_blank" rel="noopener noreferrer"}
 - Extra Information gathered from a Plex employee
 - Own experience
-
-{! include-markdown "../../../includes/support.md" !}
-<!-- --8<-- "includes/support.md" -->

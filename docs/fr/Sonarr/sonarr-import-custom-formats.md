@@ -6,9 +6,9 @@ Ici, je vais essayer d'expliquer comment vous pouvez importer manuellement des f
 
 ## Comment copier/coller le JSON depuis le site
 
-Dans cet exemple, j'utiliserai le [{{ sonarr['cf']['br-disk']['name'] }}](/Sonarr/sonarr-collection-of-custom-formats/#br-disk) {:target="_blank" rel="noopener noreferrer"} Format personnalisé, celui que la plupart des gens ne veulent pas télécharger de toute façon. Et si vous le faites, vous n’utilisez probablement aucune des applications Starr ou Plex, car les deux ne les prennent pas en charge.
+Dans cet exemple, j'utiliserai le [{{ sonarr['cf']['br-disk']['name'] }}](/Sonarr/sonarr-collection-of-custom-formats/#br-disk){:target="_blank" rel="noopener noreferrer"} Format personnalisé, celui que la plupart des gens ne veulent pas télécharger de toute façon. Et si vous le faites, vous n’utilisez probablement aucune des applications Starr ou Plex, car les deux ne les prennent pas en charge.
 
-Accédez à la [Collection de formats personnalisés](/Sonarr/sonarr-collection-of-custom-formats/){:target="_blank" rel="noopener noreferrer"} et sélectionnez [{{ sonarr['cf'][' br-disk']['name'] }}](/Sonarr/sonarr-collection-of-custom-formats/#br-disk){:target="_blank" rel="noopener noreferrer"} du tableau.
+Accédez à la [Collection of Custom Formats](/Sonarr/sonarr-collection-of-custom-formats/){:target="_blank" rel="noopener noreferrer"} and select [{{ sonarr['cf']['br-disk']['name'] }}](/Sonarr/sonarr-collection-of-custom-formats/#br-disk){:target="_blank" rel="noopener noreferrer"} du tableau.
 
 ![cf-table-select-brdisk](images/cf-table-select-brdisk.png)
 

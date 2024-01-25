@@ -95,7 +95,7 @@ Before
 traefik.enable: 'true'
 ## HTTP Routers
 traefik.http.routers.sabnzbd-rtr.entrypoints: 'https'
-traefik.http.routers.sabnzbd-rtr.rule: 'Host(`sabnzbd.{{user.domain}}`)'
+traefik.http.routers.sabnzbd-rtr.rule: 'Host(`sabnzbd.domain`)'
 traefik.http.routers.sabnzbd-rtr.tls: 'true'
 ## Middleware
 traefik.http.routers.sabnzbd-rtr.middlewares: "{{ 'chain-oauth@file' if oauth_enabled | default(false) else 'chain-basic-auth@file' }}"

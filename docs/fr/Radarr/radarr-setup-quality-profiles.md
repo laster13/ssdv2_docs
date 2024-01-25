@@ -15,14 +15,14 @@ J'ai créé un [organigramme] (#quel-profil-de-qualité-devriez-vous-choisir) po
 
 ## Bases
 
-Après avoir ajouté les formats personnalisés, comme expliqué dans [Comment importer des formats personnalisés](/radarrr/radarrr-import-custom-formats/){:target="_blank" rel="noopener noreferrer"}.
+Après avoir ajouté les formats personnalisés, comme expliqué dans [Comment importer des formats personnalisés](/radarr/radarr-import-custom-formats/){:target="_blank" rel="noopener noreferrer"}.
 Vous devrez le configurer dans le profil de qualité que vous souhaitez utiliser/préférez utiliser les formats personnalisés.
 
 `Paramètres` => `Profils`
 
 ![!cf-settings-profiles](images/cf-settings-profiles.png)
 
-!!! info "Les formats personnalisés radarrr peuvent être définis par profil et ne sont pas globaux"
+!!! info "Les formats personnalisés radarr peuvent être définis par profil et ne sont pas globaux"
 Sélectionnez le profil que vous souhaitez utiliser/préférer.
 
 ![!cf-quality-profiles](images/cf-quality-profiles.png)
@@ -30,7 +30,7 @@ Sélectionnez le profil que vous souhaitez utiliser/préférer.
 ![!cf-profile-selected](images/cf-profile-selected.png)
 
 1. Nom du profil.
-1. Autorisez les mises à niveau. radarrr cessera d'améliorer la qualité une fois que (3) sera satisfait.
+1. Autorisez les mises à niveau. radarr cessera d'améliorer la qualité une fois que (3) sera satisfait.
 1. Mettez à niveau jusqu'à la qualité sélectionnée.
 1. Le « score minimum au format personnalisé » dont le téléchargement est autorisé. [Plus d'informations](#minimum-custom-format-score)
 1. Continuez à mettre à niveau le format personnalisé jusqu'à ce que ce score soit atteint. (le définir sur « 0 » signifie qu'aucune mise à niveau n'aura lieu en fonction des formats personnalisés)
@@ -67,9 +67,9 @@ En bas, dans le profil que vous avez choisi, vous verrez les formats personnalis
 
     <p align="center">*Cliquez sur l'image ci-dessous pour voir comment utiliser l'organigramme.*
 
-    <p align="center">![Organigramme](/radarrr/images/flowchart-guide-radarr.png){ width="10%" height="10%" }
+    <p align="center">![Organigramme](/radarr/images/flowchart-guide-radarr.png){ width="10%" height="10%" }
 
-    ![Organigramme](/radarrr/images/flowchart-quality-profiles-radarr.png)
+    ![Organigramme](/radarr/images/flowchart-quality-profiles-radarr.png)
 
     Si vous n'êtes pas sûr ou si vous avez des questions, n'hésitez pas à demander de l'aide sur Discord
 
@@ -293,9 +293,9 @@ Les groupes de formats personnalisés suivants doivent être combinés avec les 
 
 ??? Astuce "Proper and Repacks - [Cliquez pour afficher/masquer]"
 
-    Je vous suggère également de modifier les paramètres Propers et Repacks dans radarrr
+    Je vous suggère également de modifier les paramètres Propers et Repacks dans radarr
 
-    `Media Management` => `File Management` sur `Ne pas préférer` et utilisez le format personnalisé [Repack/Proper](/radarrr/radarrr-collection-of-custom-formats/#repackproper).
+    `Media Management` => `File Management` sur `Ne pas préférer` et utilisez le format personnalisé [Repack/Proper](/radarr/radarr-collection-of-custom-formats/#repackproper).
 
     ![!cf-mm-propers-repacks-disable](images/cf-mm-propers-repacks-disable.png)
 
@@ -342,11 +342,11 @@ Les groupes de formats personnalisés suivants doivent être combinés avec les 
 
 ??? Astuce "Évitez d'utiliser le format personnalisé x264/x265 - [Cliquez pour afficher/masquer]"
 
-    Évitez d'utiliser le format personnalisé x264/x265 avec une partition si possible, il est plus intelligent d'utiliser le [{{ radarrr['cf']['x265-hd']['name'] }}](/radarrr/radarr-collection -of-custom-formats/#x265-hd){:target="_blank" rel="noopener noreferrer"} Format personnalisé.
+    Évitez d'utiliser le format personnalisé x264/x265 avec une partition si possible, il est plus intelligent d'utiliser le [{{ radarr['cf']['x265-hd']['name'] }}](/radarr/radarr-collection -of-custom-formats/#x265-hd){:target="_blank" rel="noopener noreferrer"} Format personnalisé.
 
     Quelque chose comme 95 % des fichiers vidéo sont au format x264 et offrent une bien meilleure prise en charge de la lecture directe. Si vous avez plus de quelques utilisateurs, vous remarquerez beaucoup plus de transcodage.
 
-    Utilisez x265 uniquement pour les versions 4K et le [{{ radarrr['cf']['x265-hd']['name'] }}](/radarrr/radarrr-collection-of-custom-formats/#x265-hd ){:target="_blank" rel="noopener noreferrer"} s'assure que vous disposez toujours des versions x265.
+    Utilisez x265 uniquement pour les versions 4K et le [{{ radarr['cf']['x265-hd']['name'] }}](/radarr/radarr-collection-of-custom-formats/#x265-hd ){:target="_blank" rel="noopener noreferrer"} s'assure que vous disposez toujours des versions x265.
 
 ### Pourquoi est-ce que j'obtiens des couleurs violettes ou vertes
 

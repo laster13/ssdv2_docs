@@ -35,50 +35,50 @@ Je fais moi-même du WEB-DL uniquement pour les émissions de télévision car, 
 
 ------
 
-## Définitions de la qualité Sonarr
+## Sonarr Quality Definitions
 
-| Qualité | Minimum (mégaoctets par minute) | Maximum (mégaoctets par minute) |
-| -------------------------------------------------- ---------------- | -------------------------------------------------- ------------ | -------------------------------------------------- ------------ |
-| {{ sonarr['qualité-taille']['série']['qualités'][0]['qualité'] }} | {{ sonarr['quality-size']['series']['qualities'][0]['min'] }} | {{ sonarr['quality-size']['series']['qualities'][0]['max'] }} |
-| {{ sonarr['qualité-taille']['série']['qualités'][1]['qualité'] }} | {{ sonarr['quality-size']['series']['qualities'][1]['min'] }} | {{ sonarr['quality-size']['series']['qualities'][1]['max'] }} |
-| {{ sonarr['qualité-taille']['série']['qualités'][2]['qualité'] }} | {{ sonarr['quality-size']['series']['qualities'][2]['min'] }} | {{ sonarr['qualité-taille']['série']['qualités'][2]['max'] }} |
-| {{ sonarr['qualité-taille']['série']['qualités'][3]['qualité'] }} | {{ sonarr['quality-size']['series']['qualities'][3]['min'] }} | {{ sonarr['quality-size']['series']['qualities'][3]['max'] }} |
-| {{ sonarr['qualité-taille']['série']['qualités'][4]['qualité'] }} | {{ sonarr['quality-size']['series']['qualities'][4]['min'] }} | {{ sonarr['qualité-taille']['série']['qualités'][4]['max'] }} |
-| {{ sonarr['qualité-taille']['série']['qualités'][5]['qualité'] }} | {{ sonarr['quality-size']['series']['qualities'][5]['min'] }} | {{ sonarr['qualité-taille']['série']['qualités'][5]['max'] }} |
-| {{ sonarr['qualité-taille']['série']['qualités'][6]['qualité'] }} | {{ sonarr['quality-size']['series']['qualities'][6]['min'] }} | {{ sonarr['quality-size']['series']['qualities'][6]['max'] }} |
-| {{ sonarr['qualité-taille']['série']['qualités'][7]['qualité'] }} | {{ sonarr['quality-size']['series']['qualities'][7]['min'] }} | {{ sonarr['qualité-taille']['série']['qualités'][7]['max'] }} |
-| {{ sonarr['qualité-taille']['série']['qualités'][8]['qualité'] }} | {{ sonarr['quality-size']['series']['qualities'][8]['min'] }} | {{ sonarr['quality-size']['series']['qualities'][8]['max'] }} |
-| {{ sonarr['qualité-taille']['série']['qualités'][9]['qualité'] }} | {{ sonarr['quality-size']['series']['qualities'][9]['min'] }} | {{ sonarr['quality-size']['series']['qualities'][9]['max'] }} |
-| {{ sonarr['qualité-taille']['série']['qualités'][10]['qualité'] }} | {{ sonarr['quality-size']['series']['qualities'][10]['min'] }} | {{ sonarr['quality-size']['series']['qualities'][10]['max'] }} |
-| {{ sonarr['qualité-taille']['série']['qualités'][11]['qualité'] }} | {{ sonarr['quality-size']['series']['qualities'][11]['min'] }} | {{ sonarr['quality-size']['series']['qualities'][11]['max'] }} |
-| {{ sonarr['qualité-taille']['série']['qualités'][12]['qualité'] }} | {{ sonarr['quality-size']['series']['qualities'][12]['min'] }} | {{ sonarr['quality-size']['series']['qualities'][12]['max'] }} |
-| {{ sonarr['qualité-taille']['série']['qualités'][13]['qualité'] }} | {{ sonarr['quality-size']['series']['qualities'][13]['min'] }} | {{ sonarr['quality-size']['series']['qualities'][13]['max'] }} |
+| Quality                                                            | Minimum (Megabytes Per Minute)                                 | Maximum (Megabytes Per Minute)                                 |
+| ------------------------------------------------------------------ | -------------------------------------------------------------- | -------------------------------------------------------------- |
+| {{ sonarr['quality-size']['series']['qualities'][0]['quality'] }}  | {{ sonarr['quality-size']['series']['qualities'][0]['min'] }}  | {{ sonarr['quality-size']['series']['qualities'][0]['max'] }}  |
+| {{ sonarr['quality-size']['series']['qualities'][1]['quality'] }}  | {{ sonarr['quality-size']['series']['qualities'][1]['min'] }}  | {{ sonarr['quality-size']['series']['qualities'][1]['max'] }}  |
+| {{ sonarr['quality-size']['series']['qualities'][2]['quality'] }}  | {{ sonarr['quality-size']['series']['qualities'][2]['min'] }}  | {{ sonarr['quality-size']['series']['qualities'][2]['max'] }}  |
+| {{ sonarr['quality-size']['series']['qualities'][3]['quality'] }}  | {{ sonarr['quality-size']['series']['qualities'][3]['min'] }}  | {{ sonarr['quality-size']['series']['qualities'][3]['max'] }}  |
+| {{ sonarr['quality-size']['series']['qualities'][4]['quality'] }}  | {{ sonarr['quality-size']['series']['qualities'][4]['min'] }}  | {{ sonarr['quality-size']['series']['qualities'][4]['max'] }}  |
+| {{ sonarr['quality-size']['series']['qualities'][5]['quality'] }}  | {{ sonarr['quality-size']['series']['qualities'][5]['min'] }}  | {{ sonarr['quality-size']['series']['qualities'][5]['max'] }}  |
+| {{ sonarr['quality-size']['series']['qualities'][6]['quality'] }}  | {{ sonarr['quality-size']['series']['qualities'][6]['min'] }}  | {{ sonarr['quality-size']['series']['qualities'][6]['max'] }}  |
+| {{ sonarr['quality-size']['series']['qualities'][7]['quality'] }}  | {{ sonarr['quality-size']['series']['qualities'][7]['min'] }}  | {{ sonarr['quality-size']['series']['qualities'][7]['max'] }}  |
+| {{ sonarr['quality-size']['series']['qualities'][8]['quality'] }}  | {{ sonarr['quality-size']['series']['qualities'][8]['min'] }}  | {{ sonarr['quality-size']['series']['qualities'][8]['max'] }}  |
+| {{ sonarr['quality-size']['series']['qualities'][9]['quality'] }}  | {{ sonarr['quality-size']['series']['qualities'][9]['min'] }}  | {{ sonarr['quality-size']['series']['qualities'][9]['max'] }}  |
+| {{ sonarr['quality-size']['series']['qualities'][10]['quality'] }} | {{ sonarr['quality-size']['series']['qualities'][10]['min'] }} | {{ sonarr['quality-size']['series']['qualities'][10]['max'] }} |
+| {{ sonarr['quality-size']['series']['qualities'][11]['quality'] }} | {{ sonarr['quality-size']['series']['qualities'][11]['min'] }} | {{ sonarr['quality-size']['series']['qualities'][11]['max'] }} |
+| {{ sonarr['quality-size']['series']['qualities'][12]['quality'] }} | {{ sonarr['quality-size']['series']['qualities'][12]['min'] }} | {{ sonarr['quality-size']['series']['qualities'][12]['max'] }} |
+| {{ sonarr['quality-size']['series']['qualities'][13]['quality'] }} | {{ sonarr['quality-size']['series']['qualities'][13]['min'] }} | {{ sonarr['quality-size']['series']['qualities'][13]['max'] }} |
 
 ------
 
-### Définitions de la qualité Sonarr - Anime
+### Sonarr Quality Definitions - Anime
 
-| Qualité | Minimum (mégaoctets par minute) | Maximum (mégaoctets par minute) |
-| -------------------------------------------------- --------------- | -------------------------------------------------- ----------- | -------------------------------------------------- ----------- |
-| {{ sonarr['qualité-taille']['anime']['qualités'][0]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][0]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][0]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][1]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][1]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][1]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][2]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][2]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][2]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][3]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][3]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][3]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][4]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][4]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][4]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][5]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][5]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][5]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][6]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][6]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][6]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][7]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][7]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][7]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][8]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][8]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][8]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][9]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][9]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][9]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][10]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][10]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][10]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][11]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][11]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][11]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][12]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][12]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][12]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][13]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][13]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][13]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][14]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][14]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][14]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][15]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][15]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][15]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][16]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][16]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][16]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][17]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][17]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][17]['max'] }} |
-| {{ sonarr['qualité-taille']['anime']['qualités'][18]['qualité'] }} | {{ sonarr['quality-size']['anime']['qualities'][18]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][18]['max'] }} |
+| Quality                                                           | Minimum (Megabytes Per Minute)                                | Maximum (Megabytes Per Minute)                                |
+| ----------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{ sonarr['quality-size']['anime']['qualities'][0]['quality'] }}  | {{ sonarr['quality-size']['anime']['qualities'][0]['min'] }}  | {{ sonarr['quality-size']['anime']['qualities'][0]['max'] }}  |
+| {{ sonarr['quality-size']['anime']['qualities'][1]['quality'] }}  | {{ sonarr['quality-size']['anime']['qualities'][1]['min'] }}  | {{ sonarr['quality-size']['anime']['qualities'][1]['max'] }}  |
+| {{ sonarr['quality-size']['anime']['qualities'][2]['quality'] }}  | {{ sonarr['quality-size']['anime']['qualities'][2]['min'] }}  | {{ sonarr['quality-size']['anime']['qualities'][2]['max'] }}  |
+| {{ sonarr['quality-size']['anime']['qualities'][3]['quality'] }}  | {{ sonarr['quality-size']['anime']['qualities'][3]['min'] }}  | {{ sonarr['quality-size']['anime']['qualities'][3]['max'] }}  |
+| {{ sonarr['quality-size']['anime']['qualities'][4]['quality'] }}  | {{ sonarr['quality-size']['anime']['qualities'][4]['min'] }}  | {{ sonarr['quality-size']['anime']['qualities'][4]['max'] }}  |
+| {{ sonarr['quality-size']['anime']['qualities'][5]['quality'] }}  | {{ sonarr['quality-size']['anime']['qualities'][5]['min'] }}  | {{ sonarr['quality-size']['anime']['qualities'][5]['max'] }}  |
+| {{ sonarr['quality-size']['anime']['qualities'][6]['quality'] }}  | {{ sonarr['quality-size']['anime']['qualities'][6]['min'] }}  | {{ sonarr['quality-size']['anime']['qualities'][6]['max'] }}  |
+| {{ sonarr['quality-size']['anime']['qualities'][7]['quality'] }}  | {{ sonarr['quality-size']['anime']['qualities'][7]['min'] }}  | {{ sonarr['quality-size']['anime']['qualities'][7]['max'] }}  |
+| {{ sonarr['quality-size']['anime']['qualities'][8]['quality'] }}  | {{ sonarr['quality-size']['anime']['qualities'][8]['min'] }}  | {{ sonarr['quality-size']['anime']['qualities'][8]['max'] }}  |
+| {{ sonarr['quality-size']['anime']['qualities'][9]['quality'] }}  | {{ sonarr['quality-size']['anime']['qualities'][9]['min'] }}  | {{ sonarr['quality-size']['anime']['qualities'][9]['max'] }}  |
+| {{ sonarr['quality-size']['anime']['qualities'][10]['quality'] }} | {{ sonarr['quality-size']['anime']['qualities'][10]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][10]['max'] }} |
+| {{ sonarr['quality-size']['anime']['qualities'][11]['quality'] }} | {{ sonarr['quality-size']['anime']['qualities'][11]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][11]['max'] }} |
+| {{ sonarr['quality-size']['anime']['qualities'][12]['quality'] }} | {{ sonarr['quality-size']['anime']['qualities'][12]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][12]['max'] }} |
+| {{ sonarr['quality-size']['anime']['qualities'][13]['quality'] }} | {{ sonarr['quality-size']['anime']['qualities'][13]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][13]['max'] }} |
+| {{ sonarr['quality-size']['anime']['qualities'][14]['quality'] }} | {{ sonarr['quality-size']['anime']['qualities'][14]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][14]['max'] }} |
+| {{ sonarr['quality-size']['anime']['qualities'][15]['quality'] }} | {{ sonarr['quality-size']['anime']['qualities'][15]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][15]['max'] }} |
+| {{ sonarr['quality-size']['anime']['qualities'][16]['quality'] }} | {{ sonarr['quality-size']['anime']['qualities'][16]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][16]['max'] }} |
+| {{ sonarr['quality-size']['anime']['qualities'][17]['quality'] }} | {{ sonarr['quality-size']['anime']['qualities'][17]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][17]['max'] }} |
+| {{ sonarr['quality-size']['anime']['qualities'][18]['quality'] }} | {{ sonarr['quality-size']['anime']['qualities'][18]['min'] }} | {{ sonarr['quality-size']['anime']['qualities'][18]['max'] }} |
 
 !!! note
     La raison pour laquelle vous ne voyez pas le score « Préféré » dans le tableau ci-dessus est que nous voulons de toute façon une qualité maximale. Alors réglez-le le plus haut possible.

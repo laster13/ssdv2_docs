@@ -77,11 +77,6 @@ plugins:
       draggable: true
       auto_caption: false
       caption_position: bottom
-  - macros:
-      j2_block_start_string: "[[%"
-      j2_block_end_string: "%]]"
-      j2_variable_start_string: "[["
-      j2_variable_end_string: "]]"
   - roamlinks 
   - mermaid2
   - callouts

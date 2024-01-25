@@ -82,7 +82,9 @@ plugins:
       draggable: true
       auto_caption: false
       caption_position: bottom
-  - roamlinks 
+  - roamlinks
+  - pages-j2:
+      use_extra: true 
   - mermaid2
   - callouts
   - i18n:

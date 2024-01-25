@@ -32,6 +32,7 @@ jobs:
       - run: pip install mkdocs-glightbox
       - run: pip install mkdocs-macros-plugin
       - run: pip install mkdocs-pages-j2-plugin
+      - run: pip install mkdocs-awesome-pages-plugin
       - run: pip install mkdocs-static-i18n
       - run: pip install mkdocs-exclude
       - run: mkdocs gh-deploy --force

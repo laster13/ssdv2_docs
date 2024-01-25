@@ -67,6 +67,16 @@ plugins:
       closing_tag: "!}"
   - markdownextradata:
       data: docs/json
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      caption_position: bottom
   - macros:
       j2_block_start_string: "[[%"
       j2_block_end_string: "%]]"

@@ -172,6 +172,8 @@ nav:
   - Rdtclient:
     - Rdtclient/configuration-rdtclient.md
     - Rdtclient/qbitorrent.md
+  - Plex:
+    - Plex/Plex-media-server.md
   - Radarr:
     - Radarr/radarr-setup-quality-profiles-french-fr.md
     - Radarr/radarr-setup-quality-profiles-anime.md

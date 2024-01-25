@@ -112,7 +112,7 @@ traefik.http.routers.sabnzbd-rtr-bypass.priority: '100'
 traefik.http.routers.sabnzbd-rtr-bypass.tls: 'true'
 ## HTTP Routers Auth
 traefik.http.routers.sabnzbd-rtr.entrypoints: 'https'
-traefik.http.routers.sabnzbd-rtr.rule: 'Host(`sabnzbd.{{user.domain}}`)
+traefik.http.routers.sabnzbd-rtr.rule: 'Host(`sabnzbd.domain`)
 traefik.http.routers.sabnzbd-rtr.priority: '99'
 traefik.http.routers.sabnzbd-rtr.tls: 'true'
 ## Middleware
@@ -140,7 +140,7 @@ traefik.http.routers.rutorrent-rtr-bypass.priority: '100'
 traefik.http.routers.rutorrent-rtr-bypass.tls: 'true'
 ## HTTP Routers Auth
 traefik.http.routers.rutorrent-rtr.entrypoints: 'https'
-traefik.http.routers.rutorrent-rtr.rule: 'Host(`rutorrent.{{user.domain}}`)'
+traefik.http.routers.rutorrent-rtr.rule: 'Host(`rutorrent.domain`)'
 traefik.http.routers.rutorrent-rtr.priority: '99'
 traefik.http.routers.rutorrent-rtr.tls: 'true'
 ## Middleware

@@ -8,7 +8,7 @@ Je vais montrer deux options différentes sur la façon dont vous pouvez configu
 - Option 2 : Cette option est mieux utilisée si vous souhaitez uniquement sélectionner les films/émissions de télévision que vous souhaitez en 4K/2160p (UHD).
 
 !!! bogue ""
-    Je ne vais pas expliquer comment configurer deux instances Radarr/Sonarr pour votre système, car cela dépend de la façon dont vous l'avez installé/exécuté. [Informations sur les instances multiples Radarr](https://wiki.servarr.com/radar/installation#multiple-instances) et [Informations sur les instances multiples Sonarr](https://wiki.servarr.com/sonarr/installation#multiple-instances )
+    Je ne vais pas expliquer comment configurer deux instances Radarr/Sonarr pour votre système, car cela dépend de la façon dont vous l'avez installé/exécuté. [Informations sur les instances multiples Radarr](https://wiki.servarr.com/radarr/installation#multiple-instances) et [Informations sur les instances multiples Sonarr](https://wiki.servarr.com/sonarr/installation#multiple-instances )
 
 ## Préparation
 
@@ -31,24 +31,24 @@ Pour cela, vous devez avoir préparé ce qui suit :
 !!! Info ""
     Dans cet exemple, je vais utiliser deux instances Radarr (les bases sont les mêmes pour Sonarr).
 
-    - `Radar 1` = Mon radar principal 4K/2160p (UHD).
-    - `Radar 2` = Mon Radarr 1080p que j'ai configuré pour un profil de qualité optimisé pour le streaming.[^1]
+    - `Radarr 1` = Mon radarr principal 4K/2160p (UHD).
+    - `Radarr 2` = Mon Radarr 1080p que j'ai configuré pour un profil de qualité optimisé pour le streaming.[^1]
 
     Cette option est mieux utilisée si vous souhaitez une copie 1:1 de vos instances Radarr/Sonarr
 
 #### Ajout de la liste Radarr Sync
 
-Dans `Radar 2` allez dans `Paramètres` => `Listes`
+Dans `Radarr 2` allez dans `Paramètres` => `Listes`
 
-![Listes de paramètres Radarr](images/radar-settings-lists.png)
+![Listes de paramètres Radarr](images/radarr-settings-lists.png)
 
 Cliquez sur le + pour ajouter une liste et sélectionnez « Radarr »
 
-![Radar ajouter une liste](images/radar-add-list.png)
+![Radarr ajouter une liste](images/radarr-add-list.png)
 
 Ensuite, vous obtenez un écran avec les options suivantes :
 
-![Options d'ajout de listes Radarr](images/radar-add-lists-options.png)
+![Options d'ajout de listes Radarr](images/radarr-add-lists-options.png)
 
 1. Le nom que vous souhaitez appeler votre liste de synchronisation.
 1. Activez pour activer la liste.
@@ -70,11 +70,11 @@ Ensuite, vous obtenez un écran avec les options suivantes :
 
 `Paramètres` => `Télécharger les clients`
 
-![!Radar - Clients de téléchargement de paramètres](images/radar-settings-download-clients.png)
+![!Radarr - Clients de téléchargement de paramètres](images/radarr-settings-download-clients.png)
 
 Sélectionnez votre client de téléchargement préféré.
 
-![!Radar - Paramètres de téléchargement des catégories de clients](images/radar-settings-download-clients-categories.png)
+![!Radarr - Paramètres de téléchargement des catégories de clients](images/radarr-settings-download-clients-categories.png)
 
 La seule chose que vous devez modifier/créer est une « Catégorie » distincte que vous allez utiliser pour « Radarr 2 ».
 
@@ -84,7 +84,7 @@ La seule chose que vous devez modifier/créer est une « Catégorie » distincte
 
 ### Comment fonctionne cette synchronisation Radarr
 
-Il ne vous reste plus qu'à utiliser `Radar 1`. Tous les films que vous ajoutez à « Radarr 1 » seront synchronisés avec « Radarr 2 » à une heure programmée.
+Il ne vous reste plus qu'à utiliser `Radarr 1`. Tous les films que vous ajoutez à « Radarr 1 » seront synchronisés avec « Radarr 2 » à une heure programmée.
 
 ------
 

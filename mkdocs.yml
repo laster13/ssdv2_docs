@@ -65,13 +65,6 @@ plugins:
   - include-markdown:
       opening_tag: "{!"
       closing_tag: "!}"
-  - markdownextradata:
-      data: docs/en/json
-  - macros:
-      j2_block_start_string: "[[%"
-      j2_block_end_string: "%]]"
-      j2_variable_start_string: "[["
-      j2_variable_end_string: "]]"
   - glightbox:
       touchNavigation: true
       loop: false
@@ -83,7 +76,6 @@ plugins:
       auto_caption: false
       caption_position: bottom
   - roamlinks
-  - awesome-pages
   - mermaid2
   - callouts
   - i18n:
@@ -189,7 +181,6 @@ nav:
     - Radarr/Radarr-Quality-Settings-File-Size.md
     - Radarr/Radarr-import-custom-formats.md
     - Radarr/Radarr-how-to-update-custom-formats.md
-    - Radarr/Radarr-collection-of-custom-formats.md    
     - Tips:
       - Radarr/Tips/Merge-quality.md
       - Radarr/Tips/Sync-2-radarr-sonarr.md
@@ -205,7 +196,6 @@ nav:
     - Sonarr/Sonarr-Quality-Settings-File-Size.md
     - Sonarr/sonarr-import-custom-formats.md
     - Sonarr/sonarr-how-to-update-custom-formats.md
-    - Sonarr/sonarr-collection-of-custom-formats.md
     - Tips:
       - Sonarr/Tips/Merge-quality.md
       - Sonarr/Tips/Sync-2-radarr-sonarr.md

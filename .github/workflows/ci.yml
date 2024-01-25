@@ -29,6 +29,7 @@ jobs:
       - run: pip install mkdocs-mermaid2-plugin
       - run: pip install mkdocs-include-markdown-plugin
       - run: pip install mkdocs-markdownextradata-plugin
+      - run: pip install mkdocs-glightbox
       - run: pip install mkdocs-macros-plugin
       - run: pip install mkdocs-static-i18n
       - run: pip install mkdocs-exclude

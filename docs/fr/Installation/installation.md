@@ -1,6 +1,6 @@
 # Installation pas à pas
 
-### on commence !!!
+### On commence !!!
 > Vous avez suivi les Prérequis alors on passe à l'installation du script qui installera toutes les dépendances (y compris docker).
 
 >[!note]+

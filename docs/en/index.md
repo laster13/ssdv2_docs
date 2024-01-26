@@ -15,9 +15,9 @@ The SSD script has been reworked since the end of the clouds and is now oriented
 * Installing Debridmediamanger
 * Cloudflare support
 * Installation via Ansible
-*Traefik
+* Traefik
 * Gluetun assisted installation
-*Backup
+* Backup
 * Seedbox security
 
 ### Demo

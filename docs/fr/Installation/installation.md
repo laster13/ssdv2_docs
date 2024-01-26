@@ -1,9 +1,10 @@
 # Installation pas à pas
 
-## on commence !!!
+### on commence !!!
 > Vous avez suivi les Prérequis alors on passe à l'installation du script qui installera toutes les dépendances (y compris docker).
 
-### il faut un user NON root, qui ait les droits de faire du sudo
+>[!note]+
+> Il faut un user NON root, qui ait les droits de faire du sudo.
 
 Sur debian, il faut commencer par installer sudo
 ``` 
@@ -68,7 +69,7 @@ recommandation ``oui`` afin de mettre à jour les sous-domaines automatiquement
 * Souhaitez vous sécuriser vos Applis avec Google OAuth2 ? (o/n - default n) : n
 * Dans un premier temps répondez ``n`` nous reviendrons dessus plus tard
 
-## Fin de la création du fichier account.yml
+### Fin de la création du fichier account.yml
 
 Lors de l'installation du script celui-ci prendra du temps et restera un moment sur
 
@@ -87,7 +88,7 @@ Pour le moment, il faut choisir ``basique``plus tard vous pourrez installer Oaut
 ### Les composants sont maintenants tous installés/réglés, poursuite de l'installation
 * Appuyez sur entrée pour continuer, ou ctrl+c pour sortir
 
-# Vous avez réussi à atteindre l'accueil du script ``BRAVO``
+### Vous avez réussi à atteindre l'accueil du script ``BRAVO``
 
 ### Commençon par installer une application (ou deux)
 * Entrez le chiffre 1) Ajout/ Suppression d'Applis

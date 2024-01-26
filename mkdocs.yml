@@ -170,9 +170,9 @@ nav:
       - Installation/oauth.md
       - Installation/optimisation-cloudflare.md
       - Installation/ufw-Installation-configuration.md
-  - Rdtclient:
-    - Rdtclient/configuration-rdtclient.md
-    - Rdtclient/qbitorrent.md
+  - RealDebrid:
+    - RealDebrid/configuration-rdtclient.md
+    - RealDebrid/qbitorrent.md
   - Plex:
     - Plex/Tips/Plex-media-server.md
   - Radarr:

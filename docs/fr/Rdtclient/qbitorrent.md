@@ -16,7 +16,7 @@ Enfin dans Media Management configurer le Root Folders en pointant sur le dossie
 
 ### Principe de fonctionnement
 
-Radarr/Sonarr envoie le resultat de la recherche à rdtclient qui lui même lance le téléchargements, gère la création des symlinks qui seront stokés dans le dossier ```/home/maman/local/radarr```. Au moment de l'importation par sonarr/radarr les symlinks seront déplacés dans le dossier ```/home/user/Medias```, dossier vers lequel PLex doit pointer.
+Radarr/Sonarr envoie le resultat de la recherche à rdtclient qui lui même lance les téléchargements, gère la création des symlinks qui seront stokés dans le dossier ```/home/user/local/radarr```. Au moment de l'importation par sonarr/radarr les symlinks seront déplacés dans le dossier ```/home/user/Medias```, dossier vers lequel PLex doit pointer.
 
 
  

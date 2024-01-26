@@ -103,7 +103,7 @@ plugins:
                 scheme: slate
           nav_translations:
             Accueil: Home
-            Installation: Setup
+            Installation: Install
   - git-revision-date-localized:
 
 

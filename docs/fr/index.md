@@ -4,6 +4,7 @@
 
 Avant tout, un grand merci à TRaSH-Guides et leur travail que j'ai mis à profit pour créer les rubriques radarr/sonarr et proposer une traduction en francais.
 https://trash-guides.info/ 
+
 Radarr/Sonarr méritaient bien d'avoir une documentation approfondie sachant que leurs configurations posent souvent questions et ne sont pas forcément évidentes pour un débutant.
 
 Le script SSD a été retravaillé depuis la fin des clouds et s'oriente désormais autour de RealDebrid. Il offre la possibilité d'installer une centaine d'applications en dehors des standards que sont plex, radarr, sonarr, rdtclient, overseerr etc .. 
@@ -18,6 +19,12 @@ Le script SSD a été retravaillé depuis la fin des clouds et s'oriente désorm
 * Installation assistée Gluetun
 * Backup
 * Sécurisation Seedbox
+
+### Demo
+***
+[![ScreenShot](https://user-images.githubusercontent.com/64525827/166642246-48c95b9e-c116-4d5b-b3e2-2e1305389f4f.png)](https://user-images.githubusercontent.com/64525827/166640750-3a9b032f-80b1-4aa0-8966-b7abd560f57d.mp4)
+***
+
 
 ### Le script SSD permet l'installation d'une seedbox complète avec Docker
 Pour se lancer dans l’installation, il faut au préalable suivre les étapes suivantes:

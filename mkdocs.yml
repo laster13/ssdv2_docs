@@ -203,6 +203,8 @@ nav:
       - Sonarr/Tips/Merge-quality.md
       - Sonarr/Tips/Sync-2-radarr-sonarr.md
       - Sonarr/Tips/How-to-setup-language-custom-formats.md
+  - Prowlarr:
+    - Prowlarr/prowlarr-setup-flaresolverr.md
   - Applications:
     - Applications/Authelia.md
     - Applications/Chevereto.md
